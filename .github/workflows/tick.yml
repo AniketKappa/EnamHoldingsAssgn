@@ -29,9 +29,9 @@ jobs:
         id: cfg
         run: |
           if [ -z "$DATABASE_URL" ]; then echo "DATABASE_URL secret is not set; skipping." >> "$GITHUB_STEP_SUMMARY"; echo "skip=1" >> "$GITHUB_OUTPUT"; fi
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         if: steps.cfg.outputs.skip != '1'
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         if: steps.cfg.outputs.skip != '1'
         with: { node-version: 22, cache: npm }
       - run: npm ci --no-audit --no-fund

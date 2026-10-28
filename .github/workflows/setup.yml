@@ -27,8 +27,8 @@ jobs:
       - name: Check configuration
         run: |
           if [ -z "$DATABASE_URL" ]; then echo "Add the DATABASE_URL repository secret first." >> "$GITHUB_STEP_SUMMARY"; exit 1; fi
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with: { node-version: 22, cache: npm }
       - run: npm ci --no-audit --no-fund
       - run: npx tsx scripts/finn.ts probe

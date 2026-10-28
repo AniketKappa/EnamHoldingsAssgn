@@ -69,7 +69,46 @@ async function probe() {
   summary(`### FINN source probe (${new Date().toISOString()})\n\n${rows.join("\n")}\n`);
 }
 
+/** Real-world fixtures for offline tests: 30 days of BSE filings, screener pages, a few results PDFs. */
+async function fixtures(dir: string) {
+  const { mkdirSync, writeFileSync } = await import("node:fs");
+  const { fetchAnnouncements } = await import("../src/lib/sources/bse");
+  const { classifyText } = await import("../src/lib/pipeline/rules");
+  const { downloadPdf } = await import("../src/lib/pipeline/filings");
+  const { getText } = await import("../src/lib/sources/http");
+  const { cleanSubject } = await import("../src/lib/sources/bse");
+  const p = JSON.parse(readFileSync(join(process.cwd(), "data", "portfolio.json"), "utf8")) as { holdings: { symbol: string; bse_code: string }[]; research_picks: { symbol: string; bse_code: string }[] };
+  mkdirSync(`${dir}/bse`, { recursive: true }); mkdirSync(`${dir}/screener`, { recursive: true }); mkdirSync(`${dir}/pdf`, { recursive: true });
+  const to = new Date(), from = new Date(Date.now() - 30 * 86_400_000);
+  const lines: string[] = [];
+  let pdfs = 0;
+  for (const h of p.holdings) {
+    try {
+      const rows = await fetchAnnouncements(h.bse_code, from, to);
+      writeFileSync(`${dir}/bse/${h.symbol}.json`, JSON.stringify(rows, null, 1));
+      lines.push(`${h.symbol}: ${rows.length} filings`);
+      const results = rows.filter((r) => classifyText(r.SUBCATNAME ?? null, cleanSubject(r.NEWSSUB ?? ""), r.HEADLINE ?? null).subtype === "financial_results" && r.ATTACHMENTNAME)
+        .sort((a, b) => Number(b.Fld_Attachsize ?? 0) - Number(a.Fld_Attachsize ?? 0));
+      if (results[0] && pdfs < 8 && Number(results[0].Fld_Attachsize ?? 0) < 12_000_000) {
+        const buf = await downloadPdf(`https://www.bseindia.com/xml-data/corpfiling/AttachLive/${results[0].ATTACHMENTNAME}`);
+        writeFileSync(`${dir}/pdf/${h.symbol}_results.pdf`, buf);
+        pdfs++;
+      }
+    } catch (e) { lines.push(`${h.symbol}: FAIL ${(e as Error).message.slice(0, 100)}`); }
+  }
+  for (const s of [...new Set([...p.holdings, ...p.research_picks].map((x) => x.symbol))]) {
+    for (const basis of ["consolidated", "standalone"]) {
+      try {
+        const url = basis === "consolidated" ? `https://www.screener.in/company/${s}/consolidated/` : `https://www.screener.in/company/${s}/`;
+        writeFileSync(`${dir}/screener/${s}_${basis}.html`, await getText(url, { headers: { Accept: "text/html" } }));
+      } catch (e) { lines.push(`screener ${s} ${basis}: FAIL ${(e as Error).message.slice(0, 80)}`); }
+    }
+  }
+  summary(`Fixtures: ${pdfs} results PDFs\n${lines.join("\n")}`);
+}
+
 async function main() {
+  if (cmd === "fixtures") return fixtures(flag("dir", "fixtures") ?? "fixtures");
   if (cmd === "help") {
     console.log("Commands: probe, doctor, migrate, seed, symbols, backfill, ingest, process, prices, verify, calendar, alerts, research <SYMBOL>, tick, taxonomy, status");
     return;

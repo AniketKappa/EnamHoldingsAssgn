@@ -1,0 +1,26 @@
+# Capture real-world fixtures (filings JSON, screener pages, results PDFs) onto the
+# `fixtures` branch, so parsers and rules can be tested offline against real data.
+name: Capture fixtures
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --no-audit --no-fund
+      - run: npx tsx scripts/finn.ts fixtures --dir /tmp/fixtures
+      - name: Commit to the fixtures branch
+        run: |
+          cd /tmp/fixtures
+          git init -q -b fixtures
+          git config user.name "finn-bot"
+          git config user.email "finn-bot@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Fixtures captured $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" fixtures:fixtures
