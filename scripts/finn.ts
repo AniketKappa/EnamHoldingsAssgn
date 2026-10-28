@@ -17,6 +17,11 @@ const deadline = Date.now() + minutes * 60_000;
 function summary(md: string) {
   console.log(md);
   if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${md}\n`);
+  // Annotations are readable through the REST API, so a remote operator can see results without log access.
+  if (process.env.GITHUB_ACTIONS) {
+    const esc = md.slice(0, 3800).replace(/%/g, "%25").replace(/\r/g, "%0D").replace(/\n/g, "%0A");
+    console.log(`::notice title=finn ${cmd}::${esc}`);
+  }
 }
 
 async function probe() {
