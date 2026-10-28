@@ -118,6 +118,14 @@ export async function ensureUser(userId: string): Promise<boolean> {
       on conflict do nothing`;
     await sql`insert into alert_rules (user_id, kind, symbol, params, label, source_text, enabled)
       select ${userId}, kind, symbol, params, label, source_text, enabled from alert_rules where user_id = 'demo'`;
+    // A new visitor sees the last week's alerts at once rather than an empty inbox.
+    await sql`insert into alerts (user_id, rule_id, symbol, kind, ref_id, title, body, url, created_at, pushed_at)
+      select ${userId}, nr.id, a.symbol, a.kind, a.ref_id, a.title, a.body, a.url, a.created_at, a.created_at
+      from alerts a
+      left join alert_rules dr on dr.id = a.rule_id
+      left join alert_rules nr on nr.user_id = ${userId} and nr.kind = dr.kind and nr.label = dr.label
+      where a.user_id = 'demo' and a.created_at > now() - interval '7 days'
+      on conflict (user_id, ref_id) do nothing`;
   }
   return true;
 }

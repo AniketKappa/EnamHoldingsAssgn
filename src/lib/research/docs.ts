@@ -33,7 +33,7 @@ export function pickDocuments(sc: ScreenerCompany, maxTranscripts = 5): DocPick[
   const withTranscript = calls.filter((c) => c.transcript);
   for (const c of withTranscript.slice(0, maxTranscripts)) {
     const p = callPeriod(c.date!);
-    out.push({ doc_type: "transcript", url: normalizeDocUrl(c.transcript!), period_label: p.label, period_end: p.end, said_on: c.date, label: `${c.label} call` });
+    out.push({ doc_type: "transcript", url: normalizeDocUrl(c.transcript!), period_label: p.label, period_end: p.end, said_on: c.date, label: `${p.label} call (${c.label})` });
   }
   if (out.length < 3) {
     const have = new Set(out.map((d) => d.period_label));
@@ -41,7 +41,7 @@ export function pickDocuments(sc: ScreenerCompany, maxTranscripts = 5): DocPick[
       if (out.length >= maxTranscripts) break;
       const p = callPeriod(c.date!);
       if (have.has(p.label)) continue;
-      out.push({ doc_type: "presentation", url: normalizeDocUrl(c.ppt!), period_label: p.label, period_end: p.end, said_on: c.date, label: `${c.label} presentation` });
+      out.push({ doc_type: "presentation", url: normalizeDocUrl(c.ppt!), period_label: p.label, period_end: p.end, said_on: c.date, label: `${p.label} presentation (${c.label})` });
       have.add(p.label);
     }
   }

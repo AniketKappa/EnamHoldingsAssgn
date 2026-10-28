@@ -1,26 +1,170 @@
 @import "tailwindcss";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource-variable/literata/index.css";
 
+/* FINN tokens (spec 7.4). One accent, spent only on materiality and primary actions. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --paper: #edf0f3;
+  --surface: #ffffff;
+  --ink: #18212b;
+  --ink-2: #5e6a78;
+  --ink-3: #8a95a3;
+  --rule: #d9dee5;
+  --accent: #3d4fd1;
+  --accent-soft: #e3e6fa;
+  --up: #18794e;
+  --down: #c23b32;
+  --up-soft: #e3f2ea;
+  --down-soft: #f8e6e4;
+  --sheet-shadow: 0 -8px 32px rgb(24 33 43 / 0.14);
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --paper: #10151f;
+    --surface: #171e2b;
+    --ink: #e6e9ef;
+    --ink-2: #9aa5b4;
+    --ink-3: #6f7a8a;
+    --rule: #273042;
+    --accent: #8e9bff;
+    --accent-soft: #232b4a;
+    --up: #4cc38a;
+    --down: #f0776f;
+    --up-soft: #16302a;
+    --down-soft: #3a2024;
+    --sheet-shadow: 0 -8px 32px rgb(0 0 0 / 0.5);
+    color-scheme: dark;
   }
 }
 
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --color-up-soft: var(--up-soft);
+  --color-down-soft: var(--down-soft);
+  --font-sans: "IBM Plex Sans", "Noto Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Literata Variable", "Literata", Georgia, "Noto Serif", serif;
+  --text-xs: 13px;
+  --text-xs--line-height: 1.4;
+  --text-sm: 15px;
+  --text-sm--line-height: 1.45;
+  --text-base: 17px;
+  --text-base--line-height: 1.45;
+  --text-lg: 22px;
+  --text-lg--line-height: 1.25;
+  --text-xl: 28px;
+  --text-xl--line-height: 1.15;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  background: var(--paper);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Every number lines up. */
+.num,
+table,
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.serif {
+  font-family: var(--font-serif);
+  line-height: 1.5;
+  font-optical-sizing: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+/* The funnel line: FINN's only unprompted motion, once per session. */
+@keyframes funnel-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.funnel-step {
+  animation: funnel-in 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.funnel-step:nth-child(2) { animation-delay: 140ms; }
+.funnel-step:nth-child(3) { animation-delay: 220ms; }
+.funnel-step:nth-child(4) { animation-delay: 360ms; }
+.funnel-step:nth-child(5) { animation-delay: 440ms; }
+.funnel-still .funnel-step { animation: none; }
+
+@keyframes slide-out {
+  to { opacity: 0; transform: translateX(40px); height: 0; margin: 0; padding: 0; }
+}
+.done-out {
+  animation: slide-out 320ms ease-in forwards;
+  overflow: hidden;
+}
+
+@keyframes chip-pop {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+.chip-pop { animation: chip-pop 200ms ease-out both; }
+
+@keyframes shimmer {
+  0% { background-position: -320px 0; }
+  100% { background-position: 320px 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--rule) 0, color-mix(in srgb, var(--rule) 50%, var(--surface)) 50%, var(--rule) 100%);
+  background-size: 640px 100%;
+  animation: shimmer 1.4s linear infinite;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+/* Safe-area padding for the tab bar on phones with a home indicator. */
+.pb-safe { padding-bottom: max(env(safe-area-inset-bottom), 6px); }
+
+.scroll-x {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.scroll-x::-webkit-scrollbar { display: none; }
+
+input[type="range"] {
+  accent-color: var(--accent);
 }

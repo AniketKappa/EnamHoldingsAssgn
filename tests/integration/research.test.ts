@@ -24,7 +24,7 @@ beforeAll(async () => {
   const { pickDocuments } = await import("@/lib/research/docs");
   const { storeDocument } = await import("@/lib/pipeline/filings");
   for (const d of pickDocuments(parseScreenerHtml(html, "LT", url))) {
-    const label = d.label.replace(/ (call|presentation)$/, "");
+    const label = d.label.match(/\(([^)]+)\)/)?.[1] ?? "";
     const pages = d.doc_type === "annual_report" ? ANNUAL_REPORT_PAGES : TRANSCRIPTS[label];
     if (pages) await storeDocument({ symbol: "LT", docType: d.doc_type, url: d.url, pages, periodLabel: d.period_label, periodEnd: d.period_end });
   }

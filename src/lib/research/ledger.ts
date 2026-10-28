@@ -85,7 +85,9 @@ export function tableActual(metric: string, h: Horizon, f: FactsBundle): Actual 
   if (h.kind === "fy" && !partial && at(f.annual.revenue, h.label) !== null) return annualActual(metric, h, f);
   const qs = have;
   const prior = qs.map(yearEarlier);
-  const span = partial ? `${qs[0]}${qs.length > 1 ? `–${qs[qs.length - 1].split(" ")[0]}` : ""} (year to date)` : h.label;
+  const fyOf = (q: string) => q.split(" ")[1];
+  const span = qs.length === 1 ? qs[0]
+    : fyOf(qs[0]) === fyOf(qs[qs.length - 1]) ? `${qs[0].split(" ")[0]}–${qs[qs.length - 1].split(" ")[0]} ${fyOf(qs[0])}` : `${qs[0]} to ${qs[qs.length - 1]}`;
   const src = `fact:quarters:${qs.join(",")}`;
   const sum = (k: string, list: string[]) => sumOver(f.quarterly[k], list);
   switch (metric) {
@@ -94,7 +96,7 @@ export function tableActual(metric: string, h: Horizon, f: FactsBundle): Actual 
       const key = metric === "revenue_growth" ? "revenue" : "pat";
       const a = sum(key, qs), b = sum(key, prior);
       if (a === null || b === null || b <= 0) return null;
-      return { value: round(((a - b) / b) * 100), unit: "pct", label: `${span} vs a year earlier`, cite: src, partial };
+      return { value: round(((a - b) / b) * 100), unit: "pct", label: `${span} vs a year earlier${partial ? ", so far" : ""}`, cite: src, partial };
     }
     case "ebitda_margin": {
       const e = sum("ebitda", qs), r = sum("revenue", qs);

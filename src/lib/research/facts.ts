@@ -84,11 +84,11 @@ export function computeFacts(sc: ScreenerCompany): FactsBundle {
     add("q_ebitda", lender ? "Financing profit" : "EBITDA", qEb?.[last.idx], "cr", latestQuarter, "quarters", col);
     if (!lender) add("q_opm", "EBITDA margin", qOpm[qd.length - 1], "pct", latestQuarter, "quarters", col);
     add("q_pbt", "Profit before tax", qPbt?.[last.idx], "cr", latestQuarter, "quarters", col);
-    add("q_pat", "Net profit", qPat?.[last.idx], "cr", latestQuarter, "quarters", col);
+    add("q_pat", "Net profit, total", qPat?.[last.idx], "cr", latestQuarter, "quarters", col);
     if (yoyCol) {
       const g = (a: number | null | undefined, b: number | null | undefined) => (a !== null && a !== undefined && b ? round(((a - b) / Math.abs(b)) * 100, 1) : null);
       add("q_revenue_yoy", "Revenue growth YoY", g(qRev?.[last.idx], qRev?.[yoyCol.idx]), "pct", latestQuarter, "quarters", `${last.label} vs ${yoyCol.label}`);
-      add("q_pat_yoy", "Net profit growth YoY", g(qPat?.[last.idx], qPat?.[yoyCol.idx]), "pct", latestQuarter, "quarters", `${last.label} vs ${yoyCol.label}`);
+      add("q_pat_yoy", "Net profit growth YoY, total", g(qPat?.[last.idx], qPat?.[yoyCol.idx]), "pct", latestQuarter, "quarters", `${last.label} vs ${yoyCol.label}`);
       const raw = (col: { idx: number }) => (qRev?.[col.idx] && qEb?.[col.idx] !== null && qEb?.[col.idx] !== undefined ? (qEb![col.idx]! / qRev![col.idx]!) * 100 : null);
       const m0 = raw(last), m1 = raw(yoyCol);
       if (!lender && m0 !== null && m1 !== null) add("q_opm_yoy_bps", "EBITDA margin change YoY", Math.round((m0 - m1) * 100), "bps", latestQuarter, "quarters", `${last.label} vs ${yoyCol.label}`);
