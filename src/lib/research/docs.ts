@@ -30,8 +30,17 @@ export function callPeriod(callDate: string): { label: string; end: string } {
 export function pickDocuments(sc: ScreenerCompany, maxTranscripts = 5): DocPick[] {
   const calls = [...sc.concalls].filter((c) => c.date).sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
   const out: DocPick[] = [];
-  const withTranscript = calls.filter((c) => c.transcript);
-  for (const c of withTranscript.slice(0, maxTranscripts)) {
+  // One call per quarter. A quarter can list two (the results call and a later investor day,
+  // or the same call hosted twice): keep the earliest, and BSE's copy over a company site's.
+  const byQuarter = new Map<string, (typeof calls)[number]>();
+  for (const c of calls.filter((x) => x.transcript)) {
+    const label = callPeriod(c.date!).label;
+    const cur = byQuarter.get(label);
+    const better = !cur || c.date! < cur.date! || (c.date === cur.date && /bseindia\.com/.test(c.transcript!) && !/bseindia\.com/.test(cur.transcript!));
+    if (better) byQuarter.set(label, c);
+  }
+  const picked = [...byQuarter.values()].sort((a, b) => (b.date ?? "").localeCompare(a.date ?? "")).slice(0, maxTranscripts);
+  for (const c of picked) {
     const p = callPeriod(c.date!);
     out.push({ doc_type: "transcript", url: normalizeDocUrl(c.transcript!), period_label: p.label, period_end: p.end, said_on: c.date, label: `${p.label} call (${c.label})` });
   }
