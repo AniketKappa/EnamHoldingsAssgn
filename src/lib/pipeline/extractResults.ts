@@ -100,7 +100,7 @@ export async function extractResultsEvent(eventKey: string): Promise<ResultsDeta
       const parts: Part[] = [{ inlineData: { mimeType: "application/pdf", data: Buffer.from(small).toString("base64") } }];
       const lenderHint = !!ev.is_financial || (pick ? /interest earned|interest expended/i.test(doc.pages[pick.pages[0]]) : false);
       const prefer = pick?.basis ?? "consolidated";
-      const prompt = RESULTS_PROMPT(String(ev.name), expected, prefer, lenderHint);
+      const prompt = RESULTS_PROMPT(String(ev.name), expected, prefer, lenderHint, pick && !pick.confident ? pageIdx.length : 0);
       const hint = await prevRevenueHint(symbol, expected);
       const templateOf = (d: ResultsExtractT): Template =>
         lenderHint || (d.current.interest_earned !== null && d.current.revenue_from_operations === null) ? "lender" : "corporate";
@@ -124,7 +124,9 @@ export async function extractResultsEvent(eventKey: string): Promise<ResultsDeta
       const metrics = computeMetrics(cur, prev, yoy, template);
       const checksOk = best.checks.every((c) => c.ok);
       const unreliable = best.checks.some((c) => !c.ok && (c.name === "units" || c.name === "periods"));
-      const sourcePages = pageIdx.map((i) => i + 1);
+      // From a set of candidates, cite only the page the model says it read.
+      const sp = best.data.statement_page;
+      const sourcePages = pick && !pick.confident && sp && sp >= 1 && sp <= pageIdx.length ? [pageIdx[sp - 1] + 1] : pageIdx.map((i) => i + 1);
       const reasons: string[] = [];
       if (!unreliable) {
         if (metrics.pat.yoy_pct !== null) reasons.push(`PAT ${pct(metrics.pat.yoy_pct, 0)} YoY`);

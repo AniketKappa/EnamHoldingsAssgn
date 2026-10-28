@@ -56,6 +56,8 @@ export const ResultsExtract = z.object({
   previous_quarter: ResultLines,
   year_ago_quarter: ResultLines,
   note: z.string().max(240).nullable(),
+  // 1-based position, within the pages sent, of the page the numbers were read from.
+  statement_page: z.number().int().nullable().optional(),
 });
 export type ResultsExtractT = z.infer<typeof ResultsExtract>;
 

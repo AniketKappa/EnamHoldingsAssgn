@@ -217,8 +217,9 @@ export function resultsTitle(m: ResultsMetrics, fmt: { crore: (n: number | null)
   return `${m.quarter}: revenue ${fmt.crore(m.revenue.value)} (${fmt.pct(m.revenue.yoy_pct)} YoY), PAT ${fmt.crore(m.pat.value)} (${fmt.pct(m.pat.yoy_pct)} YoY)`;
 }
 
-export const RESULTS_PROMPT = (company: string, periodEnd: string, prefer: string, lender: boolean) => [
+export const RESULTS_PROMPT = (company: string, periodEnd: string, prefer: string, lender: boolean, candidates = 0) => [
   `These pages hold the financial results of ${company} for the quarter ended ${periodEnd}.`,
+  candidates > 1 ? `You were sent ${candidates} candidate pages from a scanned filing; read the figures from the page images, not any text layer. Use the ${prefer} statement if present, otherwise the other one, and set statement_page to its position (1 to ${candidates}) among the pages sent.` : "",
   `Extract the ${prefer} statement of profit and loss, using three columns only: the current quarter, the immediately preceding quarter, and the same quarter last year.`,
   "Ignore half-year, nine-month and full-year columns. Report the unit printed on the page (for example 'Rs in crore' or 'Rs in lakhs').",
   "Line mapping: revenue_from_operations = 'Revenue from operations' (never 'Total income'); total_expenses = 'Total expenses';",

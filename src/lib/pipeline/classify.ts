@@ -58,18 +58,67 @@ async function writeUpdates(rows: Update[]) {
 
 /**
  * The "Sub:" line of a cover letter: what the filing is about, in the company's
- * own words. Null when the letter has none.
+ * own words. Null when the letter has none. Most say only "Disclosure under
+ * Regulation 30", so the body's first sentences are read too (bodyLead).
  */
-export function subjectLine(text: string): { line: string; at: number } | null {
-  const re = /(?:^|\s)(?:sub(?:ject)?|re)\s*\.?\s*[:\-–]\s*/gi;
+export function subjectLine(text: string): { line: string; at: number; end: number } | null {
+  const re = /(?:^|\s)(?:sub(?:ject|iect)?\s*\.?\s*[:\-–]?|re\s*:|ref\s*:)\s*/gi;
   let m: RegExpExecArray | null;
   while ((m = re.exec(text))) {
     const start = m.index + m[0].length;
+    if (/^(bse|nse|scrip|isin|no\b|letter|our )/i.test(text.slice(start, start + 12))) continue;
     const rest = text.slice(start, start + 450);
-    const stop = rest.search(/\n\s*\n|\bdear\b|\b(sir|madam)\b|\bref(erence)?\s*[:.]|\bthis is to\b|\bwe (wish|would|hereby|write|are pleased|refer)\b|\bfurther to\b|\bwith reference to\b|\bplease find\b|\bin continuation\b|\bkindly\b/i);
-    const line = (stop >= 0 ? rest.slice(0, stop) : rest.slice(0, 300)).replace(/\s+/g, " ").trim();
-    if (line.length >= 8) return { line, at: m.index };
+    const stop = rest.search(/\n\s*\n|\bdear\b|\b(sir|madam)\b|\bref(erence)?\s*[:.]|\bthis is (to|with|further|in)\b|\bwe (wish|would|hereby|write|are pleased|refer|enclose|request|submit|inform)\b|\bthanking you\b|\byours\b|\bfurther to\b|\bwith reference to\b|\bplease (find|refer|note)\b|\bin continuation\b|\bkindly\b|\byou are\b|\bin accordance with\b|\bthe (company|bank|board)\b/i);
+    const raw = stop >= 0 ? rest.slice(0, stop) : rest.slice(0, 300);
+    const line = raw.replace(/\s+/g, " ").trim();
+    if (line.length >= 8) return { line, at: m.index, end: start + raw.length };
   }
+  return null;
+}
+
+const BODY_START = /\b(this is to (inform|intimate|notify|apprise)|this is (with reference|further|in (continuation|furtherance))|we (wish|would like|are pleased|hereby|write)|you are (kindly )?informed|please (refer|find|note|be informed)|further to|in continuation|the board of directors|the company has)/i;
+
+// Regulation names in a letter's body that would otherwise trip the rules ("Prohibition of Insider Trading").
+const BODY_BOILERPLATE = [
+  /code of (practices?|conduct)[^.]{0,120}?(unpublished price sensitive information|upsi)/gi,
+  /\(?prohibition of insider trading\)?( regulations?,? \d{4})?/gi,
+  /\b(sebi|securities and exchange board of india)\s*\([^)]{0,80}\)\s*(regulations?,?\s*\d{4})?/gi,
+  /\blisting obligations and disclosure requirements\b/gi,
+  /\b(para|part|clause) [a-z0-9]+ of (para|part|schedule) [a-z0-9]+[^,.;]{0,60}/gi,
+  /\bregulation\s*30\s*(\(\d+\))?/gi,
+  // The standard declaration in every director appointment ("not debarred ... by any order passed by SEBI").
+  /[^.]*\bnot debarred\b[^.]*\./gi,
+];
+
+const SIGN_OFF = /\b(thanking you|yours (faithfully|sincerely|truly)|sincerely yours|kindly take (the same|this|it|the above) on (your )?record|this is for your (kind )?(information|record)|request you to (kindly )?take)/i;
+
+/** The first sentences of the letter's body, with regulation boilerplate removed. */
+export function bodyLead(text: string, sub: { end: number } | null): string {
+  let start = sub ? sub.end : text.search(BODY_START);
+  if (start < 0) start = 0;
+  let lead = text.slice(start, start + 700).replace(/\s+/g, " ");
+  const end = lead.search(SIGN_OFF);
+  if (end > 0) lead = lead.slice(0, end); // never the signature ("Company Secretary & Compliance Officer")
+  for (const re of BODY_BOILERPLATE) lead = lead.replace(re, " ");
+  return lead.replace(/\s+/g, " ").trim();
+}
+
+// What the body may decide on its own; generic outcomes (compliance, "agreement",
+// a press release) wait for the model.
+const BODY_TRUSTED = new Set(["litigation", "management_change", "fund_raise", "M&A", "credit_rating", "results", "dividend", "pledging", "capex", "bonus_split"]);
+const BODY_TRUSTED_SUB = new Set(["order_win", "business_update", "correction", "clarification"]);
+
+export function classifyLetter(subcategory: string | null, text: string): { category: Category; subtype: string | null; ruleId: string | null; also: Category[]; from: "sub" | "body" } | null {
+  const sub = subjectLine(text);
+  if (sub) {
+    const r = classifyText(subcategory, sub.line, null);
+    if (r.category !== "needs_llm") return { ...r, category: r.category, from: "sub" };
+  }
+  const lead = bodyLead(text, sub);
+  if (lead.length < 40) return null;
+  const r = classifyText(null, lead, null);
+  if (r.category === "needs_llm") return null;
+  if (BODY_TRUSTED.has(r.category) || (r.subtype && BODY_TRUSTED_SUB.has(r.subtype))) return { ...r, category: r.category, from: "body" };
   return null;
 }
 
@@ -143,15 +192,13 @@ export async function classifyNew(limit = 2000, deadline = Date.now() + 120_000)
     try {
       const doc = await fetchAndStore({ symbol: r.symbol, docType: "filing", url: r.pdf_url!, maxPages: 60 });
       const text = doc.pages.slice(0, 2).join("\n");
-      const sub = subjectLine(text);
-      if (sub) {
-        const res = classifyText(r.subcategory, sub.line, null);
-        if (res.category !== "needs_llm") {
-          updates.push({ id: r.id, category: res.category, subtype: res.subtype, by: `pdf:${res.ruleId}`, also: res.also });
-          byPdf++;
-          continue;
-        }
+      const hit = classifyLetter(r.subcategory, text);
+      if (hit) {
+        updates.push({ id: r.id, category: hit.category, subtype: hit.subtype, by: `pdf-${hit.from}:${hit.ruleId}`, also: hit.also });
+        byPdf++;
+        continue;
       }
+      const sub = subjectLine(text);
       excerpts.set(r.id, (sub ? text.slice(sub.at) : text).replace(/\s+/g, " ").slice(0, 1500));
     } catch { /* subject and headline only */ }
   }
