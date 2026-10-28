@@ -86,7 +86,7 @@ async function release(name: string) {
 
 /** Process stages only: classify, group, extract, score, alert, push. */
 export async function processPipeline(deadline: number) {
-  const c = await classifyNew();
+  const c = await classifyNew(2000, Math.min(deadline - 60_000, Date.now() + 90_000));
   const g = await groupNew();
   const x = await extractPending(deadline - 20_000);
   const a = await evaluateAlerts();

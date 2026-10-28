@@ -40,6 +40,7 @@ export function mockLlm(req: LlmRequest<unknown>): unknown {
         items: ids(p).map((id) => {
           const chunk = p.slice(p.indexOf(`<f id="${id}">`)).split("</f>")[0];
           if (/order valued at/i.test(chunk)) return { id, one_liner: "Order for a 765 kV substation network, ₹2,500 cr", amount_cr: 2500, amount_quote: "Rs 2,500 crore", direction: null, failed_vote: null };
+          if (/consideration of Rs\. 120 crore/i.test(chunk)) return { id, one_liner: "Bought 100% of Example Grid for ₹120 cr", amount_cr: 120, amount_quote: "Rs. 120 crore", direction: null, failed_vote: null };
           if (/reaffirmed/i.test(chunk)) return { id, one_liner: "CRISIL reaffirmed AAA/Stable on long-term bank facilities", amount_cr: null, amount_quote: null, direction: "same", failed_vote: null };
           return { id, one_liner: "Routine update", amount_cr: null, amount_quote: null, direction: null, failed_vote: null };
         }),

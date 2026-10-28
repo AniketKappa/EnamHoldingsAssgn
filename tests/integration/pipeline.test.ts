@@ -20,6 +20,7 @@ beforeAll(async () => {
     "lt_cfo.pdf": await makePdf(CFO_PAGES),
     "lt_order.pdf": await makePdf(ORDER_PAGES),
     "lt_rating.pdf": await makePdf(RATING_PAGES),
+    "lt_reg30.pdf": await makePdf(["SYNTHETIC TEST FILING\nTo, BSE Limited\nDear Sir/Madam,\nSub: Disclosure under Regulation 30 of the SEBI (LODR) Regulations, 2015 - Acquisition of 100% equity stake in Example Grid Private Limited\nThis is to inform you that the Company has completed the acquisition for a consideration of Rs. 120 crore."]),
     "hdfc_md.pdf": await makePdf(["SYNTHETIC TEST FILING\nThe Board has appointed Ms. Anita Rao as Managing Director & CEO with effect from October 27, 2026.\nBrief profile: Ms. Anita Rao has over 30 years of experience in banking."]),
   });
   close = srv.close;
@@ -34,6 +35,8 @@ beforeAll(async () => {
   const rows = [
     bseRow({ ...LT, id: "r1", subject: "Outcome of Board Meeting - Financial Results for the quarter ended September 30, 2026", subcat: "Outcome of Board Meeting", at: hoursAgo(20), pdf: "lt_results.pdf" }),
     bseRow({ ...LT, id: "r2", subject: "Newspaper Publication of financial results", subcat: "Newspaper Publication", at: hoursAgo(6) }),
+    bseRow({ ...LT, id: "r4", subject: "Board Meeting Outcome for Outcome Of Board Meeting Of Larsen & Toubro Limited", subcat: "Outcome of Board Meeting", at: hoursAgo(20.2) }),
+    bseRow({ ...LT, id: "g1", subject: "Disclosure Under Regulation 30 Of SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015", subcat: "General", at: hoursAgo(8), pdf: "lt_reg30.pdf" }),
     bseRow({ ...LT, id: "r3", subject: "Investor Presentation", subcat: "Investor Presentation", at: hoursAgo(19) }),
     bseRow({ ...LT, id: "p1", subject: "Appointment of Chief Financial Officer (synthetic test filing)", subcat: "Change in Management", at: hoursAgo(5), pdf: "lt_cfo.pdf" }),
     bseRow({ ...LT, id: "o1", subject: "Bagging/Receiving of orders/contracts", subcat: "Award of Order / Receipt of Order", headline: "Order win for the power transmission business", at: hoursAgo(4), pdf: "lt_order.pdf" }),
@@ -61,6 +64,8 @@ describe("push pipeline", () => {
     const { classifyNew } = await import("@/lib/pipeline/classify");
     const r = await classifyNew();
     expect(r.rule).toBe(9);
+    expect(r.context).toBe(1); // the bare board outcome on the results day
+    expect(r.pdf).toBe(1);     // the generic Reg 30 disclosure, read from its "Sub:" line
     expect(r.llm).toBe(1);
     expect((await classifyNew()).rule).toBe(0);
     const { db } = await import("@/lib/db");
@@ -72,18 +77,20 @@ describe("push pipeline", () => {
     expect(byId["BSE:o1"]).toBe("press_release/order_win");
     expect(byId["BSE:t1"]).toBe("unclassified/compliance");
     expect(byId["BSE:u1"]).toBe("press_release/general");
+    expect(byId["BSE:r4"]).toBe("results/financial_results");
+    expect(byId["BSE:g1"]).toBe("M&A/acquisition");
   });
 
   it("groups a results day into one event", async () => {
     const { groupNew } = await import("@/lib/pipeline/events");
-    expect(await groupNew()).toBe(10);
+    expect(await groupNew()).toBe(12);
     const { db } = await import("@/lib/db");
     const ev = await db()`select * from events where event_key = 'LT:results:2026-09-30'`;
     expect(ev).toHaveLength(1);
-    expect(ev[0].filings).toBe(4); // outcome, newspaper ad, presentation, call notice
+    expect(ev[0].filings).toBe(5); // two outcomes, newspaper ad, presentation, call notice
     expect(ev[0].primary_id).toBe("BSE:r1");
     const n = await db()`select count(*)::int as n from events`;
-    expect(n[0].n).toBe(7);
+    expect(n[0].n).toBe(8);
   });
 
   it("extracts the results card, the person cards and one-liners", async () => {
@@ -115,6 +122,11 @@ describe("push pipeline", () => {
     expect((o.detail as { amount_cr: number }).amount_cr).toBe(2500);
     expect((o.reasons as string[]).some((x) => x.includes("% of revenue"))).toBe(true);
     expect(o.base_score).toBe(50);
+
+    // A ₹120 crore stake for a ₹5 lakh crore company is routine, and says why.
+    const [g] = await db()`select base_score, reasons from events where event_key = 'LT:BSE:g1'`;
+    expect(g.reasons).toContain("₹120 cr = <0.1% of mcap");
+    expect(g.base_score).toBe(35);
   });
 
   it("computes signals and links the move to the filing that explains it", async () => {

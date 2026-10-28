@@ -34,29 +34,85 @@ export function cleanTitle(subject: string, headline: string | null): string {
   return truncate(pick, 200);
 }
 
-export interface FilingIn { id: string; symbol: string; subject: string; headline: string | null; category: string; subtype: string | null; filed_at: Date; also: string[] }
+export interface FilingIn {
+  id: string; symbol: string; subject: string; headline: string | null; category: string; subtype: string | null; filed_at: Date; also: string[];
+  pdf_bytes?: number | null; by?: string | null;
+}
 export interface EventOut {
   event_key: string; symbol: string; category: string; subtype: string | null; title: string; primary_id: string;
   first: Date; last: Date; filings: number; status: string;
 }
 export interface Assignment { id: string; event_key: string; is_primary: boolean }
 
-/** Pure grouping: which event each filing belongs to. `existing` holds results events already stored. */
+// Boilerplate that says nothing about the action ("Disclosure under Regulation 30
+// of the SEBI (LODR) Regulations, 2015"): two such filings are not the same action.
+const BOILERPLATE = [
+  /\b(of )?(the )?securities and exchange board of india\b/g,
+  /\blisting obligations? and disclosure requirements?\b/g,
+  /\bregulations? (s )?\d+( \d+| [a-z]\b)*( (and|read with) \d+( \d+| [a-z]\b)*)*/g,
+  /\b(sebi|lodr|regulations|2015)\b/g,
+  /\b(announcement|disclosure|intimation|submission|update)s?\b/g,
+  /\b(under|pursuant to|in terms of|read with|as per|as attached|please find enclosed|herewith|enclosed|the company|other applicable|of|the|and|with)\b/g,
+];
+
+/** A key that is equal for repeat filings of one action (same headline under several exchange subcategories). */
+export function actionKey(subject: string, headline: string | null): string | null {
+  const raw = (headline && headline.length > 15 ? headline : subject).toLowerCase().replace(/[^a-z0-9&%.]+/g, " ").trim();
+  let core = raw;
+  for (const re of BOILERPLATE) core = core.replace(re, " ");
+  core = core.replace(/\s+/g, " ").trim();
+  if (core.length < 30) return null;
+  // The first content words, so "Order of the Hon'ble" and "Order of Hon'ble" or a cut-off headline still match.
+  return raw.split(" ").filter((w) => w.length > 1 && !STOP.has(w)).slice(0, 14).join(" ");
+}
+
+const STOP = new Set(["of", "the", "and", "in", "to", "for", "a", "an", "on", "by", "with", "at", "is", "mr", "ms", "mrs", "dr", "hon", "ble"]);
+
+const MERGE_WINDOW_MS = 48 * 3600 * 1000;
+const DIVIDEND_WINDOW_MS = 72 * 3600 * 1000;
+
+export interface ExistingEvent {
+  event_key: string; symbol: string; first_filed_at: Date;
+  category?: string; subtype?: string | null; subject?: string | null; headline?: string | null;
+}
+
+/** Pure grouping: which event each filing belongs to. `existing` holds recent stored events of the same companies. */
 export function groupFilings(
   filings: FilingIn[],
-  existing: { event_key: string; symbol: string; first_filed_at: Date }[],
+  existing: ExistingEvent[],
 ): { events: Map<string, EventOut>; assignments: Assignment[] } {
   const events = new Map<string, EventOut>();
   const assignments: Assignment[] = [];
   const resultsBySymbol = new Map<string, { key: string; at: number }[]>();
+  // Pools of earlier events a new filing may repeat: same headline, or a dividend's record date.
+  const pools = new Map<string, { key: string; at: number }[]>();
+  const addTo = (map: Map<string, { key: string; at: number }[]>, k: string, v: { key: string; at: number }) => {
+    const list = map.get(k) ?? [];
+    list.push(v);
+    map.set(k, list);
+  };
+  const poolKeys = (symbol: string, category: string, subject: string, headline: string | null) => {
+    const keys: string[] = [];
+    const ak = actionKey(subject, headline);
+    if (ak) keys.push(`a:${symbol}:${category}:${ak}`);
+    if (category === "dividend") keys.push(`d:${symbol}`);
+    return keys;
+  };
   for (const e of existing) {
-    const list = resultsBySymbol.get(e.symbol) ?? [];
-    list.push({ key: e.event_key, at: new Date(e.first_filed_at).getTime() });
-    resultsBySymbol.set(e.symbol, list);
+    const at = new Date(e.first_filed_at).getTime();
+    if (!e.category || (e.category === "results" && e.subtype === "financial_results")) {
+      addTo(resultsBySymbol, e.symbol, { key: e.event_key, at });
+    } else {
+      for (const k of poolKeys(e.symbol, e.category, e.subject ?? "", e.headline ?? null)) addTo(pools, k, { key: e.event_key, at });
+    }
   }
   const existingKeys = new Set(existing.map((e) => e.event_key));
+  // Results first, and among them the filing that carries the statement (named as results, biggest PDF) leads.
+  const isResults = (x: FilingIn) => x.category === "results" && x.subtype === "financial_results";
+  const byContext = (x: FilingIn) => (x.by ?? "").includes("+results_day");
   const ordered = [...filings].sort((a, b) =>
-    Number(b.subtype === "financial_results" && b.category === "results") - Number(a.subtype === "financial_results" && a.category === "results")
+    Number(isResults(b)) - Number(isResults(a))
+    || (isResults(a) && isResults(b) ? Number(byContext(a)) - Number(byContext(b)) || (b.pdf_bytes ?? 0) - (a.pdf_bytes ?? 0) : 0)
     || a.filed_at.getTime() - b.filed_at.getTime());
 
   const touch = (key: string, f: FilingIn, init: () => Omit<EventOut, "first" | "last" | "filings">) => {
@@ -103,12 +159,28 @@ export function groupFilings(
         touch(joined, f, () => ({ event_key: joined!, symbol: f.symbol, category: "results", subtype: "financial_results", title: "", primary_id: "", status: "pending" }));
         assignments.push({ id: f.id, event_key: joined, is_primary: false });
       } else {
-        const key = `${f.symbol}:${f.id}`;
-        touch(key, f, () => ({
-          event_key: key, symbol: f.symbol, category: f.category, subtype: f.subtype, title, primary_id: f.id,
-          status: extractorFor(f.category, f.subtype, f.subject) ? "pending" : "skipped",
-        }));
-        assignments.push({ id: f.id, event_key: key, is_primary: true });
+        // The same action filed again (under another subcategory, or a dividend's record date) joins the first filing.
+        const t = f.filed_at.getTime();
+        const keys = poolKeys(f.symbol, f.category, f.subject, f.headline);
+        let repeat: string | null = null;
+        for (const k of keys) {
+          const win = k.startsWith("d:") ? DIVIDEND_WINDOW_MS : MERGE_WINDOW_MS;
+          const near = (pools.get(k) ?? []).filter((r) => Math.abs(r.at - t) < win)
+            .sort((a, b) => Math.abs(a.at - t) - Math.abs(b.at - t));
+          if (near.length) { repeat = near[0].key; break; }
+        }
+        if (repeat) {
+          touch(repeat, f, () => ({ event_key: repeat!, symbol: f.symbol, category: f.category, subtype: f.subtype, title: "", primary_id: "", status: "pending" }));
+          assignments.push({ id: f.id, event_key: repeat, is_primary: false });
+        } else {
+          const key = `${f.symbol}:${f.id}`;
+          touch(key, f, () => ({
+            event_key: key, symbol: f.symbol, category: f.category, subtype: f.subtype, title, primary_id: f.id,
+            status: extractorFor(f.category, f.subtype, f.subject) ? "pending" : "skipped",
+          }));
+          assignments.push({ id: f.id, event_key: key, is_primary: true });
+          for (const k of keys) addTo(pools, k, { key, at: t });
+        }
       }
     }
     // Extra categories found inside a results outcome get events of their own.
@@ -126,22 +198,26 @@ export function groupFilings(
 
 export async function groupNew(limit = 2000): Promise<number> {
   const sql = db();
-  const rows = await sql`select id, symbol, subject, headline, category, subtype, filed_at, also from announcements
+  const rows = await sql`select id, symbol, subject, headline, category, subtype, filed_at, also, pdf_bytes, classified_by from announcements
     where status = 'classified' order by filed_at limit ${limit}`;
   if (!rows.length) return 0;
   const filings: FilingIn[] = rows.map((r) => ({
     id: String(r.id), symbol: String(r.symbol), subject: String(r.subject), headline: (r.headline as string | null) ?? null,
     category: String(r.category), subtype: (r.subtype as string | null) ?? null, filed_at: new Date(r.filed_at as string),
     also: (r.also as string[]) ?? [],
+    pdf_bytes: r.pdf_bytes === null ? null : Number(r.pdf_bytes), by: (r.classified_by as string | null) ?? null,
   }));
   const symbols = [...new Set(filings.map((f) => f.symbol))];
   const minT = new Date(Math.min(...filings.map((f) => f.filed_at.getTime())) - JOIN_WINDOW_MS);
   const maxT = new Date(Math.max(...filings.map((f) => f.filed_at.getTime())) + JOIN_WINDOW_MS);
-  const existing = await sql`select event_key, symbol, first_filed_at from events
-    where category = 'results' and subtype = 'financial_results' and symbol in ${sql(symbols)}
-      and first_filed_at between ${minT} and ${maxT}`;
+  const minE = new Date(minT.getTime() - DIVIDEND_WINDOW_MS);
+  const existing = await sql`select e.event_key, e.symbol, e.first_filed_at, e.category, e.subtype, a.subject, a.headline
+    from events e left join announcements a on a.id = e.primary_id
+    where e.symbol in ${sql(symbols)} and e.first_filed_at between ${minE} and ${maxT}`;
   const { events, assignments } = groupFilings(filings, existing.map((e) => ({
     event_key: String(e.event_key), symbol: String(e.symbol), first_filed_at: new Date(e.first_filed_at as string),
+    category: String(e.category), subtype: (e.subtype as string | null) ?? null,
+    subject: (e.subject as string | null) ?? null, headline: (e.headline as string | null) ?? null,
   })));
 
   const mcaps = new Map<string, number | null>();
@@ -201,6 +277,7 @@ export async function rescoreEvent(eventKey: string): Promise<void> {
     revenueCr: e.revenue_cr ? Number(e.revenue_cr) : null,
     redFlags: (e.red_flags as string[]) ?? [],
     roleLabel,
+    amountChecked: Boolean(detail.one_liner) && detail.amount_cr == null && Boolean(detail.pdf_url),
   });
   let base = s.base;
   const reasons = [...s.reasons];

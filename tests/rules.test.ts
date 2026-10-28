@@ -33,11 +33,43 @@ const CASES: [string, string | null, string][] = [
   ["unclassified", "compliance", "Compliances-Reg. 39 (3) - Details of Loss of Certificate / Duplicate Certificate"],
 ];
 
+// Real BSE subcategory | subject | headline triples from October 2026 that the
+// first rule set got wrong (captured by the fixtures workflow).
+const REAL: [string, string | null, string][] = [
+  ["unclassified", "compliance", "Closure of Trading Window | Closure of Trading Window | Closure of Trading Window with effect from 1st October, 2026 until 48 hours after the declaration of financial results"],
+  ["results", "results_notice", "Analyst / Investor Meet | Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation | The meeting of the Board of Directors of the Company is scheduled on October 30, 2026, inter alia, to consider the financial results"],
+  ["results", "results_notice", "Board Meeting | Board Meeting Intimation for Considering The Unaudited Financial Results For The Quarter And Half Year Ended 3 | Larsen & Toubro Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 27/10/2026"],
+  ["unclassified", "board_notice", "Board Meeting Rescheduled | Update on board meeting | The Board Meeting to be held on 27/10/2026 has been revised to 07/11/2026"],
+  ["M&A", "listing", "General | Initial Public Offer Of Jio Platforms Limited - Update | Initial Public Offer of Jio Platforms Limited - Update"],
+  ["unclassified", "compliance", "General | Announcement Under Regulation 30 Of SEBI LODR- ESG Rating By Crisil ESG Ratings & Analytics Ltd | ESG Rating by Crisil ESG Ratings & Analytics Ltd."],
+  ["M&A", "restructuring_update", "General | Receipt Of Certified True Copy Of The Order Of The Hon'Ble National Company Law Tribunal, Mumbai Bench | Receipt of certified true copy of the Order of Hon'ble National Company Law Tribunal in the matter of the Scheme of Amalgamation"],
+  ["M&A", "restructuring_update", "Scheme of Arrangement | Announcement under Regulation 30 (LODR)-Scheme of Arrangement | Pronouncement of Order by the Hon'ble NCLT approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and its subsidiaries"],
+  ["press_release", "business_update", "Press Release / Media Release | Announcement under Regulation 30 (LODR)-Press Release / Media Release | Press Release titled 'Tata Steel: 2QFY2027 Production and Delivery Volumes (Provisional)'"],
+  ["management_change", "pending_people", "Press Release / Media Release | Announcement under Regulation 30 (LODR)-Press Release / Media Release | Intimation for transition of Mr. Hitesh Oberoi from MD & CEO (KMP) to Additional Director"],
+  ["unclassified", "esop", "General | Grant Of Restricted Stock Units | Grant of RSUs to eligible employees under the Employee Stock Option Plan"],
+  ["unclassified", "compliance", "General | Reminder Letter For Transfer Of Equity Shares To The Investor Education And Protection Fund ('IEPF') | Reminder letter for transfer of equity shares to IEPF"],
+  ["unclassified", "compliance", "Half Yearly Report (SEBI Circular No. CIR/IMD/DF-1/67/2017) | Compliances-Half Yearly Report | Disclosure pursuant to Paragraph 9.1(a) of the Chapter VIII of SEBI Master Circular"],
+  ["dividend", "dividend", "Record Date | Corporate Action - Record Date | Record Date for Interim Dividend for FY 2026-27 is 12th November, 2026"],
+  ["earnings_call", "recording", "Analyst / Investor Meet | Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome | Audio Video recording of the Earnings Conference Call held on 28th October, 2026"],
+  ["results", "financial_results", "Financial Results | Results- Quarterly- September 30, 2026 | The Board of Directors of the Company at their meeting held today have approved the unaudited results"],
+  ["insider_trading", "pit_violation", "General | Disclosure Of Violation Under SEBI (PIT) Regulations, 2015 | Disclosure of violation under SEBI (PIT) Regulations"],
+  ["needs_llm", null, "General | Disclosure Under Regulation 30 Of SEBI (Listing Obligations And Disclosure Requirements), Regulations, 2015 | Disclosure under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements), Regulations, 2015"],
+];
+
 describe("classification rules", () => {
   for (const [cat, sub, text] of CASES) {
     it(`${cat}/${sub ?? "*"} <- ${text.slice(0, 60)}`, () => {
       const [subcat, ...rest] = text.split(" | ");
       const r = classifyText(subcat, rest.join(" | "), null);
+      expect(r.category).toBe(cat);
+      if (sub) expect(r.subtype).toBe(sub);
+    });
+  }
+
+  for (const [cat, sub, text] of REAL) {
+    it(`real filing: ${cat}/${sub ?? "*"} <- ${text.split(" | ")[2]?.slice(0, 50)}`, () => {
+      const [subcat, subject, headline] = text.split(" | ");
+      const r = classifyText(subcat, subject, headline ?? null);
       expect(r.category).toBe(cat);
       if (sub) expect(r.subtype).toBe(sub);
     });

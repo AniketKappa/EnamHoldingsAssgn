@@ -78,7 +78,9 @@ async function fixtures(dir: string) {
   const { getText } = await import("../src/lib/sources/http");
   const { cleanSubject } = await import("../src/lib/sources/bse");
   const p = JSON.parse(readFileSync(join(process.cwd(), "data", "portfolio.json"), "utf8")) as { holdings: { symbol: string; bse_code: string }[]; research_picks: { symbol: string; bse_code: string }[] };
-  mkdirSync(`${dir}/bse`, { recursive: true }); mkdirSync(`${dir}/screener`, { recursive: true }); mkdirSync(`${dir}/pdf`, { recursive: true });
+  mkdirSync(`${dir}/bse`, { recursive: true }); mkdirSync(`${dir}/screener`, { recursive: true }); mkdirSync(`${dir}/pdf/other`, { recursive: true });
+  const index: Record<string, unknown>[] = [];
+  let otherPdfs = 0;
   const to = new Date(), from = new Date(Date.now() - 30 * 86_400_000);
   const lines: string[] = [];
   let pdfs = 0;
@@ -94,8 +96,24 @@ async function fixtures(dir: string) {
         writeFileSync(`${dir}/pdf/${h.symbol}_results.pdf`, buf);
         pdfs++;
       }
+      // Disclosure PDFs the rules cannot place, and the kinds the extractors read, for offline tests.
+      const want: Record<string, number> = { needs_llm: 3, management_change: 2, "M&A": 2, press_release: 1, credit_rating: 1, fund_raise: 1 };
+      for (const r of rows) {
+        if (otherPdfs >= 45 || !r.ATTACHMENTNAME || Number(r.Fld_Attachsize ?? 0) > 5_000_000) continue;
+        const c = classifyText(r.SUBCATNAME ?? null, cleanSubject(r.NEWSSUB ?? ""), r.HEADLINE ?? null);
+        if (!want[c.category]) continue;
+        want[c.category]--;
+        try {
+          const buf = await downloadPdf(`https://www.bseindia.com/xml-data/corpfiling/AttachLive/${r.ATTACHMENTNAME}`);
+          const name = `${h.symbol}_${String(r.NEWSID).slice(0, 8)}.pdf`;
+          writeFileSync(`${dir}/pdf/other/${name}`, buf);
+          index.push({ file: name, symbol: h.symbol, category: c.category, subtype: c.subtype, subcategory: r.SUBCATNAME, subject: cleanSubject(r.NEWSSUB ?? ""), headline: r.HEADLINE });
+          otherPdfs++;
+        } catch (e) { lines.push(`${h.symbol} pdf ${r.ATTACHMENTNAME}: FAIL ${(e as Error).message.slice(0, 80)}`); }
+      }
     } catch (e) { lines.push(`${h.symbol}: FAIL ${(e as Error).message.slice(0, 100)}`); }
   }
+  writeFileSync(`${dir}/pdf/other/index.json`, JSON.stringify(index, null, 1));
   for (const s of [...new Set([...p.holdings, ...p.research_picks].map((x) => x.symbol))]) {
     for (const basis of ["consolidated", "standalone"]) {
       try {
@@ -104,7 +122,7 @@ async function fixtures(dir: string) {
       } catch (e) { lines.push(`screener ${s} ${basis}: FAIL ${(e as Error).message.slice(0, 80)}`); }
     }
   }
-  summary(`Fixtures: ${pdfs} results PDFs\n${lines.join("\n")}`);
+  summary(`Fixtures: ${pdfs} results PDFs, ${otherPdfs} other filing PDFs\n${lines.join("\n")}`);
 }
 
 async function main() {
