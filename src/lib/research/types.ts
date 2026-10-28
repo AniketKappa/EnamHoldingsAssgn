@@ -59,6 +59,8 @@ export interface DossierV1 {
     cagr: { key: string; label: string; y3: number | null; y5: number | null }[];
   };
   cash: { cfo_pat_5y: number | null; cfo_ebitda: number | null; fcf: number | null; flag: string | null };
+  /** Lenders only: shown in place of cash quality. */
+  asset_quality?: { gnpa: number | null; nnpa: number | null; gnpa_yoy_bps: number | null };
   balance_sheet: {
     borrowings: number | null; de_ratio: number | null; interest_cover: number | null; net_worth: number | null;
     wc_days: { debtor: number | null; inventory: number | null; payable: number | null; ccc: number | null };

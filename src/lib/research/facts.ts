@@ -53,16 +53,19 @@ export function cagr(first: number | null, last: number | null, years: number): 
 export function computeFacts(sc: ScreenerCompany): FactsBundle {
   const facts: Record<string, Fact> = {};
   const basisName = sc.basis === "consolidated" ? "Screener consolidated" : "Screener standalone";
-  const add = (key: string, label: string, value: number | null | undefined, unit: Unit, period: string, statement: string, column: string) => {
+  const add = (key: string, label: string, value: number | null | undefined, unit: Unit, period: string, statement: string, column: string, basisLabel = basisName) => {
     if (value === null || value === undefined || !Number.isFinite(value)) return;
-    facts[key] = { key, label, value, unit, period, source: `${basisName} ${STATEMENT_NAME[statement] ?? statement}, ${column}` };
+    facts[key] = { key, label, value, unit, period, source: `${basisLabel} ${STATEMENT_NAME[statement] ?? statement}, ${column}` };
   };
   const q = sc.tables.quarters, pl = sc.tables.profit_loss, bs = sc.tables.balance_sheet, cf = sc.tables.cash_flow, ra = sc.tables.ratios;
   const lender = !!(q?.rows.some((r) => r.key === "financing_profit") || bs?.rows.some((r) => r.key === "deposits"));
+  // A bank's "financing profit" leaves out fee and treasury income (and, consolidated, insurance),
+  // so it is often negative and means little; banks are read on NII, profit and bad loans.
+  const bank = !!row(bs, "deposits")?.some((v) => v !== null && v > 0);
 
   // Quarterly series and the latest quarter.
   const qd = dated(q);
-  const qRev = row(q, "revenue"), qEb = row(q, lender ? "financing_profit" : "ebitda"), qPat = row(q, "pat"), qPbt = row(q, "pbt"), qInt = row(q, "interest");
+  const qRev = row(q, "revenue"), qEb = bank ? undefined : row(q, lender ? "financing_profit" : "ebitda"), qPat = row(q, "pat"), qPbt = row(q, "pbt"), qInt = row(q, "interest");
   const qLabels = qd.map((p) => fiscalQuarterLabel(p.date));
   const qOpm = qd.map((p) => (qRev?.[p.idx] && qEb?.[p.idx] !== null && qEb?.[p.idx] !== undefined ? round((qEb![p.idx]! / qRev![p.idx]!) * 100, 1) : null));
   const quarterly: Record<string, Series> = {
@@ -93,11 +96,25 @@ export function computeFacts(sc: ScreenerCompany): FactsBundle {
       const m0 = raw(last), m1 = raw(yoyCol);
       if (!lender && m0 !== null && m1 !== null) add("q_opm_yoy_bps", "EBITDA margin change YoY", Math.round((m0 - m1) * 100), "bps", latestQuarter, "quarters", `${last.label} vs ${yoyCol.label}`);
     }
+    // Lenders: asset quality instead of cash conversion.
+    if (lender) {
+      // Banks print NPA ratios at the bank level; the consolidated page may borrow them from standalone.
+      const own = row(q, "gross_npa_pct")?.[last.idx] != null;
+      const g = own ? row(q, "gross_npa_pct") : row(q, "gross_npa_pct_standalone");
+      const nn = own ? row(q, "net_npa_pct") : row(q, "net_npa_pct_standalone");
+      const npaBasis = own ? basisName : "Screener standalone";
+      add("q_gnpa", "Gross NPA", g?.[last.idx], "pct", latestQuarter, "quarters", col, npaBasis);
+      add("q_nnpa", "Net NPA", nn?.[last.idx], "pct", latestQuarter, "quarters", col, npaBasis);
+      const g0 = g?.[last.idx], g1 = yoyCol ? g?.[yoyCol.idx] : null;
+      if (yoyCol && g0 !== null && g0 !== undefined && g1 !== null && g1 !== undefined) {
+        add("q_gnpa_yoy_bps", "Gross NPA change YoY", Math.round((g0 - g1) * 100), "bps", latestQuarter, "quarters", `${last.label} vs ${yoyCol.label}`, npaBasis);
+      }
+    }
   }
 
   // Annual series (fiscal years), latest full year and growth rates.
   const yd = dated(pl);
-  const aRev = row(pl, "revenue"), aEb = row(pl, lender ? "financing_profit" : "ebitda"), aPat = row(pl, "pat"), aPbt = row(pl, "pbt"), aInt = row(pl, "interest");
+  const aRev = row(pl, "revenue"), aEb = bank ? undefined : row(pl, lender ? "financing_profit" : "ebitda"), aPat = row(pl, "pat"), aPbt = row(pl, "pbt"), aInt = row(pl, "interest");
   const yLabels = yd.map((p) => fiscalYearLabel(p.date));
   const aOpm = yd.map((p) => (aRev?.[p.idx] && aEb?.[p.idx] !== null && aEb?.[p.idx] !== undefined ? round((aEb![p.idx]! / aRev![p.idx]!) * 100, 1) : null));
   const rd = dated(ra);
@@ -166,15 +183,16 @@ export function computeFacts(sc: ScreenerCompany): FactsBundle {
     add("borrowings", "Borrowings", borrow, "cr", period, "balance_sheet", `${last.label} column`);
     if (eq !== null && res !== null) {
       add("net_worth", "Net worth", eq + res, "cr", period, "balance_sheet", `${last.label} column: equity + reserves`);
-      if (borrow !== null && eq + res > 0) add("de_ratio", "Debt to equity", round(borrow / (eq + res), 2), "x", period, "balance_sheet", `${last.label} column: borrowings / (equity + reserves)`);
+      // A bank's leverage is its deposits, so borrowings / equity says little there.
+      if (!bank && borrow !== null && eq + res > 0) add("de_ratio", "Debt to equity", round(borrow / (eq + res), 2), "x", period, "balance_sheet", `${last.label} column: borrowings / (equity + reserves)`);
     }
     if (lender) add("deposits", "Deposits", row(bs, "deposits")?.[last.idx], "cr", period, "balance_sheet", `${last.label} column`);
     annual.borrowings = { labels: bd.map((p) => p.label), values: bd.map((p) => row(bs, "borrowings")?.[p.idx] ?? null) };
   }
 
-  // Cash quality.
+  // Cash quality (not for lenders: lending growth is an operating cash outflow).
   const flags: string[] = [];
-  if (cd.length) {
+  if (cd.length && !lender) {
     const last = cd[cd.length - 1];
     const fy = fiscalYearLabel(last.date);
     add("cfo", "Cash from operations", cfo?.[last.idx], "cr", fy, "cash_flow", `${last.label} column`);

@@ -7,9 +7,11 @@ import { pct, bps } from "@/lib/format";
 export function cx(...a: Parameters<typeof clsx>) { return clsx(...a); }
 
 /** A signed change. Colour is never the only signal: the sign is always printed. */
-export function Delta({ value, kind = "pct", suffix, digits = 1, className }: { value: number | null | undefined; kind?: "pct" | "bps"; suffix?: string; digits?: number; className?: string }) {
+/** A signed change. `lowerIsBetter` (bad loans, debt) colours a fall as good. */
+export function Delta({ value, kind = "pct", suffix, digits = 1, className, lowerIsBetter = false }: { value: number | null | undefined; kind?: "pct" | "bps"; suffix?: string; digits?: number; className?: string; lowerIsBetter?: boolean }) {
   if (value === null || value === undefined || !Number.isFinite(value)) return <span className={cx("num text-ink-3", className)}>–{suffix ? ` ${suffix}` : ""}</span>;
-  const tone = value > 0 ? "text-up" : value < 0 ? "text-down" : "text-ink-2";
+  const good = lowerIsBetter ? value < 0 : value > 0;
+  const tone = value === 0 ? "text-ink-2" : good ? "text-up" : "text-down";
   return <span className={cx("num whitespace-nowrap", tone, className)}>{kind === "bps" ? bps(value) : pct(value, digits)}{suffix ? ` ${suffix}` : ""}</span>;
 }
 

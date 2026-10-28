@@ -358,7 +358,7 @@ async function assemble(state: JobState, jobId: string): Promise<{ dossier: Doss
     const ch = changeKey && facts[changeKey] ? { value: facts[changeKey].value, unit: facts[changeKey].unit, label: changeLabel ?? "YoY" } : undefined;
     tiles.push({ key, label: f.label, value: f.value, unit: f.unit, period: f.period, change: ch });
   };
-  if (fb.lender) { tile("q_nii"); tile("q_ebitda"); tile("q_pat", "q_pat_yoy"); tile("roe"); }
+  if (fb.lender) { tile("q_nii"); tile("q_pat", "q_pat_yoy"); tile("q_gnpa", "q_gnpa_yoy_bps"); tile("roe"); if (tiles.length < 4) tile("q_ebitda"); }
   else { tile("q_revenue", "q_revenue_yoy"); tile("q_opm", "q_opm_yoy_bps"); tile("q_pat", "q_pat_yoy"); tile("roce"); }
   const cagrs = (["revenue", "ebitda", "pat"] as const).map((k) => ({
     key: k, label: k === "revenue" ? "Revenue" : k === "ebitda" ? (fb.lender ? "Financing profit" : "EBITDA") : "Net profit",
@@ -382,6 +382,7 @@ async function assemble(state: JobState, jobId: string): Promise<{ dossier: Doss
     narrative_vs_numbers: state.judged ?? [],
     numbers: { tiles, annual: fb.annual, quarterly: fb.quarterly, cagr: cagrs },
     cash: { cfo_pat_5y: facts.cfo_pat_5y?.value ?? null, cfo_ebitda: facts.cfo_ebitda?.value ?? null, fcf: facts.fcf?.value ?? null, flag: fb.flags[0] ?? null },
+    asset_quality: fb.lender ? { gnpa: facts.q_gnpa?.value ?? null, nnpa: facts.q_nnpa?.value ?? null, gnpa_yoy_bps: facts.q_gnpa_yoy_bps?.value ?? null } : undefined,
     balance_sheet: {
       borrowings: facts.borrowings?.value ?? null, de_ratio: facts.de_ratio?.value ?? null, interest_cover: facts.interest_cover?.value ?? null, net_worth: netWorth,
       wc_days: { debtor: facts.debtor_days?.value ?? null, inventory: facts.inventory_days?.value ?? null, payable: facts.days_payable?.value ?? null, ccc: facts.ccc_days?.value ?? null },

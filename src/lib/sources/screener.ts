@@ -64,6 +64,8 @@ const LABEL_KEYS: Record<string, string> = {
   "working capital days": "wc_days",
   "roce %": "roce_pct",
   "roe %": "roe_pct",
+  "gross npa %": "gross_npa_pct",
+  "net npa %": "net_npa_pct",
 };
 
 const TOP_KEYS: Record<string, string> = {
@@ -192,6 +194,30 @@ export function screenerUrl(symbol: string, basis: Basis): string {
 }
 
 /** Fetch consolidated figures when they exist, else standalone. */
+export function isLender(sc: ScreenerCompany): boolean {
+  return !!(sc.tables.quarters?.rows.some((r) => r.key === "financing_profit") || sc.tables.balance_sheet?.rows.some((r) => r.key === "deposits"));
+}
+
+function hasValues(t: ScreenerTable | undefined, key: string): boolean {
+  return !!t?.rows.find((r) => r.key === key)?.values.some((v) => v !== null);
+}
+
+/** Copy the standalone NPA rows into the consolidated quarterly table, aligned by quarter. */
+export function addStandaloneNpa(cons: ScreenerCompany, stand: ScreenerCompany): void {
+  const q = cons.tables.quarters, sq = stand.tables.quarters;
+  if (!q || !sq) return;
+  for (const key of ["gross_npa_pct", "net_npa_pct"]) {
+    const src = sq.rows.find((r) => r.key === key);
+    if (!src) continue;
+    const values = q.periods.map((p) => {
+      const j = sq.periods.findIndex((x) => (x.date && x.date === p.date) || x.label === p.label);
+      return j >= 0 ? src.values[j] ?? null : null;
+    });
+    q.rows = q.rows.filter((r) => r.key !== `${key}_standalone`);
+    q.rows.push({ label: `${src.label} (standalone)`, key: `${key}_standalone`, values, unit: "pct" });
+  }
+}
+
 export async function fetchScreener(symbol: string, fetchHtml: (url: string) => Promise<string> = defaultFetch): Promise<ScreenerCompany> {
   const cUrl = screenerUrl(symbol, "consolidated");
   try {
@@ -199,7 +225,13 @@ export async function fetchScreener(symbol: string, fetchHtml: (url: string) => 
     const parsed = parseScreenerHtml(html, symbol, cUrl);
     const q = parsed.tables.quarters;
     const hasData = !!q && q.rows.some((r) => r.values.some((v) => v !== null));
-    if (parsed.basis === "consolidated" && hasData) return parsed;
+    if (parsed.basis === "consolidated" && hasData) {
+      if (isLender(parsed) && !hasValues(q, "gross_npa_pct")) {
+        // Banks report bad-loan ratios at the bank level only: borrow them from the standalone page.
+        try { addStandaloneNpa(parsed, parseScreenerHtml(await fetchHtml(screenerUrl(symbol, "standalone")), symbol, "")); } catch { /* without NPA */ }
+      }
+      return parsed;
+    }
   } catch (e) {
     if (!(e instanceof HttpError) || e.status !== 404) throw e;
   }

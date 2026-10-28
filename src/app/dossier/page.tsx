@@ -109,7 +109,7 @@ function Dossier() {
   const cred = d.say_vs_do.credibility;
   const met = cred.delivered + cred.near_miss;
   const t = (k: string) => d.facts[k];
-  const sections = [["numbers", "Numbers"], ["cash", "Cash"], ["balance", "Balance sheet"], ["business", "Business"], ["case", "Bull vs bear"]] as const;
+  const sections = [["numbers", "Numbers"], ["cash", d.lender ? "Asset quality" : "Cash"], ["balance", "Balance sheet"], ["business", "Business"], ["case", "Bull vs bear"]] as const;
   const seeds = d.seed_questions.length ? d.seed_questions : ["What did management guide for this year?", "What did analysts worry about on the last call?", "What are the main risks management names?"];
 
   return (
@@ -202,7 +202,7 @@ function Dossier() {
             <button key={tile.key} type="button" onClick={() => setOpened({ cite: `fact:${tile.key}` })} className="bg-surface px-3 py-3 text-left">
               <div className="text-xs text-ink-2">{tile.label}</div>
               <div className="num mt-0.5 text-lg font-semibold">{factValue({ ...tile, unit: tile.unit as never, source: "" })}</div>
-              {tile.change ? <div className="mt-0.5 text-xs"><Delta value={tile.change.value} kind={tile.change.unit === "bps" ? "bps" : "pct"} suffix={tile.change.label} /></div> : null}
+              {tile.change ? <div className="mt-0.5 text-xs"><Delta value={tile.change.value} kind={tile.change.unit === "bps" ? "bps" : "pct"} suffix={tile.change.label} lowerIsBetter={tile.key === "q_gnpa"} /></div> : null}
             </button>
           ))}
         </div>
@@ -235,6 +235,17 @@ function Dossier() {
         </table>
       </section>
 
+      {d.lender ? (
+      <section id="cash" className="scroll-mt-16">
+        <SectionTitle>Asset quality</SectionTitle>
+        <dl className="grid grid-cols-3 gap-3">
+          <Stat label={`Gross NPA, ${t("q_gnpa")?.period ?? "latest"}`} value={d.asset_quality?.gnpa == null ? "–" : `${d.asset_quality.gnpa}%`} onClick={() => t("q_gnpa") && setOpened({ cite: "fact:q_gnpa" })} />
+          <Stat label="Change in a year" value={d.asset_quality?.gnpa_yoy_bps == null ? "–" : `${d.asset_quality.gnpa_yoy_bps > 0 ? "+" : d.asset_quality.gnpa_yoy_bps < 0 ? "−" : ""}${Math.abs(d.asset_quality.gnpa_yoy_bps)} bps`} onClick={() => t("q_gnpa_yoy_bps") && setOpened({ cite: "fact:q_gnpa_yoy_bps" })} />
+          <Stat label={`Net NPA, ${t("q_nnpa")?.period ?? "latest"}`} value={d.asset_quality?.nnpa == null ? "–" : `${d.asset_quality.nnpa}%`} onClick={() => t("q_nnpa") && setOpened({ cite: "fact:q_nnpa" })} />
+        </dl>
+        <p className="mt-2 text-xs text-ink-3">For a lender, growing the loan book uses operating cash, so cash conversion is not shown. Bad loans are the test instead.</p>
+      </section>
+      ) : (
       <section id="cash" className="scroll-mt-16">
         <SectionTitle>Cash quality</SectionTitle>
         {d.cash.flag ? <div className="mb-3"><Chip tone="flag">{d.cash.flag}</Chip></div> : null}
@@ -251,12 +262,14 @@ function Dossier() {
         ) : null}
         <p className="mt-2 text-xs text-ink-3">Cash means cash from operations. Near or above 1× over five years, reported profits arrive as cash; below 0.7× is flagged.</p>
       </section>
+      )}
 
       <section id="balance" className="scroll-mt-16">
         <SectionTitle>Balance sheet</SectionTitle>
         <dl className="grid grid-cols-2 gap-3">
           <Stat label="Borrowings" value={d.balance_sheet.borrowings === null ? "–" : `₹${Math.round(d.balance_sheet.borrowings).toLocaleString("en-IN")} cr`} onClick={() => t("borrowings") && setOpened({ cite: "fact:borrowings" })} />
-          <Stat label="Debt to equity" value={d.balance_sheet.de_ratio === null ? "–" : `${d.balance_sheet.de_ratio}×`} onClick={() => t("de_ratio") && setOpened({ cite: "fact:de_ratio" })} />
+          {t("deposits") ? <Stat label="Deposits" value={`₹${Math.round(t("deposits")!.value).toLocaleString("en-IN")} cr`} onClick={() => setOpened({ cite: "fact:deposits" })} />
+            : <Stat label="Debt to equity" value={d.balance_sheet.de_ratio === null ? "–" : `${d.balance_sheet.de_ratio}×`} onClick={() => t("de_ratio") && setOpened({ cite: "fact:de_ratio" })} />}
           {!d.lender ? <Stat label="Interest cover" value={d.balance_sheet.interest_cover === null ? "–" : `${d.balance_sheet.interest_cover}×`} onClick={() => t("interest_cover") && setOpened({ cite: "fact:interest_cover" })} /> : null}
           <Stat label="Contingent liabilities" value={d.balance_sheet.contingent_cr === null ? "–" : `₹${Math.round(d.balance_sheet.contingent_cr).toLocaleString("en-IN")} cr${d.balance_sheet.contingent_pct_networth !== null ? `, ${d.balance_sheet.contingent_pct_networth}% of net worth` : ""}`}
             onClick={() => d.balance_sheet.cites.contingent && setOpened({ cite: d.balance_sheet.cites.contingent })} />
