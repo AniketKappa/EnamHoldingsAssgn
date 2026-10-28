@@ -78,3 +78,13 @@ describe("results maths", () => {
     expect(m.pat.yoy_pct).toBeNull();
   });
 });
+
+describe("losses", () => {
+  it("never prints a % change across a loss", async () => {
+    const { profitPhrase } = await import("@/lib/pipeline/results");
+    const fmt = { crore: (n: number | null) => `₹${Math.round(n ?? 0).toLocaleString("en-IN")} cr`, pct: (n: number | null) => (n === null ? "–" : `${n > 0 ? "+" : ""}${n}%`) };
+    expect(profitPhrase({ value: -238, yoy: 2190, yoy_pct: null }, fmt)).toBe("net loss ₹238 cr against a profit a year ago");
+    expect(profitPhrase({ value: 412, yoy: -150, yoy_pct: null }, fmt)).toBe("PAT ₹412 cr, from a loss a year ago");
+    expect(profitPhrase({ value: 5202, yoy: 3929, yoy_pct: 32.4 }, fmt)).toBe("PAT ₹5,202 cr (+32.4% YoY)");
+  });
+});

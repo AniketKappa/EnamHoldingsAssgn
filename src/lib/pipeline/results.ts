@@ -95,8 +95,20 @@ export interface ResultsMetrics {
 
 function growth(cur: number | null, base: number | null): number | null {
   if (cur === null || base === null || base === 0) return null;
-  if (base < 0 && cur >= 0) return null; // loss to profit: % change is meaningless
+  // Across a loss a % change is meaningless ("-110% YoY"); the card says "swung to a loss" instead.
+  if (base < 0 || cur < 0) return null;
   return round1(((cur - base) / Math.abs(base)) * 100);
+}
+
+/** "net loss ₹238 cr against a profit a year ago", "PAT ₹5,202 cr (+32% YoY)". */
+export function profitPhrase(m: { value: number | null; yoy: number | null; yoy_pct: number | null }, fmt: { crore: (n: number | null) => string; pct: (n: number | null) => string }, name = "PAT"): string {
+  if (m.value === null) return `${name} not stated`;
+  if (m.value < 0) {
+    const was = m.yoy === null ? "" : m.yoy > 0 ? " against a profit a year ago" : ` (loss ${fmt.crore(Math.abs(m.yoy))} a year ago)`;
+    return `net loss ${fmt.crore(Math.abs(m.value))}${was}`;
+  }
+  if (m.yoy !== null && m.yoy < 0) return `${name} ${fmt.crore(m.value)}, from a loss a year ago`;
+  return `${name} ${fmt.crore(m.value)} (${fmt.pct(m.yoy_pct)} YoY)`;
 }
 function round1(v: number) { return Math.round(v * 10) / 10; }
 
@@ -212,9 +224,9 @@ export function runChecks(
 /** Headline for the event row: numbers first, no adjectives. */
 export function resultsTitle(m: ResultsMetrics, fmt: { crore: (n: number | null) => string; pct: (n: number | null) => string }): string {
   if (m.template === "lender") {
-    return `${m.quarter}: NII ${fmt.crore(m.revenue.value)} (${fmt.pct(m.revenue.yoy_pct)} YoY), PAT ${fmt.crore(m.pat.value)} (${fmt.pct(m.pat.yoy_pct)} YoY)`;
+    return `${m.quarter}: NII ${fmt.crore(m.revenue.value)} (${fmt.pct(m.revenue.yoy_pct)} YoY), ${profitPhrase(m.pat, fmt)}`;
   }
-  return `${m.quarter}: revenue ${fmt.crore(m.revenue.value)} (${fmt.pct(m.revenue.yoy_pct)} YoY), PAT ${fmt.crore(m.pat.value)} (${fmt.pct(m.pat.yoy_pct)} YoY)`;
+  return `${m.quarter}: revenue ${fmt.crore(m.revenue.value)} (${fmt.pct(m.revenue.yoy_pct)} YoY), ${profitPhrase(m.pat, fmt)}`;
 }
 
 export const RESULTS_PROMPT = (company: string, periodEnd: string, prefer: string, lender: boolean, candidates = 0) => [

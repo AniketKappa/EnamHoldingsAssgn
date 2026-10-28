@@ -89,7 +89,8 @@ export function computeFacts(sc: ScreenerCompany): FactsBundle {
     add("q_pbt", "Profit before tax", qPbt?.[last.idx], "cr", latestQuarter, "quarters", col);
     add("q_pat", "Net profit, total", qPat?.[last.idx], "cr", latestQuarter, "quarters", col);
     if (yoyCol) {
-      const g = (a: number | null | undefined, b: number | null | undefined) => (a !== null && a !== undefined && b ? round(((a - b) / Math.abs(b)) * 100, 1) : null);
+      // No % change across a loss: "-110%" says less than the two numbers do.
+      const g = (a: number | null | undefined, b: number | null | undefined) => (a !== null && a !== undefined && a >= 0 && b && b > 0 ? round(((a - b) / b) * 100, 1) : null);
       add("q_revenue_yoy", "Revenue growth YoY", g(qRev?.[last.idx], qRev?.[yoyCol.idx]), "pct", latestQuarter, "quarters", `${last.label} vs ${yoyCol.label}`);
       add("q_pat_yoy", "Net profit growth YoY, total", g(qPat?.[last.idx], qPat?.[yoyCol.idx]), "pct", latestQuarter, "quarters", `${last.label} vs ${yoyCol.label}`);
       const raw = (col: { idx: number }) => (qRev?.[col.idx] && qEb?.[col.idx] !== null && qEb?.[col.idx] !== undefined ? (qEb![col.idx]! / qRev![col.idx]!) * 100 : null);
@@ -142,7 +143,7 @@ export function computeFacts(sc: ScreenerCompany): FactsBundle {
     add("fy_pat", "Net profit", aPat?.[last.idx], "cr", latestYear, "profit_loss", col);
     if (n >= 1) {
       const prev = yd[n - 1];
-      const g = (a?: number | null, b?: number | null) => (a !== null && a !== undefined && b ? round(((a - b) / Math.abs(b)) * 100, 1) : null);
+      const g = (a?: number | null, b?: number | null) => (a !== null && a !== undefined && a >= 0 && b && b > 0 ? round(((a - b) / b) * 100, 1) : null);
       add("fy_revenue_growth", "Revenue growth", g(aRev?.[last.idx], aRev?.[prev.idx]), "pct", latestYear, "profit_loss", `${last.label} vs ${prev.label}`);
       add("fy_pat_growth", "Net profit growth", g(aPat?.[last.idx], aPat?.[prev.idx]), "pct", latestYear, "profit_loss", `${last.label} vs ${prev.label}`);
     }

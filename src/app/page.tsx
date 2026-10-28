@@ -229,7 +229,8 @@ function ListenButton({ data }: { data: BriefT }) {
   const script = () => {
     const say = (s: string) => s.replace(/₹/g, "rupees ").replace(/ cr\b/g, " crore").replace(/YoY/g, "year on year").replace(/QoQ/g, "quarter on quarter").replace(/bps/g, "basis points").replace(/−/g, "minus ");
     const lines = [`${data.funnel.matter} ${data.funnel.matter === 1 ? "thing matters" : "things matter"} in your FINN Brief.`];
-    for (const t of data.top.filter((x) => !x.done).slice(0, 4)) lines.push(`${t.company}. ${t.results ? resultsSentence(t.results) : t.title}.`);
+    const end = (s: string) => (/[.!?]$/.test(s) ? s : `${s}.`);
+    for (const t of data.top.filter((x) => !x.done).slice(0, 4)) lines.push(`${t.company}. ${end(t.results ? resultsSentence(t.results) : t.title)}`);
     const w = data.worth.filter((x) => !x.done);
     if (w.length) lines.push(`Also worth a look: ${w.slice(0, 4).map((x) => `${x.company}, ${x.title}`).join(". ")}.`);
     if (data.routine.count) lines.push(`${data.routine.count} routine filings are collapsed.`);

@@ -130,6 +130,8 @@ export async function extractResultsEvent(eventKey: string): Promise<ResultsDeta
       const reasons: string[] = [];
       if (!unreliable) {
         if (metrics.pat.yoy_pct !== null) reasons.push(`PAT ${pct(metrics.pat.yoy_pct, 0)} YoY`);
+        else if (metrics.pat.value !== null && metrics.pat.value < 0) reasons.push(metrics.pat.yoy !== null && metrics.pat.yoy > 0 ? "Swung to a loss" : "Loss");
+        else if (metrics.pat.yoy !== null && metrics.pat.yoy < 0 && (metrics.pat.value ?? 0) > 0) reasons.push("Back to profit");
         if (template === "corporate" && metrics.ebitda_margin.yoy_bps !== null && Math.abs(metrics.ebitda_margin.yoy_bps) >= 50) {
           reasons.push(`Margin ${bps(metrics.ebitda_margin.yoy_bps)} YoY`);
         } else if (metrics.revenue.yoy_pct !== null) {

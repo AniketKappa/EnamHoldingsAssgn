@@ -18,15 +18,26 @@ export const categoryLabel = (c: string) => CAT_LABEL[c] ?? c;
 export function resultsSentence(r: ResultsCardT): string {
   if (r.unreliable) return "FINN couldn't verify this filing's numbers; the filing itself is one tap away.";
   const m = r.metrics;
-  const verb = (v: number | null) => (v === null ? "was flat" : v > 0 ? "rose" : v < 0 ? "fell" : "was flat");
-  const amt = (v: number | null) => (v === null ? "" : ` ${Math.abs(v).toFixed(1)}%`);
+  const moved = (v: number | null) => (v === null ? null : v > 0 ? `rose ${Math.abs(v).toFixed(1)}%` : v < 0 ? `fell ${Math.abs(v).toFixed(1)}%` : "was flat");
+  const line = (name: string, x: { value: number | null; yoy_pct: number | null }) => {
+    const mv = moved(x.yoy_pct);
+    return mv ? `${name} ${mv} YoY to ${crore(x.value)}` : `${name} was ${crore(x.value)}`;
+  };
+  const profit = () => {
+    const p = m.pat;
+    if (p.value !== null && p.value < 0) return `net loss of ${crore(Math.abs(p.value))}${p.yoy !== null && p.yoy > 0 ? " against a profit a year ago" : ""}`;
+    if (p.value !== null && p.yoy !== null && p.yoy < 0) return `net profit of ${crore(p.value)}, from a loss a year ago`;
+    return line("net profit", p);
+  };
   if (r.template === "lender") {
-    return `Net interest income ${verb(m.revenue.yoy_pct)}${amt(m.revenue.yoy_pct)} YoY; net profit ${verb(m.pat.yoy_pct)}${amt(m.pat.yoy_pct)} to ${crore(m.pat.value)}.`;
+    const s = `${line("Net interest income", m.revenue)}; ${profit()}.`;
+    return s.charAt(0).toUpperCase() + s.slice(1);
   }
-  const parts = [`Revenue ${verb(m.revenue.yoy_pct)}${amt(m.revenue.yoy_pct)} YoY to ${crore(m.revenue.value)}`];
+  const parts = [line("Revenue", m.revenue)];
   const yb = m.ebitda_margin.yoy_bps;
-  if (yb !== null && Math.abs(yb) >= 30) parts.push(`EBITDA margin ${yb > 0 ? "rose" : "fell"} ${Math.abs(yb)} bps to ${m.ebitda_margin.value?.toFixed(1)}%`);
-  else parts.push(`net profit ${verb(m.pat.yoy_pct)}${amt(m.pat.yoy_pct)} to ${crore(m.pat.value)}`);
+  const lossOrSwing = m.pat.value !== null && (m.pat.value < 0 || (m.pat.yoy !== null && m.pat.yoy < 0));
+  if (!lossOrSwing && yb !== null && Math.abs(yb) >= 30) parts.push(`EBITDA margin ${yb > 0 ? "rose" : "fell"} ${Math.abs(yb)} bps to ${m.ebitda_margin.value?.toFixed(1)}%`);
+  else parts.push(profit());
   let s = `${parts.join("; ")}.`;
   if (m.exceptional && Math.abs(m.exceptional) >= 1) s += ` Includes a ${crore(m.exceptional)} exceptional item.`;
   return s.charAt(0).toUpperCase() + s.slice(1);
