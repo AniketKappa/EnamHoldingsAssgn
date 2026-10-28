@@ -34,6 +34,7 @@ const SUBTYPE_LABEL: Record<string, string> = {
   restructuring: "Merger or demerger", divestment: "Stake sale", jv: "Joint venture", special_dividend: "Special dividend",
   guidance_change: "Guidance change", auditor_exit: "Auditor exit", commissioning: "Commissioning", listing: "Listing",
   restructuring_update: "Scheme update", business_update: "Business update", pit_violation: "Insider-rule breach",
+  group_restructuring: "Group restructuring", subsidiary: "Subsidiary", correction: "Correction",
 };
 
 function fmtCr(n: number) { return `₹${Math.round(n).toLocaleString("en-IN")} cr`; }

@@ -54,6 +54,18 @@ describe("grouping repeat filings of one action", () => {
     expect([...events.values()][0].filings).toBe(2);
   });
 
+  it("threads two weeks of updates on one IPO into one item (Reliance and Jio Platforms, Oct 2026)", () => {
+    const ipo = (id: string, filed: string, headline: string) => f({ id, symbol: "RELIANCE", filed, headline, category: "M&A", subtype: "listing" });
+    const { events } = groupFilings([
+      ipo("j1", "2026-10-14T18:35:09", "Proposed Initial Public Offer of Jio Platforms Limited - filing of the Red Herring Prospectus"),
+      ipo("j2", "2026-10-14T20:12:37", "Proposed Initial Public Offer of Jio Platforms Limited"),
+      ipo("j3", "2026-10-24T21:47:58", "JPL has today finalised the Issue Price at Rs. 1,119 per Equity Share"),
+      ipo("j4", "2026-10-27T22:11:23", "Trading in equity shares of Jio Platforms Limited (JPL) will commence from October 28, 2026."),
+    ], []);
+    expect(events.size).toBe(1);
+    expect([...events.values()][0].filings).toBe(4);
+  });
+
   it("matches headlines that differ by a word or a cut-off", () => {
     expect(actionKey("x", "Receipt of certified true copy of the Order of Hon'ble National Company Law Tribunal, Mumbai Bench in the matter of the Scheme of Amalgamation of Rujuvalika In"))
       .toBe(actionKey("y", "Receipt of certified true copy of the Order of the Hon'ble National Company Law Tribunal, Mumbai Bench in the matter of the Scheme of Amalgamation of Rujuvalik"));

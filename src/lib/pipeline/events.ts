@@ -70,6 +70,9 @@ const STOP = new Set(["of", "the", "and", "in", "to", "for", "a", "an", "on", "b
 
 const MERGE_WINDOW_MS = 48 * 3600 * 1000;
 const DIVIDEND_WINDOW_MS = 72 * 3600 * 1000;
+// Updates on one running story (an IPO, a scheme going through the tribunal) form one thread.
+const THREAD_WINDOW_MS = 14 * 86_400_000;
+const THREADS = new Set(["M&A:listing", "M&A:restructuring_update"]);
 
 export interface ExistingEvent {
   event_key: string; symbol: string; first_filed_at: Date;
@@ -91,11 +94,12 @@ export function groupFilings(
     list.push(v);
     map.set(k, list);
   };
-  const poolKeys = (symbol: string, category: string, subject: string, headline: string | null) => {
+  const poolKeys = (symbol: string, category: string, subject: string, headline: string | null, subtype: string | null = null) => {
     const keys: string[] = [];
     const ak = actionKey(subject, headline);
     if (ak) keys.push(`a:${symbol}:${category}:${ak}`);
     if (category === "dividend") keys.push(`d:${symbol}`);
+    if (subtype && THREADS.has(`${category}:${subtype}`)) keys.push(`t:${symbol}:${category}:${subtype}`);
     return keys;
   };
   for (const e of existing) {
@@ -103,7 +107,7 @@ export function groupFilings(
     if (!e.category || (e.category === "results" && e.subtype === "financial_results")) {
       addTo(resultsBySymbol, e.symbol, { key: e.event_key, at });
     } else {
-      for (const k of poolKeys(e.symbol, e.category, e.subject ?? "", e.headline ?? null)) addTo(pools, k, { key: e.event_key, at });
+      for (const k of poolKeys(e.symbol, e.category, e.subject ?? "", e.headline ?? null, e.subtype ?? null)) addTo(pools, k, { key: e.event_key, at });
     }
   }
   const existingKeys = new Set(existing.map((e) => e.event_key));
@@ -161,10 +165,10 @@ export function groupFilings(
       } else {
         // The same action filed again (under another subcategory, or a dividend's record date) joins the first filing.
         const t = f.filed_at.getTime();
-        const keys = poolKeys(f.symbol, f.category, f.subject, f.headline);
+        const keys = poolKeys(f.symbol, f.category, f.subject, f.headline, f.subtype);
         let repeat: string | null = null;
         for (const k of keys) {
-          const win = k.startsWith("d:") ? DIVIDEND_WINDOW_MS : MERGE_WINDOW_MS;
+          const win = k.startsWith("d:") ? DIVIDEND_WINDOW_MS : k.startsWith("t:") ? THREAD_WINDOW_MS : MERGE_WINDOW_MS;
           const near = (pools.get(k) ?? []).filter((r) => Math.abs(r.at - t) < win)
             .sort((a, b) => Math.abs(a.at - t) - Math.abs(b.at - t));
           if (near.length) { repeat = near[0].key; break; }
@@ -210,7 +214,7 @@ export async function groupNew(limit = 2000): Promise<number> {
   const symbols = [...new Set(filings.map((f) => f.symbol))];
   const minT = new Date(Math.min(...filings.map((f) => f.filed_at.getTime())) - JOIN_WINDOW_MS);
   const maxT = new Date(Math.max(...filings.map((f) => f.filed_at.getTime())) + JOIN_WINDOW_MS);
-  const minE = new Date(minT.getTime() - DIVIDEND_WINDOW_MS);
+  const minE = new Date(minT.getTime() - THREAD_WINDOW_MS);
   const existing = await sql`select e.event_key, e.symbol, e.first_filed_at, e.category, e.subtype, a.subject, a.headline
     from events e left join announcements a on a.id = e.primary_id
     where e.symbol in ${sql(symbols)} and e.first_filed_at between ${minE} and ${maxT}`;

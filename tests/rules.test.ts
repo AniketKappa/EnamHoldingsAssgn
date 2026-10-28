@@ -54,6 +54,12 @@ const REAL: [string, string | null, string][] = [
   ["results", "financial_results", "Financial Results | Results- Quarterly- September 30, 2026 | The Board of Directors of the Company at their meeting held today have approved the unaudited results"],
   ["insider_trading", "pit_violation", "General | Disclosure Of Violation Under SEBI (PIT) Regulations, 2015 | Disclosure of violation under SEBI (PIT) Regulations"],
   ["needs_llm", null, "General | Disclosure Under Regulation 30 Of SEBI (Listing Obligations And Disclosure Requirements), Regulations, 2015 | Disclosure under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements), Regulations, 2015"],
+  ["M&A", "subsidiary", "Acquisition | Announcement under Regulation 30 (LODR)-Acquisition | KPIT Technologies Limited has informed the Exchange that the Board of Directors of the Company approved the proposal to incorporate a wholly owned subsidiary in Vietnam ."],
+  ["M&A", "subsidiary", "Scheme of Arrangement | Announcement under Regulation 30 (LODR)-Scheme of Arrangement | KPIT Technologies Limited has informed the Exchange that the Board of Directors of the Company approved the Strike-off of Somit Solutions Limited, wholly owned step-down subsidiary of the Company."],
+  ["M&A", "group_restructuring", "Scheme of Arrangement | Announcement under Regulation 30 (LODR)-Scheme of Arrangement | Board approves scheme of amalgamation of its wholly owned subsidiary with the Company"],
+  ["M&A", "restructuring", "Scheme of Arrangement | Announcement under Regulation 30 (LODR)-Scheme of Arrangement | Board approves the composite scheme of arrangement for demerger of the consumer business"],
+  ["unclassified", "board_notice", "Record Date | Record Date For Payment Of Interim Dividend, If Any | This is to inform you that the meeting of Board of Directors of the Company will be held on Thursday, 29th October 2026, inter alia, to consider declaration of interim dividend, if any"],
+  ["unclassified", "correction", "General | Corrigendum to the outcome of board meeting | Corrigendum to the outcome of board meeting dated October 7, 2026"],
 ];
 
 describe("classification rules", () => {
