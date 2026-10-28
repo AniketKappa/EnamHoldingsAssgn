@@ -51,7 +51,11 @@ Top ≥ 70 · Worth a look 40–69 · Routine 15–39 (collapsed) · Hidden < 15
 | Order win | 50 | One line sized against annual revenue |
 | Analyst meets, trading windows, certificates | 5–15 | Counted, not shown |
 
-About 90% of filings are classified by 41 ordered rules with no model call.
+On 224 real filings from October 2026, ordered rules place 90% with no model call. The
+generic "Disclosure under Regulation 30" ones are then read from the letter itself (its
+"Sub:" line and first sentences), which placed all 15 in that sample; only what is left
+goes to the cheapest model. Deals are sized against market value and orders against
+revenue, so a ₹50 crore startup stake at a ₹1 lakh crore company stays routine.
 
 ## Architecture
 
@@ -114,9 +118,13 @@ and cached by content hash; the in-app **Cost** page shows calls, cache hits and
 
 ## Quality
 
-- 51 automated tests: every classification rule, results maths and all six checks (on L&T's
-  real Q2 FY27 numbers), the ledger statuses, number grounding, the screener parser on a real
-  page, and two end-to-end runs on a real Postgres (PGlite) with real PDFs and model stand-ins.
+- 112 automated tests: classification on real BSE filing subjects and real disclosure
+  letters, results-page finding on real scanned text layers, results maths and all six
+  checks (on L&T's real Q2 FY27 numbers), grouping of repeat filings, deal sizing, the
+  ledger statuses, number grounding, the screener parser on a real page, lender facts, and
+  two end-to-end runs on a real Postgres (PGlite) with real PDFs and model stand-ins.
+- `scripts/dev/replay.ts` replays captured real filings through the pipeline offline and
+  prints what the Brief would rank.
 - Runtime guards: arithmetic checks with one corrective retry on every results card; quote-on-page
   checks on every extracted fact; cross-check against screener's quarterly row a few hours later.
 

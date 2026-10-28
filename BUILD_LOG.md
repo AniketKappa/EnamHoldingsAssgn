@@ -29,3 +29,29 @@ One entry per working session: what changed, how it was tested, which fallbacks 
   process) with real PDFs served from localhost and deterministic model stand-ins.
 - UI: reviewed at 390x844 in light and dark from a synthetic preview database
   (`scripts/dev/preview-db.ts`, never deployed).
+
+## 2026-10-29, tuning on real filings (offline)
+- A `fixtures` workflow captured 30 days of real BSE filings for the 18 holdings, the
+  screener pages, eight results PDFs and 45 disclosure PDFs onto a `fixtures` branch.
+  The sandbox cannot reach BSE; GitHub Actions can, so this is how real data got here.
+- `scripts/dev/replay.ts` replays those filings through classification and grouping on
+  an in-memory Postgres with no network and no model, and prints the ranked list.
+- Classification: rules place 201 of 224 real filings (89.7%). A bare board outcome on a
+  results day joins the results (3). Generic "Disclosure under Regulation 30" filings
+  are read from the letter itself: the "Sub:" line, then the body's first sentences
+  with regulation boilerplate and the signature removed. All 15 such filings in the
+  sample now place without a model (customs and tax orders, DoT notices, a director
+  re-appointment, a bank's business update, a subsidiary liquidation, a correction).
+- Grouping: repeat filings of one action merge (Info Edge's MD transition was filed four
+  times), a dividend joins its record date, and an IPO's two weeks of updates become one
+  thread. Board notices feed the results calendar; a rescheduled meeting moves.
+- Scoring: deals are sized against market value and orders against revenue. A ₹50 crore
+  startup stake at a ₹1 lakh crore company is routine; subsidiary set-ups, closures and
+  intra-group mergers are housekeeping.
+- Results PDFs: the page finder now reads scanned statements (HDFC Bank's text layer
+  writes the letter O for zero; Info Edge's OCR is garbled). When unsure it sends the
+  model a few candidate pages and records which one it read.
+- Research: lenders get bad-loan ratios (from the bank-level table when the consolidated
+  one is blank) instead of cash conversion; no "% change" across a loss anywhere; one
+  call per quarter in the dossier (no investor-day or duplicate-host repeats).
+- Tests: 112, including real text layers, real letters and real filing subjects.
