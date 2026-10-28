@@ -1,0 +1,30 @@
+{
+  "note": "Demo portfolio (spec section 12). Weights are illustrative. BSE codes are checked against screener and BSE at seed time.",
+  "holdings": [
+    { "symbol": "RELIANCE", "name": "Reliance Industries", "bse_code": "500325", "sector": "Energy, telecom, retail", "weight_pct": 10 },
+    { "symbol": "HDFCBANK", "name": "HDFC Bank", "bse_code": "500180", "sector": "Private bank", "weight_pct": 10, "is_financial": true },
+    { "symbol": "LT", "name": "Larsen & Toubro", "bse_code": "500510", "sector": "Capital goods, EPC", "weight_pct": 9 },
+    { "symbol": "BHARTIARTL", "name": "Bharti Airtel", "bse_code": "532454", "sector": "Telecom", "weight_pct": 8 },
+    { "symbol": "SUNPHARMA", "name": "Sun Pharmaceutical Industries", "bse_code": "524715", "sector": "Pharma", "weight_pct": 7 },
+    { "symbol": "MARUTI", "name": "Maruti Suzuki India", "bse_code": "532500", "sector": "Autos", "weight_pct": 6 },
+    { "symbol": "HINDUNILVR", "name": "Hindustan Unilever", "bse_code": "500696", "sector": "FMCG", "weight_pct": 5 },
+    { "symbol": "HAL", "name": "Hindustan Aeronautics", "bse_code": "541154", "sector": "Defence", "weight_pct": 5 },
+    { "symbol": "TRENT", "name": "Trent", "bse_code": "500251", "sector": "Retail", "weight_pct": 5 },
+    { "symbol": "INDIGO", "name": "InterGlobe Aviation", "bse_code": "539448", "sector": "Aviation", "weight_pct": 5 },
+    { "symbol": "DIXON", "name": "Dixon Technologies", "bse_code": "540699", "sector": "Electronics manufacturing", "weight_pct": 5 },
+    { "symbol": "ASIANPAINT", "name": "Asian Paints", "bse_code": "500820", "sector": "Paints", "weight_pct": 4 },
+    { "symbol": "TATASTEEL", "name": "Tata Steel", "bse_code": "500470", "sector": "Metals", "weight_pct": 4 },
+    { "symbol": "KPITTECH", "name": "KPIT Technologies", "bse_code": "542651", "sector": "Auto software", "weight_pct": 4 },
+    { "symbol": "MAXHEALTH", "name": "Max Healthcare Institute", "bse_code": "543220", "sector": "Hospitals", "weight_pct": 4 },
+    { "symbol": "NAUKRI", "name": "Info Edge (India)", "bse_code": "532777", "sector": "Internet", "weight_pct": 4 },
+    { "symbol": "WAAREEENER", "name": "Waaree Energies", "bse_code": "544277", "sector": "Solar manufacturing", "weight_pct": 3 },
+    { "symbol": "SUZLON", "name": "Suzlon Energy", "bse_code": "532667", "sector": "Wind", "weight_pct": 2 }
+  ],
+  "research_picks": [
+    { "symbol": "LT", "name": "Larsen & Toubro", "bse_code": "500510", "why": "Order-inflow, revenue and margin guidance every year" },
+    { "symbol": "INFY", "name": "Infosys", "bse_code": "500209", "why": "Revenue-growth bands revised every quarter" },
+    { "symbol": "BAJFINANCE", "name": "Bajaj Finance", "bse_code": "500034", "why": "AUM growth and credit-cost guidance; lender template", "is_financial": true },
+    { "symbol": "ETERNAL", "name": "Eternal", "bse_code": "543320", "why": "Store counts and margin targets" },
+    { "symbol": "POLYCAB", "name": "Polycab India", "bse_code": "542652", "why": "Multi-year revenue and margin targets" }
+  ]
+}
