@@ -1,0 +1,18 @@
+# Quality numbers for the README: results cards against screener's quarterly table,
+# classification sources, model calls and cache hits.
+name: Evaluate
+on:
+  workflow_dispatch:
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --no-audit --no-fund
+      - run: npx tsx scripts/finn.ts eval --minutes 10
+      - run: npx tsx scripts/finn.ts taxonomy

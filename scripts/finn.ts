@@ -128,7 +128,7 @@ async function fixtures(dir: string) {
 async function main() {
   if (cmd === "fixtures") return fixtures(flag("dir", "fixtures") ?? "fixtures");
   if (cmd === "help") {
-    console.log("Commands: probe, doctor, migrate, seed, symbols, backfill, ingest, process, prices, verify, calendar, alerts, research <SYMBOL>, tick, taxonomy, status");
+    console.log("Commands: probe, migrate, seed, symbols, backfill, ingest, process, prices, verify, calendar, alerts, research <SYMBOL>, prebuild, tick, taxonomy, eval, status, fixtures");
     return;
   }
   if (cmd === "probe") return probe();
@@ -238,12 +238,32 @@ async function main() {
       break;
     }
     case "taxonomy": {
-      const rows = await sql`select classified_by like 'rule:%' as by_rule, count(*)::int as n from announcements group by 1`;
+      const { classificationSources } = await import("../src/lib/pipeline/evaluate");
+      const src = await classificationSources();
       const cats = await sql`select category, count(*)::int as n from announcements group by 1 order by 2 desc`;
-      const unmatched = await sql`select subject, exchange_subcategory from announcements where classified_by <> 'rule' and classified_by not like 'rule:%' limit 40`;
-      const total = rows.reduce((s, r) => s + Number(r.n), 0);
-      const rule = rows.find((r) => r.by_rule)?.n ?? 0;
-      summary(`Taxonomy: ${rule}/${total} by rules (${total ? Math.round((Number(rule) / total) * 100) : 0}%)\n\n${cats.map((c) => `- ${c.category}: ${c.n}`).join("\n")}\n\nNot matched by rules:\n${unmatched.map((u) => `- ${u.exchange_subcategory ?? ""} | ${u.subject}`).join("\n")}`);
+      const unmatched = await sql`select subject, exchange_subcategory, classified_by, category from announcements
+        where classified_by in ('llm', 'default') order by filed_at desc limit 40`;
+      const total = Object.values(src).reduce((a, b) => a + b, 0);
+      const noModel = (src.rules ?? 0) + (src.context ?? 0) + (src.letter ?? 0);
+      summary(`Taxonomy: ${noModel}/${total} placed without a model (${total ? Math.round((noModel / total) * 1000) / 10 : 0}%): ${JSON.stringify(src)}\n\n${cats.map((c) => `- ${c.category}: ${c.n}`).join("\n")}\n\nLeft to the model or the default:\n${unmatched.map((u) => `- [${u.classified_by} -> ${u.category}] ${u.exchange_subcategory ?? ""} | ${u.subject}`).join("\n")}`);
+      break;
+    }
+    case "eval": {
+      const { evalResults, classificationSources } = await import("../src/lib/pipeline/evaluate");
+      const r = await evalResults(deadline);
+      const src = await classificationSources();
+      const checks = await sql`select count(*)::int as n, count(*) filter (where not exists (select 1 from jsonb_array_elements(checks) c where (c->>'ok')::boolean = false))::int as all_ok
+        from results_extracts`;
+      const calls = await sql`select count(*)::int as calls, count(*) filter (where cache_hit)::int as hits, coalesce(sum(tokens_in), 0)::bigint as tin,
+        coalesce(sum(tokens_out), 0)::bigint as tout, coalesce(sum(cost_usd_est), 0)::float as usd from llm_calls`;
+      summary([
+        `Results vs screener: ${r.within}/${r.compared} numbers within 0.5% (${r.rate ?? "-"}%) across ${r.filings} filings`,
+        `All checks passed: ${checks[0].all_ok}/${checks[0].n} results cards`,
+        `Classification sources: ${JSON.stringify(src)}`,
+        `Model calls: ${calls[0].calls} (${calls[0].hits} cache hits), tokens in ${calls[0].tin}, out ${calls[0].tout}, paid-rate estimate $${Number(calls[0].usd).toFixed(2)}`,
+        r.misses.length ? `\nMisses:\n${r.misses.map((m) => `- ${m}`).join("\n")}` : "",
+        r.skipped.length ? `\nSkipped:\n${r.skipped.map((m) => `- ${m}`).join("\n")}` : "",
+      ].join("\n"));
       break;
     }
     case "status": {
