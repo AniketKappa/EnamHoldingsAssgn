@@ -198,6 +198,8 @@ async function withSlot<T>(provider: string, fn: () => Promise<T>): Promise<T> {
   try { return await fn(); } finally { inflight.set(provider, (inflight.get(provider) ?? 1) - 1); }
 }
 
+const deadModels = new Set<string>();
+
 function statusOf(e: unknown): number | undefined {
   const any = e as { status?: number; code?: number; message?: string };
   if (typeof any?.status === "number") return any.status;
@@ -231,7 +233,7 @@ export async function llm<T>(req: LlmRequest<T>): Promise<LlmResult<T>> {
     } catch { /* cache miss on error */ }
   }
 
-  const chain = chainFor(cfg.tier);
+  const chain = chainFor(cfg.tier).filter((m) => !deadModels.has(m));
   let lastErr: unknown = new LlmUnavailable("No model configured");
   for (const entry of chain) {
     const isGroq = entry.startsWith("groq:");
@@ -270,6 +272,7 @@ export async function llm<T>(req: LlmRequest<T>): Promise<LlmResult<T>> {
         const st = statusOf(e);
         await logCall({ task: req.task, model, provider, tokensIn: 0, tokensOut: 0, latency: Date.now() - t0, ok: false, cacheHit: false, error: String((e as Error)?.message ?? e).slice(0, 300), ref: req.ref });
         if (e instanceof LlmUnavailable) break;
+        if (st === 404) deadModels.add(entry); // retired or misspelt: skip it for the rest of this process
         if (st === 429) { await new Promise((r) => setTimeout(r, 2000 * (attempt + 1))); continue; }
         if (st && st >= 500 && attempt === 0) { await new Promise((r) => setTimeout(r, 1500)); continue; }
         break; // 4xx (model not found, bad request): next model
