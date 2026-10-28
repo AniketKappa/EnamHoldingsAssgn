@@ -1,7 +1,7 @@
 // Web Push (VAPID). Keys are generated once and kept in Postgres, so no one
 // handles a private key by hand; the public key is served to browsers.
 import webpush from "web-push";
-import { db, kvGet, kvSet } from "../db";
+import { db, kvGet } from "../db";
 import { env } from "../env";
 
 interface Vapid { publicKey: string; privateKey: string }

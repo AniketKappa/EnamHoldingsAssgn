@@ -6,7 +6,6 @@ import { env, IS_SERVERLESS } from "./env";
 export type Sql = postgres.Sql<Record<string, unknown>>;
 
 declare global {
-  // eslint-disable-next-line no-var
   var __finnSql: Sql | undefined;
 }
 

@@ -1,0 +1,19 @@
+# Can this runner reach every data source? Runs on demand and when source code changes.
+name: Probe sources
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["src/lib/sources/**", "scripts/finn.ts"]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --no-audit --no-fund
+      - run: npx tsx scripts/finn.ts probe

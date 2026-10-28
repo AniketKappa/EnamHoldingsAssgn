@@ -2,7 +2,7 @@
 // Web Push: Android Chrome works directly; iPhone needs FINN on the Home Screen
 // (iOS 16.4+), and permission must be asked from a tap.
 import { useEffect, useState } from "react";
-import { api, post, ApiError } from "@/lib/client/api";
+import { api, post, ApiError, useClientValue } from "@/lib/client/api";
 import { Button } from "./ui";
 
 type State = "unknown" | "unsupported" | "ios-install" | "off" | "on" | "denied";
@@ -13,24 +13,30 @@ function b64ToBytes(base64: string) {
   return Uint8Array.from(raw, (c) => c.charCodeAt(0));
 }
 
+function capabilities(): "unsupported" | "ios-install" | "denied" | "ok" {
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const standalone = window.matchMedia("(display-mode: standalone)").matches || (navigator as unknown as { standalone?: boolean }).standalone === true;
+  if (!("serviceWorker" in navigator) || !("PushManager" in window) || !("Notification" in window)) return ios && !standalone ? "ios-install" : "unsupported";
+  if (Notification.permission === "denied") return "denied";
+  return "ok";
+}
+
 export function PushControls({ compact = false }: { compact?: boolean }) {
-  const [state, setState] = useState<State>("unknown");
+  const caps = useClientValue(capabilities, "unsupported");
+  const [sub, setSub] = useState<"unknown" | "on" | "off" | "denied">("unknown");
   const [msg, setMsg] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
-    const ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
-    const standalone = window.matchMedia("(display-mode: standalone)").matches || (navigator as unknown as { standalone?: boolean }).standalone === true;
-    if (!("serviceWorker" in navigator) || !("PushManager" in window) || !("Notification" in window)) {
-      setState(ios && !standalone ? "ios-install" : "unsupported");
-      return;
-    }
-    if (Notification.permission === "denied") { setState("denied"); return; }
+    if (caps !== "ok") return;
     navigator.serviceWorker.getRegistration("/").then(async (reg) => {
-      const sub = await reg?.pushManager.getSubscription();
-      setState(sub ? "on" : "off");
-    }).catch(() => setState("off"));
-  }, []);
+      const s = await reg?.pushManager.getSubscription();
+      setSub(s ? "on" : "off");
+    }).catch(() => setSub("off"));
+  }, [caps]);
+
+  const state: State = sub === "denied" ? "denied" : caps !== "ok" ? caps : sub;
+  const setState = (s: "on" | "off" | "denied") => setSub(s);
 
   async function enable() {
     setBusy(true); setMsg(null);

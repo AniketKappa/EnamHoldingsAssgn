@@ -1,10 +1,10 @@
 "use client";
 // A tiny stale-while-revalidate fetch hook. Screens show the last good data at
 // once on tab switches and refresh in the background; no data library needed.
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 
 const cache = new Map<string, unknown>();
-const listeners = new Map<string, Set<() => void>>();
+const listeners = new Map<string, Set<() => Promise<void>>>();
 
 export class ApiError extends Error {
   constructor(public status: number, message: string) { super(message); }
@@ -25,49 +25,56 @@ export function post<T>(url: string, data: unknown, method = "POST") {
 
 /** Ask every screen showing `prefix*` to refetch (after a mutation). */
 export function invalidate(prefix: string) {
-  for (const [k, set] of listeners) if (k.startsWith(prefix)) set.forEach((fn) => fn());
+  for (const [k, set] of listeners) if (k.startsWith(prefix)) set.forEach((fn) => void fn());
 }
 
-export function useApi<T>(url: string | null, opts: { refreshMs?: number } = {}) {
-  const [data, setData] = useState<T | undefined>(() => (url ? (cache.get(url) as T | undefined) : undefined));
-  const [error, setError] = useState<ApiError | null>(null);
-  const [loading, setLoading] = useState<boolean>(!!url && !cache.has(url));
-  const current = useRef(url);
-  current.current = url;
+interface State<T> { url: string | null; data: T | undefined; error: ApiError | null; loading: boolean }
 
-  const load = useCallback(async () => {
+export function useApi<T>(url: string | null, opts: { refreshMs?: number } = {}) {
+  const [state, setState] = useState<State<T>>(() => ({ url, data: url ? (cache.get(url) as T | undefined) : undefined, error: null, loading: !!url && !cache.has(url) }));
+
+  const reload = useCallback(async () => {
     if (!url) return;
-    setLoading(!cache.has(url));
     try {
       const d = await api<T>(url);
       cache.set(url, d);
-      if (current.current === url) { setData(d); setError(null); }
+      setState({ url, data: d, error: null, loading: false });
     } catch (e) {
-      if (current.current === url) setError(e instanceof ApiError ? e : new ApiError(0, "Couldn't reach FINN. Check your connection."));
-    } finally {
-      if (current.current === url) setLoading(false);
+      const err = e instanceof ApiError ? e : new ApiError(0, "Couldn't reach FINN. Check your connection.");
+      setState((s) => ({ url, data: s.url === url ? s.data : (cache.get(url) as T | undefined), error: err, loading: false }));
     }
   }, [url]);
 
   useEffect(() => {
     if (!url) return;
-    setData(cache.get(url) as T | undefined);
-    void load();
+    let alive = true;
+    const guarded = async () => { if (alive) await reload(); };
+    void guarded();
     const set = listeners.get(url) ?? new Set();
-    set.add(load);
+    set.add(guarded);
     listeners.set(url, set);
-    let timer: ReturnType<typeof setInterval> | undefined;
-    if (opts.refreshMs) timer = setInterval(() => { if (document.visibilityState === "visible") void load(); }, opts.refreshMs);
-    return () => { set.delete(load); if (timer) clearInterval(timer); };
-  }, [url, load, opts.refreshMs]);
+    const timer = opts.refreshMs ? setInterval(() => { if (document.visibilityState === "visible") void guarded(); }, opts.refreshMs) : undefined;
+    return () => { alive = false; set.delete(guarded); if (timer) clearInterval(timer); };
+  }, [url, reload, opts.refreshMs]);
 
   const mutate = useCallback((fn: (d: T | undefined) => T | undefined) => {
-    setData((prev) => {
-      const next = fn(prev);
+    setState((s) => {
+      const next = fn(s.url === url ? s.data : (url ? (cache.get(url) as T | undefined) : undefined));
       if (url && next !== undefined) cache.set(url, next);
-      return next;
+      return { url, data: next, error: s.error, loading: false };
     });
   }, [url]);
 
-  return { data, error, loading, reload: load, mutate };
+  // A new url renders its cached copy at once, before its own fetch lands.
+  const current = state.url === url;
+  const data = current ? state.data : url ? (cache.get(url) as T | undefined) : undefined;
+  const loading = url ? (current ? state.loading : !cache.has(url)) : false;
+  return { data, error: current ? state.error : null, loading, reload, mutate };
+}
+
+const noop = () => () => {};
+
+/** A value that only exists in the browser (time, storage, APIs); the server renders `fallback`. */
+export function useClientValue<T>(get: () => T, fallback: T): T {
+  return useSyncExternalStore(noop, get, () => fallback);
 }

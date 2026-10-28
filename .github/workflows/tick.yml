@@ -1,0 +1,42 @@
+# FINN's clock. Every 10 minutes: poll BSE for new filings, then classify, group,
+# extract, score and alert; prices and signals after the close; calendar,
+# verification and the 08:30 digest when due. The work is idempotent and leased,
+# so a late or doubled run is harmless.
+name: Tick
+on:
+  schedule:
+    - cron: "3,13,23,33,43,53 * * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Tasks to force, comma separated (poll,prices,verify,calendar,digest,jobs,symbols,prebuild)"
+        required: false
+        default: ""
+concurrency:
+  group: tick
+  cancel-in-progress: false
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+    steps:
+      - name: Check configuration
+        id: cfg
+        run: |
+          if [ -z "$DATABASE_URL" ]; then echo "DATABASE_URL secret is not set; skipping." >> "$GITHUB_STEP_SUMMARY"; echo "skip=1" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/checkout@v4
+        if: steps.cfg.outputs.skip != '1'
+      - uses: actions/setup-node@v4
+        if: steps.cfg.outputs.skip != '1'
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --no-audit --no-fund
+        if: steps.cfg.outputs.skip != '1'
+      - name: Tick
+        if: steps.cfg.outputs.skip != '1'
+        run: |
+          if [ -n "${{ github.event.inputs.force }}" ]; then npx tsx scripts/finn.ts tick --minutes 11 --force "${{ github.event.inputs.force }}"; else npx tsx scripts/finn.ts tick --minutes 11; fi

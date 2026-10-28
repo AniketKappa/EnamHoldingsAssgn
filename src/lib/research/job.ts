@@ -178,7 +178,7 @@ export async function runResearchJob(jobId: string, deadline: number): Promise<b
           break;
         }
         case "ledger": {
-          const { guidance, kpis, claims } = await loadExtracts(state);
+          const { guidance, claims } = await loadExtracts(state);
           const ctx = await groundingContext(state, {});
           const facts = computeFacts(await screenerFor(state.symbol, 24)).facts;
           await logStep(jobId, `Checking ${guidance.filter((g) => g.direction !== "qualitative").length} promises`, PROGRESS.annual_report + 2);

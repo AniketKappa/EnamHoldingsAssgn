@@ -14,14 +14,17 @@ export function SymbolSearch({ onPick, placeholder, action, autoFocus }: { onPic
   const [active, setActive] = useState(0);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => {
+  useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
+
+  const onChange = (v: string) => {
+    setQ(v);
     if (timer.current) clearTimeout(timer.current);
-    const t = q.trim();
+    const t = v.trim();
     if (!t) { setHits([]); return; }
     timer.current = setTimeout(async () => {
       try { setHits((await api<{ results: Hit[] }>(`/api/symbols?q=${encodeURIComponent(t)}`)).results); setActive(0); } catch { setHits([]); }
     }, 160);
-  }, [q]);
+  };
 
   const pick = (s: string) => { setQ(""); setHits([]); onPick(s.toUpperCase()); };
 
@@ -30,7 +33,7 @@ export function SymbolSearch({ onPick, placeholder, action, autoFocus }: { onPic
       <form onSubmit={(e) => { e.preventDefault(); const t = hits[active]?.symbol ?? q.trim(); if (t) pick(t); }} className="flex items-center gap-2">
         <div className="relative flex-1">
           <Search size={17} aria-hidden className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-3" />
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={placeholder} autoFocus={autoFocus} autoCapitalize="characters" autoComplete="off" spellCheck={false}
+          <input value={q} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} autoFocus={autoFocus} autoCapitalize="characters" autoComplete="off" spellCheck={false}
             role="combobox" aria-expanded={hits.length > 0} aria-controls="symbol-hits" aria-label={placeholder}
             onKeyDown={(e) => {
               if (e.key === "ArrowDown") { e.preventDefault(); setActive((a) => Math.min(a + 1, hits.length - 1)); }

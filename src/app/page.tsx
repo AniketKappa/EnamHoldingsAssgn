@@ -1,11 +1,11 @@
 "use client";
 // The Brief: a finite, ranked list of what changed across the portfolio.
 import Link from "next/link";
-import { Suspense, useEffect, useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ChevronDown, Settings, Volume2, Square } from "lucide-react";
 import type { BriefItem, BriefT } from "@/lib/api/types";
-import { useApi, post, invalidate } from "@/lib/client/api";
+import { useApi, post, invalidate, useClientValue } from "@/lib/client/api";
 import { FunnelLine } from "@/components/Funnel";
 import { EventRow, TopCard, resultsSentence } from "@/components/cards";
 import { EventSheet } from "@/components/EventSheet";
@@ -52,8 +52,7 @@ function Brief() {
   const [showDone, setShowDone] = useState(false);
   const [routineOpen, setRoutineOpen] = useState(false);
   const [customOpen, setCustomOpen] = useState(false);
-  const [day, setDay] = useState("");
-  useEffect(() => setDay(todayLabel()), []);
+  const day = useClientValue(todayLabel, "");
 
   const setParam = (k: string, v: string | null, extra: Record<string, string | null> = {}) => {
     const p = new URLSearchParams(sp.toString());
@@ -195,10 +194,15 @@ function fmtDay(d: string) {
   return new Date(`${d}T00:00:00+05:30`).toLocaleDateString("en-IN", { day: "numeric", month: "short", timeZone: "Asia/Kolkata" });
 }
 
+function istToday() {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date());
+}
+
 function CustomRange({ open, onOpenChange, onApply }: { open: boolean; onOpenChange: (o: boolean) => void; onApply: (from: string, to: string) => void }) {
-  const today = new Date(Date.now() + 330 * 60_000).toISOString().slice(0, 10);
-  const [f, setF] = useState(today);
-  const [t, setT] = useState(today);
+  const today = useClientValue(istToday, "");
+  const [fState, setF] = useState("");
+  const [tState, setT] = useState("");
+  const f = fState || today, t = tState || today;
   return (
     <Sheet open={open} onOpenChange={onOpenChange} title="Custom range">
       <div className="pt-2 pb-4">
@@ -220,8 +224,7 @@ function CustomRange({ open, onOpenChange, onApply }: { open: boolean; onOpenCha
 /** Listen: a spoken Brief for the commute, using the phone's own speech synthesis (no cost, no model). */
 function ListenButton({ data }: { data: BriefT }) {
   const [speaking, setSpeaking] = useState(false);
-  const [supported, setSupported] = useState(false);
-  useEffect(() => setSupported(typeof window !== "undefined" && "speechSynthesis" in window), []);
+  const supported = useClientValue(() => "speechSynthesis" in window, false);
   if (!supported) return null;
   const script = () => {
     const say = (s: string) => s.replace(/₹/g, "rupees ").replace(/ cr\b/g, " crore").replace(/YoY/g, "year on year").replace(/QoQ/g, "quarter on quarter").replace(/bps/g, "basis points").replace(/−/g, "minus ");

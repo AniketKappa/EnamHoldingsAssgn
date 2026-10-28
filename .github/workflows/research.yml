@@ -1,0 +1,29 @@
+# Build (or rebuild) a dossier from CI, e.g. to pre-build the research picks.
+name: Research
+on:
+  workflow_dispatch:
+    inputs:
+      symbols:
+        description: "NSE symbols, comma separated"
+        required: true
+        default: "LT,INFY,BAJFINANCE,ETERNAL,POLYCAB"
+concurrency:
+  group: research
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --no-audit --no-fund
+      - name: Build dossiers
+        run: |
+          IFS=',' read -ra S <<< "${{ github.event.inputs.symbols }}"
+          for s in "${S[@]}"; do npx tsx scripts/finn.ts research "$(echo $s | xargs)" --minutes 15 || true; done
