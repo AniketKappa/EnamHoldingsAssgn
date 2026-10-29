@@ -55,8 +55,20 @@ async function probe() {
       const ai = new GoogleGenAI({ apiKey: env.geminiKey() });
       const names: string[] = [];
       for await (const m of await ai.models.list()) names.push(String(m.name).replace("models/", ""));
-      const wanted = [...env.models.t1(), ...env.models.t2(), ...env.models.t3(), ...env.models.grounded()];
-      return wanted.map((w) => `${w}:${names.includes(w) ? "ok" : "MISSING"}`).join(" ");
+      const wanted = [...new Set([...env.models.t1(), ...env.models.t2(), ...env.models.t3(), ...env.models.grounded()])];
+      // Listed is not the same as usable (retired models still list): ask each for one word.
+      const out: string[] = [];
+      for (const w of wanted) {
+        if (!names.includes(w)) { out.push(`${w}:MISSING`); continue; }
+        try {
+          const r = await ai.models.generateContent({ model: w, contents: "Reply with the single word OK." });
+          out.push(`${w}:${/ok/i.test(r.text ?? "") ? "ok" : "odd reply"}`);
+        } catch (e) {
+          const m = String((e as Error).message);
+          out.push(`${w}:${/\b404\b|no longer available/.test(m) ? "RETIRED" : /\b429\b/.test(m) ? "QUOTA" : "FAIL"}`);
+        }
+      }
+      return out.join(" ");
     }],
   ];
   const rows: string[] = ["| Source | Result | ms |", "| --- | --- | --- |"];
@@ -268,6 +280,23 @@ async function main() {
         r.misses.length ? `\nMisses:\n${r.misses.map((m) => `- ${m}`).join("\n")}` : "",
         r.skipped.length ? `\nSkipped:\n${r.skipped.map((m) => `- ${m}`).join("\n")}` : "",
       ].join("\n"));
+      break;
+    }
+    case "reclassify": {
+      // Filings that fell back to the default (no model answer) get a second pass: their
+      // single-filing events (and the alerts about them) go, and the filings return to 'new'.
+      const which = flag("by", "default") ?? "default";
+      const rows = await sql`select id from announcements where classified_by = ${which}`;
+      const ids = rows.map((r) => String(r.id));
+      let events = 0;
+      if (ids.length) {
+        const gone = await sql`delete from events where primary_id in ${sql(ids)} and filings <= 1 returning event_key`;
+        events = gone.length;
+        if (gone.length) await sql`delete from alerts where kind = 'event' and ref_id in ${sql(gone.map((g) => String(g.event_key)))}`;
+        await sql`update announcements set status = 'new', category = null, subtype = null, classified_by = null, also = '[]'::jsonb,
+          event_key = null, is_primary = true, one_liner = null, amount_cr = null where id in ${sql(ids)}`;
+      }
+      summary(`Reclassify (${which}): ${ids.length} filings back to new, ${events} events removed`);
       break;
     }
     case "diag": {

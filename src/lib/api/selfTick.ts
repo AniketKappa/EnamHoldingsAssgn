@@ -1,6 +1,6 @@
 // A second clock. GitHub's scheduler is best effort (on a new repository it can skip
 // hours), so when the pipeline has been quiet for 15 minutes the next visit runs a
-// tick in the background, after its response is sent. One kick per 5 minutes across
+// tick in the background, after its response is sent. Call only from route handlers. One kick per 5 minutes across
 // all visitors; the tick's own lease stops overlaps with the scheduled run.
 import { after } from "next/server";
 import { db, kvGet } from "../db";

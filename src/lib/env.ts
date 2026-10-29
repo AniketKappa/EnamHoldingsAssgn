@@ -25,10 +25,11 @@ export const env = {
   nseEnabled: () => str("NSE_ENABLED", "false") === "true",
   appUrl: () => str("APP_URL") || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"),
   models: {
-    t1: () => list("MODEL_T1", ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-2.5-flash-lite"]),
-    t2: () => list("MODEL_T2", ["gemini-3.6-flash", "gemini-3.8-flash", "gemini-2.5-flash"]),
-    t3: () => list("MODEL_T3", ["gemini-3.8-flash", "gemini-2.5-pro", "gemini-3.6-flash"]),
-    grounded: () => list("MODEL_GROUNDED", ["gemini-2.5-flash", "gemini-3.6-flash"]),
+    // Gemini 2.5 models are listed but "no longer available to new users" (404), so they are not defaults.
+    t1: () => list("MODEL_T1", ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]),
+    t2: () => list("MODEL_T2", ["gemini-3.6-flash", "gemini-3.8-flash", "gemini-3.5-flash-lite"]),
+    t3: () => list("MODEL_T3", ["gemini-3.8-flash", "gemini-3.6-flash"]),
+    grounded: () => list("MODEL_GROUNDED", ["gemini-3.6-flash", "gemini-3.8-flash", "gemini-3.5-flash-lite"]),
     groqT1: () => str("GROQ_MODEL_T1", "openai/gpt-oss-20b"),
   },
 };
