@@ -270,6 +270,25 @@ async function main() {
       ].join("\n"));
       break;
     }
+    case "diag": {
+      // Read-only diagnostics for a remote operator: where filings were classified, model errors, failed stages.
+      const by = await sql`select coalesce(classified_by, 'none') as by, count(*)::int as n from announcements group by 1 order by 2 desc`;
+      const calls = await sql`select task, model, ok, count(*)::int as n, max(created_at) as last, max(left(error, 140)) filter (where not ok) as error
+        from llm_calls group by task, model, ok order by task, model, ok`;
+      const runs = await sql`select task, ok, started_at, left(detail::text, 220) as detail from task_runs order by started_at desc limit 25`;
+      const evs = await sql`select category, status, count(*)::int as n from events group by 1, 2 order by 1, 2`;
+      const failed = await sql`select event_key, attempts, left(error, 160) as error from events where status = 'failed' or (status = 'pending' and attempts > 0) order by updated_at desc limit 20`;
+      const jobs = await sql`select kind, status, symbol, step, left(error, 140) as error, created_at from jobs order by created_at desc limit 10`;
+      summary([
+        `Classified by: ${by.map((r) => `${r.by} ${r.n}`).join(", ")}`,
+        `\nModel calls:\n${calls.map((c) => `- ${c.task} ${c.model} ${c.ok ? "ok" : "FAIL"} x${c.n}${c.error ? `: ${c.error}` : ""}`).join("\n")}`,
+        `\nEvents: ${evs.map((e) => `${e.category}/${e.status} ${e.n}`).join(", ")}`,
+        `\nFailed or retried extractions:\n${failed.map((f) => `- ${f.event_key} x${f.attempts}: ${f.error ?? ""}`).join("\n")}`,
+        `\nRecent task runs:\n${runs.map((r) => `- ${new Date(r.started_at as string).toISOString().slice(5, 16)} ${r.task} ${r.ok ? "ok" : "FAIL"} ${r.detail ?? ""}`).join("\n")}`,
+        `\nJobs:\n${jobs.map((j) => `- ${j.kind} ${j.symbol} ${j.status} at ${j.step}${j.error ? `: ${j.error}` : ""}`).join("\n")}`,
+      ].join("\n"));
+      break;
+    }
     case "status": {
       const t = await sql`select task, max(started_at) filter (where ok) as last_ok, count(*) filter (where not ok and started_at > now() - interval '1 day')::int as failures
         from task_runs group by task order by task`;

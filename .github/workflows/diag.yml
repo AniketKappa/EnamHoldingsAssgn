@@ -1,0 +1,17 @@
+# Read-only diagnostics: where filings were classified, model call outcomes, failed
+# extractions, recent task runs and jobs. Results appear as the run's annotation.
+name: Diagnostics
+on:
+  workflow_dispatch:
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --no-audit --no-fund
+      - run: npx tsx scripts/finn.ts diag
