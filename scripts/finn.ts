@@ -390,6 +390,15 @@ async function main() {
         writeFileSync(`${dir}/${symbol}.json`, JSON.stringify({ state, extracts, pages, dossier: dossier[0] ?? null }, null, 1));
         lines.push(`${symbol}: ${ids.length} documents, ${extracts.length} extracts, ${pages.length} pages`);
       }
+      // The pipeline's view of the last two weeks: filings (public exchange metadata) and the events built from them.
+      const filings = await sql`select id, symbol, subject, headline, exchange_category, exchange_subcategory, filed_at, pdf_url, pdf_bytes,
+          category, subtype, classified_by, also, event_key, is_primary, one_liner, amount_cr, status
+        from announcements where filed_at > now() - interval '14 days' order by filed_at`;
+      const events = await sql`select event_key, symbol, category, subtype, title, primary_id, first_filed_at, last_filed_at, filings,
+          base_score, market_bonus, reasons, red_flags, detail, status from events where first_filed_at > now() - interval '14 days' order by first_filed_at`;
+      const companies = await sql`select symbol, name, bse_code, sector, industry, mcap_cr, revenue_cr, is_financial from companies where symbol in (select distinct symbol from announcements)`;
+      writeFileSync(`${dir}/pipeline.json`, JSON.stringify({ at: new Date().toISOString(), companies, filings, events }, null, 1));
+      lines.push(`pipeline: ${filings.length} filings, ${events.length} events`);
       summary(`Dump: ${lines.join("; ")}`);
       break;
     }
