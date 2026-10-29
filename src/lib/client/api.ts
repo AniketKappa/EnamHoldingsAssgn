@@ -57,6 +57,14 @@ export function useApi<T>(url: string | null, opts: { refreshMs?: number } = {})
     return () => { alive = false; set.delete(guarded); if (timer) clearInterval(timer); };
   }, [url, reload, opts.refreshMs]);
 
+  // While FINN is still being set up (503), look again every 30 seconds.
+  const settingUp = state.url === url && state.error?.status === 503;
+  useEffect(() => {
+    if (!settingUp) return;
+    const t = setTimeout(() => void reload(), 30_000);
+    return () => clearTimeout(t);
+  }, [settingUp, reload, state]);
+
   const mutate = useCallback((fn: (d: T | undefined) => T | undefined) => {
     setState((s) => {
       const next = fn(s.url === url ? s.data : (url ? (cache.get(url) as T | undefined) : undefined));

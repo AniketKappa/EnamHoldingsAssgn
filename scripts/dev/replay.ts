@@ -22,7 +22,7 @@ async function main() {
   await server.start();
   process.env.DATABASE_URL = `postgres://postgres@127.0.0.1:${port}/postgres`;
   process.env.DB_POOL_MAX = "1";
-  delete process.env.GEMINI_API_KEY;
+  delete process.env.GEMINI_API_KEY; delete process.env.GOOGLE_API_KEY; delete process.env.GOOGLE_GENERATIVE_AI_API_KEY;
   const { db, closeDb } = await import("../../src/lib/db");
   const sql = db();
   await sql.unsafe(readFileSync("db/schema.sql", "utf8"));

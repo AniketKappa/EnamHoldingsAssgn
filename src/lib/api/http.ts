@@ -23,6 +23,8 @@ export async function handle(fn: () => Promise<Response>): Promise<Response> {
   try {
     return await fn();
   } catch (e) {
+    // 42P01 undefined_table: the database exists but the first setup run has not created the schema yet.
+    if ((e as { code?: string })?.code === "42P01") return fail(503, "FINN is being set up. The first data load takes about 15 minutes; this page fills in by itself.");
     console.error(e);
     return fail(500, `Something broke on FINN's side: ${String((e as Error)?.message ?? e).slice(0, 160)}`);
   }

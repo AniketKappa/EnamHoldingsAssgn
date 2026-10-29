@@ -15,7 +15,7 @@ function list(name: string, fallback: string[]): string[] {
 export const env = {
   // Vercel's Supabase integration provides POSTGRES_URL (pooled). Locally we use DATABASE_URL.
   databaseUrl: () => str("DATABASE_URL") || str("POSTGRES_URL"),
-  geminiKey: () => str("GEMINI_API_KEY"),
+  geminiKey: () => str("GEMINI_API_KEY") || str("GOOGLE_API_KEY") || str("GOOGLE_GENERATIVE_AI_API_KEY"),
   groqKey: () => str("GROQ_API_KEY"),
   tavilyKey: () => str("TAVILY_API_KEY"),
   cronSecret: () => str("CRON_SECRET"),
