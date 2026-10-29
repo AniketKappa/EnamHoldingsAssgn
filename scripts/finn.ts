@@ -133,6 +133,10 @@ async function main() {
   }
   if (cmd === "probe") return probe();
   if (!hasDb()) throw new Error("DATABASE_URL is not set");
+  const dbUrl = env.databaseUrl();
+  if (/@db\.[a-z0-9]+\.supabase\.co(:5432)?\//.test(dbUrl)) {
+    summary("DATABASE_URL is Supabase's direct connection, which is IPv6 only and unreachable from GitHub runners. In Supabase, open Connect and copy the Transaction pooler URI (port 6543) instead.");
+  }
   const sql = db();
   switch (cmd) {
     case "migrate": {
