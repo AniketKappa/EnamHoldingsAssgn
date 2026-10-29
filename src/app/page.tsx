@@ -7,6 +7,9 @@ import { firstBrief } from "@/lib/api/firstBrief";
 
 type SP = Promise<Record<string, string | string[] | undefined>>;
 
+// Room for a background tick when the pipeline has gone quiet (see lib/api/selfTick).
+export const maxDuration = 300;
+
 export default function Page({ searchParams }: { searchParams: SP }) {
   return (
     <Suspense fallback={<BriefSkeleton />}>

@@ -5,6 +5,7 @@ import { briefUrl } from "../briefUrl";
 import { currentUser } from "./user";
 import { getBrief } from "./brief";
 import type { BriefT } from "./types";
+import { tickIfStale } from "./selfTick";
 
 const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) ?? null;
 
@@ -13,6 +14,7 @@ export async function firstBrief(sp: Record<string, string | string[] | undefine
   const w = one(sp.w) ?? "24h", from = one(sp.from), to = one(sp.to);
   try {
     const data = await getBrief(await currentUser(), w, from, to);
+    await tickIfStale();
     return { url: briefUrl(w, from, to), data: JSON.parse(JSON.stringify(data)) as BriefT };
   } catch {
     return null;
