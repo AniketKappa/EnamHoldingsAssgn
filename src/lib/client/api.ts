@@ -1,7 +1,7 @@
 "use client";
 // A tiny stale-while-revalidate fetch hook. Screens show the last good data at
 // once on tab switches and refresh in the background; no data library needed.
-import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 
 const cache = new Map<string, unknown>();
 const listeners = new Map<string, Set<() => Promise<void>>>();
@@ -11,7 +11,9 @@ export class ApiError extends Error {
 }
 
 export async function api<T>(url: string, init?: RequestInit): Promise<T> {
-  const res = await fetch(url, { ...init, headers: { "Content-Type": "application/json", ...(init?.headers ?? {}) } });
+  // A plain GET (no extra headers) so it can reuse a <link rel=preload as=fetch> of the same URL.
+  const headers = init?.body ? { "Content-Type": "application/json", ...(init?.headers ?? {}) } : init?.headers;
+  const res = await fetch(url, { ...init, headers });
   const text = await res.text();
   let body: unknown = null;
   try { body = text ? JSON.parse(text) : null; } catch { body = { error: text.slice(0, 200) }; }
@@ -30,8 +32,19 @@ export function invalidate(prefix: string) {
 
 interface State<T> { url: string | null; data: T | undefined; error: ApiError | null; loading: boolean }
 
-export function useApi<T>(url: string | null, opts: { refreshMs?: number } = {}) {
-  const [state, setState] = useState<State<T>>(() => ({ url, data: url ? (cache.get(url) as T | undefined) : undefined, error: null, loading: !!url && !cache.has(url) }));
+export function useApi<T>(url: string | null, opts: { refreshMs?: number; initial?: { url: string; data: T } | null } = {}) {
+  // `initial` is data the server rendered this page with (it changes on every navigation).
+  const seeded = opts.initial && opts.initial.url === url ? opts.initial.data : undefined;
+  const [state, setState] = useState<State<T>>(() => {
+    const data = seeded ?? (url ? (cache.get(url) as T | undefined) : undefined);
+    return { url, data, error: null, loading: !!url && data === undefined };
+  });
+  // New server data (a navigation or a window switch) replaces what the screen holds.
+  const [adopted, setAdopted] = useState<T | undefined>(seeded);
+  if (seeded !== undefined && seeded !== adopted) {
+    setAdopted(seeded);
+    setState({ url, data: seeded, error: null, loading: false });
+  }
 
   const reload = useCallback(async () => {
     if (!url) return;
@@ -45,17 +58,22 @@ export function useApi<T>(url: string | null, opts: { refreshMs?: number } = {})
     }
   }, [url]);
 
+  // Data the server just rendered is fresh: no fetch for it, only the periodic refresh.
+  const used = useRef<WeakSet<object>>(new WeakSet());
   useEffect(() => {
     if (!url) return;
     let alive = true;
     const guarded = async () => { if (alive) await reload(); };
-    void guarded();
+    if (seeded !== undefined && typeof seeded === "object" && seeded !== null && !used.current.has(seeded)) {
+      used.current.add(seeded);
+      cache.set(url, seeded);
+    } else void guarded();
     const set = listeners.get(url) ?? new Set();
     set.add(guarded);
     listeners.set(url, set);
     const timer = opts.refreshMs ? setInterval(() => { if (document.visibilityState === "visible") void guarded(); }, opts.refreshMs) : undefined;
     return () => { alive = false; set.delete(guarded); if (timer) clearInterval(timer); };
-  }, [url, reload, opts.refreshMs]);
+  }, [url, reload, opts.refreshMs, seeded]);
 
   // While FINN is still being set up (503), look again every 30 seconds.
   const settingUp = state.url === url && state.error?.status === 503;

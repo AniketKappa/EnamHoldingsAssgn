@@ -14,7 +14,8 @@ how the code is laid out and the rules that keep it honest.
   facts (code only), the Say-vs-Do ledger (code only), synthesis with grounding, Ask.
 - `src/lib/llm/`: the router (the only place that calls a model), schemas, pricing.
 - `src/lib/tasks.ts`: the tick orchestrator (schedule, lease, deadlines).
-- `src/app/`: static page shells (client components) and JSON route handlers.
+- `src/app/`: page shells (client components; the Brief is server-rendered with its first
+  data via partial prerendering) and JSON route handlers.
 - `scripts/finn.ts`: CLI used by GitHub Actions: probe, migrate, seed, backfill, tick, research.
 - `db/schema.sql`: the only contract between the app and the pipeline.
 
@@ -29,7 +30,8 @@ how the code is laid out and the rules that keep it honest.
 2. LLMs extract; code decides. Scores, arithmetic, QoQ/YoY, ledger statuses are code with tests.
 3. Every extracted fact carries a quote and a page; drop facts whose quote is not on that page.
 4. Money is Rs crore after extraction. Convert lakh, million and rupees at the boundary.
-5. No page load calls a model or a scraper. Pages read the JSON API; the API reads Postgres.
+5. No page load calls a model or a scraper. Pages read the JSON API (or, for the Brief's
+   first server render, the same read function the API uses); everything reads Postgres.
 6. Never request linkedin.com. Never use screener's prose (About, pros and cons, summaries).
 7. UI copy: sentence case, numbers with units and signs, none of: robust, significant,
    notably, impressive, strong, delve, landscape.

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { AppShell } from "@/components/AppShell";
+import { literata, literataExt } from "./fonts";
 
 export const metadata: Metadata = {
   title: { default: "FINN", template: "%s – FINN" },
@@ -22,7 +23,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN">
+    <html lang="en-IN" className={`${literata.variable} ${literataExt.variable}`}>
       <body>
         <AppShell>{children}</AppShell>
       </body>

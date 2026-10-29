@@ -1,25 +1,23 @@
 "use client";
-// Details open as bottom sheets so the list underneath keeps its place.
-import { Drawer } from "vaul";
-import type { ReactNode } from "react";
+// Details open as bottom sheets so the list underneath keeps its place. The
+// drawer code loads on first open (or when the browser is idle), not with the page.
+import dynamic from "next/dynamic";
+import { useState, type ReactNode } from "react";
 
-export function Sheet({ open, onOpenChange, title, children, description }: {
+const SheetImpl = dynamic(() => import("./SheetImpl").then((m) => m.SheetImpl), { ssr: false });
+
+if (typeof window !== "undefined") {
+  const warm = () => { void import("./SheetImpl"); };
+  if ("requestIdleCallback" in window) window.requestIdleCallback(warm, { timeout: 4000 });
+  else setTimeout(warm, 2500);
+}
+
+export function Sheet(props: {
   open: boolean; onOpenChange: (o: boolean) => void; title: string; children: ReactNode; description?: string;
 }) {
-  return (
-    <Drawer.Root open={open} onOpenChange={onOpenChange}>
-      <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 z-40 bg-black/30" />
-        <Drawer.Content
-          aria-describedby={undefined}
-          className="fixed inset-x-0 bottom-0 z-50 mx-auto flex max-h-[92dvh] w-full max-w-[560px] flex-col rounded-t-[20px] bg-surface outline-none"
-          style={{ boxShadow: "var(--sheet-shadow)" }}>
-          <div aria-hidden className="mx-auto mt-2.5 mb-1 h-1.5 w-10 shrink-0 rounded-full bg-rule" />
-          <Drawer.Title className="sr-only">{title}</Drawer.Title>
-          {description ? <Drawer.Description className="sr-only">{description}</Drawer.Description> : null}
-          <div className="overflow-y-auto overscroll-contain px-4 pb-[max(env(safe-area-inset-bottom),20px)]">{children}</div>
-        </Drawer.Content>
-      </Drawer.Portal>
-    </Drawer.Root>
-  );
+  // Mount on first open and stay mounted, so closing still animates.
+  const [ever, setEver] = useState(props.open);
+  if (props.open && !ever) setEver(true);
+  if (!ever) return null;
+  return <SheetImpl {...props} />;
 }

@@ -1,7 +1,7 @@
 "use client";
 // One-thumb navigation: four tabs at the bottom, content in a phone-width column.
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Bell, Briefcase, Inbox, Telescope } from "lucide-react";
 import type { ReactNode } from "react";
 import { useApi } from "@/lib/client/api";
@@ -16,6 +16,9 @@ const TABS = [
 
 export function AppShell({ children }: { children: ReactNode }) {
   const path = usePathname() ?? "/";
+  const router = useRouter();
+  // Tabs prefetch when a finger or pointer reaches them, not all at once on load.
+  const warm = (href: string) => () => router.prefetch(href);
   const { data } = useApi<{ unread: number }>("/api/alerts", { refreshMs: 90_000 });
   const unread = data?.unread ?? 0;
   return (
@@ -28,7 +31,8 @@ export function AppShell({ children }: { children: ReactNode }) {
             const Icon = t.icon;
             return (
               <li key={t.href}>
-                <Link href={t.href} aria-current={active ? "page" : undefined}
+                <Link href={t.href} aria-current={active ? "page" : undefined} prefetch={false}
+                  onTouchStart={warm(t.href)} onMouseEnter={warm(t.href)} onFocus={warm(t.href)}
                   className={cx("relative flex min-h-14 flex-col items-center justify-center gap-0.5 text-xs", active ? "text-ink" : "text-ink-2")}>
                   {active ? <span aria-hidden className="absolute top-0 h-[2px] w-8 rounded-full bg-accent" /> : null}
                   <span className="relative">
