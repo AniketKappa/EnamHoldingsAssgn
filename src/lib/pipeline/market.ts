@@ -101,6 +101,10 @@ export async function explainSignals(days = 7) {
     const key = ev.length ? String(ev[0].event_key) : null;
     await sql`update price_signals set explained_by = ${key} where symbol = ${String(s.symbol)} and d = ${toIso(s.d)}`;
     if (key) {
+      // An alert raised before the filing was grouped learns its explanation now.
+      await sql`update alerts a set body = 'Explained by: ' || e.title || ', filed ' || to_char(e.first_filed_at at time zone 'Asia/Kolkata', 'DD Mon HH24:MI')
+        from events e where e.event_key = ${key} and a.kind = 'signal' and a.ref_id = ${`${String(s.symbol)}:${toIso(s.d)}`}
+          and a.body = 'No filing explains this move.'`;
       const chip = hits.price || hits.sigma ? `Price ${pct(num(s.ret_pct))}` : `Volume ${multiple(num(s.vol_ratio))}`;
       await sql`update events set market_bonus = 10,
         reasons = case when reasons @> ${sql.json([chip])} then reasons else reasons || ${sql.json([chip])} end,

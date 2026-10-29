@@ -78,10 +78,12 @@ export async function evaluateAlerts(): Promise<{ events: number; signals: numbe
     }
   }
 
-  // Signals: the latest session only (and the one before, for late runs).
+  // Signals: the latest session only (and the one before, for late runs). A move is only
+  // alerted once every filing of that company has been grouped, so "explained by" is settled.
   const sigs = await sql`select s.*, e.title as ev_title, e.first_filed_at as ev_at from price_signals s
     left join events e on e.event_key = s.explained_by
-    where s.d >= (select max(d) from price_signals) - 1`;
+    where s.d >= (select max(d) from price_signals) - 1
+      and not exists (select 1 from announcements a where a.symbol = s.symbol and a.status in ('new', 'classified'))`;
   let sg = 0;
   for (const s of sigs) {
     const sym = String(s.symbol);
@@ -95,7 +97,7 @@ export async function evaluateAlerts(): Promise<{ events: number; signals: numbe
         ? `Explained by: ${s.ev_title}, filed ${whenIst(new Date(s.ev_at as string))}`
         : "No filing explains this move.";
       const res = await sql`insert into alerts (user_id, rule_id, symbol, kind, ref_id, title, body, url)
-        values (${userId}, ${rule.id}, ${sym}, 'signal', ${`${sym}:${d}`}, ${signalTitle(sym, sig)}, ${body}, ${`/company/${encodeURIComponent(sym)}`})
+        values (${userId}, ${rule.id}, ${sym}, 'signal', ${`${sym}:${d}`}, ${signalTitle(sym, sig)}, ${body}, ${`/company?s=${encodeURIComponent(sym)}`})
         on conflict (user_id, ref_id) do nothing returning id`;
       sg += res.length;
     }

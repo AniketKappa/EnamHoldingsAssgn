@@ -88,6 +88,8 @@ async function release(name: string) {
 export async function processPipeline(deadline: number) {
   const c = await classifyNew(2000, Math.min(deadline - 60_000, Date.now() + 90_000));
   const g = await groupNew();
+  // New events can explain moves already seen (e.g. a backfill computed signals first).
+  if (g) await explainSignals(10).catch(() => 0);
   const x = await extractPending(deadline - 20_000);
   const a = await evaluateAlerts();
   const p = await pushPendingAlerts().catch(() => 0);

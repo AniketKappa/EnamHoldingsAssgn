@@ -89,10 +89,21 @@ function Dossier() {
   }
 
   if (!symbol) return <main className="pt-6"><Notice>Open a dossier from Research.</Notice></main>;
+  if (error && error.status === 404) {
+    return (
+      <main className="pt-6">
+        <div className="rounded-[14px] border border-rule bg-surface px-5 py-6">
+          <h1 className="text-lg font-semibold">No dossier for {symbol} yet</h1>
+          <p className="mt-1 text-sm text-ink-2">FINN reads {symbol}&apos;s last five call transcripts, its annual report and its financial tables, then checks what management promised against what it delivered. A first build takes two to four minutes.</p>
+          <div className="mt-4"><Button variant="primary" href={`/research?build=${symbol}`}>Build the dossier</Button></div>
+        </div>
+      </main>
+    );
+  }
   if (error) {
     return (
       <main className="pt-6">
-        <Notice tone="error" action={<Button variant="primary" href={`/research?build=${symbol}`}>Build dossier</Button>}>{error.status === 404 ? `No dossier for ${symbol} yet.` : error.message}</Notice>
+        <Notice tone="error" action={<Button variant="primary" href={`/research?build=${symbol}`}>Try building it again</Button>}>{error.message}</Notice>
       </main>
     );
   }

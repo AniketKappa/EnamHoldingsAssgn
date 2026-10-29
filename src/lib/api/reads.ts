@@ -51,12 +51,18 @@ export async function getEvent(userId: string, key: string): Promise<EventDetail
   };
 }
 
+/** Early signal alerts linked to /company/SYM; the page lives at /company?s=SYM. */
+function fixUrl(u: string | null): string | null {
+  const m = u?.match(/^\/company\/([^/?#]+)$/);
+  return m ? `/company?s=${m[1]}` : u;
+}
+
 export async function listAlerts(userId: string): Promise<{ alerts: AlertT[]; unread: number }> {
   const rows = await db()`select a.*, r.label as rule_label from alerts a left join alert_rules r on r.id = a.rule_id
     where a.user_id = ${userId} order by a.created_at desc limit 100`;
   const alerts: AlertT[] = rows.map((r) => ({
     id: Number(r.id), symbol: (r.symbol as string | null) ?? null, kind: r.kind as AlertT["kind"], title: String(r.title),
-    body: (r.body as string | null) ?? null, url: (r.url as string | null) ?? null, at: iso(r.created_at), read: !!r.read_at,
+    body: (r.body as string | null) ?? null, url: fixUrl((r.url as string | null) ?? null), at: iso(r.created_at), read: !!r.read_at,
     rule: (r.rule_label as string | null) ?? null,
   }));
   return { alerts, unread: alerts.filter((a) => !a.read).length };
