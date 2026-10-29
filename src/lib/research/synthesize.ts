@@ -10,6 +10,7 @@ import type { Cited } from "./types";
 const PROMPT = (company: string, input: string) => `Write the research summary of ${company} for a concentrated public-markets investor.
 Use only the facts, ledger and extracts below; do not use any outside knowledge of the company.
 Every bullet cites at least one input id exactly as given (fact:<key> or doc:<id>:p<n>). Numbers carry units and must come from the inputs.
+Write numbers the way the inputs show them: ₹78,750 cr, 11.6%, 133 bps, 1.24×.
 At most 25 words per bullet. Plain verbs, numbers first. Never use: robust, significant, notably, impressive, strong, delve, landscape.
 Produce: what_matters_now (3 bullets: the few things that matter for the thesis today), bull (3), bear (3),
 and seed_questions (3 questions an investor would ask next that these documents can answer).
@@ -29,8 +30,37 @@ export interface SynthesisInput {
   flags: string[];
 }
 
+/** A fact as an Indian investor reads it: ₹78,750 cr, 11.6%, −133 bps, 1.24×. */
+export function factText(f: Fact): string {
+  const v = f.value;
+  const sign = v < 0 ? "−" : "";
+  const abs = Math.abs(v);
+  const grouped = abs.toLocaleString("en-IN", { maximumFractionDigits: abs >= 100 ? 0 : 2 });
+  switch (f.unit) {
+    case "cr": return `${sign}₹${grouped} cr`;
+    case "rs": return `${sign}₹${grouped}`;
+    case "pct": return `${sign}${grouped}%`;
+    case "bps": return `${sign}${grouped} bps`;
+    case "x": return `${sign}${grouped}×`;
+    case "days": return `${sign}${grouped} days`;
+    default: return `${sign}${grouped}`;
+  }
+}
+
+/**
+ * Safety net for the writer's output: bare crore figures get the rupee sign and
+ * Indian grouping, and "1.24x" becomes "1.24×". Values are unchanged, so number
+ * grounding still holds.
+ */
+export function formatNumbers(text: string): string {
+  return text
+    .replace(/(?:₹|Rs\.?\s?|INR\s?)?(\d{1,3}(?:,\d{2,3})+|\d{4,})(\.\d+)?\s?(?:cr|crore)\b/gi, (_m, int: string, dec: string | undefined) =>
+      `₹${Number(int.replace(/,/g, "")).toLocaleString("en-IN")}${dec ?? ""} cr`)
+    .replace(/(\d(?:\.\d+)?)x\b/g, "$1×");
+}
+
 export function compactInput(i: SynthesisInput): string {
-  const facts = Object.values(i.facts).map((f) => `fact:${f.key} = ${f.label} ${f.value}${f.unit === "pct" ? "%" : f.unit === "cr" ? " cr" : f.unit === "bps" ? " bps" : f.unit === "x" ? "x" : f.unit === "days" ? " days" : ""} (${f.period})`);
+  const facts = Object.values(i.facts).map((f) => `fact:${f.key} = ${f.label} ${factText(f)} (${f.period})`);
   return JSON.stringify({
     facts,
     say_vs_do: { credibility: i.credibility, items: i.ledger },
@@ -47,7 +77,7 @@ function validBullets(list: { text: string; cites: string[] }[], ctx: GroundingC
   for (const b of list) {
     const cites = b.cites.filter((c) => citeExists(c, ctx));
     if (!cites.length) { log.push(`dropped (no valid cite): ${b.text}`); continue; }
-    const text = stripUrls(b.text);
+    const text = formatNumbers(stripUrls(b.text));
     const g = numbersGrounded(text, cites, ctx);
     if (!g.ok) { log.push(`dropped (ungrounded ${g.bad.join(", ")}): ${text}`); continue; }
     out.push({ text, cites });

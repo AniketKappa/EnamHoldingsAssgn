@@ -37,7 +37,7 @@ export default function Page() {
           </dl>
           <p className="mt-3 text-sm text-ink-2">
             FINN runs on free tiers. At paid rates, everything so far would have cost about <span className="num text-ink">${data.totals.usd.toFixed(2)}</span>.
-            {data.classification.filings ? <> Of {data.classification.filings.toLocaleString("en-IN")} filings, <span className="num text-ink">{Math.round((data.classification.by_rule / data.classification.filings) * 100)}%</span> were classified by rules with no model call.</> : null}
+            {data.classification.filings ? <> Of {data.classification.filings.toLocaleString("en-IN")} filings, <span className="num text-ink">{Math.round((data.classification.by_rule / data.classification.filings) * 100)}%</span> were classified with no model call: by rules, or by reading the filing&apos;s own subject line.</> : null}
           </p>
           {!data.by_task.length ? <div className="mt-6"><Notice>No model calls yet. The first filings run and the first dossier build will appear here.</Notice></div> : null}
           {data.by_task.length ? <SectionTitle>By task</SectionTitle> : null}

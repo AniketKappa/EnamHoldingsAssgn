@@ -148,7 +148,9 @@ export async function costSummary() {
   const [t] = await sql`select count(*)::int as calls, count(*) filter (where cache_hit)::int as cached, coalesce(sum(cost_usd_est), 0)::float as usd,
       count(*) filter (where created_at > now() - interval '24 hours' and not cache_hit and ok)::int as calls_24h
     from llm_calls`;
-  const [a] = await sql`select count(*)::int as filings, count(*) filter (where classified_by like 'rule:%')::int as by_rule,
+  // "No model call" counts the rules, the results-day context and the letter reading.
+  const [a] = await sql`select count(*)::int as filings,
+      count(*) filter (where classified_by like 'rule:%' or classified_by like 'pdf-%')::int as by_rule,
       count(*) filter (where classified_by = 'llm')::int as by_model from announcements`;
   const dossiers = await sql`select symbol, stats, created_at from dossiers order by created_at desc limit 12`;
   return {

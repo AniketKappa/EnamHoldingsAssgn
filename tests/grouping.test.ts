@@ -138,3 +138,18 @@ describe("deal size decides materiality", () => {
     expect([...pts].sort((a, b) => a - b)).toEqual(pts);
   });
 });
+
+describe("management changes", () => {
+  it("handing back an additional charge is a planned exit, and the appointment leads the card (HAL, Oct 2026)", async () => {
+    const { flagsFor, primaryChange } = await import("@/lib/pipeline/peopleRules");
+    const base = { effective_date: "2026-10-28", brief_profile: null, relationships: null, resignation_letter_attached: null, quote: "q", page: 1 };
+    const ravi = { ...base, person_name: "Shri Kota Ravi", designation: "Director (Operations)", role_class: "top" as const, change_type: "cessation" as const,
+      reason: "On appointment of Shri P B Rangarao as Director (Operations) of the Company, Shri Kota Ravi, Chairman and Managing Director of the Company ceased to hold the additional charge of Director (Operations)" };
+    const rao = { ...base, person_name: "Shri P B Rangarao", designation: "Director (Operations)", role_class: "top" as const, change_type: "appointment" as const, reason: null };
+    expect(flagsFor(ravi)).toEqual([]);
+    expect(primaryChange([ravi, rao])?.person_name).toBe("Shri P B Rangarao");
+    const quit = { ...ravi, person_name: "A Person", designation: "Chief Financial Officer", change_type: "resignation" as const, reason: "Personal reasons" };
+    expect(flagsFor(quit)).toEqual(["Unplanned CFO exit"]);
+    expect(primaryChange([rao, quit])?.person_name).toBe("A Person");
+  });
+});

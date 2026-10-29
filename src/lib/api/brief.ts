@@ -79,7 +79,12 @@ export async function freshness() {
   const sql = db();
   const rows = await sql`select task, max(started_at) filter (where ok) as at from task_runs where task in ('poll', 'prices') group by task`;
   const poll = rows.find((r) => r.task === "poll")?.at as string | undefined;
-  const prices = rows.find((r) => r.task === "prices")?.at as string | undefined;
+  // A backfill loads prices without a 'prices' task run, so fall back to when bars last arrived.
+  let prices = rows.find((r) => r.task === "prices")?.at as string | undefined;
+  if (!prices) {
+    const [p] = await sql`select max(d)::text as d from prices`;
+    if (p?.d) prices = istAt(String(p.d), 15, 30).toISOString(); // the close of the latest session loaded
+  }
   const now = new Date();
   const marketHours = isWeekdayIst(now) && istMinutes(now) >= 9 * 60 + 15 && istMinutes(now) <= 15 * 60 + 30;
   const delayed = !!poll && marketHours && now.getTime() - new Date(poll).getTime() > 30 * 60_000;

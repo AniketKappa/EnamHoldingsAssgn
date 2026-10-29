@@ -254,10 +254,14 @@ export async function llm<T>(req: LlmRequest<T>): Promise<LlmResult<T>> {
     return { data, text: typeof data === "string" ? data : JSON.stringify(data), model: "mock", cached: false, tokensIn: 0, tokensOut: 0 };
   }
 
+  const skip = await spentModels();
   if (!req.noCache && hasDb()) {
     try {
       const rows = await db()`select response, model from llm_cache where key = ${key}`;
-      if (rows.length) {
+      // A summary written by a fallback model is rewritten once the preferred model has quota again.
+      const preferred = chainFor(cfg.tier)[0];
+      const upgrade = cfg.tier === "t3" && rows.length && String(rows[0].model) !== preferred && !skip.has(preferred) && !deadModels.has(preferred);
+      if (rows.length && !upgrade) {
         const cached = rows[0].response as { data: T; text: string; sources?: LlmResult<T>["sources"]; supports?: LlmResult<T>["supports"] };
         await logCall({ task: req.task, model: String(rows[0].model), provider: "cache", tokensIn: 0, tokensOut: 0, latency: 0, ok: true, cacheHit: true, ref: req.ref });
         return { data: cached.data, text: cached.text, model: String(rows[0].model), cached: true, tokensIn: 0, tokensOut: 0, sources: cached.sources, supports: cached.supports };
@@ -265,7 +269,6 @@ export async function llm<T>(req: LlmRequest<T>): Promise<LlmResult<T>> {
     } catch { /* cache miss on error */ }
   }
 
-  const skip = await spentModels();
   let chain = chainFor(cfg.tier).filter((m) => !deadModels.has(m) && !skip.has(m));
   if (!chain.length) chain = chainFor(cfg.tier).filter((m) => !deadModels.has(m)); // try anyway rather than fail silently
   let lastErr: unknown = new LlmUnavailable("No model configured");
@@ -297,7 +300,7 @@ export async function llm<T>(req: LlmRequest<T>): Promise<LlmResult<T>> {
         if (hasDb() && !req.noCache) {
           try {
             await db()`insert into llm_cache (key, response, model) values (${key}, ${db().json({ data, text: out.text, sources: out.sources, supports: out.supports } as never)}, ${model})
-              on conflict (key) do nothing`;
+              on conflict (key) do update set response = excluded.response, model = excluded.model`;
           } catch { /* ignore */ }
         }
         return { data, text: out.text, model, cached: false, tokensIn: out.tokensIn, tokensOut: out.tokensOut, sources: out.sources, supports: out.supports };

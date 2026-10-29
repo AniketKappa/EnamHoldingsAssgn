@@ -17,16 +17,21 @@ export function roleClassOf(designation: string, fallback: Change["role_class"])
   return fallback;
 }
 
-const PLANNED_EXIT = /retire|superannuat|end of (his|her|the) term|completion of (his|her|the) term|tenure (end|complet)|not seeking re-?appointment|attain(ed|ing) the age|promot(ed|ion) within|elevat/i;
+// Exits that are part of a plan: retirement, end of term, promotion, or handing back an
+// additional charge when a full-time appointee takes over (common at public-sector boards).
+const PLANNED_EXIT = /retire|superannuat|end of (his|her|the) term|completion of (his|her|the) term|tenure (end|complet)|not seeking re-?appointment|attain(ed|ing) the age|promot(ed|ion) within|elevat|additional charge|consequent (up)?on (the )?appointment|on (the )?appointment of|hand(ed|ing)? ?over|relinquish/i;
+
+export function isUnplannedExit(c: Change): boolean {
+  const rc = roleClassOf(c.designation, c.role_class);
+  const exit = c.change_type === "resignation" || c.change_type === "cessation";
+  return exit && (rc === "top" || rc === "auditor") && !PLANNED_EXIT.test(`${c.reason ?? ""}`);
+}
 
 export function flagsFor(c: Change): string[] {
   const flags: string[] = [];
   const rc = roleClassOf(c.designation, c.role_class);
   const exit = c.change_type === "resignation" || c.change_type === "cessation";
-  if (exit && (rc === "top" || rc === "auditor") && !PLANNED_EXIT.test(`${c.reason ?? ""}`)) {
-    const who = shortRole(c.designation);
-    flags.push(`Unplanned ${who} exit`);
-  }
+  if (isUnplannedExit(c)) flags.push(`Unplanned ${shortRole(c.designation)} exit`);
   if (exit && rc === "independent" && c.reason && !/personal|pre-?occupation|other commitments|retire|term/i.test(c.reason)) {
     flags.push("Independent director exit with stated reasons");
   }
@@ -50,10 +55,11 @@ export function shortRole(designation: string): string {
 
 /** The most important change in a filing decides the event's subtype and title. */
 export function primaryChange(changes: Change[]): Change | null {
+  // Within a role class: an unplanned exit leads, then an appointment, then a planned exit.
   const rank = (c: Change) => {
     const rc = roleClassOf(c.designation, c.role_class);
     const r = { auditor: 5, top: 4, kmp: 2, independent: 1, other: 0 }[rc];
-    return r * 10 + (c.change_type === "appointment" ? 1 : 2);
+    return r * 10 + (isUnplannedExit(c) ? 3 : c.change_type === "appointment" ? 2 : 1);
   };
   return [...changes].sort((a, b) => rank(b) - rank(a))[0] ?? null;
 }
