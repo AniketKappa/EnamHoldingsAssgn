@@ -32,7 +32,7 @@ export default function Page() {
       <SectionTitle>Data</SectionTitle>
       <p className="text-sm text-ink-2">
         Filings checked {data?.freshness.filings_checked_at ? whenIst(data.freshness.filings_checked_at) : "not yet"}; prices {data?.freshness.prices_at ? `at ${whenIst(data.freshness.prices_at)}` : "not yet loaded"}.
-        {" "}Filings come from BSE every 10 minutes from 07:00 to midnight, hourly overnight. Prices are end of day from Yahoo Finance, with BSE as the fallback.
+        {" "}Filings come from BSE every 10 minutes from 07:00 to midnight and hourly overnight; if that clock is late, the next visit catches up in the background. Prices are end of day from Yahoo Finance, with BSE as the fallback.
       </p>
       {data && !data.llm ? <p className="mt-2 text-sm text-down">Model features are off on this deployment: no API key is configured.</p> : null}
 
@@ -42,7 +42,7 @@ export default function Page() {
         <ul className="num mt-2 space-y-1 text-sm text-ink-2">
           <li><span className="text-ink">Base</span> for the kind of event (table below)</li>
           <li><span className="text-ink">+15</span> for a governance red flag, such as an unplanned CFO exit or a downgrade</li>
-          <li><span className="text-ink">+5 or +15</span> when the amount is 5% or 10% of market value</li>
+          <li><span className="text-ink">Deal size</span> against market value: +15 at 10% or more, +5 at 5%, down to −45 below 0.5%, so a small stake stays routine. Orders are sized against annual revenue instead</li>
           <li><span className="text-ink">+10</span> when the stock then moves past the alert thresholds</li>
           <li><span className="text-ink">+5 or +10</span> when the holding is 5% or 10% of your portfolio</li>
           <li><span className="text-ink">× 0.7</span> after &ldquo;Not useful&rdquo; on that kind of filing for that company; <span className="text-ink">× 0.3</span> for a muted category</li>
@@ -66,7 +66,7 @@ export default function Page() {
             ))}
           </tbody>
         </table>
-        <p className="mt-3 text-sm text-ink-2">About 90% of filings are classified by ordered rules, not a model. Models read only what code can&apos;t: a results statement page, a management-change disclosure, the size of a deal. Every number is checked by arithmetic, and every dossier claim must cite a page or a table cell.</p>
+        <p className="mt-3 text-sm text-ink-2">About 90% of filings are classified by ordered rules, not a model; generic &ldquo;Regulation 30&rdquo; disclosures are read from the letter&apos;s own subject line and first sentences. Repeat filings of one action, a dividend and its record date, and an IPO&apos;s run of updates each count once. Models read only what code can&apos;t: a results statement page, a management-change disclosure, the size of a deal. Every number is checked by arithmetic, and every dossier claim must cite a page or a table cell.</p>
       </section>
 
       <SectionTitle>Efficiency</SectionTitle>

@@ -34,7 +34,8 @@ Every visitor gets their own copy of the demo portfolio and rules (an anonymous 
 ```
 score = base(kind of event)
       + 15 governance red flag (unplanned CEO/CFO/auditor exit, downgrade, new pledge)
-      + 5 / 15 when the amount is 5% / 10% of market value
+      + deal size: +15 at ≥10% of market value, +5 at ≥5%, −15 below 2%, −45 below 0.5%
+        (orders against annual revenue instead)
       + 10 when the stock then moved past the alert thresholds
       + 5 / 10 when the holding is 5% / 10% of the portfolio
       × feedback (Not useful 0.7, muted category 0.3)
@@ -84,6 +85,10 @@ flowchart LR
   page load calls a model or a scraper, so a slow source never blanks the app.
 - **GitHub Actions is the worker and the clock.** It runs the same pipeline code as the app
   (`scripts/finn.ts tick`), every stage idempotent and leased, so a late or doubled run is harmless.
+  GitHub's scheduler is best effort, so there is a second clock: when the pipeline has been
+  quiet for 15 minutes, the next visit runs a tick on Vercel in the background.
+- **The Brief is server-rendered with its data** (partial prerendering: a static shell, the
+  Brief streamed in the same response), so the first paint shows the cards, not a spinner.
 - **Dossier builds run on Vercel** in resumable steps under a lease; the client's progress
   poll keeps a build moving within the 300-second function limit.
 - **Push without secrets handling:** Web Push VAPID keys are generated into the database
