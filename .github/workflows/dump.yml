@@ -1,0 +1,29 @@
+# Dump research inputs (job state, transcript extracts, cited pages, saved dossiers) to the
+# `dump` branch, so the ledger and synthesis can be debugged offline against real data.
+# Reads public-document data only; no user data.
+name: Dump research inputs
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --no-audit --no-fund
+      - run: npx tsx scripts/finn.ts dump --dir /tmp/dump
+      - name: Commit to the dump branch
+        run: |
+          cd /tmp/dump
+          git init -q -b dump
+          git config user.name "finn-bot"
+          git config user.email "finn-bot@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Dump $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" dump:dump

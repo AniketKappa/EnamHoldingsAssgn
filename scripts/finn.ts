@@ -156,7 +156,7 @@ async function fixtures(dir: string) {
 async function main() {
   if (cmd === "fixtures") return fixtures(flag("dir", "fixtures") ?? "fixtures");
   if (cmd === "help") {
-    console.log("Commands: probe, migrate, seed, symbols, backfill, ingest, process, prices, verify, calendar, alerts, research <SYMBOL>, prebuild, tick, taxonomy, eval, status, fixtures");
+    console.log("Commands: probe, migrate, seed, symbols, backfill, ingest, process, prices, verify, calendar, alerts, research <SYMBOL>, prebuild, tick, taxonomy, eval, status, fixtures, dump");
     return;
   }
   if (cmd === "probe") return probe();
@@ -351,6 +351,41 @@ async function main() {
         (select count(*) from events where status = 'pending')::int as pending, (select count(*) from dossiers)::int as dossiers,
         (select count(*) from prices)::int as prices, (select count(*) from llm_calls)::int as llm_calls`;
       summary(`Status: ${JSON.stringify(c[0])}\n\n${t.map((r) => `- ${r.task}: last ok ${r.last_ok ? new Date(r.last_ok as string).toISOString() : "never"}, failures today ${r.failures}`).join("\n")}`);
+      break;
+    }
+    case "dump": {
+      // Research inputs for offline debugging of the ledger and synthesis: each dossier's job state,
+      // its transcript extracts, the pages they cite and the saved dossier. Public documents only;
+      // no user data (portfolios, rules, push subscriptions) is read.
+      const { mkdirSync, writeFileSync } = await import("node:fs");
+      const dir = flag("dir", "dump")!;
+      mkdirSync(dir, { recursive: true });
+      const syms = await sql`select distinct symbol from dossiers order by symbol`;
+      const lines: string[] = [];
+      for (const { symbol } of syms) {
+        const job = await sql`select result from jobs where kind = 'research' and status = 'done' and symbol = ${symbol} order by updated_at desc limit 1`;
+        const state = job[0]?.result as { docs?: { id?: number }[] } | undefined;
+        const ids = (state?.docs ?? []).map((d) => d.id).filter((x): x is number => typeof x === "number");
+        const extracts = ids.length ? await sql`select document_id, kind, data, model from doc_extracts where document_id in ${sql(ids)}` : [];
+        const cited = new Set<string>();
+        for (const e of extracts) {
+          const d = e.data as { guidance?: { page: number }[]; reported_kpis?: { page: number }[] };
+          for (const g of [...(d.guidance ?? []), ...(d.reported_kpis ?? [])]) cited.add(`${e.document_id}:${g.page}`);
+        }
+        const byDoc = new Map<number, number[]>();
+        for (const k of cited) {
+          const [a, b] = k.split(":").map(Number);
+          byDoc.set(a, [...(byDoc.get(a) ?? []), b, b - 1, b + 1].filter((p) => p > 0));
+        }
+        const pages: unknown[] = [];
+        for (const [docId, list] of byDoc) {
+          pages.push(...await sql`select document_id, page_no, text from doc_pages where document_id = ${docId} and page_no in ${sql([...new Set(list)])}`);
+        }
+        const dossier = await sql`select version, data from dossiers where symbol = ${symbol} order by created_at desc limit 1`;
+        writeFileSync(`${dir}/${symbol}.json`, JSON.stringify({ state, extracts, pages, dossier: dossier[0] ?? null }, null, 1));
+        lines.push(`${symbol}: ${ids.length} documents, ${extracts.length} extracts, ${pages.length} pages`);
+      }
+      summary(`Dump: ${lines.join("; ")}`);
       break;
     }
     default:
