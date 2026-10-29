@@ -238,22 +238,22 @@ function Dossier() {
       {d.lender ? (
       <section id="cash" className="scroll-mt-16">
         <SectionTitle>Asset quality</SectionTitle>
-        <dl className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-3">
           <Stat label={`Gross NPA, ${t("q_gnpa")?.period ?? "latest"}`} value={d.asset_quality?.gnpa == null ? "–" : `${d.asset_quality.gnpa}%`} onClick={() => t("q_gnpa") && setOpened({ cite: "fact:q_gnpa" })} />
           <Stat label="Change in a year" value={d.asset_quality?.gnpa_yoy_bps == null ? "–" : `${d.asset_quality.gnpa_yoy_bps > 0 ? "+" : d.asset_quality.gnpa_yoy_bps < 0 ? "−" : ""}${Math.abs(d.asset_quality.gnpa_yoy_bps)} bps`} onClick={() => t("q_gnpa_yoy_bps") && setOpened({ cite: "fact:q_gnpa_yoy_bps" })} />
           <Stat label={`Net NPA, ${t("q_nnpa")?.period ?? "latest"}`} value={d.asset_quality?.nnpa == null ? "–" : `${d.asset_quality.nnpa}%`} onClick={() => t("q_nnpa") && setOpened({ cite: "fact:q_nnpa" })} />
-        </dl>
+        </div>
         <p className="mt-2 text-xs text-ink-3">For a lender, growing the loan book uses operating cash, so cash conversion is not shown. Bad loans are the test instead.</p>
       </section>
       ) : (
       <section id="cash" className="scroll-mt-16">
         <SectionTitle>Cash quality</SectionTitle>
         {d.cash.flag ? <div className="mb-3"><Chip tone="flag">{d.cash.flag}</Chip></div> : null}
-        <dl className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-3">
           <Stat label="Cash ÷ profit, 5 years" value={d.cash.cfo_pat_5y === null ? "–" : `${d.cash.cfo_pat_5y}×`} onClick={() => t("cfo_pat_5y") && setOpened({ cite: "fact:cfo_pat_5y" })} />
           <Stat label={`Cash ÷ EBITDA, ${t("cfo_ebitda")?.period ?? "latest"}`} value={d.cash.cfo_ebitda === null ? "–" : `${d.cash.cfo_ebitda}%`} onClick={() => t("cfo_ebitda") && setOpened({ cite: "fact:cfo_ebitda" })} />
           <Stat label={`Free cash flow, ${t("fcf")?.period ?? "latest"}`} value={d.cash.fcf === null ? "–" : `₹${Math.round(d.cash.fcf).toLocaleString("en-IN")} cr`} onClick={() => t("fcf") && setOpened({ cite: "fact:fcf" })} />
-        </dl>
+        </div>
         {d.numbers.annual.cfo?.values.length ? (
           <div className="mt-3">
             <div className="text-xs text-ink-2">Cash from operations, ₹ cr</div>
@@ -266,14 +266,14 @@ function Dossier() {
 
       <section id="balance" className="scroll-mt-16">
         <SectionTitle>Balance sheet</SectionTitle>
-        <dl className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           <Stat label="Borrowings" value={d.balance_sheet.borrowings === null ? "–" : `₹${Math.round(d.balance_sheet.borrowings).toLocaleString("en-IN")} cr`} onClick={() => t("borrowings") && setOpened({ cite: "fact:borrowings" })} />
           {t("deposits") ? <Stat label="Deposits" value={`₹${Math.round(t("deposits")!.value).toLocaleString("en-IN")} cr`} onClick={() => setOpened({ cite: "fact:deposits" })} />
             : <Stat label="Debt to equity" value={d.balance_sheet.de_ratio === null ? "–" : `${d.balance_sheet.de_ratio}×`} onClick={() => t("de_ratio") && setOpened({ cite: "fact:de_ratio" })} />}
           {!d.lender ? <Stat label="Interest cover" value={d.balance_sheet.interest_cover === null ? "–" : `${d.balance_sheet.interest_cover}×`} onClick={() => t("interest_cover") && setOpened({ cite: "fact:interest_cover" })} /> : null}
           <Stat label="Contingent liabilities" value={d.balance_sheet.contingent_cr === null ? "–" : `₹${Math.round(d.balance_sheet.contingent_cr).toLocaleString("en-IN")} cr${d.balance_sheet.contingent_pct_networth !== null ? `, ${d.balance_sheet.contingent_pct_networth}% of net worth` : ""}`}
             onClick={() => d.balance_sheet.cites.contingent && setOpened({ cite: d.balance_sheet.cites.contingent })} />
-        </dl>
+        </div>
         {!d.lender && d.balance_sheet.wc_days.ccc !== null ? (
           <p className="num mt-3 text-sm text-ink-2">Working capital: debtors {d.balance_sheet.wc_days.debtor ?? "–"} days, inventory {d.balance_sheet.wc_days.inventory ?? "–"} days, payables {d.balance_sheet.wc_days.payable ?? "–"} days, cash cycle {String(d.balance_sheet.wc_days.ccc).replace("-", "−")} days{(d.balance_sheet.wc_days.ccc ?? 0) < 0 ? ": suppliers and customer advances fund the business" : ""}.</p>
         ) : null}
@@ -352,7 +352,7 @@ function Dossier() {
           Built with {d.stats.calls} model calls ({d.stats.cached_calls} from cache), {(d.stats.tokens_in / 1000).toFixed(0)}k tokens read, in {Math.round(d.stats.seconds / 60) || 1} min. At paid rates this would cost about ${d.stats.cost_usd_est.toFixed(3)}; FINN runs on free tiers.
           {d.stats.dropped_bullets ? ` ${d.stats.dropped_bullets} drafted bullet${d.stats.dropped_bullets > 1 ? "s" : ""} failed the citation or number checks and ${d.stats.dropped_bullets > 1 ? "were" : "was"} dropped.` : ""}
         </p>
-        <p className="mt-2 text-xs text-ink-3">Primary sources only: no broker notes, news or the model&apos;s own knowledge. <Link href="/settings#how" className="text-accent">How FINN decides</Link></p>
+        <p className="mt-2 text-xs text-ink-3">Primary sources only: no broker notes, news or the model&apos;s own knowledge. <Link href="/settings#how" className="text-accent underline underline-offset-2">How FINN decides</Link></p>
       </section>
 
       <div className="pb-safe fixed inset-x-0 bottom-[60px] z-20 border-t border-rule bg-paper/95 px-4 pt-2 backdrop-blur">
@@ -400,8 +400,8 @@ function LedgerItem({ r, onOpen }: { r: LedgerRow; onOpen: (o: Opened) => void }
 function Stat({ label, value, onClick }: { label: string; value: string; onClick?: () => void }) {
   return (
     <button type="button" onClick={onClick} className="rounded-[12px] border border-rule bg-surface px-3 py-2.5 text-left">
-      <dt className="text-xs leading-snug text-ink-2">{label}</dt>
-      <dd className="num mt-1 text-base font-semibold">{value}</dd>
+      <span className="block text-xs leading-snug text-ink-2">{label}</span>
+      <span className="num mt-1 block text-base font-semibold">{value}</span>
     </button>
   );
 }

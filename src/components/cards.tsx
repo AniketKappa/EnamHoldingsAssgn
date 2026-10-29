@@ -199,7 +199,7 @@ export function TopCard({ item, onOpen, onDone, onAsk, leaving }: { item: BriefI
           {r ? <ChecksLine r={r} /> : item.status === "pending" ? <span className="text-xs text-ink-3">Reading the filing…</span> : null}
           {item.pdf_url ? (
             <a href={pageLink(item.pdf_url, r?.source_pages?.[0]) ?? undefined} target="_blank" rel="noreferrer"
-              className="mt-1 flex items-center gap-1 text-xs text-accent">
+              className="-my-1 flex min-h-8 items-center gap-1 py-1 text-xs text-accent">
               Open filing{r?.source_pages?.[0] ? ` p.${r.source_pages[0]}` : ""} <ExternalLink size={12} aria-hidden />
             </a>
           ) : null}

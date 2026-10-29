@@ -8,13 +8,13 @@
   --paper: #edf0f3;
   --surface: #ffffff;
   --ink: #18212b;
-  --ink-2: #5e6a78;
-  --ink-3: #8a95a3;
+  --ink-2: #4d5866;
+  --ink-3: #636e7b;
   --rule: #d9dee5;
   --accent: #3d4fd1;
   --accent-soft: #e3e6fa;
   --up: #18794e;
-  --down: #c23b32;
+  --down: #b4342b;
   --up-soft: #e3f2ea;
   --down-soft: #f8e6e4;
   --sheet-shadow: 0 -8px 32px rgb(24 33 43 / 0.14);
@@ -26,8 +26,8 @@
     --paper: #10151f;
     --surface: #171e2b;
     --ink: #e6e9ef;
-    --ink-2: #9aa5b4;
-    --ink-3: #6f7a8a;
+    --ink-2: #a6b0bd;
+    --ink-3: #8590a0;
     --rule: #273042;
     --accent: #8e9bff;
     --accent-soft: #232b4a;

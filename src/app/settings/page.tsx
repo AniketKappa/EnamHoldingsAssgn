@@ -27,7 +27,7 @@ export default function Page() {
       <h1 className="text-xl font-semibold tracking-tight">Settings</h1>
       <SectionTitle>Alerts on this device</SectionTitle>
       <PushControls />
-      <p className="mt-2 text-xs text-ink-2">Thresholds and the categories that alert you are set as <Link href="/alerts?tab=rules" className="text-accent">watch rules</Link>.</p>
+      <p className="mt-2 text-xs text-ink-2">Thresholds and the categories that alert you are set as <Link href="/alerts?tab=rules" className="text-accent underline underline-offset-2">watch rules</Link>.</p>
 
       <SectionTitle>Data</SectionTitle>
       <p className="text-sm text-ink-2">
@@ -70,7 +70,7 @@ export default function Page() {
       </section>
 
       <SectionTitle>Efficiency</SectionTitle>
-      <p className="text-sm text-ink-2">Every model call is logged with its tokens and cached by content. <Link href="/cost" className="text-accent">See calls, cache hits and cost</Link>.</p>
+      <p className="text-sm text-ink-2">Every model call is logged with its tokens and cached by content. <Link href="/cost" className="text-accent underline underline-offset-2">See calls, cache hits and cost</Link>.</p>
 
       <SectionTitle>About</SectionTitle>
       <p className="text-sm text-ink-2">FINN is a research prototype, not investment advice. Sources: BSE corporate filings, company call transcripts and annual reports, screener.in&apos;s financial tables (never its commentary), and Yahoo Finance prices. Person backgrounds come from web search results with their links; FINN never reads LinkedIn.</p>
