@@ -133,10 +133,10 @@ Measured on the deployed app with live data (October 2026):
 | Check | Result |
 | --- | --- |
 | Filings classified without a model | 242 of 247 (98%) |
-| Results numbers matching screener's quarterly table | 58 of 66 within 0.5% (87.9%); the misses are EBITDA definitions (L&T's financial-services finance cost, KPIT), not misreads |
+| Results numbers matching screener's quarterly table | 87 of 98 within 0.5% (88.8%) across 10 results; the misses are EBITDA definitions (L&T's financial-services finance cost, KPIT), not misreads |
 | Results arithmetic checks passing | every card shows its six checks; a failed check is shown, not hidden |
-| Lighthouse, mobile, on the Brief | 97 performance, 100 accessibility, 100 best practices, 100 SEO |
-| Console errors across every screen, light and dark | 0 |
+| Lighthouse, mobile, on the Brief (three runs) | 94–97 performance, 100 accessibility, 100 best practices, 100 SEO |
+| Console errors and failed requests across 14 screens, light and dark | 0 |
 | Model calls for the whole run | 433 (counting retries and free-tier refusals), about $0.98 at paid rates, ₹0 spent |
 | 30-day Brief, 18 holdings | 241 filings became 63 events, 28 worth reading |
 | Say vs Do on L&T | 2 of 3 resolved promises met (67%): FY26 order inflow +20% against ≥10%, working capital 4.1% against 10%; FY26 revenue +11.8% against 15% missed |
