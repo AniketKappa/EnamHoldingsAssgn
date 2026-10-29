@@ -12,7 +12,7 @@ export function bseRow(p: { id: string; code: string; company: string; subject: 
   return {
     NEWSID: p.id, SCRIP_CD: Number(p.code), NEWSSUB: `${p.company} - ${p.code} - ${p.subject}`, HEADLINE: p.headline ?? "",
     CATEGORYNAME: p.category ?? null, SUBCATNAME: p.subcat, NEWS_DT: istNaive(p.at), DT_TM: istNaive(p.at), DissemDT: istNaive(p.at),
-    ATTACHMENTNAME: p.pdf ?? null, Fld_Attachsize: p.pdf ? 250_000 : null, SLONGNAME: p.company, CRITICALNEWS: 0,
+    ATTACHMENTNAME: p.pdf ?? null, Fld_Attachsize: p.pdf ? 200_000 + [...p.pdf].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) % 100_000, 7) : null, SLONGNAME: p.company, CRITICALNEWS: 0,
   };
 }
 

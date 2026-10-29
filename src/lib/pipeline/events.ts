@@ -76,8 +76,13 @@ const THREADS = new Set(["M&A:listing", "M&A:restructuring_update"]);
 
 export interface ExistingEvent {
   event_key: string; symbol: string; first_filed_at: Date;
-  category?: string; subtype?: string | null; subject?: string | null; headline?: string | null;
+  category?: string; subtype?: string | null; subject?: string | null; headline?: string | null; pdf_bytes?: number | null;
 }
+
+// One letter filed under several exchange subcategories ("Acquisition", "Disinvestment", "General")
+// arrives minutes apart with the same attachment, byte for byte.
+const SAME_PDF_WINDOW_MS = 6 * 3600 * 1000;
+const SAME_PDF_MIN_BYTES = 20_000;
 
 /** Pure grouping: which event each filing belongs to. `existing` holds recent stored events of the same companies. */
 export function groupFilings(
@@ -94,8 +99,9 @@ export function groupFilings(
     list.push(v);
     map.set(k, list);
   };
-  const poolKeys = (symbol: string, category: string, subject: string, headline: string | null, subtype: string | null = null) => {
+  const poolKeys = (symbol: string, category: string, subject: string, headline: string | null, subtype: string | null = null, pdfBytes: number | null = null) => {
     const keys: string[] = [];
+    if (pdfBytes && pdfBytes >= SAME_PDF_MIN_BYTES) keys.push(`b:${symbol}:${pdfBytes}`);
     const ak = actionKey(subject, headline);
     if (ak) keys.push(`a:${symbol}:${category}:${ak}`);
     if (category === "dividend") keys.push(`d:${symbol}`);
@@ -107,7 +113,7 @@ export function groupFilings(
     if (!e.category || (e.category === "results" && e.subtype === "financial_results")) {
       addTo(resultsBySymbol, e.symbol, { key: e.event_key, at });
     } else {
-      for (const k of poolKeys(e.symbol, e.category, e.subject ?? "", e.headline ?? null, e.subtype ?? null)) addTo(pools, k, { key: e.event_key, at });
+      for (const k of poolKeys(e.symbol, e.category, e.subject ?? "", e.headline ?? null, e.subtype ?? null, e.pdf_bytes ?? null)) addTo(pools, k, { key: e.event_key, at });
     }
   }
   const existingKeys = new Set(existing.map((e) => e.event_key));
@@ -165,10 +171,10 @@ export function groupFilings(
       } else {
         // The same action filed again (under another subcategory, or a dividend's record date) joins the first filing.
         const t = f.filed_at.getTime();
-        const keys = poolKeys(f.symbol, f.category, f.subject, f.headline, f.subtype);
+        const keys = poolKeys(f.symbol, f.category, f.subject, f.headline, f.subtype, f.pdf_bytes ?? null);
         let repeat: string | null = null;
         for (const k of keys) {
-          const win = k.startsWith("d:") ? DIVIDEND_WINDOW_MS : k.startsWith("t:") ? THREAD_WINDOW_MS : MERGE_WINDOW_MS;
+          const win = k.startsWith("d:") ? DIVIDEND_WINDOW_MS : k.startsWith("t:") ? THREAD_WINDOW_MS : k.startsWith("b:") ? SAME_PDF_WINDOW_MS : MERGE_WINDOW_MS;
           const near = (pools.get(k) ?? []).filter((r) => Math.abs(r.at - t) < win)
             .sort((a, b) => Math.abs(a.at - t) - Math.abs(b.at - t));
           if (near.length) { repeat = near[0].key; break; }
@@ -215,13 +221,14 @@ export async function groupNew(limit = 2000): Promise<number> {
   const minT = new Date(Math.min(...filings.map((f) => f.filed_at.getTime())) - JOIN_WINDOW_MS);
   const maxT = new Date(Math.max(...filings.map((f) => f.filed_at.getTime())) + JOIN_WINDOW_MS);
   const minE = new Date(minT.getTime() - THREAD_WINDOW_MS);
-  const existing = await sql`select e.event_key, e.symbol, e.first_filed_at, e.category, e.subtype, a.subject, a.headline
+  const existing = await sql`select e.event_key, e.symbol, e.first_filed_at, e.category, e.subtype, a.subject, a.headline, a.pdf_bytes
     from events e left join announcements a on a.id = e.primary_id
     where e.symbol in ${sql(symbols)} and e.first_filed_at between ${minE} and ${maxT}`;
   const { events, assignments } = groupFilings(filings, existing.map((e) => ({
     event_key: String(e.event_key), symbol: String(e.symbol), first_filed_at: new Date(e.first_filed_at as string),
     category: String(e.category), subtype: (e.subtype as string | null) ?? null,
     subject: (e.subject as string | null) ?? null, headline: (e.headline as string | null) ?? null,
+    pdf_bytes: e.pdf_bytes === null || e.pdf_bytes === undefined ? null : Number(e.pdf_bytes),
   })));
 
   const mcaps = new Map<string, number | null>();
@@ -304,3 +311,34 @@ export async function rescoreEvent(eventKey: string): Promise<void> {
 }
 
 function dedupe(a: string[]): string[] { return [...new Set(a.filter(Boolean))]; }
+
+/**
+ * Repair for events stored before same-attachment grouping: events of one company whose lead
+ * filings carry the same attachment within six hours become one (the earliest keeps its key).
+ */
+export async function mergeSameAttachment(days = 35): Promise<number> {
+  const sql = db();
+  const rows = await sql`select e.event_key, e.symbol, e.first_filed_at, a.pdf_bytes from events e join announcements a on a.id = e.primary_id
+    where e.first_filed_at > now() - make_interval(days => ${days}) and e.category <> 'results' and a.pdf_bytes >= ${SAME_PDF_MIN_BYTES}
+    order by e.symbol, a.pdf_bytes, e.first_filed_at`;
+  let merged = 0;
+  for (let i = 0; i < rows.length; i++) {
+    const keep = rows[i];
+    const dups: string[] = [];
+    while (i + 1 < rows.length && rows[i + 1].symbol === keep.symbol && Number(rows[i + 1].pdf_bytes) === Number(keep.pdf_bytes)
+      && new Date(rows[i + 1].first_filed_at as string).getTime() - new Date(keep.first_filed_at as string).getTime() < SAME_PDF_WINDOW_MS) {
+      dups.push(String(rows[++i].event_key));
+    }
+    if (!dups.length) continue;
+    await sql.begin(async (tx) => {
+      await tx`update announcements set event_key = ${String(keep.event_key)}, is_primary = false where event_key in ${tx(dups)}`;
+      await tx`update events set filings = (select count(*) from announcements where event_key = ${String(keep.event_key)}),
+        last_filed_at = greatest(last_filed_at, (select max(filed_at) from announcements where event_key = ${String(keep.event_key)})), updated_at = now()
+        where event_key = ${String(keep.event_key)}`;
+      await tx`delete from alerts where kind = 'event' and ref_id in ${tx(dups)}`;
+      await tx`delete from events where event_key in ${tx(dups)}`;
+    });
+    merged += dups.length;
+  }
+  return merged;
+}

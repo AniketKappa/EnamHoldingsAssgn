@@ -137,7 +137,9 @@ export async function extractResultsEvent(eventKey: string): Promise<ResultsDeta
         } else if (metrics.revenue.yoy_pct !== null) {
           reasons.push(`${template === "lender" ? "NII" : "Revenue"} ${pct(metrics.revenue.yoy_pct, 0)} YoY`);
         }
-        if (metrics.exceptional && Math.abs(metrics.exceptional) >= 1) reasons.push(`Exceptional ${crore(metrics.exceptional)}`);
+        // An exceptional item is a reason only when it moves profit: 5% of pre-exceptional PBT or more.
+        const pre = Math.abs((metrics.pbt.value ?? 0) - (metrics.exceptional ?? 0));
+        if (metrics.exceptional && Math.abs(metrics.exceptional) >= Math.max(1, 0.05 * pre)) reasons.push(`Exceptional ${crore(metrics.exceptional)}`);
       }
       const detail: ResultsDetail = {
         quarter: fiscalQuarterLabel(cur.period_end || expected),

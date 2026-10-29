@@ -17,7 +17,7 @@ export interface Scored { base: number; reasons: string[] }
 
 // Where the size of the money decides materiality (a ₹50 crore startup stake is
 // not news for a ₹1 lakh crore company; the same deal is for a ₹2,000 crore one).
-const SIZED = new Set(["M&A", "fund_raise", "capex", "press_release", "litigation"]);
+const SIZED = new Set(["M&A", "fund_raise", "capex", "press_release", "litigation", "insider_trading"]);
 const SIZE_UNSTATED = new Set(["acquisition", "divestment", "jv", "order_win"]);
 
 /** Points for an amount as a share of market value (or of revenue for orders). */
@@ -47,7 +47,8 @@ export function scoreEvent(i: ScoreInput): Scored {
     base += 15;
     for (const f of i.redFlags) if (!reasons.includes(f)) reasons.push(f);
   }
-  if (i.amountCr && i.amountCr > 0) {
+  // Only where money is the story: a rating on ₹5,685 cr of bank lines is not a ₹5,685 cr event.
+  if (i.amountCr && i.amountCr > 0 && (SIZED.has(i.category) || i.subtype === "order_win")) {
     if (i.subtype === "order_win") {
       // Orders are sized against what the company sells in a year, never its market value.
       if (i.revenueCr && i.revenueCr > 0) {
@@ -57,9 +58,7 @@ export function scoreEvent(i: ScoreInput): Scored {
       } else reasons.push(fmtCr(i.amountCr));
     } else if (i.mcapCr && i.mcapCr > 0) {
       const ofMcap = (i.amountCr / i.mcapCr) * 100;
-      const pts = sizePoints(ofMcap, "mcap");
-      // Upside for any big number; the downgrade only where size is the story.
-      base += pts > 0 || SIZED.has(i.category) ? pts : 0;
+      base += sizePoints(ofMcap, "mcap");
       reasons.push(`${fmtCr(i.amountCr)} = ${pctText(ofMcap)}% of mcap`);
     } else {
       reasons.push(fmtCr(i.amountCr));

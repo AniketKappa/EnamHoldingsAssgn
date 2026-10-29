@@ -7,7 +7,7 @@ import { PeopleExtract, type PeopleExtractT } from "../llm/schemas";
 import { subsetPdf } from "../sources/pdf";
 import { markPages, quoteOnPage } from "../text";
 import { fetchAndStore, downloadPdf } from "./filings";
-import { roleClassOf, flagsFor, primaryChange, peopleSubtype, peopleTitle } from "./peopleRules";
+import { roleClassOf, flagsFor, primaryChange, peopleSubtype, peopleTitle, subsidiarySeat } from "./peopleRules";
 import { personBackground, type Background } from "./background";
 
 type Change = PeopleExtractT["changes"][number];
@@ -92,8 +92,10 @@ export async function extractPeopleEvent(eventKey: string): Promise<{ people: Pe
         || pages.some((p) => p.toLowerCase().includes(c.person_name.toLowerCase().split(" ").slice(-1)[0] ?? "~"));
       if (!quoteOk) continue;
     }
-    people.push({ ...c, role_class: rc, flags: flagsFor({ ...c, role_class: rc }), quote_ok: quoteOk, background: null });
+    people.push({ ...c, role_class: rc, flags: [], quote_ok: quoteOk, background: null });
   }
+  // Flags read the whole filing: a named successor makes an exit planned.
+  for (const p of people) p.flags = flagsFor(p, people);
   if (!people.length) throw new Error("No person changes found in the filing");
 
   const primary = primaryChange(people);
@@ -101,7 +103,7 @@ export async function extractPeopleEvent(eventKey: string): Promise<{ people: Pe
 
   // Background only for incoming or re-designated top roles (the brief's "who are they").
   for (const p of people) {
-    if (!ENRICH.test(p.role_class)) continue;
+    if (!ENRICH.test(p.role_class) || subsidiarySeat(p)) continue;
     if (!(p.change_type === "appointment" || p.change_type === "redesignation")) continue;
     p.background = await personBackground({
       name: p.person_name, designation: p.designation, company, changeType: p.change_type, date: p.effective_date,
@@ -122,7 +124,7 @@ export async function extractPeopleEvent(eventKey: string): Promise<{ people: Pe
   }
 
   // Leadership churn: a second top or KMP exit within 90 days.
-  const isExit = (p: PersonDetail) => (p.change_type === "resignation" || p.change_type === "cessation") && (p.role_class === "top" || p.role_class === "kmp");
+  const isExit = (p: PersonDetail) => (p.change_type === "resignation" || p.change_type === "cessation") && (p.role_class === "top" || p.role_class === "kmp") && !subsidiarySeat(p);
   if (people.some(isExit)) {
     const [{ n }] = await sql`select count(distinct pe.person_name)::int as n from people_events pe
       join announcements a on a.id = pe.announcement_id
@@ -151,7 +153,7 @@ export async function refreshPeopleCards(): Promise<number> {
     if (!detail.people?.length) continue;
     for (const p of detail.people) {
       const keep = p.flags.filter((f) => f === "Leadership churn");
-      p.flags = [...flagsFor(p), ...keep];
+      p.flags = [...flagsFor(p, detail.people), ...keep];
     }
     const primary = primaryChange(detail.people);
     const idx = Math.max(0, detail.people.findIndex((p) => p === primary));

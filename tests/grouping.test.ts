@@ -27,6 +27,19 @@ describe("grouping repeat filings of one action", () => {
     expect(assignments.filter((a) => a.is_primary)).toHaveLength(1);
   });
 
+  it("merges one letter filed as Acquisition, Disinvestment and General minutes apart (same attachment)", () => {
+    const filings = [
+      f({ id: "d1", filed: "2026-10-28T12:42:51", subject: "Announcement under Regulation 30 (LODR)-Acquisition", headline: "Regulation 30- Acquisition", category: "M&A", subtype: "acquisition", pdf_bytes: 634837 }),
+      f({ id: "d2", filed: "2026-10-28T12:44:40", subject: "Announcement under Regulation 30 (LODR)-Diversification / Disinvestment", headline: "Regulation 30- Disinvestment", category: "M&A", subtype: "divestment", pdf_bytes: 634837 }),
+      f({ id: "d3", filed: "2026-10-28T12:47:02", subject: "Intimation Pursuant To Regulation 30", headline: REG30, category: "M&A", subtype: "stake_sale", pdf_bytes: 634837 }),
+      // A different letter the same week stays separate.
+      f({ id: "d4", filed: "2026-10-23T11:59:58", subject: "Disclosure Under Regulation 30", headline: REG30, category: "M&A", subtype: "stake_sale", pdf_bytes: 257543 }),
+    ];
+    const { events } = groupFilings(filings, []);
+    expect(events.size).toBe(2);
+    expect(events.get("NAUKRI:d1")?.filings).toBe(3);
+  });
+
   it("joins a repeat to an event stored by an earlier run", () => {
     const { events, assignments } = groupFilings(
       [f({ id: "m9", filed: "2026-10-28T14:10:00", headline: TRANSITION, category: "management_change", subtype: "pending_people" })],
