@@ -1,0 +1,63 @@
+# Live QA of the deployed app: phone-size screenshots in light and dark, console
+# errors and API timings, plus Lighthouse (mobile) on the Brief. Results go to the
+# `qa` branch so they can be reviewed without opening a browser.
+name: Live QA
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "App URL"
+        required: false
+        default: "https://enam-holdings-assgn.vercel.app"
+permissions:
+  contents: write
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 22 }
+      - name: Install Playwright and Lighthouse
+        run: |
+          mkdir -p /tmp/qa-tools && cd /tmp/qa-tools && npm init -y >/dev/null
+          npm i --no-audit --no-fund playwright@1 lighthouse@12 >/dev/null
+          npx playwright install --with-deps chromium >/dev/null
+      - name: Screens
+        run: |
+          cp scripts/dev/qa.mjs /tmp/qa-tools/qa.mjs
+          cd /tmp/qa-tools && node qa.mjs "${{ github.event.inputs.url }}" /tmp/qa-out | tee /tmp/qa-out-summary.txt
+        continue-on-error: true
+      - name: Lighthouse
+        run: |
+          cd /tmp/qa-tools
+          CHROME=$(node -e "console.log(require('playwright').chromium.executablePath())")
+          for i in 1 2 3; do
+            CHROME_PATH=$CHROME npx lighthouse "${{ github.event.inputs.url }}/" --quiet --chrome-flags="--headless=new --no-sandbox" \
+              --form-factor=mobile --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=/tmp/qa-out/lighthouse-$i.json || true
+          done
+          node -e '
+            const fs = require("fs");
+            for (const i of [1, 2, 3]) {
+              try {
+                const d = JSON.parse(fs.readFileSync(`/tmp/qa-out/lighthouse-${i}.json`, "utf8"));
+                const s = Object.fromEntries(Object.entries(d.categories).map(([k, v]) => [k, Math.round(v.score * 100)]));
+                const a = d.audits;
+                console.log(`Lighthouse ${i}: ${JSON.stringify(s)} FCP ${a["first-contentful-paint"].displayValue}, LCP ${a["largest-contentful-paint"].displayValue}, TBT ${a["total-blocking-time"].displayValue}, CLS ${a["cumulative-layout-shift"].displayValue}`);
+              } catch (e) { console.log(`Lighthouse ${i}: failed`); }
+            }' | tee -a /tmp/qa-out-summary.txt
+      - name: Annotate
+        run: |
+          esc=$(head -c 3800 /tmp/qa-out-summary.txt | sed -e 's/%/%25/g' | sed -e ':a;N;$!ba;s/\n/%0A/g')
+          echo "::notice title=finn qa::$esc"
+      - name: Commit to the qa branch
+        run: |
+          cp /tmp/qa-out-summary.txt /tmp/qa-out/summary.txt
+          cd /tmp/qa-out
+          git init -q -b qa
+          git config user.name "finn-bot"
+          git config user.email "finn-bot@users.noreply.github.com"
+          git add -A
+          git commit -q -m "QA $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" qa:qa
