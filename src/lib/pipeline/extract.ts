@@ -4,7 +4,7 @@
 import { db } from "../db";
 import { llmConfigured } from "../llm/router";
 import { extractResultsEvent } from "./extractResults";
-import { extractPeopleEvent } from "./extractPeople";
+import { extractPeopleEvent, retryBackgrounds } from "./extractPeople";
 import { oneLinersPending } from "./oneLiners";
 import { rescoreEvent } from "./events";
 
@@ -28,7 +28,7 @@ async function runOne(eventKey: string, fn: (k: string) => Promise<unknown>): Pr
 }
 
 export async function extractPending(deadline = Date.now() + 180_000): Promise<Record<string, number>> {
-  const out = { results: 0, people: 0, one_liners: 0, failed: 0 };
+  const out = { results: 0, people: 0, one_liners: 0, failed: 0, backgrounds: 0 };
   if (!llmConfigured()) return out;
   const sql = db();
   // Newest first: today's results matter more than a backfilled month.
@@ -52,5 +52,6 @@ export async function extractPending(deadline = Date.now() + 180_000): Promise<R
       and category not in ('results', 'management_change')`;
     for (const k of keys) await rescoreEvent(String(k.event_key));
   }
+  if (Date.now() < deadline - 40_000) out.backgrounds = await retryBackgrounds(deadline).catch(() => 0);
   return out;
 }

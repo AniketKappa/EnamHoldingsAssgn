@@ -141,6 +141,32 @@ export async function extractPeopleEvent(eventKey: string): Promise<{ people: Pe
   return { people, primary_index: primaryIndex };
 }
 
+/**
+ * Backgrounds whose search failed (usually the free grounding quota) are tried again
+ * on later runs, up to three times, for top-role appointments of the last week.
+ */
+export async function retryBackgrounds(deadline: number, limit = 4): Promise<number> {
+  const sql = db();
+  const rows = await sql`select e.event_key, e.detail, c.name from events e join companies c on c.symbol = e.symbol
+    where e.category = 'management_change' and e.status = 'done' and e.first_filed_at > now() - interval '7 days'
+      and coalesce((e.detail->>'bg_attempts')::int, 0) < 3
+      and exists (select 1 from jsonb_array_elements(e.detail->'people') p where (p->'background'->>'retry')::boolean)
+    order by e.first_filed_at desc limit ${limit}`;
+  let fixed = 0;
+  for (const r of rows) {
+    if (Date.now() > deadline - 20_000) break;
+    const detail = r.detail as { people: PersonDetail[]; bg_attempts?: number; primary_index?: number };
+    for (const p of detail.people) {
+      if (!p.background?.retry) continue;
+      p.background = await personBackground({ name: p.person_name, designation: p.designation, company: String(r.name), changeType: p.change_type, date: p.effective_date });
+      if (!p.background.retry) fixed++;
+    }
+    detail.bg_attempts = (detail.bg_attempts ?? 0) + 1;
+    await sql`update events set detail = ${sql.json(detail as never)}, updated_at = now() where event_key = ${String(r.event_key)}`;
+  }
+  return fixed;
+}
+
 function isoDate(s: string | null): string | null {
   return s && /^\d{4}-\d{2}-\d{2}$/.test(s) ? s : null;
 }

@@ -9,6 +9,8 @@ import { truncate } from "../text";
 
 export interface Background extends PersonBackgroundT {
   via: "grounded_search" | "tavily" | "none";
+  /** True when the search itself failed (quota, outage), so a later run should try again. */
+  retry?: boolean;
 }
 
 interface Src { title: string; url: string }
@@ -106,13 +108,14 @@ export async function personBackground(q: {
 }): Promise<Background> {
   const empty: Background = { headline: null, previous_roles: [], education: [], years_experience: null, linkedin_url: null, sources: [], via: "none" };
   if (!llmConfigured()) return empty;
+  let failed = false;
   try {
     const g = await viaGrounding(q);
     if (g && g.previous_roles.length) return g;
-  } catch { /* fall through to Tavily */ }
+  } catch { failed = true; /* fall through to Tavily */ }
   try {
     const t = await viaTavily(q);
     if (t && t.previous_roles.length) return t;
   } catch { /* no background */ }
-  return empty;
+  return failed ? { ...empty, retry: true } : empty;
 }
