@@ -9,7 +9,7 @@ import type { CompanyT } from "@/lib/api/types";
 import { useApi, post, api, invalidate, ApiError } from "@/lib/client/api";
 import { mcap, price, multiple, whenIst } from "@/lib/format";
 import { PriceChart } from "@/components/charts";
-import { EventRow, categoryLabel } from "@/components/cards";
+import { EventRow, kindLabel } from "@/components/cards";
 import { EventSheet } from "@/components/EventSheet";
 import { Button, Delta, Notice, SectionTitle, SkeletonRows } from "@/components/ui";
 
@@ -72,7 +72,7 @@ function Company() {
           <SectionTitle>Recent events</SectionTitle>
           {data.events.length ? (
             <ul className="divide-y divide-rule border-y border-rule">
-              {data.events.map((e) => <EventRow key={e.key} item={{ key: e.key, symbol: categoryLabel(e.category), title: e.title, at: e.at, tier: e.tier }} onOpen={() => setOpen(e.key)} />)}
+              {data.events.map((e) => <EventRow key={e.key} item={{ key: e.key, symbol: kindLabel(e.category, e.subtype), title: e.title, at: e.at, tier: e.tier }} onOpen={() => setOpen(e.key)} />)}
             </ul>
           ) : <Notice>No filings stored for {data.symbol} yet.{data.held ? " The first run fetches 30 days." : " Add it to your portfolio to follow its filings."}</Notice>}
           {!data.held ? <p className="mt-3 text-xs text-ink-3">FINN follows filings for portfolio companies only; research works for any NSE company.</p> : null}

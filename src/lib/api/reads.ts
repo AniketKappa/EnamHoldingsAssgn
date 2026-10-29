@@ -109,7 +109,7 @@ export async function getCompany(userId: string, symbol: string): Promise<Compan
   const [c] = await sql`select c.*, exists(select 1 from holdings h where h.user_id = ${userId} and h.symbol = c.symbol) as held from companies c where c.symbol = ${symbol}`;
   if (!c) return null;
   const prices = await sql`select d, close, volume from (select d, close, volume from prices where symbol = ${symbol} order by d desc limit 120) t order by d`;
-  const events = await sql`select event_key, title, first_filed_at, category, base_score + market_bonus as score from events
+  const events = await sql`select event_key, title, first_filed_at, category, subtype, base_score + market_bonus as score from events
     where symbol = ${symbol} and base_score + market_bonus >= 15 order by first_filed_at desc limit 25`;
   const up = await sql`select meeting_date from upcoming_results where symbol = ${symbol} and meeting_date >= current_date order by meeting_date limit 1`;
   const d = await sql`select version, created_at from dossiers where symbol = ${symbol} order by created_at desc limit 1`;
@@ -117,7 +117,7 @@ export async function getCompany(userId: string, symbol: string): Promise<Compan
   return {
     symbol, name: String(c.name), sector: (c.sector ?? c.industry ?? null) as string | null, mcap_cr: num(c.mcap_cr), is_financial: !!c.is_financial, held: !!c.held,
     prices: prices.map((p) => ({ d: day(p.d), close: Number(p.close), volume: Number(p.volume ?? 0) })),
-    events: events.map((e) => ({ key: String(e.event_key), title: String(e.title), at: iso(e.first_filed_at), category: String(e.category), score: Number(e.score), tier: tierOf(Number(e.score)) })),
+    events: events.map((e) => ({ key: String(e.event_key), title: String(e.title), at: iso(e.first_filed_at), category: String(e.category), subtype: (e.subtype as string | null) ?? null, score: Number(e.score), tier: tierOf(Number(e.score)) })),
     upcoming: up.length ? day(up[0].meeting_date) : null,
     dossier: d.length ? { version: String(d[0].version), built_at: iso(d[0].created_at) } : null,
     signal: s.length ? { d: day(s[0].d), ret_pct: num(s[0].ret_pct), vol_ratio: num(s[0].vol_ratio), explained_by: (s[0].explained_by as string | null) ?? null } : null,

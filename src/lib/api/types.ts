@@ -111,7 +111,7 @@ export interface HoldingT {
 export interface CompanyT {
   symbol: string; name: string; sector: string | null; mcap_cr: number | null; is_financial: boolean; held: boolean;
   prices: { d: string; close: number; volume: number }[];
-  events: { key: string; title: string; at: string; category: string; tier: Tier; score: number }[];
+  events: { key: string; title: string; at: string; category: string; subtype: string | null; tier: Tier; score: number }[];
   upcoming: string | null;
   dossier: { version: string; built_at: string } | null;
   signal: { d: string; ret_pct: number | null; vol_ratio: number | null; explained_by: string | null } | null;

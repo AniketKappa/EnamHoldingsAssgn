@@ -7,7 +7,7 @@ import type { EventDetailT } from "@/lib/api/types";
 import { useApi, post, invalidate } from "@/lib/client/api";
 import { crore, whenIst, pct, multiple } from "@/lib/format";
 import { Sheet } from "./Sheet";
-import { ChecksLine, PersonBlock, ResultsGrid, categoryLabel, resultsSentence } from "./cards";
+import { ChecksLine, PersonBlock, ResultsGrid, categoryLabel, kindLabel, resultsSentence } from "./cards";
 import { Button, Chip, Notice, SkeletonRows, cx } from "./ui";
 import { AskSheet } from "./AskSheet";
 
@@ -43,7 +43,7 @@ export function EventSheet({ eventKey, onClose }: { eventKey: string | null; onC
               </div>
               <time className="num shrink-0 text-xs text-ink-2" dateTime={it.at}>{whenIst(it.at)}</time>
             </div>
-            <div className="mt-0.5 text-xs text-ink-2">{categoryLabel(it.category)}{it.filings > 1 ? `, ${it.filings} filings grouped` : ""}</div>
+            <div className="mt-0.5 text-xs text-ink-2">{kindLabel(it.category, it.subtype)}{it.filings > 1 ? `, ${it.filings} filings grouped` : ""}</div>
 
             {it.results ? (
               <>

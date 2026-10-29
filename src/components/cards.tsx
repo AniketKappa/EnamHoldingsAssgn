@@ -14,6 +14,19 @@ const CAT_LABEL: Record<string, string> = {
 };
 export const categoryLabel = (c: string) => CAT_LABEL[c] ?? c;
 
+const KIND_LABEL: Record<string, string> = {
+  order_win: "Order win", business_update: "Business update", clarification: "Clarification", listing: "Listing",
+  restructuring: "Merger or demerger", restructuring_update: "Scheme update", group_restructuring: "Group restructuring",
+  subsidiary: "Subsidiary", acquisition: "Acquisition", divestment: "Stake sale", jv: "Joint venture",
+  equity_raise: "Equity raise", debt_raise: "Debt raise", buyback: "Buyback", regulatory_action: "Regulatory action",
+  insolvency: "Insolvency", dispute: "Dispute", correction: "Correction", results_notice: "Results date",
+  downgrade: "Rating downgrade", upgrade: "Rating upgrade", reaffirm: "Rating reaffirmed", pledge_create: "New pledge",
+  pledge_release: "Pledge released", promoter_buy: "Promoter buy", promoter_sell: "Promoter sale", pit_violation: "Insider-rule breach",
+  commissioning: "Commissioning", special_dividend: "Special dividend", auditor_exit: "Auditor exit",
+};
+/** The most specific name for an event: "Order win" rather than "Press release". */
+export const kindLabel = (category: string, subtype?: string | null) => (subtype && KIND_LABEL[subtype]) || categoryLabel(category);
+
 /** One sentence, numbers first, written by code from the extracted metrics. */
 export function resultsSentence(r: ResultsCardT): string {
   if (r.unreliable) return "FINN couldn't verify this filing's numbers; the filing itself is one tap away.";
@@ -188,7 +201,7 @@ export function TopCard({ item, onOpen, onDone, onAsk, leaving }: { item: BriefI
           </>
         ) : (
           <>
-            <div className="mt-1 text-xs text-ink-2">{categoryLabel(item.category)}</div>
+            <div className="mt-1 text-xs text-ink-2">{kindLabel(item.category, item.subtype)}</div>
             <p className="serif mt-2 text-base text-ink">{item.title}</p>
           </>
         )}
