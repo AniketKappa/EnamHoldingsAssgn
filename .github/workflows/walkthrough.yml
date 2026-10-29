@@ -1,0 +1,43 @@
+# Record a silent phone-size walkthrough of the live app (Playwright video, converted to MP4)
+# onto the `video` branch.
+name: Walkthrough video
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "App URL"
+        required: false
+        default: "https://enam-holdings-assgn.vercel.app"
+permissions:
+  contents: write
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 22 }
+      - name: Install Playwright
+        run: |
+          mkdir -p /tmp/rec && cd /tmp/rec && npm init -y >/dev/null
+          npm i --no-audit --no-fund playwright@1 >/dev/null
+          npx playwright install --with-deps chromium >/dev/null
+          which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null)
+      - name: Record
+        run: |
+          cp scripts/dev/walkthrough.mjs /tmp/rec/walkthrough.mjs
+          cd /tmp/rec && node walkthrough.mjs "${{ github.event.inputs.url }}" /tmp/video | tee /tmp/video-log.txt
+          ffmpeg -y -loglevel error -i /tmp/video/walkthrough.webm -vf "scale=780:-2" -c:v libx264 -preset veryfast -crf 24 -pix_fmt yuv420p -movflags +faststart /tmp/video/finn-walkthrough.mp4
+          rm /tmp/video/walkthrough.webm
+          ls -la /tmp/video
+          echo "::notice title=walkthrough::$(tr '\n' ' ' < /tmp/video-log.txt) $(du -h /tmp/video/finn-walkthrough.mp4 | cut -f1)"
+      - name: Commit to the video branch
+        run: |
+          cd /tmp/video
+          git init -q -b video
+          git config user.name "finn-bot"
+          git config user.email "finn-bot@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Walkthrough $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" video:video
