@@ -54,10 +54,10 @@ Top ≥ 70 · Worth a look 40–69 · Routine 15–39 (collapsed) · Hidden < 15
 | Order win | 50 | One line sized against annual revenue |
 | Analyst meets, trading windows, certificates | 5–15 | Counted, not shown |
 
-On the live run (224 real BSE filings, 16–29 October 2026), ordered rules placed 201 with no
+On a captured sample of 224 real BSE filings, ordered rules placed 201 with no
 model call; generic "Disclosure under Regulation 30" letters are then read from the letter
 itself (its "Sub:" line and first sentences), which placed 15 more, and the results-day
-context 3 more: **97.8% classified without a model**, 5 left to the cheapest one. Deals are
+context 3 more; on the live run that is **242 of 247 filings (98%) classified without a model**. Deals are
 sized against market value and orders against revenue, so a ₹50 crore startup stake at a
 ₹1 lakh crore company stays routine; amounts that are not the story (the bank lines behind a
 rating action) never move a score. One letter filed under three exchange subcategories, a
@@ -132,12 +132,14 @@ Measured on the deployed app with live data (October 2026):
 
 | Check | Result |
 | --- | --- |
-| Filings classified without a model | 219 of 224 (97.8%) |
+| Filings classified without a model | 242 of 247 (98%) |
 | Results numbers matching screener's quarterly table | 58 of 66 within 0.5% (87.9%); the misses are EBITDA definitions (L&T's financial-services finance cost, KPIT), not misreads |
 | Results arithmetic checks passing | every card shows its six checks; a failed check is shown, not hidden |
 | Lighthouse, mobile, on the Brief | 97 performance, 100 accessibility, 100 best practices, 100 SEO |
 | Console errors across every screen, light and dark | 0 |
-| Model calls for the whole run | ≈300, about $0.50 at paid rates (free tier in practice) |
+| Model calls for the whole run | 433 (counting retries and free-tier refusals), about $0.98 at paid rates, ₹0 spent |
+| 30-day Brief, 18 holdings | 241 filings became 63 events, 28 worth reading |
+| Say vs Do on L&T | 2 of 3 resolved promises met (67%): FY26 order inflow +20% against ≥10%, working capital 4.1% against 10%; FY26 revenue +11.8% against 15% missed |
 
 How it is kept honest:
 
