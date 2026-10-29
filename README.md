@@ -54,11 +54,14 @@ Top ≥ 70 · Worth a look 40–69 · Routine 15–39 (collapsed) · Hidden < 15
 | Order win | 50 | One line sized against annual revenue |
 | Analyst meets, trading windows, certificates | 5–15 | Counted, not shown |
 
-On 224 real filings from October 2026, ordered rules place 90% with no model call. The
-generic "Disclosure under Regulation 30" ones are then read from the letter itself (its
-"Sub:" line and first sentences), which placed all 15 in that sample; only what is left
-goes to the cheapest model. Deals are sized against market value and orders against
-revenue, so a ₹50 crore startup stake at a ₹1 lakh crore company stays routine.
+On the live run (224 real BSE filings, 16–29 October 2026), ordered rules placed 201 with no
+model call; generic "Disclosure under Regulation 30" letters are then read from the letter
+itself (its "Sub:" line and first sentences), which placed 15 more, and the results-day
+context 3 more: **97.8% classified without a model**, 5 left to the cheapest one. Deals are
+sized against market value and orders against revenue, so a ₹50 crore startup stake at a
+₹1 lakh crore company stays routine; amounts that are not the story (the bank lines behind a
+rating action) never move a score. One letter filed under three exchange subcategories, a
+results day's six filings, or an IPO's run of updates each count once.
 
 ## Architecture
 
@@ -125,15 +128,39 @@ and cached by content hash; the in-app **Cost** page shows calls, cache hits and
 
 ## Quality
 
-- 112 automated tests: classification on real BSE filing subjects and real disclosure
-  letters, results-page finding on real scanned text layers, results maths and all six
-  checks (on L&T's real Q2 FY27 numbers), grouping of repeat filings, deal sizing, the
-  ledger statuses, number grounding, the screener parser on a real page, lender facts, and
-  two end-to-end runs on a real Postgres (PGlite) with real PDFs and model stand-ins.
-- `scripts/dev/replay.ts` replays captured real filings through the pipeline offline and
-  prints what the Brief would rank.
-- Runtime guards: arithmetic checks with one corrective retry on every results card; quote-on-page
-  checks on every extracted fact; cross-check against screener's quarterly row a few hours later.
+Measured on the deployed app with live data (October 2026):
+
+| Check | Result |
+| --- | --- |
+| Filings classified without a model | 219 of 224 (97.8%) |
+| Results numbers matching screener's quarterly table | 58 of 66 within 0.5% (87.9%); the misses are EBITDA definitions (L&T's financial-services finance cost, KPIT), not misreads |
+| Results arithmetic checks passing | every card shows its six checks; a failed check is shown, not hidden |
+| Lighthouse, mobile, on the Brief | 97 performance, 100 accessibility, 100 best practices, 100 SEO |
+| Console errors across every screen, light and dark | 0 |
+| Model calls for the whole run | ≈300, about $0.50 at paid rates (free tier in practice) |
+
+How it is kept honest:
+
+- **LLMs extract, code decides, and code checks the extraction.** In the live run the
+  cheapest model copied the prompt's "FY27" into every FY26 promise and left "Rs 1,356
+  billion" as 1,356 crore. `src/lib/research/normalize.ts` now re-derives each promise's
+  period from its own quote ("FY '26", "by March '26", "full year" in a Q2 call), the call's
+  year words, or a heading on the page; converts money from the speaker's words; refiles
+  metrics the words do not support (working capital is not net debt); checks a segment's
+  target (L&T's P&M margin, Polycab's FMEG) against what management reports for it, never
+  the consolidated tables; and drops analysts restating guidance and numbers not in the quote.
+- **149 automated tests**, most on real data: classification on real BSE subjects and
+  disclosure letters, results-page finding on real scanned text layers, results maths and the
+  six checks on L&T's real Q2 FY27 numbers, grouping of real repeat filings, person-card rules
+  on real Info Edge, KPIT and HAL filings, 29 ledger checks on real quotes from L&T, Infosys,
+  Bajaj Finance, Eternal and Polycab calls, the screener parser on a real page, lender facts,
+  and two end-to-end runs on real Postgres (PGlite) with real PDFs and model stand-ins.
+- **Replays against production data:** `scripts/finn.ts dump` (a workflow) exports the
+  research inputs and the last two weeks of filings to a branch; `scripts/dev/ledger-replay.ts`
+  and `scripts/dev/replay.ts` rebuild the ledger and the Brief from them offline.
+- **Runtime guards:** arithmetic checks with one corrective retry on every results card;
+  quote-on-page checks on every extracted fact; a cross-check against screener's quarterly
+  row a few hours later; citation and number checks on every dossier bullet.
 
 ## Left out, on purpose
 

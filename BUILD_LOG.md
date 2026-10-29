@@ -55,3 +55,31 @@ One entry per working session: what changed, how it was tested, which fallbacks 
   one is blank) instead of cash conversion; no "% change" across a loss anywhere; one
   call per quarter in the dossier (no investor-day or duplicate-host repeats).
 - Tests: 112, including real text layers, real letters and real filing subjects.
+
+## 2026-10-29, live on Vercel and Supabase: QA on real data
+- Deployed to Vercel (Mumbai) with Supabase Postgres through the transaction pooler; GitHub
+  Actions runs the clock and every operator command (`ops`, `research`, `qa`, `eval`, `diag`,
+  `dump`), so the whole system was run and debugged from this chat without database access.
+- Second clock: GitHub's scheduler ran once in six hours, so a visit to the Brief or Alerts
+  starts a background tick when the pipeline has been quiet for 15 minutes.
+- Free-tier reality: Flash's daily quota ran out within an hour and Gemini 2.5 is closed to
+  new keys. The router now skips spent models until the daily reset (shared through the
+  database), keeps Flash-Lite at the end of every chain, and upgrades cached summaries
+  written by a fallback model when the better one is back.
+- A `qa` workflow takes phone screenshots of every screen in both themes, collects console
+  errors and API timings, and runs Lighthouse (mobile: 97 / 100 / 100 / 100) onto a branch.
+- Live fixes: alert a price move only after its filings are grouped; neutral empty states;
+  handovers (an additional charge returned, a successor named, the CEO staying on the board)
+  are not unplanned exits; a subsidiary board seat is not a new chairman; one letter filed
+  under three subcategories (same attachment) is one event; rating actions are not sized
+  by their bank lines; small exceptional items are not reasons.
+- Say vs Do, the important one: L&T showed "0 resolved promises" because Flash-Lite had
+  copied the prompt's "FY27" into every FY26 promise, kept "Rs 1,356 billion" as 1,356 crore
+  and filed working capital under net debt. A `dump` workflow exported the real extracts;
+  `normalize.ts` now re-derives each promise's period, units, metric and scope from its own
+  quote and page, and the ledger chains revisions call to call. Replayed on the five dossiers:
+  L&T's FY26 revenue promise (15%) is missed at 11.8%, its working-capital target (12%, cut
+  to 10%) delivered at 4.1%; Infosys's FY26 guidance (3–3.5% in constant currency, 20–22%
+  margin) delivered at 3.1% and 21%; Bajaj Finance's FY26 AUM growth delivered.
+  The extraction prompt now gives each call its own year words and conversion examples.
+- Tests: 149.
