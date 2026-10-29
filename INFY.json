@@ -1,0 +1,3040 @@
+{
+ "state": {
+  "t0": 1793276083398,
+  "docs": [
+   {
+    "id": 94,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+    "label": "Q2 FY27 call (Oct 2026)",
+    "pages": 48,
+    "status": "extracted",
+    "said_on": "2026-10-15",
+    "doc_type": "transcript",
+    "period_end": "2026-09-30",
+    "period_label": "Q2 FY27"
+   },
+   {
+    "id": 95,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/95f8af86-dc92-49dc-a7cf-ecce287f8cce.pdf",
+    "label": "Q1 FY27 call (Jul 2026)",
+    "pages": 48,
+    "status": "extracted",
+    "said_on": "2026-07-15",
+    "doc_type": "transcript",
+    "period_end": "2026-06-30",
+    "period_label": "Q1 FY27"
+   },
+   {
+    "id": 96,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2ab7badf-388c-4dab-bfcc-3e128677734c.pdf",
+    "label": "Q4 FY26 call (Apr 2026)",
+    "pages": 46,
+    "status": "extracted",
+    "said_on": "2026-04-15",
+    "doc_type": "transcript",
+    "period_end": "2026-03-31",
+    "period_label": "Q4 FY26"
+   },
+   {
+    "id": 97,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/373b3501-e2a7-4ba4-bdd1-83f6bc21c25c.pdf",
+    "label": "Q3 FY26 call (Jan 2026)",
+    "pages": 39,
+    "status": "extracted",
+    "said_on": "2026-01-15",
+    "doc_type": "transcript",
+    "period_end": "2025-12-31",
+    "period_label": "Q3 FY26"
+   },
+   {
+    "id": 98,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cf4a6179-8e43-4959-b055-91f1f7f4f076.pdf",
+    "label": "Q2 FY26 call (Oct 2025)",
+    "pages": 38,
+    "status": "extracted",
+    "said_on": "2025-10-15",
+    "doc_type": "transcript",
+    "period_end": "2025-09-30",
+    "period_label": "Q2 FY26"
+   },
+   {
+    "id": 99,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+    "label": "FY26 annual report",
+    "pages": 383,
+    "status": "extracted",
+    "said_on": null,
+    "doc_type": "annual_report",
+    "period_end": "2026-03-31",
+    "period_label": "FY26"
+   }
+  ],
+  "done": [
+   "resolve",
+   "financials",
+   "documents",
+   "extract",
+   "annual_report",
+   "ledger",
+   "synthesis"
+  ],
+  "name": "Infosys",
+  "judged": [
+   {
+    "id": 1,
+    "cite": "doc:94:p4",
+    "cites": [],
+    "claim": "AI revenue grew significantly reaching 10.5% of total revenue with strong sequential growth.",
+    "quote": "AI revenue was a standout at 10.5% of our revenue, growing at 29% sequentially.",
+    "verdict": "too_early",
+    "evidence": "No facts mention AI revenue percentage."
+   },
+   {
+    "id": 2,
+    "cite": "doc:94:p4",
+    "cites": [],
+    "claim": "Large deals remained strong at $5.2 billion including two mega deals.",
+    "quote": "Large deals were another standout at $5.2 bn for the quarter. This includes two mega deals.",
+    "verdict": "too_early",
+    "evidence": "No facts mention large deals."
+   },
+   {
+    "id": 3,
+    "cite": "doc:95:p29",
+    "cites": [],
+    "claim": "AI revenue grew strongly and reached 8.2% of total revenue in Q1 FY27, displaying double-digit quarter-on-quarter growth over several quarters.",
+    "quote": "AI revenues for the quarter at 8.2%. This is growing at double-digit Q-on-Q over the last several quarters.",
+    "verdict": "too_early",
+    "evidence": "No facts mention AI revenue percentage in Q1 FY27."
+   },
+   {
+    "id": 4,
+    "cite": "doc:95:p6",
+    "cites": [],
+    "claim": "Macro environment continues to remain uncertain, prompting a downward revision to the revenue guidance for FY27.",
+    "quote": "Overall, we continue to see the macro environment remaining uncertain. With our Q1 results and a view for the rest of the financial year, we are changing our revenue growth guidance",
+    "verdict": "too_early",
+    "evidence": "No facts mention revenue guidance for FY27."
+   },
+   {
+    "id": 5,
+    "cite": "doc:95:p30",
+    "cites": [],
+    "claim": "Client decision to terminate an EURS project created a one-off 50 basis point drag on Q1 revenue growth.",
+    "quote": "Q1 revenue growth was lower than our expectations, mainly due to - one-off 50 basis point impact on account of program termination by an EURS client during the quarter.",
+    "verdict": "too_early",
+    "evidence": "No facts mention a client project termination impact on Q1 revenue."
+   },
+   {
+    "id": 6,
+    "cite": "doc:95:p30",
+    "cites": [],
+    "claim": "Clients are demanding AI-driven productivity improvements alongside high competitive intensity, softening realized price growth.",
+    "quote": "Additionally, client expectation on productivity, along with high competitive intensity is resulting in softer increase in price versus our expectations.",
+    "verdict": "too_early",
+    "evidence": "No facts mention client demands for AI-driven productivity or pricing trends."
+   },
+   {
+    "id": 7,
+    "cite": "doc:96:p4",
+    "cites": [],
+    "claim": "Growth in Financial Services and Energy, Utilities, Resources and Services is expected to accelerate in FY27.",
+    "quote": "We expect acceleration of growth in Financial Services and in Energy, Utility, Resources and Services vertical.",
+    "verdict": "too_early",
+    "evidence": "No facts mention vertical-specific growth expectations for FY27."
+   },
+   {
+    "id": 8,
+    "cite": "doc:96:p5",
+    "cites": [],
+    "claim": "Net new large deals accounted for 55% of the total deal value in FY26, supporting future growth.",
+    "quote": "We see on the large deals, the net new is pretty large for the full year at 55%. So that gives us support for growth.",
+    "verdict": "too_early",
+    "evidence": "No facts mention net new large deals percentage for FY26."
+   },
+   {
+    "id": 9,
+    "cite": "doc:96:p6",
+    "cites": [],
+    "claim": "AI services revenue is seeing strong growth nicely ahead of Q3 levels.",
+    "quote": "The growth in AI services is very strong, but we have not disclosed that revenue number externally here.",
+    "verdict": "too_early",
+    "evidence": "No facts mention AI services revenue growth relative to Q3 levels."
+   },
+   {
+    "id": 10,
+    "cite": "doc:96:p22",
+    "cites": [],
+    "claim": "The pricing environment has remained stable, with most FY26 growth being pricing-led as AI services command better pricing.",
+    "quote": "In terms of pricing, I think pricing environment for us has remained stable. On the contrary, actually, most of our growth this year has been pricing-led because the volumes have been softer.",
+    "verdict": "too_early",
+    "evidence": "No facts mention the stability of the pricing environment or pricing-led growth."
+   }
+  ],
+  "sector": null,
+  "symbol": "INFY",
+  "pending": [],
+  "version": "d4d583121382",
+  "synthesis": {
+   "log": [],
+   "bear": [
+    {
+     "text": "Debtor days reached 72 days in FY26, matching the cash conversion cycle.",
+     "cites": [
+      "fact:debtor_days",
+      "fact:ccc_days"
+     ]
+    },
+    {
+     "text": "Borrowings totalled ₹8,525 cr in Sep 2026.",
+     "cites": [
+      "fact:borrowings"
+     ]
+    },
+    {
+     "text": "Revenue CAGR over 3 years slowed to 6.8% up to FY26.",
+     "cites": [
+      "fact:revenue_cagr_3y"
+     ]
+    }
+   ],
+   "bull": [
+    {
+     "text": "Interest cover reached 97.1× in FY26 while debt to equity stood at 0.09× in Sep 2026.",
+     "cites": [
+      "fact:interest_cover",
+      "fact:de_ratio"
+     ]
+    },
+    {
+     "text": "Free cash flow reached ₹31,259 cr in FY26 alongside CFO / EBITDA of 101%.",
+     "cites": [
+      "fact:fcf",
+      "fact:cfo_ebitda"
+     ]
+    },
+    {
+     "text": "ROCE touched 40% in FY26 and ROE stood at 31.9% currently.",
+     "cites": [
+      "fact:roce",
+      "fact:roe"
+     ]
+    }
+   ],
+   "model": "gemini-3.5-flash-lite",
+   "dropped": 0,
+   "seed_questions": [
+    "What specific macro factors caused management to lower the revenue growth guidance for FY27?",
+    "How will client demands for AI-driven productivity impact pricing realization across operating segments?",
+    "What are the specific plans and timelines for hiring 20,000 college graduates in FY27?"
+   ],
+   "what_matters_now": [
+    {
+     "text": "Revenue reached ₹49,244 cr in Q2 FY27, and revenue growth YoY registered 10.7%.",
+     "cites": [
+      "fact:q_revenue",
+      "fact:q_revenue_yoy"
+     ]
+    },
+    {
+     "text": "Management delivered 3.1% revenue growth in FY26 against the target of 3–3.5%.",
+     "cites": [
+      "doc:97:p4",
+      "doc:96:p4"
+     ]
+    },
+    {
+     "text": "Management guided for 1–2% revenue growth and 20–22% operating margin for FY27.",
+     "cites": [
+      "doc:94:p4"
+     ]
+    }
+   ]
+  }
+ },
+ "extracts": [
+  {
+   "document_id": "94",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "Based on our Q2 performance and revised outlook for the rest of the year, our revenue growth guidance is 1% to 2% YoY.in constant currency terms.",
+      "metric": "revenue_growth",
+      "horizon": "FY27",
+      "speaker": "Salil Parekh",
+      "direction": "range",
+      "label_raw": "revenue growth guidance",
+      "target_low": 1,
+      "target_high": 2
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Our operating margin guidance remains at 20% to 22% for the year.",
+      "metric": "ebit_margin",
+      "horizon": "FY27",
+      "speaker": "Salil Parekh",
+      "direction": "range",
+      "label_raw": "operating margin guidance",
+      "target_low": 20,
+      "target_high": 22
+     }
+    ],
+    "call_date": "October 23, 2026",
+    "call_period": "Q2 FY27",
+    "reported_kpis": [
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "Our revenue growth for Q2 was 1.5% YoY and 1.2% sequentially in constant currency terms.",
+      "value": 1.5,
+      "metric": "revenue_growth",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "AI revenue was a standout at 10.5% of our revenue, growing at 29% sequentially.",
+      "value": 10.5,
+      "metric": "other:ai_revenue_pct",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 4,
+      "unit": "other",
+      "basis": "reported",
+      "quote": "Large deals were another standout at $5.2 bn for the quarter.",
+      "value": 5.2,
+      "metric": "order_inflow",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Operating margin was stable at 21%.",
+      "value": 21,
+      "metric": "ebit_margin",
+      "period": "Q2 FY27"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 5,
+      "topic": "Guidance and Margins",
+      "summary": "Analysts questioned the narrowing of the guidance range, margin performance, salary hikes, and the impact of rupee depreciation and AI deflation."
+     },
+     {
+      "page": 5,
+      "topic": "AI Monetization and Pricing",
+      "summary": "Concerns regarding whether AI-led productivity could reduce traditional billable work and offset pricing pressure."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 4,
+      "claim": "AI revenue grew significantly reaching 10.5% of total revenue with strong sequential growth.",
+      "quote": "AI revenue was a standout at 10.5% of our revenue, growing at 29% sequentially.",
+      "horizon": "Q2 FY27"
+     },
+     {
+      "page": 4,
+      "claim": "Large deals remained strong at $5.2 billion including two mega deals.",
+      "quote": "Large deals were another standout at $5.2 bn for the quarter. This includes two mega deals.",
+      "horizon": "Q2 FY27"
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "95",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "we are changing our revenue growth guidance to 1.5% to 3% Y-on-Y growth in constant currency terms.",
+      "metric": "revenue_growth",
+      "horizon": "FY27",
+      "speaker": "Salil Parekh",
+      "direction": "range",
+      "label_raw": "revenue growth guidance",
+      "target_low": 1.5,
+      "target_high": 3
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Our operating margin guidance remains the same at 20% to 22% operating margin.",
+      "metric": "ebit_margin",
+      "horizon": "FY27",
+      "speaker": "Salil Parekh",
+      "direction": "range",
+      "label_raw": "operating margin guidance",
+      "target_low": 20,
+      "target_high": 22
+     },
+     {
+      "page": 5,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "Our plan is to have 6,000 Frontier Engineers over the next few years.",
+      "metric": "other:frontier_engineers",
+      "horizon": "medium_term",
+      "speaker": "Salil Parekh",
+      "direction": "point",
+      "label_raw": "frontier engineers",
+      "target_low": 6000,
+      "target_high": 6000
+     },
+     {
+      "page": 17,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "This year, we have a plan to recruit 20,000 college graduates.",
+      "metric": "other:college_graduates_hiring",
+      "horizon": "FY27",
+      "speaker": "Salil Parekh",
+      "direction": "point",
+      "label_raw": "college graduates recruitment plan",
+      "target_low": 20000,
+      "target_high": 20000
+     },
+     {
+      "page": 31,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We expect Onsite mix excluding new acquisitions to reduce by 75 bps to 1% for the year.",
+      "metric": "other:onsite_mix_reduction",
+      "horizon": "FY27",
+      "speaker": "Jayesh Sanghrajka",
+      "direction": "range",
+      "label_raw": "Onsite mix excluding new acquisitions reduction",
+      "target_low": 0.75,
+      "target_high": 1
+     },
+     {
+      "page": 31,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We expect effective tax rate for the year to be in the range of 29% to 30%.",
+      "metric": "other:effective_tax_rate",
+      "horizon": "FY27",
+      "speaker": "Jayesh Sanghrajka",
+      "direction": "range",
+      "label_raw": "effective tax rate",
+      "target_low": 29,
+      "target_high": 30
+     }
+    ],
+    "call_date": "2026-07-23",
+    "call_period": "Q1 FY27",
+    "reported_kpis": [
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "Our revenue growth for Q1 was at 2.4% Y-on-Y and 1% Q-on-Q in constant currency terms.",
+      "value": 2.4,
+      "metric": "revenue_growth",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "Our revenue growth for Q1 was at 2.4% Y-on-Y and 1% Q-on-Q in constant currency terms.",
+      "value": 1,
+      "metric": "revenue_growth",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "operating margin at 21.1%",
+      "value": 21.1,
+      "metric": "ebit_margin",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "other",
+      "basis": "unspecified",
+      "quote": "free cash flow at $955 mn.",
+      "value": 955,
+      "metric": "other:free_cash_flow",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Earnings per share were up 15% Y-on-Y in rupee terms.",
+      "value": 15,
+      "metric": "pat_growth",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 30,
+      "unit": "other",
+      "basis": "unspecified",
+      "quote": "Q1 revenues were at $5,082 mn, increase of 1% sequentially and 2.4% Y-on-Y in constant currency terms.",
+      "value": 5082,
+      "metric": "revenue",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "other",
+      "basis": "unspecified",
+      "quote": "Our large deals, $3.6 bn at 61% net new",
+      "value": 3600,
+      "metric": "order_inflow",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Our AI services revenue was 8.2% of overall revenue in Q1.",
+      "value": 8.2,
+      "metric": "other:ai_services_revenue_share",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 31,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "utilization, excluding trainees, improving by 1.9% to 84.9%.",
+      "value": 84.9,
+      "metric": "other:utilization_excluding_trainees",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 31,
+      "unit": "other",
+      "basis": "unspecified",
+      "quote": "DSO reduced by 4 days sequentially to 63.",
+      "value": 63,
+      "metric": "other:dso",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 31,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Attrition increased slightly to 13% versus 12.6% sequentially, in-line with Q1 seasonality.",
+      "value": 13,
+      "metric": "other:attrition",
+      "period": "Q1 FY27"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 6,
+      "topic": "Reasons for revenue guidance cut",
+      "summary": "Analysts inquired about the reasons behind trimming the FY27 revenue growth guidance and the macro factors impacting performance."
+     },
+     {
+      "page": 6,
+      "topic": "Pricing pressure and competitive intensity",
+      "summary": "Analysts asked about irrational or aggressive competitive pricing in the market and how AI productivity asks are affecting pricing realization."
+     },
+     {
+      "page": 6,
+      "topic": "CEO succession and transition",
+      "summary": "Journalists and analysts asked about the CEO transition timing, mandate for the successor Ashiss Dash, and reason for not extending Salil Parekh's term."
+     },
+     {
+      "page": 8,
+      "topic": "AI revenue lumpiness and deflation impact",
+      "summary": "Analysts questioned whether AI revenue is lumpy and when AI-led gains will become large enough to offset client productivity-led deflation."
+     },
+     {
+      "page": 13,
+      "topic": "Margin sustainability with wage hikes",
+      "summary": "Analysts pressed on whether Infosys can sustain the 20% to 22% margin range with upcoming wage hikes, acquisition costs, and lower growth."
+     },
+     {
+      "page": 38,
+      "topic": "TCV ramp-up and conversion to revenue",
+      "summary": "Analysts questioned why healthy deal bookings and high net-new TCV were not translating into faster revenue growth, asking about duration and ramp lags."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 29,
+      "claim": "AI revenue grew strongly and reached 8.2% of total revenue in Q1 FY27, displaying double-digit quarter-on-quarter growth over several quarters.",
+      "quote": "AI revenues for the quarter at 8.2%. This is growing at double-digit Q-on-Q over the last several quarters.",
+      "horizon": "Q1 FY27"
+     },
+     {
+      "page": 6,
+      "claim": "Macro environment continues to remain uncertain, prompting a downward revision to the revenue guidance for FY27.",
+      "quote": "Overall, we continue to see the macro environment remaining uncertain. With our Q1 results and a view for the rest of the financial year, we are changing our revenue growth guidance",
+      "horizon": "FY27"
+     },
+     {
+      "page": 30,
+      "claim": "Client decision to terminate an EURS project created a one-off 50 basis point drag on Q1 revenue growth.",
+      "quote": "Q1 revenue growth was lower than our expectations, mainly due to - one-off 50 basis point impact on account of program termination by an EURS client during the quarter.",
+      "horizon": "Q1 FY27"
+     },
+     {
+      "page": 30,
+      "claim": "Clients are demanding AI-driven productivity improvements alongside high competitive intensity, softening realized price growth.",
+      "quote": "Additionally, client expectation on productivity, along with high competitive intensity is resulting in softer increase in price versus our expectations.",
+      "horizon": "Q1 FY27"
+     },
+     {
+      "page": 33,
+      "claim": "Operating margin guidance of 20% to 22% was maintained despite wage hike and acquisition headwinds, offset by Project Maximus and currency tailwinds.",
+      "quote": "Margin guidance is maintained at 20% to 22%. This assumes headwind from wage hikes productivity pass-throughs, AI investments and 50 basis point impact from acquisitions",
+      "horizon": "FY27"
+     },
+     {
+      "page": 15,
+      "claim": "Financial Services and EURS segments are expected to outperform the company's average growth rate for the remainder of the year.",
+      "quote": "Financial Services and EURS, both we expect to deliver higher than the company average going forward or for the rest of the year.",
+      "horizon": "FY27"
+     },
+     {
+      "page": 33,
+      "claim": "Infosys opted out of bidding on certain deals with a European manufacturing client due to commercial and return expectations.",
+      "quote": "European Manufacturing client due to reduced client spend along with our conscious decision to not pursue certain deals that were not aligned to our return expectations",
+      "horizon": "FY27"
+     },
+     {
+      "page": 31,
+      "claim": "Large deal wins showed strong momentum with 61% net new TCV and positive market share from vendor consolidation.",
+      "quote": "Large deal wins were strong at $3.6 bn with high net new of 61%, reflecting the relevance of our value proposition.",
+      "horizon": "Q1 FY27"
+     }
+    ]
+   },
+   "model": "gemini-3.8-flash"
+  },
+  {
+   "document_id": "96",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "Our revenue growth guidance for the financial year 2027 is 1.5% to 3.5% growth year-on-year in constant currency terms.",
+      "metric": "revenue_growth",
+      "horizon": "FY27",
+      "speaker": "Salil Parekh",
+      "direction": "range",
+      "label_raw": "revenue growth guidance",
+      "target_low": 1.5,
+      "target_high": 3.5
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Our operating margin guidance for financial year '27 is 20% to 22%.",
+      "metric": "ebit_margin",
+      "horizon": "FY27",
+      "speaker": "Salil Parekh",
+      "direction": "range",
+      "label_raw": "operating margin guidance",
+      "target_low": 20,
+      "target_high": 22
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We expect acceleration of growth in Financial Services and in Energy, Utility, Resources and Services vertical.",
+      "metric": "revenue_growth",
+      "horizon": "FY27",
+      "speaker": "Salil Parekh",
+      "direction": "qualitative",
+      "label_raw": "Financial Services growth",
+      "target_low": null,
+      "target_high": null
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We expect acceleration of growth in Financial Services and in Energy, Utility, Resources and Services vertical.",
+      "metric": "revenue_growth",
+      "horizon": "FY27",
+      "speaker": "Salil Parekh",
+      "direction": "qualitative",
+      "label_raw": "Energy, Utility, Resources and Services vertical growth",
+      "target_low": null,
+      "target_high": null
+     },
+     {
+      "page": 8,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "This year also, we are expecting at least 20,000 freshers to be hired.",
+      "metric": "other:freshers_hired",
+      "horizon": "FY27",
+      "speaker": "Jayesh Sanghrajka",
+      "direction": "at_least",
+      "label_raw": "freshers to be hired",
+      "target_low": 20000,
+      "target_high": null
+     },
+     {
+      "page": 29,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We expect effective tax rates for the FY27 to be in the range of 29% to 30%.",
+      "metric": "other:effective_tax_rate",
+      "horizon": "FY27",
+      "speaker": "Jayesh Sanghrajka",
+      "direction": "range",
+      "label_raw": "effective tax rates",
+      "target_low": 29,
+      "target_high": 30
+     }
+    ],
+    "call_date": "2026-04-23",
+    "call_period": "Q4 FY26",
+    "reported_kpis": [
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "We had growth of 3.1% for the full year in constant currency terms.",
+      "value": 3.1,
+      "metric": "revenue_growth",
+      "period": "FY26"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "On Q4, our growth year-on-year was 4.1% in constant currency terms.",
+      "value": 4.1,
+      "metric": "revenue_growth",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 4,
+      "unit": "other",
+      "basis": "unspecified",
+      "quote": "Large deals were very good, $14.9 bn for the full year, $3.2 bn for the fourth quarter.",
+      "value": 14.9,
+      "metric": "order_inflow",
+      "period": "FY26"
+     },
+     {
+      "page": 4,
+      "unit": "other",
+      "basis": "unspecified",
+      "quote": "Large deals were very good, $14.9 bn for the full year, $3.2 bn for the fourth quarter.",
+      "value": 3.2,
+      "metric": "order_inflow",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "The full year was 28% higher than it was in the previous year.",
+      "value": 28,
+      "metric": "order_inflow_growth",
+      "period": "FY26"
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "So if you look at the margins, the full year margins is at 21%.",
+      "value": 21,
+      "metric": "ebit_margin",
+      "period": "FY26"
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "The quarterly margins also 20.9%, very close to 21%.",
+      "value": 20.9,
+      "metric": "ebit_margin",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 8,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "The last year, we had announced 20,000 for FY26 and we have hired more than 20,000 freshers from the market.",
+      "value": 20000,
+      "metric": "other:freshers_hired",
+      "period": "FY26"
+     },
+     {
+      "page": 28,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Utilization, excluding trainees, was 83% in Q4 and 84.4% in FY26.",
+      "value": 83,
+      "metric": "other:utilization_ex_trainees",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 28,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Utilization, excluding trainees, was 83% in Q4 and 84.4% in FY26.",
+      "value": 84.4,
+      "metric": "other:utilization_ex_trainees",
+      "period": "FY26"
+     },
+     {
+      "page": 28,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Utilization, including trainees, was at 81.1% for FY26 reflecting the investment made towards creating future capacity.",
+      "value": 81.1,
+      "metric": "other:utilization_inc_trainees",
+      "period": "FY26"
+     },
+     {
+      "page": 28,
+      "unit": "other",
+      "basis": "unspecified",
+      "quote": "Strong focus on collections aided by technology interventions helped us reduce DSO, including unbilled net of unearned to 78, which is the lowest in seven years.",
+      "value": 78,
+      "metric": "other:dso",
+      "period": "FY26"
+     },
+     {
+      "page": 29,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "ROE stood at 31.6%.",
+      "value": 31.6,
+      "metric": "other:roe",
+      "period": "FY26"
+     },
+     {
+      "page": 29,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Voluntary attrition reduced by 1.5% to 12.6% for the year, reflecting continued softness and our interventions toward talent retention.",
+      "value": 12.6,
+      "metric": "other:attrition",
+      "period": "FY26"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 5,
+      "topic": "FY27 revenue guidance composition and M&A impact",
+      "summary": "Analysts questioned what drove the 1.5%–3.5% revenue guidance, the inorganic contribution from acquisitions, and whether discretionary spending was deteriorating."
+     },
+     {
+      "page": 10,
+      "topic": "Sequential headcount decline and wage hikes",
+      "summary": "Journalists and analysts asked why headcount declined sequentially by 8,000 employees and sought clarity on wage hike quantum and timelines."
+     },
+     {
+      "page": 12,
+      "topic": "AI productivity and revenue deflation",
+      "summary": "Analysts pressed on how AI productivity pass-through is compressing traditional IT service contracts, diluting base revenues, and affecting growth."
+     },
+     {
+      "page": 13,
+      "topic": "Daimler / European manufacturing client ramp-down",
+      "summary": "Analysts sought details on the winding down or ramp-down of a large European automotive manufacturing account and its impact on FY27 guidance."
+     },
+     {
+      "page": 43,
+      "topic": "Competitive intensity and aggressive pricing",
+      "summary": "Analysts asked if competitors are aggressively underpricing deals under the pretext of AI productivity improvements, triggering irrational pricing."
+     },
+     {
+      "page": 44,
+      "topic": "Volume growth outlook under AI deflation",
+      "summary": "Analysts questioned whether the volume-to-revenue growth algorithm has structurally changed due to AI efficiency gains."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 4,
+      "claim": "Growth in Financial Services and Energy, Utilities, Resources and Services is expected to accelerate in FY27.",
+      "quote": "We expect acceleration of growth in Financial Services and in Energy, Utility, Resources and Services vertical.",
+      "horizon": "FY27"
+     },
+     {
+      "page": 5,
+      "claim": "Net new large deals accounted for 55% of the total deal value in FY26, supporting future growth.",
+      "quote": "We see on the large deals, the net new is pretty large for the full year at 55%. So that gives us support for growth.",
+      "horizon": "FY27"
+     },
+     {
+      "page": 6,
+      "claim": "AI services revenue is seeing strong growth nicely ahead of Q3 levels.",
+      "quote": "The growth in AI services is very strong, but we have not disclosed that revenue number externally here.",
+      "horizon": null
+     },
+     {
+      "page": 22,
+      "claim": "The pricing environment has remained stable, with most FY26 growth being pricing-led as AI services command better pricing.",
+      "quote": "In terms of pricing, I think pricing environment for us has remained stable. On the contrary, actually, most of our growth this year has been pricing-led because the volumes have been softer.",
+      "horizon": "FY26"
+     },
+     {
+      "page": 22,
+      "claim": "Over 90% of employees are getting skilled on various AI platforms.",
+      "quote": "yes about just over 90% of people are now getting skilled on different types of the AI platforms.",
+      "horizon": null
+     },
+     {
+      "page": 27,
+      "claim": "Clients are prioritizing cost optimization engagements over growth-led transformation programs amid guarded spending.",
+      "quote": "Client spending is guarded, with greater focus on cost optimization engagements as against growth-led transformation programs.",
+      "horizon": null
+     },
+     {
+      "page": 31,
+      "claim": "Lower spending by a European manufacturing client and the decision to avoid low-return deals will reduce FY27 growth by 0.75% to 1%.",
+      "quote": "Reduction of 0.75% to 1% due to lower revenue from one of our large European manufacturing client.",
+      "horizon": "FY27"
+     },
+     {
+      "page": 31,
+      "claim": "Further reduction in onsite mix is expected to impact FY27 revenue growth by 0.75% to 1%.",
+      "quote": "Further reduction in onsite mix by 0.75% to 1%, we expect third-party cost for FY27 to remain at similar levels as FY26.",
+      "horizon": "FY27"
+     }
+    ]
+   },
+   "model": "gemini-3.8-flash"
+  },
+  {
+   "document_id": "97",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "The new revenue growth guidance for this financial year is 3% to 3.5% growth in constant currency.",
+      "metric": "revenue_growth",
+      "horizon": "FY26",
+      "speaker": "Salil Parekh",
+      "direction": "range",
+      "label_raw": "revenue growth guidance for this financial year",
+      "target_low": 3,
+      "target_high": 3.5
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Our operating margin guidance for the financial year remains the same at 20% to 22%.",
+      "metric": "ebit_margin",
+      "horizon": "FY26",
+      "speaker": "Salil Parekh",
+      "direction": "range",
+      "label_raw": "operating margin guidance for the financial year",
+      "target_low": 20,
+      "target_high": 22
+     }
+    ],
+    "call_date": "January 14, 2026",
+    "call_period": "Q3 FY26",
+    "reported_kpis": [
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "Our revenue grew 0.6% sequentially and 1.7% year-on-year in constant currency terms.",
+      "value": 0.6,
+      "metric": "revenue_growth",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "Our revenue grew 0.6% sequentially and 1.7% year-on-year in constant currency terms.",
+      "value": 1.7,
+      "metric": "revenue_growth",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "other",
+      "basis": "reported",
+      "quote": "Our large deals were at $4.8 bn, with 57% net new.",
+      "value": 4.8,
+      "metric": "order_inflow",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "ex_one_offs",
+      "quote": "Our adjusted operating margin was 21.2%.",
+      "value": 21.2,
+      "metric": "ebit_margin",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 21,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Operating margins including the impact of change in labor codes stands at 18.4%, adjusting for the same, it is at 21.2%.",
+      "value": 18.4,
+      "metric": "ebit_margin",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 21,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "our revenue growth in 9 months stood at 2.8%, which is at the higher end of our earlier guided range.",
+      "value": 2.8,
+      "metric": "revenue_growth",
+      "period": "Q3 FY26"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 4,
+      "topic": "Headcount increase vs peers",
+      "summary": "Questions on how to interpret the headcount increase amid peer job cuts and whether it indicates improving demand."
+     },
+     {
+      "page": 4,
+      "topic": "Margin dip and labor codes",
+      "summary": "Inquiries regarding sequential margin movements, labor code charges, and the impact of wage hikes."
+     },
+     {
+      "page": 11,
+      "topic": "North America de-growth",
+      "summary": "Questions on reasons for North America de-growing in constant currency and industry specific softness like Retail."
+     },
+     {
+      "page": 8,
+      "topic": "H-1B visa and employee entry issues",
+      "summary": "Concerns over U.S. immigration scrutiny and visa policies affecting deployment."
+     },
+     {
+      "page": 11,
+      "topic": "AI pricing and impact on business",
+      "summary": "Questions regarding pricing models for AI agents like Devin and whether they create margin headwinds or cannibalization."
+     },
+     {
+      "page": 10,
+      "topic": "CEO succession plan",
+      "summary": "Inquiry regarding the CEO's term ending in March 2027 and the succession planning status."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 3,
+      "claim": "Demand and deal momentum remain strong with large deals totaling $4.8 billion in Q3.",
+      "quote": "Our large deals were at $4.8 bn, with 57% net new.",
+      "horizon": "Q3 FY26"
+     },
+     {
+      "page": 3,
+      "claim": "Six AI-led value pools are emerging that could unlock large incremental opportunities.",
+      "quote": "We are now witnessing six AI-led value pools emerging that could unlock a large incremental opportunity.",
+      "horizon": null
+     },
+     {
+      "page": 20,
+      "claim": "Financial services and Energy, Utilities, Resources and Services verticals expect acceleration in FY27 over FY26.",
+      "quote": "In Financial services and in Energy, Utilities, Resources and Services verticals, we expect acceleration in financial year 2027 over financial year 2026.",
+      "horizon": "FY27"
+     },
+     {
+      "page": 22,
+      "claim": "Adjusted operating margin increased by 20 basis points sequentially to 21.2% in Q3.",
+      "quote": "Adjusted operating margins increased by 20 basis points sequentially to 21.2%.",
+      "horizon": "Q3 FY26"
+     },
+     {
+      "page": 21,
+      "claim": "Europe continued to lead regional growth by 7.2% year-on-year in constant currency terms.",
+      "quote": "Among geos, Europe continued to lead the growth by 7.2% year-on-year in constant currency terms.",
+      "horizon": "Q3 FY26"
+     },
+     {
+      "page": 22,
+      "claim": "LTM attrition declined by 2% sequentially and 1.4% on a year-on-year basis.",
+      "quote": "LTM attrition declined by 2% sequentially and 1.4% on a year-on-year basis",
+      "horizon": "Q3 FY26"
+     },
+     {
+      "page": 22,
+      "claim": "Completed buyback returning INR 18,000 crores to shareholders to help EPS accretion.",
+      "quote": "During the quarter, we successfully completed our largest ever buyback, returning INR18,000 crores to our shareholders, which will help EPS accretion.",
+      "horizon": "Q3 FY26"
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "98",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "The new guidance is growth between 2% and 3% in constant currency terms for the full year.",
+      "metric": "revenue_growth",
+      "horizon": "FY26",
+      "speaker": "Salil Parekh",
+      "direction": "range",
+      "label_raw": "revenue growth guidance for the financial year",
+      "target_low": 2,
+      "target_high": 3
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "And our operating margin guidance remains the same as in the past quarter at 20% to 22% for the full year.",
+      "metric": "ebit_margin",
+      "horizon": "FY26",
+      "speaker": "Salil Parekh",
+      "direction": "range",
+      "label_raw": "operating margin guidance for the full year",
+      "target_low": 20,
+      "target_high": 22
+     }
+    ],
+    "call_date": "October 16, 2025",
+    "call_period": "Q2 FY26",
+    "reported_kpis": [
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "Our revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency terms.",
+      "value": 2.2,
+      "metric": "revenue_growth",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "constant_currency",
+      "quote": "Our revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency terms.",
+      "value": 2.9,
+      "metric": "revenue_growth",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Our operating margin was 21%.",
+      "value": 21,
+      "metric": "ebit_margin",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "other",
+      "basis": "unspecified",
+      "quote": "Our large deals were at $3.1 bn, out of which 67% was net new work.",
+      "value": 3.1,
+      "metric": "order_inflow",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 20,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "H1 margins were 20.9% versus 21.1% in H1 '25.",
+      "value": 20.9,
+      "metric": "ebit_margin",
+      "period": "H1 FY26"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 3,
+      "topic": "Guidance tightness and recovery in verticals like Manufacturing and Retail",
+      "summary": "Analyst questioned why guidance was only tightened rather than increased given the run rate, and asked about headwinds in verticals like Manufacturing and Retail."
+     },
+     {
+      "page": 4,
+      "topic": "H-1B visa dependency and viability",
+      "summary": "Analysts repeatedly asked about the percentage of employees dependent on H-1B visas and whether sending freshers to the U.S. remains viable."
+     },
+     {
+      "page": 4,
+      "topic": "AI revenue quantification",
+      "summary": "Analysts inquired about when Infosys will quantify its AI revenues compared to peers."
+     },
+     {
+      "page": 4,
+      "topic": "Acquisitions and Versent Group contribution",
+      "summary": "Questions were raised regarding revenue contributions from recent M&A activities, specifically the Versent Group acquisition in Australia."
+     },
+     {
+      "page": 29,
+      "topic": "Subcontractor costs and utilization",
+      "summary": "Analyst questioned the step down in utilization despite the step-up in subcontractor usage and skill gaps."
+     },
+     {
+      "page": 33,
+      "topic": "Impact of AI on IT services revenue growth and pricing deflation",
+      "summary": "Analysts asked whether the deflationary impact of AI is higher than volume growth and how deal pricing is affected."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 3,
+      "claim": "Client interactions show strong focus on deploying AI across the enterprise for growth and cost efficiency.",
+      "quote": "Our client interactions are showing a strong focus on deploying AI across the enterprise, both for growth and for cost efficiency programs.",
+      "horizon": null
+     },
+     {
+      "page": 5,
+      "claim": "The macroeconomic environment still remains uncertain with constraints in retail and automotive sectors.",
+      "quote": "As we stand today, the environment still remains uncertain.",
+      "horizon": null
+     },
+     {
+      "page": 20,
+      "claim": "Financial Services and Manufacturing grew above 5% year-on-year in constant currency in Q2 and H1.",
+      "quote": "Amongst large verticals, Financial Services and Manufacturing grew above 5% year-on-year in constant currency, both in Q2 and H1.",
+      "horizon": null
+     },
+     {
+      "page": 20,
+      "claim": "Europe grew greater than 5% year-on-year in constant currency terms in H1.",
+      "quote": "Europe also grew greater than 5% year-on-year in constant currency terms.",
+      "horizon": null
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "99",
+   "kind": "annual_report",
+   "data": {
+    "segments": [
+     {
+      "name": "Financial Services",
+      "page": 81,
+      "share_pct": null,
+      "revenue_cr": 49908
+     },
+     {
+      "name": "Manufacturing",
+      "page": 81,
+      "share_pct": null,
+      "revenue_cr": 29078
+     },
+     {
+      "name": "Energy, Utilities, Resources and Services",
+      "page": 81,
+      "share_pct": null,
+      "revenue_cr": 23818
+     },
+     {
+      "name": "Retail",
+      "page": 81,
+      "share_pct": null,
+      "revenue_cr": 23077
+     },
+     {
+      "name": "Communication",
+      "page": 81,
+      "share_pct": null,
+      "revenue_cr": 21765
+     },
+     {
+      "name": "Hi-Tech",
+      "page": 81,
+      "share_pct": null,
+      "revenue_cr": 13928
+     },
+     {
+      "name": "Life Sciences",
+      "page": 81,
+      "share_pct": null,
+      "revenue_cr": 12267
+     },
+     {
+      "name": "All other segments",
+      "page": 81,
+      "share_pct": null,
+      "revenue_cr": 4809
+     }
+    ],
+    "citations": [
+     {
+      "page": 81,
+      "field": "segments",
+      "quote": "Business segments – Consolidated (In ₹ crore)"
+     },
+     {
+      "page": 133,
+      "field": "top_risks",
+      "quote": "The Risk Office assessed, monitored and reported on risks related to geopolitical scenarios; uncertainties in the economy; inflation; artificial intelligence, technology disruption and innovation; talent availability; cybersecurity; data protection and privacy; ESG; contractual liabilities; and complex and evolving regulatory environment."
+     },
+     {
+      "page": 345,
+      "field": "contingent_liabilities_cr",
+      "quote": "Claims against the Group, not acknowledged as debts(1) 3,117"
+     },
+     {
+      "page": 56,
+      "field": "related_party_highlights",
+      "quote": "There were no contracts or arrangements or transactions entered into during the year ended March 31, 2026, which were not at arm’s length basis."
+     },
+     {
+      "page": 277,
+      "field": "auditor_opinion",
+      "quote": "In our opinion and to the best of our information and according to the explanations given to us, the aforesaid Consolidated Financial Statements, give the information required by the Companies Act, 2013 (the “Act”) in the manner so required and give a true and fair view in conformity with the Indian Accounting Standards prescribed under section 133 of the Act"
+     },
+     {
+      "page": 278,
+      "field": "key_audit_matters",
+      "quote": "Revenue recognition"
+     },
+     {
+      "page": 279,
+      "field": "key_audit_matters",
+      "quote": "Revenue recognition - Fixed-price contracts using the percentage of completion method"
+     }
+    ],
+    "top_risks": [
+     "Geopolitical, macroeconomic or health events",
+     "Uncertainties in the economy",
+     "Inflation",
+     "Artificial intelligence, technology disruption and innovation",
+     "Cybersecurity, data protection and privacy"
+    ],
+    "pages_read": [
+     13,
+     14,
+     56,
+     75,
+     79,
+     80,
+     81,
+     82,
+     102,
+     109,
+     116,
+     125,
+     131,
+     132,
+     133,
+     160,
+     195,
+     196,
+     197,
+     198,
+     199,
+     200,
+     251,
+     263,
+     275,
+     276,
+     277,
+     278,
+     279,
+     280,
+     281,
+     345,
+     356
+    ],
+    "fiscal_year": "2025-26",
+    "auditor_opinion": "unmodified",
+    "key_audit_matters": [
+     "Revenue recognition",
+     "Revenue recognition - Fixed-price contracts using the percentage of completion method"
+    ],
+    "business_description": "Infosys is a global leader in next-generation digital services and consulting, enabling clients across various industries to navigate their digital transformation. The Company provides end-to-end business solutions including IT services, software development, consulting, and business process management.",
+    "related_party_highlights": [
+     "There were no contracts or arrangements or transactions entered into during the year ended March 31, 2026, which were not at arm's length basis."
+    ],
+    "contingent_liabilities_cr": 3117
+   },
+   "model": "gemini-3.5-flash-lite"
+  }
+ ],
+ "pages": [
+  {
+   "document_id": "94",
+   "page_no": 3,
+   "text": "External Document © 2025 Infosys Limited 2\nSanjana B\nThe Hindu BusinessLine\nRukmini Rao\nFortune India\nPooja Patil\nBusinessworld"
+  },
+  {
+   "document_id": "94",
+   "page_no": 4,
+   "text": "External Document © 2025 Infosys Limited 3\nRishi Basu\nA very good evening, everyone, and thank you for joining Infosys' Second Quarter Financial Results.\nMy name is Rishi, and I would like to welcome all of you. One question. Okay.\nWith that, I am going to hand it over to Salil for his opening remarks. Over to you, Salil.\nSalil Parekh\nThanks, Rishi. It is good to see that everyone listens to you so well. So good evening, and welcome,\neveryone. Thank you for joining us. Our revenue growth for Q2 was 1.5% YoY and 1.2% sequentially\nin constant currency terms. AI revenue was a standout at 10.5% of our revenue, growing at 29%\nsequentially. And last quarter, it was at 8.2%.\nLarge deals were another standout at $5.2 bn for the quarter. This includes two mega deals. One of\nthese mega deals was for over $2 bn with a large international company for a period of seven years,\nand this is net new. This deal is expected to contribute over 1% revenue growth in the coming\nfinancial year.\nThe second mega deal was for $1 bn for a renewal. Our large deal pipeline is healthy and includes\nsome other mega deals in this pipeline. Operating margin was stable at 21%. Free cash flow was\nstrong at $928 mn (Editor’s comment) for the quarter.\nAs enterprises adopt AI at scale, another quarter of strong growth in AI revenues is a recognition of\nour differentiated market positioning and client confidence. As an ecosystem integrator, we continue\nto work closely with the frontier model companies, both open-weight and closed models. Our deep\ninvestments in Topaz Fabric help our clients seamlessly navigate between models to ensure token\noptimization and value realization.\nInfosys continues to gain market share, especially where economics of the program is aligned to the\nstakeholder interest. We remain the preferred AI strategy and deployment partner for our top clients.\nAs AI remains central to enterprise transformation in the years ahead, Infosys is well positioned to\nhelp navigate this shift.\nBased on our Q2 performance and revised outlook for rest of the year, our revenue growth guidance\nis 1% to 2% YoY.in constant currency terms. Our operating margin guidance remains at 20% to 22%\nfor the year.\nThank you. And with that, we can open it up for questions.\nRishi Basu"
+  },
+  {
+   "document_id": "94",
+   "page_no": 5,
+   "text": "External Document © 2025 Infosys Limited 4\nThank you, Salil. We will now open the floor for questions. Joining Salil is Mr. Jayesh Sanghrajka,\nChief Financial Officer, Infosys. The first question is from Meghna Sen from CNBC-TV18.\nMeghna Sen\nThank you very much. My first question is on your guidance. So, you have narrowed both the lower\nand upper end. Could you help us understand why? Explain the margin performance, the benefit of\nrupee depreciation, any offset and loss due to deflation, etc.? And did your salary hike also impact\nyour margins in the second half?\nThird is, your AI revenue is 10.5% of your Q2 revenue. So how many deals won will have AI element?\nAnd with AI jitters globally, is there a change in business? And fourth, how are your December quarter\nfurloughs shaping up versus last year and which sectors look the most vulnerable?\nSalil Parekh\nOkay. Let me start off with some of them, and Jayesh will also jump in with some of the other ones.\nSo first, AI is really an incredible performance for us. It is 10.5% of our revenue, growing sequentially\n29%. We had laid out the AI approach in the Hexagon with six different areas of focus.\nAnd in this revenue mix, we see each of those areas growing well, especially things that we do where\nwe are building agents, where we are doing legacy modernization, where we are doing process AI,\nwhere we are doing data AI. So those are growing exceptionally well, but all of them are doing well.\nAnd then we have the partner ecosystem with that. That is really gaining momentum.\nI think in terms of the global AI our attention is really much more on the large enterprises with which\nwe are working. So for them, this is starting to become more-and-more relevant. And with the\ninvestments we made and build the Topaz Fabric and the capabilities we have, plus all the training\nthat we have done for all of our people, which many and more are certified now, ready to do work\nwith different partners of the frontier companies, that is where we are getting the good traction with\nthe enterprise clients.\nI will spend a couple of minutes on the industries. I think what we see, and Jayesh will add more to\nthat, we see really good strength on the Financial Services. We see good strength on Energy Utilities.\nWe see good strength on the Manufacturing. And we see some weakness on the Retail and we see\nsome weakness on the Hi-Tech. But it is a mix of all of those that we have put together in how we\nsee this.\nJayesh Sanghrajka"
+  },
+  {
+   "document_id": "95",
+   "page_no": 4,
+   "text": "External Document © 2025 Infosys Limited 3\nRishi Basu\nA very good evening, everyone and thank you for joining Infosys' first quarter financial results. My\nname is Rishi. And on behalf of Infosys, I would like to welcome all of you today. I would first like to\ninvite our Chairman, Mr. Nandan Nilekani and our Chief Executive Officer, Mr. Salil Parekh for an\nimportant announcement which will then be followed by our business updates. Kindly note, Nandan\nwill not be taking any questions. Sirs, over to you.\nNandan Nilekani\nThank you, Rishi and it is great to be here with all of you. I thought I would take this opportunity to\nmake an important announcement. As you know, Salil has been CEO of Infosys for almost 10 years.\nHe came, I do not know how many of you were here 10 years back, but he came at a time when\nthings were slightly unstable. And he brought in calmness, focus, took the company from $10 bn to\n$20 bn, completely did the transformation for the digital era and started the AI differentiation and\nimplementation. Salil’s term comes to an end on March 31, 2027.\nInfosys has been looking at his succession. And today, I am delighted to tell you that the Board has\nappointed his successor, our new CEO, who will take over on April 1, 2027. He is from Infosys. He\nhas been somebody who is a true-blue Infoscion. He has worked in Infosys for 31 years. He has\nworked in every part of Infosys, be it in delivery, be it in sales, be it in account management, starting\na new DC in Bhubaneswar, everything. And he is someone who I think everybody likes, respects, is\nan uncomplicated guy who focuses on what needs to be done. His name is Ashiss Dash. So Ashiss\nis based out of L.A. He has been there for some time. He will move back to India and in the next 2-\n3 months, he will do some CEO coaching and then from October 1, Salil will take him on as his\nmentee and prepare him for the role, so that he can take on this role of managing a complex $20 bn\ncompany in a very transformational time.\nSo, I just wanted to let you know that Ashiss will be the new CEO and I would now like to request\nSalil to say a few words about Ashiss.\nSalil Parekh\nThanks, Nandan. So first welcome, everyone. This is an incredible time for us, as Nandan shared, I\nhave known Dash for a very long time working closely with him, a huge congratulations to him and\nin making sure everything he does works well into the future. He has had an amazing portfolio, the\nway he has built it, the way he has crafted it in terms of the clients he has worked with, in terms of\nthe people he has worked with."
+  },
+  {
+   "document_id": "95",
+   "page_no": 5,
+   "text": "External Document © 2025 Infosys Limited 4\nAnd there is a tremendous set of opportunities from that on to the overall company, the learnings\nfrom that as we apply to the overall company. Ashiss Dash, also a very collaborative individual\nworking well with all of the various components within Infosys and having been here for a long time,\nhas made sure he has learned everything and also understood how all different parts of the company\nwork. So huge, huge congratulations to him and looking forward to working with him as we do the\ntransition over the next few months.\nRishi Basu\nI now invite Jayesh to join Salil on stage to commence the quarter updates. As always, for this\nsection, I will request one question from each media house. But with that, let me invite Salil for his\nremarks. Over to you, Salil.\nSalil Parekh\nThanks, Rishi, and thanks Nandan. So good afternoon, everyone. Thank you for being here.\nOur revenue growth for Q1 was at 2.4% Y-on-Y and 1% Q-on-Q in constant currency terms. We had\na one-time revenue impact of a client decision during the quarter. Our AI services revenue was 8.2%\nof overall revenue in Q1. Our large deals, $3.6 bn at 61% net new, operating margin at 21.1%, free\ncash flow at $955 mn. Earnings per share were up 15% Y-on-Y in rupee terms.\nWe saw a strong acceleration in our AI work, as I shared earlier, with AI revenues at 8.2%. This is\ngrowing at double-digit Q-on-Q for the last several quarters. With this momentum, we see long-term\nrelevance of our services for our clients, which are all driven through AI. From our delivery team,\nover 80,000 employees are working on coding tools such as Claude Code or Codex or several others\nfor our clients, for our work inside. We see strong traction across the six areas of new growth that\nwe see in AI, our Hexagon for AI strategy.\nWe see client work, for example in building agents for processes, work on data, modernization and\nusing coding tools. We are building a team of frontier engineers to support our client work. Our plan\nis to have 6,000 Frontier Engineers over the next few years. We have built a platform, Topaz Fabric\nthat enables our clients to get the benefits of AI while keeping the sovereignty of their own data within\ntheir company.\nOur clients are able to work with any foundation model, closed, open-weight or on the cloud on their\nown servers. Our clients are able to optimize token cost, which has become very critical now to make\nsure its appropriate for the type of work they are doing and not out of hand."
+  },
+  {
+   "document_id": "95",
+   "page_no": 6,
+   "text": "External Document © 2025 Infosys Limited 5\nOverall, we continue to see the macro environment remaining uncertain. With our Q1 results and a\nview for the rest of the financial year, we are changing our revenue growth guidance to 1.5% to 3%\nY-on-Y growth in constant currency terms. Our operating margin guidance remains the same at 20%\nto 22% operating margin.\nThank you. And with that, let's open it up for questions.\nRishi Basu\nThank you, Salil. We will now open the floor for questions. The first question is from Ritu Singh from\nCNBC TV18.\nRitu Singh\nThank you very much. I know you have asked for one question. But if I may, Salil, you have given\nus a big news in this quarter. To begin with, since you speak about how you brought in and Mr.\nNilekani spoke about how you brought in calmness at a time when the company was going through\nquite a bit.\nEven now you are speaking of this global uncertainty because of which you have had to, again, pull\ndown your guidance as well. Why decide to leave at a time like now, instead of perhaps looking at\nan extension? I wanted to understand. And with the new CEO coming in, any mandate for the new\nCEO that you could highlight for us more clearly? And perhaps that is something the investors would\nalso want to know?\nAnd then on the earnings, of course, the reason for this revision downwards, if you could give us a\nlittle more colour on what you are seeing in the environment, where is the weakness? Where is\nmomentum picking up?\nSome of your competitors like Tech M have been talking about irrational competitive pricing. Wipro\nhas also spoken about that a bit. So what are you seeing in the environment? And with a 1% kind of\ngrowth in the first quarter, do we assume the second half will be meaningfully better if you were to\nreach that upper end of the 3% guidance you are speaking about?\nAnd just on AI, if you could update us how the revenue is moving? Is it proceeding as per what your\nexpectations were? Any updates you could share on that front as well, as far as revenue contribution\nfrom AI is concerned?\nSalil Parekh\nSo let me start with the first one."
+  },
+  {
+   "document_id": "95",
+   "page_no": 7,
+   "text": "External Document © 2025 Infosys Limited 6\nI think you had that question collectively for some time now. We have the answer. As I look at it, I am\nreally delighted with the role I have played here. We have taken the business, as Nandan said from\n$10 bn to $20 bn. It is working very well, the digital transformation and now the AI transformation is\nlaunched. So, I am really delighted that it is working well with our clients and with an incredible team\nthat we have inside. So that is what I would like to say on the first one.\nOn the second, I think what we are seeing is an environment, where a little bit sort of combining the\nthird piece as well, AI services is growing extremely well, double-digit growth, if you look at it like Q-\non-Q, if you look at it over several quarters in the past. We see that those 6 areas that we have\nidentified like the process, the agents, the data, the engineering, all of those are working extremely\nwell with our clients. So we are now looking at revenue growth in each of those areas.\nOur pipeline is even larger than the 8%, which is the revenue today. So we see good traction in that.\nTherefore, we feel there is a good long-term relevance of our services to our clients because this is\ngoing to continue to grow as we look out into the future.\nNow the question on the guidance, we had a one-time impact that I shared with a client decision.\nThere are factors related to what is going on in the macro environment, which we talked about. There\nare factors related to the volumes in the quarter. But we look at the large deal number, $3.6 bn, 61%\nnet new, so we see a lot of support in that. I think there are 5 (Editor’s comment) of those deals\nwhich are consolidation deals that we have been the beneficiary in, as an example. There are 3\n(Editor’s comment) deals which are just under the $500 mn range. So just like a mega deal. So we\nsee really good traction. The pipeline there is looking good.\nSo all that when we balance, we decided to look at our guidance in a different way. The upper end\nof the guidance was really based on if the macro was improving, we now see the macro, it may\nimprove, but not at the level that we were thinking initially. And so that is how we really constructed\nthe guidance. But we have tremendous view that this is a good place for Infosys to operate, with AI\nthe way it is looking and all of the work that we are doing on large deals gives us continued traction.\nRitu Singh\n[Inaudible]. The question of why you didn’t decide to stay on and what the mandates are and you\nknow better. If you could clarify all of those points?\nSalil Parekh\nSo there I think, as I shared earlier, my sense is, I have been fortunate to have a tremendous\nopportunity and what we have done in Infosys over the last many years and having taken the"
+  },
+  {
+   "document_id": "95",
+   "page_no": 16,
+   "text": "External Document © 2025 Infosys Limited 15\nOn the guidance also, if you could just extend a little bit on the colour on why really the upper limit\nwas reduced? Do you see macroeconomic environment further worsening or do you see that\nconversations have been a little different from last quarter? And secondly, are you still looking at\nacquisitions and investments and which spaces will these be in? And lastly, what next for Salil\nParekh?\nSalil Parekh\nSo on the first one, I think the consolidation deals, the ones I was referring to, are all in the large\ndeals. So those are not the ones, we were only saying, like, within the large deal, we see those many\nconsolidation deals. We are not specifying in which areas, but these are typically in the bigger\nindustries that we operate in. And there are big companies who are looking to consolidate across\npartners. And that is where we have seen it. But we are not specifying where we see that.\nBeena Parmar\nYou lost some renewals?\nSalil Parekh\nYes. So, we do not comment on any specific deals in the environment, in any case. However, we are\nquite clear that our focus overall is to make sure that we are working with clients on projects and\ncontracts that make economic sense to us. But no specific comment beyond that. We want to make\nsure that economically, it makes sense to us in some of these situations as well.\nThe guidance, I will also request Jayesh. I have also said a few things that he will add to it. What we\nsee is given where we were in Q1, which is the outcome that we had with one of the delivery client\ndecisions that I shared, we want to make sure that we have a guidance that reflects all of that.\nAnd then looking at the changes, whether it is in volumes, whether it is in some level of pricing mix\nthat is how we built the guidance. As we go through the year, we typically reduce the band as well,\nso instead of 2 points, it is now like a 1.5 point band as we go through the quarters. And that is how\nwe built the guidance. Jayesh will add to it.\nTo your other question, I think for me really the attention is, on what we are driving through for this\nyear, making sure that we continue to lead in AI, making sure that we continue to win market share\nand making sure that we have an absolutely smooth transition. I very much enjoy what I am doing,\nand I am sure once all of this is done, I will have time to focus on what is next.\nAcquisitions, we are continuing to look at acquisitions. We have a good pipeline in that. We did the\nacquisition on Life Sciences, Healthcare. We did the acquisition on Insurance. We have other areas"
+  },
+  {
+   "document_id": "95",
+   "page_no": 17,
+   "text": "External Document © 2025 Infosys Limited 16\nthat we have an interest in. So, we have a view in geography that we are looking at some\ngeographies where we could do more work, and those are good geographies. We could do more in\nsome of the other industries as well. For example, we are not doing anything, but we have seen that\nthere could be things we could do in Telco and Financial Services, a little bit more in Healthcare.\nThere are areas that we could do, which are more service-line oriented. We think there is good\ntraction in where AI can be leveraged into processes and agent building. But there is a pipeline and\nwe will continue with the acquisitions.\nJayesh Sanghrajka\nJust to add to what Salil was saying and I will come to guidance in a bit. On the consolidation deal\nof the six deals that we have won, it is a $700 mn of net new business that we have won. So, we\nhave seen positive impact coming out of the consolidation deal and we have been on the positive\nside of the market share.\nOn the guidance, whatever happens in Q1 typically has a cascading impact on the whole year. While\nwe will see benefit coming out of the acquisition that we completed in Q1, the one-off impact that we\nhad in Q1, the softer-than-expected volume and price that we got in Q1 will have a cascading effect\non the rest of the year in terms of guidance.\nIn terms of the large deal that we talked about with the European client where we decided to not bid\nbeyond the point because it did not make commercial sense or economic sense as Salil said, that\nwill have an additional impact in Q4 as the deal comes to a closure in December. So, that is also\nbaked in our guidance.\nAnd if you compare to last year, we have additional headwinds coming from the lower on-site mix,\nas I called out in the last quarter because of our conscious decision of derisking our business model.\nDeals that we lost in the last quarter from the same European manufacturing client and that impact,\nwhich was baked in the original guidance as well.\nSo, all of this cumulatively results in our guidance, there are multiple models that leads to the lower\nend and the upper end of the guidance and that is how the guidance is baked in.\nRishi Basu\nThank you. The next question is from Sanjana from The Hindu Business Line.\nSanjana B\nGood evening, gentlemen. Just two questions. Coming to rupee depreciation, how much of a tailwind\nhas that provided to your margins in Q1 or going ahead, how do you see that panning out? And the"
+  },
+  {
+   "document_id": "95",
+   "page_no": 18,
+   "text": "External Document © 2025 Infosys Limited 17\nother one is, how is AI improving or what kind of impact does it have on your employee productivity?\nAnd how is this affecting the revenue per employee metric? Just these two questions. Thank you.\nSalil Parekh\nI will start on the second one and Jayesh will come on the first. So if you look at not this quarter, but\nthe previous several quarters, we have had a good improvement in revenue productivity. We\ngenerally speaking, see overall that there is a benefit from that productivity coming.\nHaving said that, we are recruiting. We have recruited 20,000 college graduates last year. This year,\nwe have a plan to recruit 20,000 college graduates. We have already done almost 4,000 in the first\nquarter. But equally, we see that there is a productivity benefit, that will continue to come through.\nThen, of course, you also have pricing issues within the market, so those sometimes balance out.\nBut if I look back, not this quarter with the previous several quarters, we have seen a continuous\nexpansion of that.\nJayesh Sanghrajka\nAnd on rupee depreciation, every 1% change in the currency or depreciation in dollar typically gives\nyou anywhere between 15 to 17 bps on margin. But the important thing to note also is whenever\ndollar appreciates against rupee, it generally appreciates against most of the currency also. And we\nhave roughly 45% of revenue coming from non-U.S. geography and that kind of offsets some part\nof the rupee depreciation benefit.\nRishi Basu\nThank you. The next question is from Uma Kannan from Deccan Herald.\nUma Kannan\nGood evening gentlemen. With the rise in security incidents around autonomous AI agents and\nrecent breach at model hosting platform, it is about OpenAI hack. How are you updating your\napproach to safety and security? Just adding on to it, using cross domain network, is it not a risk for\nyour client database as AI tools will have full access to it? And also tell us about the guardrails you\nhave put in place for AI systems?\nSalil Parekh"
+  },
+  {
+   "document_id": "95",
+   "page_no": 29,
+   "text": "External Document © 2026 Infosys Limited 5\nOur revenue growth for Q1 was 2.4% Y-on-Y and 1% Q-on-Q in constant currency terms. We had a\nonetime revenue impact of a client decision during this quarter.\nOur AI services revenue was 8.2% of overall revenue. Our large deals were $3.6 bn with a net new\nof 61%. Our operating margin was 21.1%. Free cash flow at $955 mn. And our earnings per share\nwere higher by 15% in Q1, in rupee terms.\nWe saw a strong acceleration in our AI business, as I shared earlier, with AI revenues for the quarter\nat 8.2%. This is growing at double-digit Q-on-Q over the last several quarters.\nWith this momentum, we see long-term relevance of our services for our clients. From our delivery\nteam, over 80,000 employees are working today on coding tools such as Claude Code or Codex for\nour clients and for some projects inside. We saw strong traction across the 6 areas of growth in our\nAI strategy, Hexagon. We see client work, for example, in building agents for processes, work on\ndata, in AI, in modernization and of course, in coding tools.\nFor a health care company, we implemented AI agents to automate medicaid eligibility verification\nand operation support. The solution reduced eligibility verification time from about 6 to 8 days to\napproximately 4 minutes.\nWe are building a team of frontier engineers to support our client work. Our plan is to have 6,000\nfrontier engineers over the next few years.\nWe have built a platform, Topaz Fabric that allows our clients to get benefits of AI, while keeping the\nsovereignty of their data and company knowledge with themselves. Our clients are able to work with\nany foundation model closed, open weight, on cloud, on their server. Topaz Fabric provides a\nharness to a client to enable them to more fully deploy the benefits of the foundation models into\ntheir organization.\nOur clients are also able to optimize their token cost by ensuring appropriate models are used for\nappropriate tasks. Overall, we see a good pipeline for AI services, and that gives us a good view for\ncontinued AI work with our clients.\nOutside of that, we continue to see the macro-environment remaining uncertain. With our Q1 results\nand a view of the rest of the financial year, we have changed our revenue growth guidance to 1.5%\nto 3% Y-on-Y growth in constant currency terms. Our operating margin guidance remains the same\nat 20% to 22%. Thank you.\nAnd with that, let me hand it over to Jayesh for his update."
+  },
+  {
+   "document_id": "95",
+   "page_no": 30,
+   "text": "External Document © 2026 Infosys Limited 6\nJayesh Sanghrajka\nThank you, Salil. Good morning, good evening everyone and thank you for joining the call today.\nWe entered FY27 against a backdrop of a dynamic and evolving business environment, which is\nreflected in lower-than expected volumes. Clients continue to prioritize investments in AI,\nmodernization, cloud and productivity initiatives while remaining selective in discretionary spending.\nOur focus remains on disciplined execution supporting clients' transformation agenda and delivering\nsustainable financial performance.\nQ1 revenues were at $5,082 mn, increase of 1% sequentially and 2.4% Y-on-Y in constant currency\nterms. Acquisitions contributed approximately 1.1% sequentially.\nOur AI revenue momentum is very strong with AI revenues at 8.2% of our overall revenues, growing\nat a strong double-digit sequentially over the last many quarters. We are seeing strong traction\nacross all 6 value pools with higher share of revenues coming from process AI, AI strategy and\nengineering and Data for AI.\nQ1 revenue growth was lower than our expectations, mainly due to\n- one-off 50 basis point impact on account of program termination by an EURS client during the\nquarter. This was not factored in the earlier guidance.\n- Volumes were soft and weaker than expectations and also versus the historical Q1 trends\n- Additionally, client expectation on productivity, along with high competitive intensity is resulting\nin softer increase in price versus our expectations.\nSequential revenue growth was also impacted by higher offshoring to derisk our business model,\nalong with lower revenues from a European Manufacturing client, as I mentioned in the last earnings\ncall.\nDespite lower-than-expected growth, gross margins improved by 60 bps sequentially. Operating\nmargin improved by 20 bps sequentially to 21.1%. Major components of the change are as below-\nTailwinds of\n- 70 bps from rupee depreciation,\n- 20 bps from Project Maximus,\n- 10 bps (Editor’s comment) net benefit due to amortization of costs on intangibles incurred in Q4,\noffset by impact of new acquisitions in Q1\nHeadwinds of"
+  },
+  {
+   "document_id": "95",
+   "page_no": 31,
+   "text": "External Document © 2026 Infosys Limited 7\n- 50 bps from investment in AI sales and marketing,\n- 40 bps from onetime revenue impact arising out of program termination.\nWe also had onetime cost benefit of approximately 30 bps, which was offset by 20 bps due to\nincrease in various other expenses.\nOur tight focus on improving operational efficiency led to utilization, excluding trainees, improving by\n1.9% to 84.9%.\nOnsite mix, excluding new acquisitions, dropped by 30 bps, however including acquisitions, it\nremained flat. We expect Onsite mix excluding new acquisitions to reduce by 75 bps to 1% for the\nyear.\nDSO reduced by 4 days sequentially to 63. DSO, including unbilled net of unearned was 76 days\nversus 78 in Q4. Headcount reduced by 500 employees after adding over 2,000 employees from\nacquisitions.\nAttrition increased slightly to 13% versus 12.6% sequentially, in-line with Q1 seasonality. We plan to\ngive salary hikes to most of our employees effective October while the rest of the employees will be\ncovered in January '27.\nWe expect effective tax rate for the year to be in the range of 29% to 30%.\nEPS for the quarter stood at INR19.19, up approximately 15% year-on-year.\nQ1 yield on cash investment balance was at 6.8%.\nOur balance sheet continues to be strong and debt-free. Consolidated cash and cash equivalents\nwere at $3.9 bn at the end of the quarter after returning more than $1 bn to the shareholders through\ndividends. Free cash flow was strong at $955 mn at 116.5% of net profit.\nLarge deal wins were strong at $3.6 bn with high net new of 61%, reflecting the relevance of our\nvalue proposition. Out of the 22 large deal won, we had three deals worth $400 mn each. We have\nbeen on the positive side of vendor consolidation with 20% of the total large deal TCV being from\nnew vendor consolidation deals.\nVertical-wise, we won 5 deals in Financial Services and Communications, 4 in EURS, 3 in\nManufacturing, 2 in Retail, 1 each in Life Science, HiTech and others. Region-wise, we signed 11\ndeals in North America, 8 in Europe and 3 in the Rest of the world.\nComing to Verticals;"
+  },
+  {
+   "document_id": "95",
+   "page_no": 32,
+   "text": "External Document © 2026 Infosys Limited 8\nIn Financial Services, uncertainty and geopolitical instability is causing some client' hesitancy as\nspending patterns are taking a more cautious approach. Client priorities are centered on efficiency,\nproductivity and modernization with discretionary spend being evaluated more carefully. We see\nmomentum across banking, payments, capital markets and wealth management. AI adoption has\nbeen incremental additive with clients increasingly engaging us to support their AI journeys across\nstrategy, platforms, engineering and operations. This is reflected in our strong deal wins this quarter\nwith approximately $1 bn in large deal net new TCV. GCCs continue to expand and we are partnering\nwith our clients both in setup and growth of GCCs.\nGrowth in Manufacturing continues to be impacted due to lower revenue from a large client. Clients\nremain cautious on discretionary spend and decision making is elongated, especially in European\nauto. The impact of tariffs, geopolitical uncertainty and energy cost is keeping budgets tightly\ncontrolled. While AI adoption is creating new opportunity areas, it is also raising productivity\nexpectations from clients. We are getting better pricing on AI skills and consulting. We remain\nfocused on supporting clients through digital, AI modernization and consolidation initiatives while\nbalancing growth opportunities with disciplined deal selection and sustainable pricing.\nEURS segment was impacted by one-off client termination, adjusted for which the growth was strong.\nMacroeconomic uncertainty continues to influence client spending patterns and decision-making\ntimelines. Clients are driving business priorities, including cost optimization, operational resilience,\nproductivity improvements and regulatory compliance. Generative AI is emerging as a strong growth\ncatalyst, driving process re-imagination and productivity initiatives. Our partnerships with hyper-\nscalers and AI native companies is allowing us to experiment and ideate faster.\nIn Retail and CPG, consumer spend remains muted and budgets are tightly controlled due to\ngeopolitics, inflation and tariffs. Spend is shifting towards AI modernization and productivity-led\nprograms funded through operational efficiency and cost optimization. Clients are asking for AI-led\nproductivity commitments leading to new pricing structures. We are leveraging our native knowledge\nof the clients' business processes and technology landscapes and augmenting it with AI. Large deal\npipeline is healthy, but decision cycles are longer.\nIn Communications, operating environment remains challenging as clients continue to exercise\ndiscipline on discretionary spending and closely scrutinize investment decisions. AI is reshaping\nspending patterns, enterprises are increasingly prioritizing initiatives that deliver near-term gains.\nTelcom is undergoing significant transformation with consolidation and M&A with increased\ninvestments, especially for OEMs. We remain focused on aligning our offerings to these evolving\nclient priorities and helping enterprise realize measurable business outcomes."
+  },
+  {
+   "document_id": "96",
+   "page_no": 3,
+   "text": "External Document © 2025 Infosys Limited 2\nPoulomi Chatterjee\nThe Financial Express\nJas Bardia\nThe Mint"
+  },
+  {
+   "document_id": "96",
+   "page_no": 4,
+   "text": "External Document © 2025 Infosys Limited 3\nRishi Basu\nA very good evening everyone and thank you for joining us today at our Fourth Quarter Financial\nResults. My name is Rishi. And on behalf of Infosys, I would like to welcome all of you. Once again,\napologies for the delay. As always, we request one question from each media house, but I know we\nare delayed so we may accommodate a little more. We don’t know.\nBut with that, let me invite our Chief Executive Officer, Mr. Salil Parekh for his opening remarks. Over\nto you, Salil.\nSalil Parekh\nThanks, Rishi, and thank you all for being here. Sorry, we are late. We delivered a strong\nperformance in financial year 2026. We had growth of 3.1% for the full year in constant currency\nterms. On Q4, our growth year-on-year was 4.1% in constant currency terms. We had strong growth\nin Financial Services, in Communications, in Manufacturing from the industry side and Europe on\nthe geography side.\nLarge deals were very good, $14.9 bn for the full year, $3.2 bn for the fourth quarter. The full year\nwas 28% higher than it was in the previous year. We shared our AI strategy during the AI Investor\nDay a few weeks ago. We see a large addressable market for AI services across the six areas that\nwe mentioned - AI strategy engineering, data, process, legacy modernization, physical AI and trust.\nWith our Topaz Fabric platform for AI and our Cobalt platform for cloud, we have differentiated\ncapabilities that are operational today and that are working with our clients across each of these six\nareas of the AI landscape.\nAs we look ahead to the financial year 2027, we see large opportunities in AI services. We also see\ncontinued competitive intensity and we see an AI productivity impact, a combination of these things.\nWith our clear AI strategic roadmap and our real-world toolkit of Topaz Fabric, we are well positioned\nto support our clients' transformation, technology and operations objectives.\nOur revenue growth guidance for the financial year 2027 is 1.5% to 3.5% growth year-on-year in\nconstant currency terms. We expect acceleration of growth in Financial Services and in Energy,\nUtility, Resources and Services vertical. Our operating margin guidance for financial year '27 is 20%\nto 22%.\nWith that, let us open it up for questions.\nRishi Basu"
+  },
+  {
+   "document_id": "96",
+   "page_no": 5,
+   "text": "External Document © 2025 Infosys Limited 4\nThank you, Salil. Joining Salil is Mr. Jayesh Sanghrajka, Chief Financial Officer, Infosys. The first\nquestion is from Ritu Singh from CNBC TV18.\nRitu Singh\nHi, Salil. Hi, Jayesh. Salil, first on your guidance itself, 1.5% to 3.5%, if you could break up for us,\nthere are a bunch of acquisitions you have made at the end of the quarter. By when do you expect\nthem to close? Will it be sometime during the course of FY? And if yes, how much of that is baked\ninto these numbers?\nAnd especially on the discretionary spend environment because we have heard from your peers like\nHCLTech, for instance, talking about how there were two large US telecom clients that had cut down\non spends, there were cancellations of two SAP projects and so on. Wipro, again, giving a similar,\nyou know, sort of commentary.\nSo, what are you seeing from your clients in some of the verticals you had highlighted the last time\nthat were seeing weakness? You know, what sort of guidance you have there? Secondly, on your\nmargin 21%, if you could break up for us, how much was the tailwind from currency, etc., what portion\nhave you reinvested, what the philosophy there is?\nAnd Jayesh, 20,000 was the figure you gave us for hiring for the last fiscal. What is the plan for this\nyear? What are the wage hikes that you have planned and the time period for that? And Salil, if I\nmay, you know, there has been some speculation about your tenure here at Infosys. Your current\nterm ends in March next year. Has there been a discussion at the Board level about a potential\nextension, and would you wish to continue for a full term? What has been the talks around there?\nSalil Parekh\nSo let me start with the industry view. On the guidance of the revenue, Jayesh will give a little bit of\nthe color with that acquisition what you mentioned, on the way we have made the guidance and\nsome other market outlook.\nSo, what we are seeing right now is Financial Services, we are seeing an acceleration of our growth\nnext year. So, we had growth in financial year '26, we are seeing more growth. In Energy, Utilities,\nServices, Resources vertical, similar, good, more growth there. What we are seeing in terms of\nprojects, at the AI Investor Day, we shared that our AI services revenue was growing nicely. We see\non the large deals, the net new is pretty large for the full year at 55%. So that gives us support for\ngrowth."
+  },
+  {
+   "document_id": "96",
+   "page_no": 6,
+   "text": "External Document © 2025 Infosys Limited 5\nAnd we see the compression that we mentioned in that AI Investor Day and earlier just now as a\ncombination. We are not seeing something that has unusually changed from last quarter to this\nquarter. In the sense, these are the scenarios we were seeing. It has not either become more or\nless, it is that sort of a scenario.\nGood growth on those industries I mentioned, good growth in the AI and compression and there is\ncompetitive intensity. And all that put together with a little bit of like a color on the acquisition is where\nthe guidance comes out. And then on margin also, Jayesh, will give some view .\nRitu Singh\n[Editors remark: Question inaudible] On AI, for instance, you told us in your investor briefing that\n5.5% of the revenue in the third quarter came in from AI. The total addressable market is about $300-\n$400 bn. You know, in the fourth quarter, is there a number you could provide us, annualized what\nis the number you see? If there is more clarity you could give us, or what market share do you target\nfrom this $400 bn figure?\nSalil Parekh\nSo, we are targeting a very good market share from that number, which was for 2030 what we had\ngiven, the addressable market from an external study. The growth in AI services is very strong, but\nwe have not disclosed that revenue number externally here.\n5.5% is that, yeah in Q3\nRitu Singh\nYeah, but was it similar in the fourth quarter?\nSalil Parekh\nNo, it is growing. It is much more growth but we are not giving the number, but it is growing very\nnicely here.\nRitu Singh\nSo, it is higher than 5.5%?\nSalil Parekh\nYes. Yes.\nSalil Parekh"
+  },
+  {
+   "document_id": "96",
+   "page_no": 7,
+   "text": "External Document © 2025 Infosys Limited 6\nI will let Jayesh answer the other questions.\nJayesh Sanghrajka\nYes. So, if you look at the revenue guidance, and I will just maybe come back to the full year revenue\nnumbers. The 3.1% growth was after absorbing lower third party-related revenue which was 1% and\nthe lower on-site mix which was 70 basis points. So, we should look at the revenue numbers in that\ncontext. Both of that impacted the revenue from the overall revenue growth perspective.\nIn terms of the guidance for the next year, we had three acquisitions or two acquisitions and a JV\nthat we announced last year. The acquisition with an insurance company which is Stratus, which is\nalready closed and it is baked in the guidance. What is baked into the guidance is approximately 25\nbasis points or a quarter point of the guidance.\nThe other acquisition was Optimum, which is not baked in because we have not closed it yet. We\nare still awaiting certain regulatory approvals. And once that is closed is when we will bake in. The\nthird one is a JV with an Australian client of ours which is also pending regulatory approvals right\nnow. So, we have not baked in both of that in the guidance at this point in time.\nRitu Singh\nSo only Optimum is 25 basis points?\nJayesh Sanghrajka\nThe Stratus is 25 basis points at this point in time.\nRitu Singh\nThe margin breakup?\nJayesh Sanghrajka\nSo if you look at the margins, the full year margins is at 21%. The quarterly margins also 20.9%, very\nclose to 21%. If you look at the puts and takes of the margin walk from the last quarter, we got 50\nbasis points impact from an acquisition-related amortization that we absorbed.\nThere was a 30 basis points of one-off benefit that we got in Q3, so you know when you compare,\nthat is a headwind. And 20 basis points was on account of comp-related matters. That was partially\noffset by 40 basis points of currency benefit and 30 basis points came from Maximus performance.\nRishi Basu"
+  },
+  {
+   "document_id": "96",
+   "page_no": 8,
+   "text": "External Document © 2025 Infosys Limited 7\nThank you. I think, question on tenure.\nJayesh Sanghrajka\nYeah, and the last question was hiring. The last year, we had announced 20,000 for FY26 and we\nhave hired more than 20,000 freshers from the market. This year also, we are expecting at least\n20,000 freshers to be hired.\nRishi Basu\nOn the tenure, I think, Salil.\nSalil Parekh\nNo comment.\nRishi Basu\nRight. Thank you, Ritu. We will now move to Mansee Dave from ET Now.\nMansee Dave\nGood evening, Salil and Jayesh. Pleasure talking to you. My first question is on the margin\nsustainability where margins have remained resilient despite multiple headwinds. So, what gives\nyou confidence in sustaining the same going forward? And the next question would be on the global\nuncertainties which we have seen these days. So global uncertainties like the geopolitical tensions\nand cautious client spending let’s say, what early signals are you seeing for FY27? Do you expect\nthe growth acceleration or another year of consolidation moving ahead? Thank you.\nSalil Parekh\nLet me start on the margin, Jayesh will have much more color. I think some time ago Jayesh started\nthe program on the margin expansion or margin protection and that is one of the main reasons why\nthe company has been able to remain resilient on the margins. So, we have been fairly consistent\nacross the large number of years. The program is very strong and is being executed well. We will\ncontinue to see there are also great pressures, but we are confident with the guidance that we have\ngiven this year for the margin between '20 and '22.\nAnd then Jayesh will give a little bit more color, but on the environment what you asked. I think what\nwe are seeing there is, at the start of this calendar year, we were starting to see the global\nenvironment, the growth, especially in our strong markets looking good. And even in the markets\nwhere we are now making a bigger movement, for example, Japan and all was growing quite nicely."
+  },
+  {
+   "document_id": "96",
+   "page_no": 9,
+   "text": "External Document © 2025 Infosys Limited 8\nNow with the situation with the Iran war, there was a change in the economic environment. Now from\nwhat we are seeing, there seems to be paths towards things stabilizing. We hope everyone sort of\ngets there. From then what we understand like, just talking to people in the market and the clients is\nthat, the underlying resilience of some of the economies where we have the big markets is pretty\ngood.\nThe economies are doing well, there is good investments, AI is growing well and we have a good\nstrategic approach on AI services. So, my sense is that it will definitely help, but we will see how it\nplays out. So, we have given the guidance of the growth based on what we are seeing today. We\nwill see whether some of this comes true or some of this changes as the year goes.\nJayesh Sanghrajka\nIf you look at the margin program and like Salil was saying, I think it is done well. In the first year we\nexpanded margins by 50 basis points. This year while we have maintained margins at 21%, I think\nwe have absorbed a lot of headwinds and we have also invested a lot in the business, right?\nOur sales and marketing costs for instance gone up by 40 basis points. We have invested in all that\nAI related capabilities and the AI partnerships. We have invested in talent. So, I think we have\nabsorbed all of those and delivered 21% margin. That is what gives us confidence of way forward.\nBut at the same time there are going to be headwinds, right? There is competitiveness in the market,\nthere is acquisition that we have done. The acquisition related cost will impact margins by another\n60 to 70 basis points. So those are the headwinds that we will have to you know, absorb while we\ntalk about the margin program. And our endeavour is to improve margins on a medium to long term\nperiod. But this year we are confident of delivering 20% to 22%.\nRishi Basu\nThank you. The is from Chandra Srikanth from Moneycontrol.\nChandra R. Srikanth\nHi Salil, Hi Jayesh. Salil, you know, you mentioned BFSI and Energy and Utilities a couple of times.\nJust wanted to understand you know, what is giving you so much of confidence there. And as Ritu\npointed out that some of your peers have spoken about client specific issues and how discretionary\nspending continue, spends continue to be a challenge. So, what is working for you in terms of the\nnormal business, as well as AI business?\nAnd AI also, because you mentioned last time that it is now 5% of revenues for you. If you can give\nus a sense of where things stand now, it will be really useful? In terms of acquisitions do you see"
+  },
+  {
+   "document_id": "96",
+   "page_no": 27,
+   "text": "External Document © 2026 Infosys Limited 3\nSome examples of the work we are doing,\nFor a consumer products Retail company, Ralph Lauren, we helped build a conversational and\npersonalized AI tool that led to converting customer interest into a shopping experience. This resulted\nin an increase in their revenue by 12% and customer engagement by 50%.\nFor a large transport company, Hertz, we helped with a legacy migration to bring 3 mn lines of\nCOBOL code to a modern microservices environment using AI foundation models. The cost was\n60% lower, the timeline was 60% quicker than how they would have done it without AI.\nFor a large energy company, BP, we deployed 50 AI agent initiatives across trading, supply chain,\nsustainability and core operations to transform the software development, knowledge automation,\nlegacy modernization, and digital decision support. This resulted in 95% payment accuracy, 50%\nfaster contract validation and 18% improvement in IT operations efficiency.\nWe have strategic collaborations with emerging foundation model companies such as Anthropic and\nOpenAI, which help us support our clients' transformation for software development, legacy\nmodernization and agent building. We also have established strategic AI collaborations with Google\nGemini, NVIDIA, Microsoft, AWS, Google Cloud and Intel, among others. We have deployed over\n30,000 developers on GitHub Copilot.\nAs we look ahead to financial year 2027, we see large opportunities in AI services, continued\ncompetitive intensity, and AI productivity impact. With our clear AI strategic roadmap and real-world\ntoolkit of Topaz Fabric, we are well positioned to support our clients' transformation technology and\noperations objectives.\nOur revenue growth guidance of financial year '27 is 1.5% to 3.5% year-on-year in constant currency\nterms. We expect acceleration in growth in Financial Services and the Energy Utilities Resources\nServices vertical from financial year '26 to '27. We expect H1 to be stronger than H2 consistent with\nour normal seasonality. Our operating margin guidance for financial year '27 is 20% to 22%.\nWith that, let me hand it over to Jayesh for his update.\nJayesh Sanghrajka\nThank you, Salil. Good morning, good evening, everyone, and thank you for joining the call today.\nFinancial year '26 performance demonstrates our ability to maintain financial discipline and\noperational excellence in a challenging and evolving business environment. Client spending is\nguarded, with greater focus on cost optimization engagements as against growth-led transformation"
+  },
+  {
+   "document_id": "96",
+   "page_no": 28,
+   "text": "External Document © 2026 Infosys Limited 4\nprograms. We are seeing increasing momentum in AI-driven initiatives, particularly around\nproductivity, automation and platform-led modernization initiatives.\nLet me start with the key highlights for the year and the quarter.\n1. FY26 revenues crossed $20 bn and grew 3.1% in constant currency terms, within the\nupgraded guidance band given in January. This was after lower third-party costs which was\ndown by 1% as percentage of revenue and 0.7% reduction in onsite mix. Acquisitions\ncontributed about 70 bps on full year growth.\n2. For FY26, Communications, Manufacturing vertical and Europe geography grew more than\ndouble the company average, led by ramp-up of the large deal wins. Additionally, FS and\nEURS grew above the company average in constant currency terms.\n3. Volumes for the year were flattish, growth was led by increase in realization thanks to Project\nMaximus.\n4. Adjusted operating margin was stable at 21%. Gains from currency and Maximus were\nreinvested in talent, AI and sales and marketing.\n5. Q4 revenues grew by 4.1% year-on-year. Sequentially, revenues declined 1.3% in constant\ncurrency due to seasonality and slower decision making in the month of March.\n6. Growth in Q4 was broad-based across major geographies. Communications, EURS and LS\nvertical grew well above the company average on a year-on-year basis in constant currency\nterms.\n7. Q4 operating margins stood at 20.9%, down 0.3% sequentially, adjusted for the Labor Code\nimpact in Q3.\n8. Onsite mix further reduced to 22.8% from 23.1% in Q3.\n9. Utilization, excluding trainees, was 83% in Q4 and 84.4% in FY26. Utilization, including\ntrainees, was at 81.1% for FY26 reflecting the investment made towards creating future\ncapacity.\n10. Strong focus on collections aided by technology interventions helped us reduce DSO,\nincluding unbilled net of unearned to 78, which is the lowest in seven years.\n11. Reported EPS in INR terms grew 23.8% Y-o-Y in Q4 and 11% in FY26. EPS adjusted for\nincome tax orders and the Labor Code grew double digit for the year at 13.9% in Q4 and\n12.1% for the full year in INR terms.\n12. Free cash flow adjusted for the Labor Code and income tax refunds stood at $3.5 bn for FY\nand $882 mn for Q4. Adjusted free cash as a percentage of net profit continue to be well\nabove 100% at 106% for FY26 and 111% for Q4."
+  },
+  {
+   "document_id": "96",
+   "page_no": 29,
+   "text": "External Document © 2026 Infosys Limited 5\n13. We had a strong large deal wins in financial year with a TCV of $15 bn with 55% net new.\nLarge deal pipeline continues to remain strong. Our $50 mn plus clients increased by 3 and\n$100 mn plus clients also increased by 3, $400 mn by 2 in FY 26.\n14. Headcount at the end of the year was over 328,000. Voluntary attrition reduced by 1.5% to\n12.6% for the year, reflecting continued softness and our interventions toward talent\nretention.\n15. We onboarded more than 20,000 freshers in FY26 and expect to hire a similar number in\nFY27. We will continue to calibrate the overall requirement depending on growth expectations\nand attrition trends.\nOperating margins for Q4 declined by 0.3% to 20.9%, sequentially. Major components of the\nchanges are as below\nHeadwinds of\n- 50 basis points impact from past acquisition on account of additional amortization of\nintangibles,\n- 30 basis points from normalization of last quarter's one-off gain,\n- 20 basis points from compensation-related costs offset by lower variable pay\nThis is partially offset by tailwinds of\n- 40 basis points from currency and\n- 30 basis points from Maximus comprising of value-based selling, lean and automation and\ncritical portfolio\nQ4 yield on cash and investments balance was at 6.2% and 6.7% for the year. ROE stood at 31.6%.\nConsolidated cash and investments were at $4.5 bn after returning over $4 bn to shareholders in\nFY26 reflecting our strong cash generation.\nWe signed 19 large deals during the quarter with TCV of $3.2 bn. This includes, 5 each in Financial\nServices and Manufacturing, 4 in Retail, 2 each in Life Science and Communication and 1 in EURS.\nRegion-wise, we signed 11 deals in Europe, 5 in America and 3 in the Rest of the World.\nIn FY26, we signed 96 large deals with TCV of $15 bn, 55% net new. This includes 3 mega deals for\nthe year.\nTax rate for the quarter is lower due to reversal of prior year tax provisions, as a result of favorable\ntax orders. We expect effective tax rates for the FY27 to be in the range of 29% to 30%."
+  },
+  {
+   "document_id": "96",
+   "page_no": 30,
+   "text": "External Document © 2026 Infosys Limited 6\nIn line with our capital allocation policy, board has proposed a final dividend of INR25 per share\nwhich will result in a total dividend of INR48 per share, an increase of 11.6% over last year, once the\nfinal dividend is approved by the shareholders.\nComing to verticals,\nFinancial Services for FY26 grew above company average at 4.4%, led by ramp-ups of large deal\nwins and continued momentum in AI-led transformation, legacy modernization and vendor\nconsolidation. Overall market sentiment remains positive, resulting in continued consumer spending\nacross US banking, capital markets and Europe. CY26 budgets are expected to grow in US. We\nsigned a large GCC deal for a regional bank in the US, an industry first and a large AI-first GCC deal.\nWe are strategic AI partner for 18 out of the top 20 clients in this vertical. Significant large deal\nclosures and new account openings in FY26 along with a strong large deal pipeline will drive growth\nacceleration in FY27.\nClients in Manufacturing remain cautious amid softer demand particularly in automotive and parts of\nEurope. There is continued uncertainty on account of tariffs and ongoing Middle East conflict which\nis resulting into delayed decision making in pockets. Discretionary spending remains constrained,\nwhile clients prioritizing cost optimization and operational resilience. Large deal pipeline comprises\nof infra outsourcing, AMS, S/4HANA rollouts etc. Near term and FY27 growth will be impacted due\nto low revenue from one large client.\nAcross EURS segment, demand environment remains constructive supported by a strong large deal\npipeline. Clients continue to prioritize cost reduction and operational efficiency which is a driving\nvendor consolidation. In Energy, we see increased outsourcing leading to healthy deal momentum.\nUtilities demand is structurally higher, driven by grid constraints, renewables integration and\nacceleration electricity needs for a data center. 80% of the large deal TCV of FY26 was net new\nwhich will help growth acceleration in FY27.\nIn Retail segment, clients are operating in continued uncertainty from supply chain disruptions,\ngeopolitical conflict and shifting trade policy. Consumer demand remains muted across the sector\nand budgets are tightly controlled with discretionary spends under pressure. Clients expect savings\nfrom AI-led productivity to do more with the similar budgets. We will see higher demand for AI-\nassisted legacy modernization. Topaz Fabric and AI Next platforms are helping clients in ideation\nfrom concept to deployable stage with the right guardrails for privacy, ethics and control.\nIn Communications sector, growth for FY26 was led by large deal ramp-ups. Overall environment\nremains cautious, amid macro uncertainty and margin pressures for clients. Budgets are flat to\nnegative which is impacting discretionary spend. Non-discretionary spends are selective and"
+  },
+  {
+   "document_id": "97",
+   "page_no": 2,
+   "text": "External Document © 2026 Infosys Limited 1\nInfosys Limited\nPress Conference Call\nJanuary 14, 2026\nCORPORATE PARTICIPANTS:\nSalil Parekh\nChief Executive Officer and Managing Director\nJayesh Sanghrajka\nChief Financial Officer\nRishi Basu\nAssociate Vice President and Global Head - Corporate Communications\nANALYSTS\nRitu Singh\nCNBC TV18\nMansee Dave\nET Now\nShristi Achar\nThe Economic Times\nChandra R. Srikanth\nMoneycontrol\nHaripriya Suresh\nReuters\nAvik Das\nBusiness Standard\nSanjana B.\nThe Hindu BusinessLine\nJas Bardia\nMint\nPoulomi Chatterjee\nFinancial Express\nUma Kannan\nDeccan Herald\nPadmini Dhruvaraj\nThe New Indian Express"
+  },
+  {
+   "document_id": "97",
+   "page_no": 3,
+   "text": "External Document © 2026 Infosys Limited 2\nRishi Basu\nA very good evening, everyone, and wishing you all a very Happy New Year. Thank you for joining\nus today. My name is Rishi. And on behalf of Infosys, I would like to welcome all of you. As always,\nsince this is the New Year, my rules do not really change, one question from each media house. We\ntry our best.\nBut with that, let me invite our Chief Executive Officer, Mr. Salil Parekh, for his opening remarks.\nOver to you, Salil.\nSalil Parekh\nThanks, Rishi. It is good to see that you are very consistent, and I am sure the media team is as well.\nGood afternoon, everyone, and thank you for being here. Warm wishes for the new year to all of you.\nWe have had a strong performance in Q3. Our revenue grew 0.6% sequentially and 1.7% year-on-\nyear in constant currency terms. Our large deals were at $4.8 bn, with 57% net new. This was across\n26 deals.\nOur adjusted operating margin was 21.2%. We generated free cash flow of $915 mn. One of the\nmost significant large deals we won was with the National Health Service in the U.K. This $1.6 bn\ndeal expands our work in the healthcare sector. We will help NHS leverage AI to streamline\noperations and improve patient care for U.K. citizens.\nWe have deepened our Topaz AI capability with an agent services suite called Topaz Fabric. This\nsuite helps our clients manage and implement AI agents across the enterprise. We had strong\nmomentum in AI adoption across our client base. Today, we work with 90% of our largest 200 clients\nto unlock value with AI. We are currently working on 4,600 AI projects. Our teams have generated\nover 28 mn lines of code using AI. We have built over 500 agents. We are scaling our forward\ndeployed engineer team.\nWe are now witnessing six AI-led value pools emerging that could unlock a large incremental\nopportunity. We also see productivity-led benefits that compress some legacy areas. The six large\nAI-led value pools are:\n- AI engineering services,\n- Data for AI,\n- Agents for operations,\n- AI software development and legacy modernization,"
+  },
+  {
+   "document_id": "97",
+   "page_no": 4,
+   "text": "External Document © 2026 Infosys Limited 3\n- AI deployed in physical devices and\n- AI trust and risk services\nWe believe we are uniquely positioned to capture market share across these value pools and emerge\nas the leading AI value creator for global enterprises. We will share a comprehensive view of our\napproach at an investor day later this quarter.\nWith a strong performance in this quarter, we have revised our revenue growth guidance for the\nfinancial year. The new revenue growth guidance for this financial year is 3% to 3.5% growth in\nconstant currency. Our operating margin guidance for the financial year remains the same at 20%\nto 22%.\nWith that, let us open it up for questions.\nRishi Basu\nThank you, Salil. We will now open the floor for questions. Joining Salil is Mr. Jayesh Sanghrajka,\nChief Financial Officer, Infosys. The first question is from Ritu Singh from CNBC TV18.\nRitu Singh\nHi. Thank you. Rishi, sorry, this is our only chance to speak with the management every quarter. So\nwe will have to exceed that one question limit. With that, Salil and Jayesh, to begin with, I wanted to\nstart with your headcount number. We have seen an increase of 13,246 over the last two quarters.\nAnd this is interesting because it is coming at a time when your peer, TCS, is cutting 30,000 jobs.\nHow should we read into this? I mean, is this a real indicator of how you see the demand environment\nimproving?\nAnd with that, I wanted to get to your guidance figure being raised to 3% to 3.5%. How much of that\nupgrade is because of large deals like NHS being factored in? How much of the Versent acquisition,\nwhich is yet to be completed as we understand, is baked into that number? And, last quarter, you\nwere telling us, for instance, there are segments like Retail that remain the weakest link, so where\nare you seeing improvement that has led you to upgrade your guidance? That is one.\nAlso, sequentially, we have seen a bit of a marginal dip in your margins that is to 20.8%. This is at a\ntime when there are tailwinds emerging from the rupee depreciation. So if you could break down why\nthat has been the case? And while you continue to tell us about how you are uniquely placed to\nexploit that AI opportunity, and the likes of HCLTech and TCS have been giving us concrete\nnumbers. Why does Infosys refrain from doing so? Thank you."
+  },
+  {
+   "document_id": "97",
+   "page_no": 5,
+   "text": "External Document © 2026 Infosys Limited 4\nSalil Parekh\nSo let me start. On margin, Jayesh might have some points.\nI think the first part, I missed a little bit, it was the headcount increase, right? Yes, so on the headcount\nincrease, I think it demonstrates that we have confidence in where the market is and what we are\nseeing in terms of the demand. And that also feeds in, in a way to the second point you had in terms\nof how are we raising the growth guidance.\nSo first, in terms of the growth guidance, we are just finishing the third quarter, so only one quarter\nis left. We have had a lot of large deals in the previous few quarters. Plus we had a very strong\nexecution in this quarter.\nYou asked a little bit about the industries. We have seen, for example, in Financial services, and we\nhave seen in Energy, Utilities, Resources, Services, we see that the way the deals have come, the\nway we have become AI partner of choice with our largest clients, we see a good outlook even as\nwe look into the next financial year. And that in part helped us to increase the guidance, which is\nonly for this financial year, which is ending in March.\nJayesh Sanghrajka\nSo first of all, very Happy New Year to all of you. Before I come to margin, I just wanted to also touch\nupon the headcount part. If you recollect last year, we had called out that we are going to hire 20,000\nfreshers this year. We have onboarded roughly around 18,000 freshers, and we are well on our way\nto finish our 20,000 number for this year, which, in a way, reflects in a headcount also because many\nof them are under training. And if you look at our utilization, including trainees, has come down. So,\nthat is our investment into building capacity for future in a way. So that is on the headcount.\nIf you look at margins, we have expanded our margin this quarter by 20 basis points versus the last\nquarter. We are now on a nine-month basis at 21% margin, which is midpoint of the guidance that\nwe have given. The puts and takes of 20 basis point expansion this quarter is 40 basis points came\nfrom currency, 50 basis points came from the Project Maximus, mainly on account of value-based\nselling and the lean & automation that we have done on multiple projects, offset by the furloughs and\nlower working days that we had. We also accrued a higher variable pay compared to last quarter,\nwhich was offset by some of the one-offs that we got. So that is the broad margin walk in a way.\nBut if you look at the nine months period margin, which is 21%, we have invested in our sales and\nmarketing, which has gone up by 50 basis points on a year-on-year basis. So that has been absorbed\nin the margin. The lower utilization of almost 1% has been absorbed in our margin. So this margin is"
+  },
+  {
+   "document_id": "97",
+   "page_no": 20,
+   "text": "External Document © 2026 Infosys Limited 3\nwith an agent services suite called Topaz Fabric. This suite helps our clients manage and implement\nAI agents across the enterprise.\nWe are expanding our strategic partnerships with AI companies. We recently announced a\npartnership with Cognition. Here, we will combine Cognition's Devin software agent with Infosys'\nknowledge of the client landscape and industry expertise. We are already working with them across\nclients.\nIndustry analysts recognize Infosys for its leadership in AI. In financial year 2026, we were\nrecognized as a leader across 12 ratings. We had strong momentum in AI adoption across our client\nbase. Today, we work with 90% of our 200 largest clients to unlock value with AI. We are currently\nworking on 4,600 AI projects. Our teams have generated over 28 mn lines of code using AI. We have\nbuilt over 500 agents. We are scaling our forward deployed engineer team.\nOur clients are turning to us as trusted partners to drive value realization from AI investments. Some\nof the areas they focus on are fragmented data, legacy application landscape and business\nworkflows that are not conducive for AI. We bring together a deep understanding of clients'\ntechnology landscape, strong data engineering and process reimagination capabilities to help them\ncapture value at scale from AI.\nWe aspire to make AI work for clients delivering business outcomes for cost, revenue growth and\ninnovation. We are witnessing six AI-led value pools emerging that could unlock a large incremental\nopportunity for us. We also see productivity-led benefits that compress some legacy areas.\nThe six value pools of opportunity in AI services we see are,\n- AI engineering services,\n- Data for AI,\n- Agents for operations,\n- AI software development and legacy modernization,\n- AI and physical devices and\n- AI trust and risk services\nWe believe we are uniquely positioned to capture market share across these value pools and emerge\nas the leading AI value creator for global enterprises. We will share a comprehensive view on our\napproach at an Investor Day later this quarter.\nIn Financial services, we see good traction in large deals and discretionary projects. In Financial\nservices and in Energy, Utilities, Resources and Services verticals, we expect acceleration in"
+  },
+  {
+   "document_id": "97",
+   "page_no": 21,
+   "text": "External Document © 2026 Infosys Limited 4\nfinancial year 2027 over financial year 2026. This is based on good deal wins and AI preferred partner\nstatus with 15 of our largest 25 clients in each of these verticals.\nWith the strong performance in this quarter, we have revised our revenue guidance for the financial\nyear. The new revenue growth guidance for this financial year is 3% to 3.5% growth in constant\ncurrency. Our operating margin guidance for the financial year remains the same at 20% to 22%.\nWith that, let me hand it over to Jayesh for his update.\nJayesh Sanghrajka\nThank you, Salil. Good morning, good evening, everyone, and thank you for joining the call today.\nFirst of all, a very Happy New Year to all of you.\nComing to the quarter, our Q3 performance demonstrates continued momentum we saw in the last\ntwo quarters, underscoring resilience of our business model, relevance of our offerings and our\ndisciplined execution.\nWe had another quarter of growth, despite seasonal weakness and reduction in third party costs.\nThe results for Q3 FY'26 include a charge associated with change in labor codes in India, which had\nan impact on operating profit, net profit, EPS and free cash flow for the quarter. Reference to the\nadjusted numbers exclude the impact from the same.\nRevenue for Q3 was $5.1 bn, up 0.6% sequentially and 1.7% year-on-year basis in constant currency\nterms. Operating margins including the impact of change in labor codes stands at 18.4%, adjusting\nfor the same, it is at 21.2%.\nKey highlights of the quarter are as follows:\n1. We achieved strong revenue growth despite seasonality and lower third-party costs. Third-party\nas a percentage of revenue reduced by 0.3% sequentially and approximately 2.4% on a year-\non-year basis.\n2. With three strong quarters of performance, our revenue growth in 9 months stood at 2.8%, which\nis at the higher end of our earlier guided range. This is despite the lower third party, which has\nreduced by approximately 1% compared to the same period last year and now stands at 7.3%.\n3. Momentum in Financial Services continues with 3.9% year-on-year growth in constant currency\nterms.\n4. Among geos, Europe continued to lead the growth by 7.2% year-on-year in constant currency\nterms.\n5. Volumes continue to remain soft for the quarter and the year."
+  },
+  {
+   "document_id": "97",
+   "page_no": 22,
+   "text": "External Document © 2026 Infosys Limited 5\n6. On a 9-month basis, RPP increased, reflecting continued momentum of value-based selling and\nproductivity increases that we have achieved.\n7. Adjusted operating margins increased by 20 basis points sequentially to 21.2%.\n8. We continue our investments in sales and marketing, which has increased by double digits this\nyear to date and impacting margins by approximately 50 basis points\n9. Utilization, excluding trainees was down by 1% sequentially at 84.1% and including trainees, was\ndown by 2.2% to 80% as we continue to create capacity for future growth opportunities.\n10. Our adjusted margins for 9 months are at 21% at midpoint of guidance after absorbing\naccelerated investment in sales and marketing as well as lower utilization.\n11. On-site mix further reduced by 10 basis points in Q3 and by 70 basis points in 9 months FY'26.\n12. Investment in talent continues. Net headcount increased by 5,000 to 337,000 employees. LTM\nattrition declined by 2% sequentially and 1.4% on a year-on-year basis, reflecting both market\nconditions and our focus on employee retention and upskilling.\n13. Large deal TCV was robust at $4.8 bn in Q3 with 57% net new. Total large deal TCV for 9 months\nstood at $11.7 bn, exceeding the total large deal TCV of full year FY'25. Net new deal TCV for 9\nmonths was up by 40% as compared to the same period last year. Large deal pipeline continues\nto be healthy.\n14. Our razor-sharp focus aided by the deployment of AI agents on our order to receivable cycle has\nresulted in decline of 5 days in DSO, including net unbilled to 82 days sequentially.\n15. Driven by strong collections, free cash flow generation adjusted for labor codes remained robust\nat $965 mn, which is 113% of adjusted net profit. Adjusted free cash flow conversion for 9 months\nstood at 118%.\n16. Adjusted EPS in rupee terms for 9 months FY'26 grew at double digits at 11.5%.\n17. During the quarter, we successfully completed our largest ever buyback, returning INR18,000\ncrores to our shareholders, which will help EPS accretion. We also paid out interim dividend for\nFY'26 in line with our capital allocation policy.\nAdjusted operating margins for Q3 expanded by 20 basis points to 21.2% sequentially. Major\ncomponents of changes are as below:\nTailwinds of\n- 40 basis points from currency movement,\n- 40 basis points from Maximus comprising primarily of value-based selling, critical portfolios and\nlean & automation,\noffset by"
+  },
+  {
+   "document_id": "98",
+   "page_no": 2,
+   "text": "External Document © 2025 Infosys Limited 1\nInfosys Limited\nQ2 FY26 Financial Results Press Conference Call\nOctober 16, 2025\nCORPORATE PARTICIPANTS:\nSalil Parekh\nChief Executive Officer and Managing Director\nJayesh Sanghrajka\nChief Financial Officer\nRishi Basu\nAssociate Vice President and Global Head - Corporate Communications\nJOURNALISTS\nRitu Singh\nCNBC TV18\nJude Sannith\nET Now\nUma Kannan\nDeccan Herald\nBeena Parmar\nThe Economic Times\nJas Bardia\nMint\nVeena Mani\nThe Times of India\nRukmini Rao\nFortune India\nSanjana B\nThe Hindu BusinessLine"
+  },
+  {
+   "document_id": "98",
+   "page_no": 3,
+   "text": "External Document © 2025 Infosys Limited 2\nRishi Basu\nA very good evening, everyone, and thank you for joining Infosys' second quarter financial results.\nMy name is Rishi and on behalf of Infosys, I would like to welcome all of you. As always, we request\none question. And with that, let me invite our Chief Executive Officer, Mr. Salil Parekh, for his opening\nremarks. Over to you, Salil.\nSalil Parekh\nThanks, Rishi. Good afternoon. Welcome everyone to the campus here, and welcome to our press\nconference event. We had a strong performance in Q2. Our revenues for the quarter grew 2.2%\nsequentially and 2.9% year-on-year in constant currency terms. Our operating margin was 21%. Our\nlarge deals were at $3.1 bn, out of which 67% was net new work.\nIn addition, we announced a mega deal worth $1.6 bn after the close of the quarter, but before our\nresults announcement. We have added 8,000 employees during the quarter. Our client interactions\nare showing a strong focus on deploying AI across the enterprise, both for growth and for cost\nefficiency programs.\nIn doing this, we are continuing to scale our team of forward deployed engineers. With a strong\nperformance in Q2, we changed our revenue growth guidance for the financial year. The new\nguidance is growth between 2% and 3% in constant currency terms for the full year. And our\noperating margin guidance remains the same as in the past quarter at 20% to 22% for the full year.\nWith that, let us open it up for questions.\nRishi Basu\nThank you, Salil. We will now open the floor for questions. Joining Salil is Mr. Jayesh Sanghrajka,\nChief Financial Officer, Infosys. The first question is from Ritu Singh from CNBC TV18.\nRitu Singh\nThank you. Hi Salil. Hi Jayesh. Salil, firstly, on the guidance, the fact that you have tightened it, but\nnot really increased it, from 1% to 3%, you have gone to 2% to 3%. And with a 2.2% growth this\nquarter as well, at the current run rate, you will at most have a flat growth for the rest of the year for\nQ3 and Q4 with the current guidance, you will easily get to the top end.\nSo I wanted to understand, are you not seeing a meaningful recovery, especially when it comes to\nyour Manufacturing, Retail, these kind of verticals? What kind of headwinds do you continue to see?\nBecause for Infosys, the contribution to revenues is slightly larger than that of peers. That was one."
+  },
+  {
+   "document_id": "98",
+   "page_no": 4,
+   "text": "External Document © 2025 Infosys Limited 3\nAlso on the H-1B visa issue, if you could give us some details on how many employees you deployed\non this visa for this year and the previous maybe a couple of years? And whether you see now this\nas being something unviable, sending freshers on H-1B visas to work in the U.S.\nIf I may also ask, your peers like HCL Tech have also started to quantify their AI revenues. We have\nbeen asking you this for several quarters now, and we understand AI cuts across services and\nsectors. Could you give us a sense of what exactly you are seeing there? And finally, the Versent\nGroup acquisition, what exactly was the contribution to revenues and whether you are looking at\nfurther M&A in the region or outside? Thank you.\nSalil Parekh\nSo let me start, and Jayesh will add in a couple of things. First, on the guidance and the environment.\nSo in the guidance, typically, second half of the year is slower than the first half. That is the normal\npattern. So we have continued with that pattern. Having said that, we have seen good traction, and\nthat is how we have actually increased the guidance.\nThe previous guidance was 1% to 3%, and now it is 2% to 3%. So, in a sense, we have much more\nconfidence with the lower end being increased in what we see into the outlook for the year.\nIn terms of the specific industries you mentioned, we had a good performance in Manufacturing, in\nFinancial Services. We still see constraints in Retail. We do see a good pipeline there, and we will\nsee how that plays out in the coming quarters. Keeping all those things in mind and the global\nenvironment in terms of the macro, we decided to keep the guidance at 2% to 3% with all of those\nfactors that I mentioned.\nOn the H-1B visa, what we have shared in the past, what we have shared recently, first, our U.S.\nworkforce, the number of people that require Infosys sponsorship for immigration is a minority. So,\nthe majority of the people do not require it from our perspective.\nSecond, we have built a large number of centers and hubs, which are focused on digital, on\ninnovation, on technology and AI in the U.S. We have relationships with universities. We have a\ntraining facility there. With all of that in mind, we are clear today that we will work with our clients\nwithout any disruption to their services and into the future. We do not have any specific information\nto share on the numbers that you had suggested.\nRitu Singh"
+  },
+  {
+   "document_id": "98",
+   "page_no": 19,
+   "text": "External Document © 2025 Infosys Limited 3\naddition, we announced a mega deal worth $1.6 bn after the close of the quarter but before today’s\nresults announcement.\nWe added 8,000 employees during the quarter. Our client interactions show strong focus on\ndeploying AI across the enterprise for growth and on cost efficiency programs. In doing this, we\ncontinue to scale our team of forward-deployed engineers. Our results and pipeline of deals reflect\nthe trust our clients have in our ability to help them bring AI to their enterprises.\nFor example, we are partnering with an apparel company with generative AI and AI Ops technologies\nto help them modernize their core operations, simplify their IT, and unlock greater value from their\ndata.\nFor a telecom client, we are infusing advanced intelligence across their operations to accelerate the\npace of innovation and help them to deliver compelling digital experiences for their customers.\nAs a result of our investments, we have emerged as the leading enterprise AI services and solutions\nprovider. We would like to take this opportunity and give you an update on how our investments in\nAI have positioned us as the preferred services partner for large-scale enterprise AI transformation\nprogram today.\nSatish, our Chief Delivery Officer, will share this update later in the call with all of you.\nWe continue our strategic approach to acquisitions with the joint venture announcement of Versent\nin Australia.\nWith a strong performance in Q2, we changed our revenue growth guidance for the financial year.\nThe new guidance is 2% to 3% growth in constant currency terms. Our operating margin guidance\nfor the financial year remains the same at 20% to 22%.\nWith that, let me hand it over to Jayesh.\nJayesh Sanghrajka\nThank you, Salil. Good morning, good evening everyone, and thank you for joining the call today.\nI am pleased to report that we had another quarter of robust all-around performance despite an\nuncertain environment. We continued our strong growth momentum for the second consecutive\nquarters, accompanied by higher margins, led by focus on client relevance and rigor on execution."
+  },
+  {
+   "document_id": "98",
+   "page_no": 20,
+   "text": "External Document © 2025 Infosys Limited 4\nWe are making necessary investment in technology, people and in sales engine to future proof our\nbusiness.\nLet me cover key aspects of our results:\n1. Quarterly revenues crossed $5 bn in Q2 '26 and $10 bn for the half year. Revenue grew 2.2%\nsequentially in Q2, including 20 bps from acquisitions in constant currency terms.\n2. Growth in Q2 was on back of the 2.6% sequential growth in Q1. H1 revenues, therefore, grew\nat 3.3%.\n3. Volumes continue to remain soft with bulk of the revenue growth driven by realization increase.\n4. Amongst large verticals, Financial Services and Manufacturing grew above 5% year-on-year in\nconstant currency, both in Q2 and H1.\n5. Europe also grew greater than 5% year-on-year in constant currency terms.\n6. H1 gross margin remained resilient at 30.8%, flat year-on-year after absorbing compensation\nheadwinds, reflecting the progress of Project Maximus.\n7. Operating margin expanded by 20 bps sequentially to 21%. H1 margins were 20.9% versus\n21.1% in H1 '25. We continue to invest in sales and marketing, which is reflected in 12.8%\ngrowth in S&M cost, H1 over H1.\n8. Utilization, excluding trainees, remained stable at 85%, which is within our comfort range.\n9. Onsite mix reduced by 40 basis points for the quarter and 60 basis points for the half year.\n10. We continue to invest in talent and have hired over 12,000 freshers in the last 6 months. Total\nemployee headcount was at 332,000, an increase of over 8,000 in Q2. Attrition remains low at\n14.3%.\n11. DSO is down 2 days to 71 days and DSO including net unbilled is down by 5 days to 87 on a\nyear-on-year basis.\n12. Cash flow generation remained strong. Free cash flow stood at $1.1 bn, which is 131% of the\nnet profit and is well above 100% for the 6th consecutive quarter, bolstered by tax refunds. H1\nfree cash flow conversion is at 120%.\n13. Large deal TCV for Q2 was at $3.1 bn, which is with 67% net new. H1 deal wins at $6.9 bn with\nnet new at 60% plus. This does not include the mega deal announcement this week with NHS.\n14. Q2 EPS in rupee terms grew by 13% year-on-year to Rs. 17.6.\nOperating margin for Q2 was at 21%, increase of 20 basis points sequentially. The major\ncomponents of sequential margin change for the quarter were:\nTailwinds of\n 60 basis points from currency movement"
+  },
+  {
+   "document_id": "98",
+   "page_no": 21,
+   "text": "External Document © 2025 Infosys Limited 5\n 30 basis points from Project Maximus emanating from RPP increase from value-based selling\nand lean in automation partly offset by increase in subcon and lower onsite utilization\nOffset by\n 70 basis points of impact from higher post-sale customer support on a sequential basis and\nother expenses.\nConsolidated cash and investments were at $6.2 bn at the end of quarter. Yield on cash balance\nwas at 6.98% and ROE stood at 29.1%.\nWe have taken several strategic steps in the past few years to reduce our dependence on work visa,\nespecially H-1Bs in the U.S. This includes reduction in onsite mix, increased focus on near-shoring,\nincreased local hiring, university partnerships, and creation of local hubs. We currently have several\ndelivery centers across the U.S. to serve clients and leverage local talent. These hubs focus on\nemerging technologies, such as artificial intelligence, machine learning, cloud computing, big data,\nand user experience design.\nIn line with our capital allocation policy, during the quarter, we announced Rs. 18,000 crores buyback\nthrough tender route at Rs. 1,800 per share. Buyback is expected to be completed in Q3, subject to\nshareholder approval.\nThe Board approved Rs. 23 interim dividend, which is 9.5% higher than the FY '25 interim dividend.\nWe signed 23 large deals during the quarter, 6 in Financial Services, 4 each in Manufacturing,\nCommunication and Retail, 3 in EURS and 1 each in Hi-tech and others. Region-wise, we signed 14\ndeals in America, 7 in Europe, 1 each in ROW and India.\nComing to verticals:\nIn Financial Services, clients are actively planning modernization and AI-driven initiatives with a\nclear focus on cost efficiency, enhanced customer experience, and strategic business\ntransformation. We see strong momentum in mortgages, capital markets, commercial banking, and\nwealth management areas. While macro uncertainty and volatility is impacting spends, there is some\nacceleration in mortgage sector with recent reduction in interest rates. Overall pipeline and signing\nremains strong, which is visible in 6 large deals signing this quarter. Banks have spent significantly\nto build AI infrastructure. Many initiatives are progressing from proof of concepts to full-scale projects\nwith notable traction in Agentic AI."
+  }
+ ],
+ "dossier": {
+  "version": "d4d583121382",
+  "data": {
+   "bear": [
+    {
+     "text": "Debtor days reached 72 days in FY26, matching the cash conversion cycle.",
+     "cites": [
+      "fact:debtor_days",
+      "fact:ccc_days"
+     ]
+    },
+    {
+     "text": "Borrowings totalled ₹8,525 cr in Sep 2026.",
+     "cites": [
+      "fact:borrowings"
+     ]
+    },
+    {
+     "text": "Revenue CAGR over 3 years slowed to 6.8% up to FY26.",
+     "cites": [
+      "fact:revenue_cagr_3y"
+     ]
+    }
+   ],
+   "bull": [
+    {
+     "text": "Interest cover reached 97.1× in FY26 while debt to equity stood at 0.09× in Sep 2026.",
+     "cites": [
+      "fact:interest_cover",
+      "fact:de_ratio"
+     ]
+    },
+    {
+     "text": "Free cash flow reached ₹31,259 cr in FY26 alongside CFO / EBITDA of 101%.",
+     "cites": [
+      "fact:fcf",
+      "fact:cfo_ebitda"
+     ]
+    },
+    {
+     "text": "ROCE touched 40% in FY26 and ROE stood at 31.9% currently.",
+     "cites": [
+      "fact:roce",
+      "fact:roe"
+     ]
+    }
+   ],
+   "cash": {
+    "fcf": 31259,
+    "flag": null,
+    "cfo_ebitda": 101,
+    "cfo_pat_5y": 1.1
+   },
+   "name": "Infosys",
+   "basis": "consolidated",
+   "facts": {
+    "pe": {
+     "key": "pe",
+     "unit": "x",
+     "label": "P/E",
+     "value": 14.4,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "cfo": {
+     "key": "cfo",
+     "unit": "cr",
+     "label": "Cash from operations",
+     "value": 33986,
+     "period": "FY26",
+     "source": "Screener consolidated cash flow, Mar 2026 column"
+    },
+    "fcf": {
+     "key": "fcf",
+     "unit": "cr",
+     "label": "Free cash flow",
+     "value": 31259,
+     "period": "FY26",
+     "source": "Screener consolidated cash flow, Mar 2026 column"
+    },
+    "roe": {
+     "key": "roe",
+     "unit": "pct",
+     "label": "ROE",
+     "value": 31.9,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "mcap": {
+     "key": "mcap",
+     "unit": "cr",
+     "label": "Market cap",
+     "value": 455807,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "roce": {
+     "key": "roce",
+     "unit": "pct",
+     "label": "ROCE",
+     "value": 40,
+     "period": "FY26",
+     "source": "Screener consolidated ratios, Mar 2026 column"
+    },
+    "price": {
+     "key": "price",
+     "unit": "rs",
+     "label": "Price",
+     "value": 1123,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "q_opm": {
+     "key": "q_opm",
+     "unit": "pct",
+     "label": "EBITDA margin",
+     "value": 23.7,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "q_pat": {
+     "key": "q_pat",
+     "unit": "cr",
+     "label": "Net profit, total",
+     "value": 7838,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "q_pbt": {
+     "key": "q_pbt",
+     "unit": "cr",
+     "label": "Profit before tax",
+     "value": 11063,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "cfo_5y": {
+     "key": "cfo_5y",
+     "unit": "cr",
+     "label": "Cash from operations, 5 years",
+     "value": 141242,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated cash flow, Mar 2022 to Mar 2026, cumulative"
+    },
+    "fy_opm": {
+     "key": "fy_opm",
+     "unit": "pct",
+     "label": "EBITDA margin",
+     "value": 23.7,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "fy_pat": {
+     "key": "fy_pat",
+     "unit": "cr",
+     "label": "Net profit",
+     "value": 29474,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "pat_5y": {
+     "key": "pat_5y",
+     "unit": "cr",
+     "label": "Net profit, 5 years",
+     "value": 128726,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2022 to Mar 2026, cumulative"
+    },
+    "ccc_days": {
+     "key": "ccc_days",
+     "unit": "days",
+     "label": "Cash conversion cycle",
+     "value": 72,
+     "period": "FY26",
+     "source": "Screener consolidated ratios, Mar 2026 column"
+    },
+    "de_ratio": {
+     "key": "de_ratio",
+     "unit": "x",
+     "label": "Debt to equity",
+     "value": 0.09,
+     "period": "Sep 2026",
+     "source": "Screener consolidated balance sheet, Sep 2026 column: borrowings / (equity + reserves)"
+    },
+    "q_ebitda": {
+     "key": "q_ebitda",
+     "unit": "cr",
+     "label": "EBITDA",
+     "value": 11689,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "fy_ebitda": {
+     "key": "fy_ebitda",
+     "unit": "cr",
+     "label": "EBITDA",
+     "value": 42280,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "net_worth": {
+     "key": "net_worth",
+     "unit": "cr",
+     "label": "Net worth",
+     "value": 99077,
+     "period": "Sep 2026",
+     "source": "Screener consolidated balance sheet, Sep 2026 column: equity + reserves"
+    },
+    "q_pat_yoy": {
+     "key": "q_pat_yoy",
+     "unit": "pct",
+     "label": "Net profit growth YoY, total",
+     "value": 6.3,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 vs Sep 2025"
+    },
+    "q_revenue": {
+     "key": "q_revenue",
+     "unit": "cr",
+     "label": "Revenue",
+     "value": 49244,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "borrowings": {
+     "key": "borrowings",
+     "unit": "cr",
+     "label": "Borrowings",
+     "value": 8525,
+     "period": "Sep 2026",
+     "source": "Screener consolidated balance sheet, Sep 2026 column"
+    },
+    "cfo_ebitda": {
+     "key": "cfo_ebitda",
+     "unit": "pct",
+     "label": "CFO / EBITDA",
+     "value": 101,
+     "period": "FY26",
+     "source": "Screener consolidated cash flow, Mar 2026 column"
+    },
+    "cfo_pat_5y": {
+     "key": "cfo_pat_5y",
+     "unit": "x",
+     "label": "CFO / PAT, 5 years",
+     "value": 1.1,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated cash flow, Mar 2022 to Mar 2026, cumulative"
+    },
+    "fy_revenue": {
+     "key": "fy_revenue",
+     "unit": "cr",
+     "label": "Revenue",
+     "value": 178650,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "debtor_days": {
+     "key": "debtor_days",
+     "unit": "days",
+     "label": "Debtor days",
+     "value": 72,
+     "period": "FY26",
+     "source": "Screener consolidated ratios, Mar 2026 column"
+    },
+    "pat_cagr_3y": {
+     "key": "pat_cagr_3y",
+     "unit": "pct",
+     "label": "Net profit CAGR, 3 years",
+     "value": 6.9,
+     "period": "3 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2023 to Mar 2026"
+    },
+    "pat_cagr_5y": {
+     "key": "pat_cagr_5y",
+     "unit": "pct",
+     "label": "Net profit CAGR, 5 years",
+     "value": 8.7,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2021 to Mar 2026"
+    },
+    "fy_pat_growth": {
+     "key": "fy_pat_growth",
+     "unit": "pct",
+     "label": "Net profit growth",
+     "value": 10.2,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 vs Mar 2025"
+    },
+    "q_opm_yoy_bps": {
+     "key": "q_opm_yoy_bps",
+     "unit": "bps",
+     "label": "EBITDA margin change YoY",
+     "value": 6,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 vs Sep 2025"
+    },
+    "q_revenue_yoy": {
+     "key": "q_revenue_yoy",
+     "unit": "pct",
+     "label": "Revenue growth YoY",
+     "value": 10.7,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 vs Sep 2025"
+    },
+    "ebitda_cagr_3y": {
+     "key": "ebitda_cagr_3y",
+     "unit": "pct",
+     "label": "EBITDA CAGR, 3 years",
+     "value": 6.4,
+     "period": "3 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2023 to Mar 2026"
+    },
+    "ebitda_cagr_5y": {
+     "key": "ebitda_cagr_5y",
+     "unit": "pct",
+     "label": "EBITDA CAGR, 5 years",
+     "value": 8.7,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2021 to Mar 2026"
+    },
+    "interest_cover": {
+     "key": "interest_cover",
+     "unit": "x",
+     "label": "Interest cover",
+     "value": 97.1,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column: (PBT + interest) / interest"
+    },
+    "revenue_cagr_3y": {
+     "key": "revenue_cagr_3y",
+     "unit": "pct",
+     "label": "Revenue CAGR, 3 years",
+     "value": 6.8,
+     "period": "3 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2023 to Mar 2026"
+    },
+    "revenue_cagr_5y": {
+     "key": "revenue_cagr_5y",
+     "unit": "pct",
+     "label": "Revenue CAGR, 5 years",
+     "value": 12.2,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2021 to Mar 2026"
+    },
+    "fy_revenue_growth": {
+     "key": "fy_revenue_growth",
+     "unit": "pct",
+     "label": "Revenue growth",
+     "value": 9.6,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 vs Mar 2025"
+    }
+   },
+   "flags": [],
+   "stats": {
+    "calls": 7,
+    "seconds": 1542,
+    "tokens_in": 117216,
+    "tokens_out": 16765,
+    "cached_calls": 0,
+    "cost_usd_est": 0.1068,
+    "dropped_bullets": 0
+   },
+   "header": {
+    "pe": 14.4,
+    "roe": 31.9,
+    "roce": 40,
+    "price": 1123,
+    "mcap_cr": 455807,
+    "screener_url": "https://www.screener.in/company/INFY/consolidated/"
+   },
+   "lender": false,
+   "sector": null,
+   "symbol": "INFY",
+   "numbers": {
+    "cagr": [
+     {
+      "y3": 6.8,
+      "y5": 12.2,
+      "key": "revenue",
+      "label": "Revenue"
+     },
+     {
+      "y3": 6.4,
+      "y5": 8.7,
+      "key": "ebitda",
+      "label": "EBITDA"
+     },
+     {
+      "y3": 6.9,
+      "y5": 8.7,
+      "key": "pat",
+      "label": "Net profit"
+     }
+    ],
+    "tiles": [
+     {
+      "key": "q_revenue",
+      "unit": "cr",
+      "label": "Revenue",
+      "value": 49244,
+      "change": {
+       "unit": "pct",
+       "label": "YoY",
+       "value": 10.7
+      },
+      "period": "Q2 FY27"
+     },
+     {
+      "key": "q_opm",
+      "unit": "pct",
+      "label": "EBITDA margin",
+      "value": 23.7,
+      "change": {
+       "unit": "bps",
+       "label": "YoY",
+       "value": 6
+      },
+      "period": "Q2 FY27"
+     },
+     {
+      "key": "q_pat",
+      "unit": "cr",
+      "label": "Net profit, total",
+      "value": 7838,
+      "change": {
+       "unit": "pct",
+       "label": "YoY",
+       "value": 6.3
+      },
+      "period": "Q2 FY27"
+     },
+     {
+      "key": "roce",
+      "unit": "pct",
+      "label": "ROCE",
+      "value": 40,
+      "period": "FY26"
+     }
+    ],
+    "annual": {
+     "cfo": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       8353,
+       10028,
+       11531,
+       13218,
+       14841,
+       17003,
+       23224,
+       23885,
+       22467,
+       25210,
+       35694,
+       33986
+      ]
+     },
+     "fcf": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       6106,
+       7305,
+       8771,
+       11220,
+       12396,
+       13696,
+       21117,
+       21724,
+       19888,
+       23009,
+       33457,
+       31259
+      ]
+     },
+     "opm": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       27.9,
+       27.4,
+       27.2,
+       26.7,
+       24.4,
+       24.5,
+       27.8,
+       25.9,
+       23.9,
+       23.7,
+       24.1,
+       23.7
+      ]
+     },
+     "pat": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       12372,
+       13489,
+       14353,
+       16029,
+       15410,
+       16639,
+       19423,
+       22146,
+       24108,
+       26248,
+       26750,
+       29474
+      ]
+     },
+     "roce": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       36,
+       33,
+       30,
+       30,
+       32,
+       32,
+       35,
+       37,
+       40,
+       40,
+       38,
+       40
+      ]
+     },
+     "ebitda": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       14883,
+       17079,
+       18604,
+       18822,
+       20170,
+       22267,
+       27889,
+       31491,
+       35130,
+       36425,
+       39236,
+       42280
+      ]
+     },
+     "revenue": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       53319,
+       62441,
+       68484,
+       70522,
+       82675,
+       90791,
+       100472,
+       121641,
+       146767,
+       153670,
+       162990,
+       178650
+      ]
+     },
+     "borrowings": {
+      "labels": [
+       "Mar 2015",
+       "Mar 2016",
+       "Mar 2017",
+       "Mar 2018",
+       "Mar 2019",
+       "Mar 2020",
+       "Mar 2021",
+       "Mar 2022",
+       "Mar 2023",
+       "Mar 2024",
+       "Mar 2025",
+       "Mar 2026",
+       "Sep 2026"
+      ],
+      "values": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       4633,
+       5325,
+       5474,
+       8299,
+       8359,
+       8227,
+       9176,
+       8525
+      ]
+     }
+    },
+    "quarterly": {
+     "opm": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       24.2,
+       23.5,
+       23.2,
+       24,
+       23.9,
+       24.2,
+       24.1,
+       23.5,
+       23.7,
+       23.4,
+       24.1,
+       23.7,
+       23.7
+      ]
+     },
+     "pat": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       6215,
+       6113,
+       7975,
+       6374,
+       6516,
+       6822,
+       7038,
+       6924,
+       7375,
+       6666,
+       8509,
+       7775,
+       7838
+      ]
+     },
+     "ebitda": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       9440,
+       9137,
+       8784,
+       9437,
+       9809,
+       10115,
+       9874,
+       9943,
+       10535,
+       10634,
+       11167,
+       11409,
+       11689
+      ]
+     },
+     "revenue": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       38994,
+       38821,
+       37923,
+       39315,
+       40986,
+       41764,
+       40925,
+       42279,
+       44490,
+       45479,
+       46402,
+       48211,
+       49244
+      ]
+     }
+    }
+   },
+   "pending": [],
+   "version": 1,
+   "built_at": "2026-10-29T12:40:25.783Z",
+   "business": {
+    "cites": {
+     "risks": "doc:99:p133"
+    },
+    "risks": [
+     "Geopolitical, macroeconomic or health events",
+     "Uncertainties in the economy",
+     "Inflation",
+     "Artificial intelligence, technology disruption and innovation",
+     "Cybersecurity, data protection and privacy"
+    ],
+    "segments": [
+     {
+      "cite": "doc:99:p81",
+      "name": "Financial Services",
+      "share_pct": null,
+      "revenue_cr": 49908
+     },
+     {
+      "cite": "doc:99:p81",
+      "name": "Manufacturing",
+      "share_pct": null,
+      "revenue_cr": 29078
+     },
+     {
+      "cite": "doc:99:p81",
+      "name": "Energy, Utilities, Resources and Services",
+      "share_pct": null,
+      "revenue_cr": 23818
+     },
+     {
+      "cite": "doc:99:p81",
+      "name": "Retail",
+      "share_pct": null,
+      "revenue_cr": 23077
+     },
+     {
+      "cite": "doc:99:p81",
+      "name": "Communication",
+      "share_pct": null,
+      "revenue_cr": 21765
+     },
+     {
+      "cite": "doc:99:p81",
+      "name": "Hi-Tech",
+      "share_pct": null,
+      "revenue_cr": 13928
+     },
+     {
+      "cite": "doc:99:p81",
+      "name": "Life Sciences",
+      "share_pct": null,
+      "revenue_cr": 12267
+     },
+     {
+      "cite": "doc:99:p81",
+      "name": "All other segments",
+      "share_pct": null,
+      "revenue_cr": 4809
+     }
+    ],
+    "description": "Infosys is a global leader in next-generation digital services and consulting, enabling clients across various industries to navigate their digital transformation. The Company provides end-to-end business solutions including IT services, software development, consulting, and business process management.",
+    "related_party": [
+     "There were no contracts or arrangements or transactions entered into during the year ended March 31, 2026, which were not at arm's length basis."
+    ]
+   },
+   "documents": [
+    {
+     "id": 94,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+     "type": "transcript",
+     "label": "Q2 FY27 call (Oct 2026)",
+     "pages": 48,
+     "period_label": "Q2 FY27"
+    },
+    {
+     "id": 95,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/95f8af86-dc92-49dc-a7cf-ecce287f8cce.pdf",
+     "type": "transcript",
+     "label": "Q1 FY27 call (Jul 2026)",
+     "pages": 48,
+     "period_label": "Q1 FY27"
+    },
+    {
+     "id": 96,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2ab7badf-388c-4dab-bfcc-3e128677734c.pdf",
+     "type": "transcript",
+     "label": "Q4 FY26 call (Apr 2026)",
+     "pages": 46,
+     "period_label": "Q4 FY26"
+    },
+    {
+     "id": 97,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/373b3501-e2a7-4ba4-bdd1-83f6bc21c25c.pdf",
+     "type": "transcript",
+     "label": "Q3 FY26 call (Jan 2026)",
+     "pages": 39,
+     "period_label": "Q3 FY26"
+    },
+    {
+     "id": 98,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cf4a6179-8e43-4959-b055-91f1f7f4f076.pdf",
+     "type": "transcript",
+     "label": "Q2 FY26 call (Oct 2025)",
+     "pages": 38,
+     "period_label": "Q2 FY26"
+    },
+    {
+     "id": 99,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+     "type": "annual_report",
+     "label": "FY26 annual report",
+     "pages": 383,
+     "used_pages": [
+      13,
+      14,
+      56,
+      75,
+      79,
+      80,
+      81,
+      82,
+      102,
+      109,
+      116,
+      125,
+      131,
+      132,
+      133,
+      160,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      251,
+      263,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      345,
+      356
+     ],
+     "period_label": "FY26"
+    }
+   ],
+   "say_vs_do": {
+    "note": null,
+    "items": [
+     {
+      "id": 1,
+      "call": "Q2 FY27 call",
+      "cite": "doc:94:p4",
+      "note": "Period in progress; guided on a constant currency basis, so it is checked against what management reports",
+      "basis": "constant_currency",
+      "quote": "Based on our Q2 performance and revised outlook for the rest of the year, our revenue growth guidance is 1% to 2% YoY.in constant currency terms.",
+      "scope": null,
+      "actual": null,
+      "metric": "revenue_growth",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-10-15",
+      "speaker": "Salil Parekh",
+      "label_raw": "revenue growth guidance",
+      "revised_to": null,
+      "target_text": "1–2%",
+      "metric_label": "Revenue growth"
+     },
+     {
+      "id": 2,
+      "call": "Q2 FY27 call",
+      "cite": "doc:94:p4",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "reported",
+      "quote": "Our operating margin guidance remains at 20% to 22% for the year.",
+      "scope": null,
+      "actual": null,
+      "metric": "ebit_margin",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-10-15",
+      "speaker": "Salil Parekh",
+      "label_raw": "operating margin guidance",
+      "revised_to": null,
+      "target_text": "20–22%",
+      "metric_label": "Operating margin"
+     },
+     {
+      "id": 3,
+      "call": "Q1 FY27 call",
+      "cite": "doc:95:p6",
+      "note": null,
+      "basis": "constant_currency",
+      "quote": "we are changing our revenue growth guidance to 1.5% to 3% Y-on-Y growth in constant currency terms.",
+      "scope": null,
+      "actual": null,
+      "metric": "revenue_growth",
+      "status": "revised",
+      "horizon": "FY27",
+      "said_on": "2026-07-15",
+      "speaker": "Salil Parekh",
+      "label_raw": "revenue growth guidance",
+      "revised_to": {
+       "cite": "doc:94:p4",
+       "text": "1–2%",
+       "said_period": "Q2 FY27"
+      },
+      "target_text": "1.5–3%",
+      "metric_label": "Revenue growth"
+     },
+     {
+      "id": 5,
+      "call": "Q1 FY27 call",
+      "cite": "doc:95:p5",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "Our plan is to have 6,000 Frontier Engineers over the next few years.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:frontier_engineers",
+      "status": "pending",
+      "horizon": "Medium term",
+      "said_on": "2026-07-15",
+      "speaker": "Salil Parekh",
+      "label_raw": "frontier engineers",
+      "revised_to": null,
+      "target_text": "6,000",
+      "metric_label": "Frontier engineers"
+     },
+     {
+      "id": 6,
+      "call": "Q1 FY27 call",
+      "cite": "doc:95:p17",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "This year, we have a plan to recruit 20,000 college graduates.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:college_graduates_hiring",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-07-15",
+      "speaker": "Salil Parekh",
+      "label_raw": "college graduates recruitment plan",
+      "revised_to": null,
+      "target_text": "20,000",
+      "metric_label": "College graduates hiring"
+     },
+     {
+      "id": 7,
+      "call": "Q1 FY27 call",
+      "cite": "doc:95:p31",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "We expect Onsite mix excluding new acquisitions to reduce by 75 bps to 1% for the year.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:onsite_mix_reduction",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-07-15",
+      "speaker": "Jayesh Sanghrajka",
+      "label_raw": "Onsite mix excluding new acquisitions reduction",
+      "revised_to": null,
+      "target_text": "0.75–1%",
+      "metric_label": "Onsite mix reduction"
+     },
+     {
+      "id": 8,
+      "call": "Q1 FY27 call",
+      "cite": "doc:95:p31",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "We expect effective tax rate for the year to be in the range of 29% to 30%.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:effective_tax_rate",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-07-15",
+      "speaker": "Jayesh Sanghrajka",
+      "label_raw": "effective tax rate",
+      "revised_to": null,
+      "target_text": "29–30%",
+      "metric_label": "Effective tax rate"
+     },
+     {
+      "id": 9,
+      "call": "Q4 FY26 call",
+      "cite": "doc:96:p4",
+      "note": null,
+      "basis": "constant_currency",
+      "quote": "Our revenue growth guidance for the financial year 2027 is 1.5% to 3.5% growth year-on-year in constant currency terms.",
+      "scope": null,
+      "actual": null,
+      "metric": "revenue_growth",
+      "status": "revised",
+      "horizon": "FY27",
+      "said_on": "2026-04-15",
+      "speaker": "Salil Parekh",
+      "label_raw": "revenue growth guidance",
+      "revised_to": {
+       "cite": "doc:95:p6",
+       "text": "1.5–3%",
+       "said_period": "Q1 FY27"
+      },
+      "target_text": "1.5–3.5%",
+      "metric_label": "Revenue growth"
+     },
+     {
+      "id": 11,
+      "call": "Q4 FY26 call",
+      "cite": "doc:96:p4",
+      "note": "No numeric target",
+      "basis": "unspecified",
+      "quote": "We expect acceleration of growth in Financial Services and in Energy, Utility, Resources and Services vertical.",
+      "scope": "segment",
+      "actual": null,
+      "metric": "revenue_growth",
+      "status": "unverifiable",
+      "horizon": "FY27",
+      "said_on": "2026-04-15",
+      "speaker": "Salil Parekh",
+      "label_raw": "Financial Services growth",
+      "revised_to": null,
+      "target_text": "Qualitative",
+      "metric_label": "Revenue growth"
+     },
+     {
+      "id": 12,
+      "call": "Q4 FY26 call",
+      "cite": "doc:96:p4",
+      "note": "No numeric target",
+      "basis": "unspecified",
+      "quote": "We expect acceleration of growth in Financial Services and in Energy, Utility, Resources and Services vertical.",
+      "scope": "segment",
+      "actual": null,
+      "metric": "revenue_growth",
+      "status": "unverifiable",
+      "horizon": "FY27",
+      "said_on": "2026-04-15",
+      "speaker": "Salil Parekh",
+      "label_raw": "Energy, Utility, Resources and Services vertical growth",
+      "revised_to": null,
+      "target_text": "Qualitative",
+      "metric_label": "Revenue growth"
+     },
+     {
+      "id": 13,
+      "call": "Q4 FY26 call",
+      "cite": "doc:96:p8",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "This year also, we are expecting at least 20,000 freshers to be hired.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:freshers_hired",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-04-15",
+      "speaker": "Jayesh Sanghrajka",
+      "label_raw": "freshers to be hired",
+      "revised_to": null,
+      "target_text": "At least 20,000",
+      "metric_label": "Freshers hired"
+     },
+     {
+      "id": 15,
+      "call": "Q3 FY26 call",
+      "cite": "doc:97:p4",
+      "note": null,
+      "basis": "constant_currency",
+      "quote": "The new revenue growth guidance for this financial year is 3% to 3.5% growth in constant currency.",
+      "scope": null,
+      "actual": {
+       "cite": "doc:96:p4",
+       "unit": "pct",
+       "label": "FY26",
+       "value": 3.1
+      },
+      "metric": "revenue_growth",
+      "status": "delivered",
+      "horizon": "FY26",
+      "said_on": "2026-01-15",
+      "speaker": "Salil Parekh",
+      "label_raw": "revenue growth guidance for this financial year",
+      "revised_to": null,
+      "target_text": "3–3.5%",
+      "metric_label": "Revenue growth"
+     },
+     {
+      "id": 16,
+      "call": "Q3 FY26 call",
+      "cite": "doc:97:p4",
+      "note": null,
+      "basis": "reported",
+      "quote": "Our operating margin guidance for the financial year remains the same at 20% to 22%.",
+      "scope": null,
+      "actual": {
+       "cite": "doc:96:p7",
+       "unit": "pct",
+       "label": "FY26",
+       "value": 21
+      },
+      "metric": "ebit_margin",
+      "status": "delivered",
+      "horizon": "FY26",
+      "said_on": "2026-01-15",
+      "speaker": "Salil Parekh",
+      "label_raw": "operating margin guidance for the financial year",
+      "revised_to": null,
+      "target_text": "20–22%",
+      "metric_label": "Operating margin"
+     },
+     {
+      "id": 17,
+      "call": "Q2 FY26 call",
+      "cite": "doc:98:p3",
+      "note": null,
+      "basis": "constant_currency",
+      "quote": "The new guidance is growth between 2% and 3% in constant currency terms for the full year.",
+      "scope": null,
+      "actual": null,
+      "metric": "revenue_growth",
+      "status": "revised",
+      "horizon": "FY26",
+      "said_on": "2025-10-15",
+      "speaker": "Salil Parekh",
+      "label_raw": "revenue growth guidance for the financial year",
+      "revised_to": {
+       "cite": "doc:97:p4",
+       "text": "3–3.5%",
+       "said_period": "Q3 FY26"
+      },
+      "target_text": "2–3%",
+      "metric_label": "Revenue growth"
+     }
+    ],
+    "credibility": {
+     "score": null,
+     "missed": 0,
+     "pending": 7,
+     "resolved": 2,
+     "delivered": 2,
+     "near_miss": 0
+    }
+   },
+   "balance_sheet": {
+    "cites": {
+     "auditor": "doc:99:p277",
+     "contingent": "doc:99:p345"
+    },
+    "wc_days": {
+     "ccc": 72,
+     "debtor": 72,
+     "payable": null,
+     "inventory": null
+    },
+    "de_ratio": 0.09,
+    "net_worth": 99077,
+    "borrowings": 8525,
+    "contingent_cr": 3117,
+    "interest_cover": 97.1,
+    "auditor_opinion": "unmodified",
+    "key_audit_matters": [
+     "Revenue recognition",
+     "Revenue recognition - Fixed-price contracts using the percentage of completion method"
+    ],
+    "contingent_pct_networth": 3.1
+   },
+   "seed_questions": [
+    "What specific macro factors caused management to lower the revenue growth guidance for FY27?",
+    "How will client demands for AI-driven productivity impact pricing realization across operating segments?",
+    "What are the specific plans and timelines for hiring 20,000 college graduates in FY27?"
+   ],
+   "analyst_concerns": [
+    {
+     "cite": "doc:94:p5",
+     "topic": "Guidance and Margins",
+     "summary": "Analysts questioned the narrowing of the guidance range, margin performance, salary hikes, and the impact of rupee depreciation and AI deflation."
+    },
+    {
+     "cite": "doc:94:p5",
+     "topic": "AI Monetization and Pricing",
+     "summary": "Concerns regarding whether AI-led productivity could reduce traditional billable work and offset pricing pressure."
+    },
+    {
+     "cite": "doc:95:p6",
+     "topic": "Reasons for revenue guidance cut",
+     "summary": "Analysts inquired about the reasons behind trimming the FY27 revenue growth guidance and the macro factors impacting performance."
+    },
+    {
+     "cite": "doc:95:p6",
+     "topic": "Pricing pressure and competitive intensity",
+     "summary": "Analysts asked about irrational or aggressive competitive pricing in the market and how AI productivity asks are affecting pricing realization."
+    },
+    {
+     "cite": "doc:95:p6",
+     "topic": "CEO succession and transition",
+     "summary": "Journalists and analysts asked about the CEO transition timing, mandate for the successor Ashiss Dash, and reason for not extending Salil Parekh's term."
+    },
+    {
+     "cite": "doc:95:p8",
+     "topic": "AI revenue lumpiness and deflation impact",
+     "summary": "Analysts questioned whether AI revenue is lumpy and when AI-led gains will become large enough to offset client productivity-led deflation."
+    },
+    {
+     "cite": "doc:95:p13",
+     "topic": "Margin sustainability with wage hikes",
+     "summary": "Analysts pressed on whether Infosys can sustain the 20% to 22% margin range with upcoming wage hikes, acquisition costs, and lower growth."
+    },
+    {
+     "cite": "doc:95:p38",
+     "topic": "TCV ramp-up and conversion to revenue",
+     "summary": "Analysts questioned why healthy deal bookings and high net-new TCV were not translating into faster revenue growth, asking about duration and ramp lags."
+    }
+   ],
+   "what_matters_now": [
+    {
+     "text": "Revenue reached ₹49,244 cr in Q2 FY27, and revenue growth YoY registered 10.7%.",
+     "cites": [
+      "fact:q_revenue",
+      "fact:q_revenue_yoy"
+     ]
+    },
+    {
+     "text": "Management delivered 3.1% revenue growth in FY26 against the target of 3–3.5%.",
+     "cites": [
+      "doc:97:p4",
+      "doc:96:p4"
+     ]
+    },
+    {
+     "text": "Management guided for 1–2% revenue growth and 20–22% operating margin for FY27.",
+     "cites": [
+      "doc:94:p4"
+     ]
+    }
+   ],
+   "narrative_vs_numbers": [
+    {
+     "id": 1,
+     "cite": "doc:94:p4",
+     "cites": [],
+     "claim": "AI revenue grew significantly reaching 10.5% of total revenue with strong sequential growth.",
+     "quote": "AI revenue was a standout at 10.5% of our revenue, growing at 29% sequentially.",
+     "verdict": "too_early",
+     "evidence": "No facts mention AI revenue percentage."
+    },
+    {
+     "id": 2,
+     "cite": "doc:94:p4",
+     "cites": [],
+     "claim": "Large deals remained strong at $5.2 billion including two mega deals.",
+     "quote": "Large deals were another standout at $5.2 bn for the quarter. This includes two mega deals.",
+     "verdict": "too_early",
+     "evidence": "No facts mention large deals."
+    },
+    {
+     "id": 3,
+     "cite": "doc:95:p29",
+     "cites": [],
+     "claim": "AI revenue grew strongly and reached 8.2% of total revenue in Q1 FY27, displaying double-digit quarter-on-quarter growth over several quarters.",
+     "quote": "AI revenues for the quarter at 8.2%. This is growing at double-digit Q-on-Q over the last several quarters.",
+     "verdict": "too_early",
+     "evidence": "No facts mention AI revenue percentage in Q1 FY27."
+    },
+    {
+     "id": 4,
+     "cite": "doc:95:p6",
+     "cites": [],
+     "claim": "Macro environment continues to remain uncertain, prompting a downward revision to the revenue guidance for FY27.",
+     "quote": "Overall, we continue to see the macro environment remaining uncertain. With our Q1 results and a view for the rest of the financial year, we are changing our revenue growth guidance",
+     "verdict": "too_early",
+     "evidence": "No facts mention revenue guidance for FY27."
+    },
+    {
+     "id": 5,
+     "cite": "doc:95:p30",
+     "cites": [],
+     "claim": "Client decision to terminate an EURS project created a one-off 50 basis point drag on Q1 revenue growth.",
+     "quote": "Q1 revenue growth was lower than our expectations, mainly due to - one-off 50 basis point impact on account of program termination by an EURS client during the quarter.",
+     "verdict": "too_early",
+     "evidence": "No facts mention a client project termination impact on Q1 revenue."
+    },
+    {
+     "id": 6,
+     "cite": "doc:95:p30",
+     "cites": [],
+     "claim": "Clients are demanding AI-driven productivity improvements alongside high competitive intensity, softening realized price growth.",
+     "quote": "Additionally, client expectation on productivity, along with high competitive intensity is resulting in softer increase in price versus our expectations.",
+     "verdict": "too_early",
+     "evidence": "No facts mention client demands for AI-driven productivity or pricing trends."
+    },
+    {
+     "id": 7,
+     "cite": "doc:96:p4",
+     "cites": [],
+     "claim": "Growth in Financial Services and Energy, Utilities, Resources and Services is expected to accelerate in FY27.",
+     "quote": "We expect acceleration of growth in Financial Services and in Energy, Utility, Resources and Services vertical.",
+     "verdict": "too_early",
+     "evidence": "No facts mention vertical-specific growth expectations for FY27."
+    },
+    {
+     "id": 8,
+     "cite": "doc:96:p5",
+     "cites": [],
+     "claim": "Net new large deals accounted for 55% of the total deal value in FY26, supporting future growth.",
+     "quote": "We see on the large deals, the net new is pretty large for the full year at 55%. So that gives us support for growth.",
+     "verdict": "too_early",
+     "evidence": "No facts mention net new large deals percentage for FY26."
+    },
+    {
+     "id": 9,
+     "cite": "doc:96:p6",
+     "cites": [],
+     "claim": "AI services revenue is seeing strong growth nicely ahead of Q3 levels.",
+     "quote": "The growth in AI services is very strong, but we have not disclosed that revenue number externally here.",
+     "verdict": "too_early",
+     "evidence": "No facts mention AI services revenue growth relative to Q3 levels."
+    },
+    {
+     "id": 10,
+     "cite": "doc:96:p22",
+     "cites": [],
+     "claim": "The pricing environment has remained stable, with most FY26 growth being pricing-led as AI services command better pricing.",
+     "quote": "In terms of pricing, I think pricing environment for us has remained stable. On the contrary, actually, most of our growth this year has been pricing-led because the volumes have been softer.",
+     "verdict": "too_early",
+     "evidence": "No facts mention the stability of the pricing environment or pricing-led growth."
+    }
+   ]
+  }
+ }
+}

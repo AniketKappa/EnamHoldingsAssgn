@@ -1,0 +1,2951 @@
+{
+ "state": {
+  "t0": 1793277473273,
+  "docs": [
+   {
+    "id": 112,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/77b6d277-0ffc-440d-ba8a-2bd9bc3dc43e.pdf",
+    "label": "Q2 FY27 call (Oct 2026)",
+    "pages": 20,
+    "status": "extracted",
+    "said_on": "2026-10-15",
+    "doc_type": "transcript",
+    "period_end": "2026-09-30",
+    "period_label": "Q2 FY27"
+   },
+   {
+    "id": 113,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e47a217c-cefa-4ff6-8e34-6bbd07d42b13.pdf",
+    "label": "Q1 FY27 call (Jul 2026)",
+    "pages": 19,
+    "status": "extracted",
+    "said_on": "2026-07-15",
+    "doc_type": "transcript",
+    "period_end": "2026-06-30",
+    "period_label": "Q1 FY27"
+   },
+   {
+    "id": 114,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f66f17ac-c40f-4309-afca-3e66af0956a0.pdf",
+    "label": "Q4 FY26 call (May 2026)",
+    "pages": 19,
+    "status": "extracted",
+    "said_on": "2026-05-15",
+    "doc_type": "transcript",
+    "period_end": "2026-03-31",
+    "period_label": "Q4 FY26"
+   },
+   {
+    "id": 115,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c54bf2c3-22fa-45e1-bf1a-2194e7b46183.pdf",
+    "label": "Q3 FY26 call (Jan 2026)",
+    "pages": 20,
+    "status": "extracted",
+    "said_on": "2026-01-15",
+    "doc_type": "transcript",
+    "period_end": "2025-12-31",
+    "period_label": "Q3 FY26"
+   },
+   {
+    "id": 116,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7a5825e0-67d1-41af-96e0-d78387aaba8d.pdf",
+    "label": "Q2 FY26 call (Oct 2025)",
+    "pages": 19,
+    "status": "extracted",
+    "said_on": "2025-10-15",
+    "doc_type": "transcript",
+    "period_end": "2025-09-30",
+    "period_label": "Q2 FY26"
+   },
+   {
+    "id": 117,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ff6bcced-1327-449f-8a82-6fd651a0124f.pdf",
+    "label": "FY26 annual report",
+    "pages": 450,
+    "status": "extracted",
+    "said_on": null,
+    "doc_type": "annual_report",
+    "period_end": "2026-03-31",
+    "period_label": "FY26"
+   }
+  ],
+  "done": [
+   "resolve",
+   "financials",
+   "documents",
+   "extract",
+   "annual_report",
+   "ledger",
+   "synthesis"
+  ],
+  "name": "Polycab India",
+  "judged": [
+   {
+    "id": 1,
+    "cite": "doc:112:p2",
+    "cites": [],
+    "claim": "The Wires and Cables business continues to deliver robust growth supported by healthy demand.",
+    "quote": "The Wires and Cables business continues to deliver robust growth, supported by healthy demand trends, strong market positioning, and consistent execution.",
+    "verdict": "too_early",
+    "evidence": "The facts do not contain information about the Wires and Cables business or demand trends."
+   },
+   {
+    "id": 2,
+    "cite": "doc:112:p2",
+    "cites": [],
+    "claim": "Project Spring initiatives are progressing in line with plan and yielding results.",
+    "quote": "Encouragingly, the initiatives under our strategic roadmap, Project Spring, are progressing in line with plan and are already beginning to yield meaningful results",
+    "verdict": "too_early",
+    "evidence": "The facts do not provide details on Project Spring initiatives."
+   },
+   {
+    "id": 3,
+    "cite": "doc:112:p2",
+    "cites": [],
+    "claim": "FMEG segment recorded its seventh consecutive profitable quarter.",
+    "quote": "The FMEG segment continued to strengthen its growth trajectory and recorded its seventh consecutive profitable quarter.",
+    "verdict": "too_early",
+    "evidence": "The facts do not contain data regarding the FMEG segment or its profitable quarters."
+   },
+   {
+    "id": 4,
+    "cite": "doc:112:p5",
+    "cites": [],
+    "claim": "Exports picked up strongly with 17% YoY growth and 85% QoQ growth.",
+    "quote": "Despite challenging geopolitical environment, exports picked up strongly during the quarter as sales grew 17% year-on-year and grew 85% quarter-on-quarter.",
+    "verdict": "too_early",
+    "evidence": "The facts do not mention export sales growth figures."
+   },
+   {
+    "id": 5,
+    "cite": "doc:113:p3",
+    "cites": [],
+    "claim": "Wires & cables business maintained steady momentum leveraging market leadership and execution capabilities.",
+    "quote": "The Wires & Cables business maintained steady momentum, leveraging its market leadership and execution capabilities, while the FMEG business continued its trajectory of steady improvement",
+    "verdict": "too_early",
+    "evidence": "The facts do not mention the Wires & Cables business or FMEG performance."
+   },
+   {
+    "id": 6,
+    "cite": "doc:113:p5",
+    "cites": [],
+    "claim": "Wires grew faster than cables and channel sales outperformed institutional sales during the quarter.",
+    "quote": "From a category standpoint, wires grew faster than cables during the quarter. Channel sales also outperformed institutional sales, highlighting the strength of our distribution network.",
+    "verdict": "too_early",
+    "evidence": "The facts do not provide a breakdown between wires and cables or channel and institutional sales."
+   },
+   {
+    "id": 7,
+    "cite": "doc:113:p5",
+    "cites": [],
+    "claim": "Solar business continued to be the primary growth engine in FMEG, delivering more than twofold growth year-on-year.",
+    "quote": "Solar business, our largest category within the FMEG portfolio, continued to be the primary growth engine, delivering more than twofold growth year-on-year.",
+    "verdict": "too_early",
+    "evidence": "The facts do not contain data on the Solar business or FMEG portfolio."
+   },
+   {
+    "id": 8,
+    "cite": "doc:114:p3",
+    "cites": [],
+    "claim": "Demand sentiment was impacted by geopolitical developments in the Middle East.",
+    "quote": "The demand sentiment to an extent was impacted by geopolitical developments in the Middle East",
+    "verdict": "too_early",
+    "evidence": "The facts do not report on demand sentiment or geopolitical developments in the Middle East."
+   },
+   {
+    "id": 9,
+    "cite": "doc:114:p6",
+    "cites": [],
+    "claim": "Domestic wires and cable organized market share increased to 30-31%.",
+    "quote": "Our domestic wires and cable organized market share has now increased to 30-31%",
+    "verdict": "too_early",
+    "evidence": "The facts do not provide market share percentages for domestic wires and cable."
+   },
+   {
+    "id": 10,
+    "cite": "doc:114:p7",
+    "cites": [],
+    "claim": "FMEG segment delivered 47% year-on-year growth for the quarter.",
+    "quote": "registering a strong 47% year-on-year growth with broad-based contributions across all product categories.",
+    "verdict": "too_early",
+    "evidence": "The facts do not mention the FMEG segment growth rate for the quarter."
+   }
+  ],
+  "sector": null,
+  "symbol": "POLYCAB",
+  "pending": [],
+  "version": "61367bc9405e",
+  "synthesis": {
+   "log": [],
+   "bear": [
+    {
+     "text": "P/E ratio currently trades at 36.7×.",
+     "cites": [
+      "fact:pe"
+     ]
+    },
+    {
+     "text": "Debtor days reached 48 days in FY26.",
+     "cites": [
+      "fact:debtor_days"
+     ]
+    },
+    {
+     "text": "Wires and Cables segment accounts for 87% of business.",
+     "cites": [
+      "doc:117:p9"
+     ]
+    }
+   ],
+   "bull": [
+    {
+     "text": "Revenue CAGR for 3 years reached 27% up to FY26.",
+     "cites": [
+      "fact:revenue_cagr_3y"
+     ]
+    },
+    {
+     "text": "Cash conversion cycle remained at 39 days in FY26.",
+     "cites": [
+      "fact:ccc_days"
+     ]
+    },
+    {
+     "text": "ROCE stood at 33% for FY26.",
+     "cites": [
+      "fact:roce"
+     ]
+    }
+   ],
+   "model": "gemini-3.5-flash-lite",
+   "dropped": 0,
+   "seed_questions": [
+    "What factors drive the FMEG margin reaching 10.1%?",
+    "How will copper price fluctuations impact Q3 margins?",
+    "What is the status of the IBC hearing for Asier Metals?"
+   ],
+   "what_matters_now": [
+    {
+     "text": "Revenue reached ₹9,899 cr in Q2 FY27 with a YoY growth rate of 52.8%.",
+     "cites": [
+      "fact:q_revenue",
+      "fact:q_revenue_yoy"
+     ]
+    },
+    {
+     "text": "EBITDA margin changed YoY by −140 bps to reach 14.4% in Q2 FY27.",
+     "cites": [
+      "fact:q_opm",
+      "fact:q_opm_yoy_bps"
+     ]
+    },
+    {
+     "text": "Management targeted an EBITDA margin of 11–13% for the medium term in the Q2 FY27 call.",
+     "cites": [
+      "doc:112:p6"
+     ]
+    }
+   ]
+  }
+ },
+ "extracts": [
+  {
+   "document_id": "112",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "In line with our Project Spring roadmap, we remain confident of sustaining medium- to long-term EBITDA margins within our guided range of 11% to 13%.",
+      "metric": "ebitda_margin",
+      "horizon": "medium_term",
+      "speaker": "Aditya Nathany",
+      "direction": "range",
+      "label_raw": "Wires and Cables",
+      "target_low": 11,
+      "target_high": 13
+     },
+     {
+      "page": 8,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Today, we are already at an EBIT margin of 10.1%, which is very high. I would believe you would appreciate the kind of efforts that we have put together to get this segment turnaround in the way we have been seeing the results in this quarter.",
+      "metric": "ebitda_margin",
+      "horizon": "FY30",
+      "speaker": "Aditya Nathany",
+      "direction": "range",
+      "label_raw": "FMEG",
+      "target_low": 8,
+      "target_high": 10
+     },
+     {
+      "page": 7,
+      "unit": "x",
+      "basis": "unspecified",
+      "quote": "Our objective continues to be growing at 1.5x to 2x of the industry growth rate while steadily enhancing profitability.",
+      "metric": "other:revenue_growth_multiple",
+      "horizon": "medium_term",
+      "speaker": "Aditya Nathany",
+      "direction": "range",
+      "label_raw": "FMEG",
+      "target_low": 1.5,
+      "target_high": 2
+     }
+    ],
+    "call_date": "October 15, 2026",
+    "call_period": "Q2 FY27",
+    "reported_kpis": [
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Consolidated revenue grew by 53% year-on-year, with all business segments contributing meaningfully to this growth momentum.",
+      "value": 53,
+      "metric": "revenue",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBITDA increased by 39% year-on-year, while EBITDA margins expanded by more than 50 basis points sequentially to 14.4%, supported by a favourable business mix and continued focus on operational efficiencies.",
+      "value": 39,
+      "metric": "ebitda",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBITDA increased by 39% year-on-year, while EBITDA margins expanded by more than 50 basis points sequentially to 14.4%, supported by a favourable business mix and continued focus on operational efficiencies.",
+      "value": 14.4,
+      "metric": "ebitda_margin",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "Profitability remained robust, with profit after tax reaching a record high of INR 9,900 million, representing a 43% year-over-year increase.",
+      "value": 9900,
+      "metric": "pat",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "PAT margins stood at 10.0% for the quarter, reflecting healthy earnings growth and sustained margin resilience.",
+      "value": 10,
+      "metric": "other:pat_margin",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "Net cash stood at INR 45.2 billion as of September 30th, 2026, compared to INR 29.4 billion a year ago.",
+      "value": 45.2,
+      "metric": "other:net_cash",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "other",
+      "basis": "reported",
+      "quote": "This was aided by higher payable days arising from the increased use of letters of credit for our raw material procurement. As these benefits gradually normalize, we expect the working capital cycle to trend towards our long-term operating range of 45 to 50 days.",
+      "value": 11,
+      "metric": "other:working_capital_days",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "During the first half of the year, we incurred capital expenditures of INR 6.1 billion, reflecting our ongoing investments in capacity expansion, supply chain capabilities and future growth platforms.",
+      "value": 6.1,
+      "metric": "capex",
+      "period": "H1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Revenue grew by 46% year-on-year, crossing a significant milestone of INR180 billion.",
+      "value": 46,
+      "metric": "revenue_growth",
+      "period": "H1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBITDA increased by 36% year-on-year, with margins remaining healthy at 14.1%, while profit after tax grew by 38% year-on-year, translating into PAT margins of 9.9%.",
+      "value": 36,
+      "metric": "ebitda",
+      "period": "H1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBITDA increased by 36% year-on-year, with margins remaining healthy at 14.1%, while profit after tax grew by 38% year-on-year, translating into PAT margins of 9.9%.",
+      "value": 14.1,
+      "metric": "ebitda_margin",
+      "period": "H1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBITDA increased by 36% year-on-year, with margins remaining healthy at 14.1%, while profit after tax grew by 38% year-on-year, translating into PAT margins of 9.9%.",
+      "value": 38,
+      "metric": "pat_growth",
+      "period": "H1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBITDA increased by 36% year-on-year, with margins remaining healthy at 14.1%, while profit after tax grew by 38% year-on-year, translating into PAT margins of 9.9%.",
+      "value": 9.9,
+      "metric": "other:pat_margin",
+      "period": "H1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "The Wires and Cables segment delivered a strong quarter, recording 47% year-on-year revenue growth.",
+      "value": 47,
+      "metric": "revenue_growth",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Within this, the domestic Wires and Cables business grew by an impressive 50% year-on-year, driven by healthy demand conditions, strong channel execution and favourable commodity linked realizations.",
+      "value": 50,
+      "metric": "revenue_growth",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBIT margins in the Wires and Cables segment stood at 14.2%.",
+      "value": 14.2,
+      "metric": "ebit_margin",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "The FMEG segment delivered a breakthrough quarter, registering a remarkable 124% year-on-year growth with strong performance across all major product categories.",
+      "value": 124,
+      "metric": "revenue_growth",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "The segment also achieved a major profitability milestone, with EBIT margins crossing the double-digit mark for the first time and recording a 10.1% margin during the quarter.",
+      "value": 10.1,
+      "metric": "ebit_margin",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 6,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "The EPC segment reported revenues of INR 6,171 million in Q2 FY27, representing a healthy year-on-year growth of 53%.",
+      "value": 6171,
+      "metric": "revenue",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "The EPC segment reported revenues of INR 6,171 million in Q2 FY27, representing a healthy year-on-year growth of 53%.",
+      "value": 53,
+      "metric": "revenue_growth",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Segment profitability remained strong at INR444 million, translating into an EBIT margin of 7.2%.",
+      "value": 7.2,
+      "metric": "ebit_margin",
+      "period": "Q2 FY27"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 7,
+      "topic": "FMEG margins",
+      "summary": "Analyst asked about the drivers behind the strong FMEG margin reaching 10.1% and whether Project Spring targets would be revised."
+     },
+     {
+      "page": 8,
+      "topic": "Wires and Cables margins and competition",
+      "summary": "Analyst inquired about the sustainability of high Wires and Cables margins and potential risks from new entrants in the distribution channel."
+     },
+     {
+      "page": 9,
+      "topic": "Volume growth breakdown",
+      "summary": "Analyst asked for the exact breakdown of volume growth vs value growth in cables and wires."
+     },
+     {
+      "page": 9,
+      "topic": "NCLAT / IBC proceedings",
+      "summary": "Analyst inquired about the status and timeline of the IBC hearing regarding Asier Metals."
+     },
+     {
+      "page": 11,
+      "topic": "Exports and Data Centers",
+      "summary": "Analyst asked about export outlook and opportunities in optical fiber cables and data centers."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 2,
+      "claim": "The Wires and Cables business continues to deliver robust growth supported by healthy demand.",
+      "quote": "The Wires and Cables business continues to deliver robust growth, supported by healthy demand trends, strong market positioning, and consistent execution.",
+      "horizon": "medium_term"
+     },
+     {
+      "page": 2,
+      "claim": "Project Spring initiatives are progressing in line with plan and yielding results.",
+      "quote": "Encouragingly, the initiatives under our strategic roadmap, Project Spring, are progressing in line with plan and are already beginning to yield meaningful results",
+      "horizon": "medium_term"
+     },
+     {
+      "page": 2,
+      "claim": "FMEG segment recorded its seventh consecutive profitable quarter.",
+      "quote": "The FMEG segment continued to strengthen its growth trajectory and recorded its seventh consecutive profitable quarter.",
+      "horizon": "Q2 FY27"
+     },
+     {
+      "page": 5,
+      "claim": "Exports picked up strongly with 17% YoY growth and 85% QoQ growth.",
+      "quote": "Despite challenging geopolitical environment, exports picked up strongly during the quarter as sales grew 17% year-on-year and grew 85% quarter-on-quarter.",
+      "horizon": "Q2 FY27"
+     },
+     {
+      "page": 6,
+      "claim": "Solar products are the primary growth driver in FMEG with multifold growth.",
+      "quote": "Solar products, which constitute the largest category within our FMEG portfolio, continue to be the primary growth driver, registering multi-fold growth during this quarter.",
+      "horizon": "Q2 FY27"
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "113",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "EBIT margins for the quarter were 8%, very much in line with the milestones laid out under Project Spring, where we target EBITDA margins of 8% to 10% by FY 2030.",
+      "metric": "ebitda_margin",
+      "horizon": "FY30",
+      "speaker": "Shashank Yagnick",
+      "direction": "range",
+      "label_raw": "FMEG",
+      "target_low": 8,
+      "target_high": 10
+     },
+     {
+      "page": 5,
+      "unit": "x",
+      "basis": "unspecified",
+      "quote": "Our strategic priorities remain unchanged to grow at 1.5x to 2x of the industry growth while progressively enhancing profitability.",
+      "metric": "revenue_growth",
+      "horizon": "medium_term",
+      "speaker": "Shashank Yagnick",
+      "direction": "range",
+      "label_raw": "FMEG",
+      "target_low": 1.5,
+      "target_high": 2
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Consistent with our Project Spring roadmap, we continue to maintain our medium- to long-term margin guidance of 11% to 13% for this business.",
+      "metric": "ebit_margin",
+      "horizon": "medium_term",
+      "speaker": "Shashank Yagnick",
+      "direction": "range",
+      "label_raw": "Wires & Cables",
+      "target_low": 11,
+      "target_high": 13
+     }
+    ],
+    "call_date": "July 16, 2026",
+    "call_period": "Q1 FY27",
+    "reported_kpis": [
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Consolidated revenues grew by 39% year-on-year, supported by sustained momentum across both our wires and cables and FMEG businesses.",
+      "value": 39,
+      "metric": "revenue_growth",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Operating performance remained robust during the quarter. EBITDA increased by 32% year-on-year and the margins stood at 13.8%",
+      "value": 32,
+      "metric": "ebitda",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Operating performance remained robust during the quarter. EBITDA increased by 32% year-on-year and the margins stood at 13.8%, reflecting an improvement of approximately 70 basis points sequentially over the previous quarter.",
+      "value": 13.8,
+      "metric": "ebitda_margin",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 4,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "At the bottom line, we achieved our highest ever quarterly Profit After Tax of INR 7,967 million, representing a growth of 33% year-on-year.",
+      "value": 7967,
+      "metric": "pat",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "At the bottom line, we achieved our highest ever quarterly Profit After Tax of INR 7,967 million, representing a growth of 33% year-on-year.",
+      "value": 33,
+      "metric": "pat_growth",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "The Wires & Cables segment registered a healthy 39% year-on-year growth during the quarter.",
+      "value": 39,
+      "metric": "revenue_growth",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Within this, the domestic Wires & Cables business delivered an impressive 43% year-on-year growth",
+      "value": 43,
+      "metric": "revenue_growth",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBIT margins for the Wires & Cables business stood at 13.3%.",
+      "value": 13.3,
+      "metric": "ebit_margin",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "The FMEG segment delivered another outstanding quarter, recording 71% year-on-year growth with strong contributions across all product categories.",
+      "value": 71,
+      "metric": "revenue_growth",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBIT margins for the quarter were 8%, very much in line with the milestones laid out under Project Spring",
+      "value": 8,
+      "metric": "ebit_margin",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 6,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "The EPC business reported revenues of INR 3,077 million during the Quarter 1 Financial Year 2027",
+      "value": 3077,
+      "metric": "revenue",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 8,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "This quarter, we have delivered EBIT of 11% in our EPC business",
+      "value": 11,
+      "metric": "ebit_margin",
+      "period": "Q1 FY27"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 6,
+      "topic": "Price hikes, volume growth and copper prices",
+      "summary": "Analyst asked about price hikes and volume growth in the quarter and how pricing will work out for Q2 considering copper prices."
+     },
+     {
+      "page": 6,
+      "topic": "Working capital and acceptances",
+      "summary": "Clarification sought on actual creditors, capex creditors, acceptances, and whether interest on acceptances is booked in expenses or finance costs."
+     },
+     {
+      "page": 7,
+      "topic": "Data centre opportunity and optic fibres",
+      "summary": "Asked for thoughts on the upcoming data centre opportunity and opportunities in optic fibres."
+     },
+     {
+      "page": 7,
+      "topic": "Exports slowdown",
+      "summary": "Inquired whether the 13% decline in exports was largely due to the Middle East and how coming quarters are foreseen."
+     },
+     {
+      "page": 7,
+      "topic": "Bharat Net project and EPC revenue",
+      "summary": "Asked about profitability of Bharat Net projects given steep price increases in fibre, and reasons for weak EPC revenue."
+     },
+     {
+      "page": 8,
+      "topic": "Full year volume growth",
+      "summary": "Inquired how to look at full year volume growth given high bases in certain quarters."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 3,
+      "claim": "Wires & cables business maintained steady momentum leveraging market leadership and execution capabilities.",
+      "quote": "The Wires & Cables business maintained steady momentum, leveraging its market leadership and execution capabilities, while the FMEG business continued its trajectory of steady improvement",
+      "horizon": null
+     },
+     {
+      "page": 5,
+      "claim": "Wires grew faster than cables and channel sales outperformed institutional sales during the quarter.",
+      "quote": "From a category standpoint, wires grew faster than cables during the quarter. Channel sales also outperformed institutional sales, highlighting the strength of our distribution network.",
+      "horizon": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "claim": "Solar business continued to be the primary growth engine in FMEG, delivering more than twofold growth year-on-year.",
+      "quote": "Solar business, our largest category within the FMEG portfolio, continued to be the primary growth engine, delivering more than twofold growth year-on-year.",
+      "horizon": "Q1 FY27"
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "114",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 12,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "and in the near to mid term, we may expect 12% to 14% EBITDA.",
+      "metric": "ebitda_margin",
+      "horizon": "medium_term",
+      "speaker": "Shashank Yagnick",
+      "direction": "range",
+      "label_raw": "EBITDA margin",
+      "target_low": 12,
+      "target_high": 14
+     },
+     {
+      "page": 8,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "achieving 8% to 10% EBITDA margins by financial year 2030.",
+      "metric": "ebitda_margin",
+      "horizon": "FY30",
+      "speaker": "Shashank Yagnick",
+      "direction": "range",
+      "label_raw": "FMEG EBITDA margins",
+      "target_low": 8,
+      "target_high": 10
+     },
+     {
+      "page": 6,
+      "unit": "cr",
+      "basis": "unspecified",
+      "quote": "execute our planned capex program of INR 60 billion to INR 80 billion over the next 5 years",
+      "metric": "capex",
+      "horizon": "medium_term",
+      "speaker": "Shashank Yagnick",
+      "direction": "range",
+      "label_raw": "capex program",
+      "target_low": 60,
+      "target_high": 80
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "achieving a 30% payout ratio by financial year 2030.",
+      "metric": "other:dividend_payout",
+      "horizon": "FY30",
+      "speaker": "Shashank Yagnick",
+      "direction": "at_least",
+      "label_raw": "dividend payout ratio",
+      "target_low": 30,
+      "target_high": null
+     }
+    ],
+    "call_date": "May 06, 2026",
+    "call_period": "Q4 FY26",
+    "reported_kpis": [
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "consolidated revenue growing 27% year-on-year",
+      "value": 27,
+      "metric": "revenue_growth",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBITDA for the quarter increased by 13% year-on-year",
+      "value": 13,
+      "metric": "ebitda",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "margins at 13.1%",
+      "value": 13.1,
+      "metric": "ebitda_margin",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 5,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "highest ever quarterly PAT of INR7.9 billion",
+      "value": 7.9,
+      "metric": "pat",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "reflecting a growth of 7% year-on-year.",
+      "value": 7,
+      "metric": "pat_growth",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 6,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "Capital expenditure for the quarter stood at INR3.9 billion",
+      "value": 3.9,
+      "metric": "capex",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 6,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "taking the total capex for full financial year to approximately INR14.8 billion",
+      "value": 14.8,
+      "metric": "capex",
+      "period": "FY26"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "growing 29% year-on-year.",
+      "value": 29,
+      "metric": "revenue_growth",
+      "period": "FY26"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "margins expanding to 13.9%.",
+      "value": 13.9,
+      "metric": "ebitda_margin",
+      "period": "FY26"
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "The Wires & Cables segment delivered a strong 30% year-on-year growth during the quarter.",
+      "value": 30,
+      "metric": "revenue_growth",
+      "period": "Q4 FY26"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 9,
+      "topic": "Volume growth and price hikes",
+      "summary": "Analyst asked for volume growth breakdown in Cables & Wires and price hikes taken from January."
+     },
+     {
+      "page": 9,
+      "topic": "Current demand situation",
+      "summary": "Analyst inquired about the domestic demand situation post-March disruptions."
+     },
+     {
+      "page": 10,
+      "topic": "Export outlook",
+      "summary": "Analyst asked about the resumption of exports and optimistic sectors going forward."
+     },
+     {
+      "page": 10,
+      "topic": "March impact quantification",
+      "summary": "Analyst requested quantification of the impact of Middle East-related disruptions in March."
+     },
+     {
+      "page": 11,
+      "topic": "Capacity utilization",
+      "summary": "Analyst asked about the status of current capacity utilization and peak levels."
+     },
+     {
+      "page": 16,
+      "topic": "Inventory gains and raw material pass-through",
+      "summary": "Analyst inquired about inventory gains during the quarter and passing on price inflation."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 3,
+      "claim": "Demand sentiment was impacted by geopolitical developments in the Middle East.",
+      "quote": "The demand sentiment to an extent was impacted by geopolitical developments in the Middle East",
+      "horizon": "Q4 FY26"
+     },
+     {
+      "page": 6,
+      "claim": "Domestic wires and cable organized market share increased to 30-31%.",
+      "quote": "Our domestic wires and cable organized market share has now increased to 30-31%",
+      "horizon": "FY26"
+     },
+     {
+      "page": 7,
+      "claim": "FMEG segment delivered 47% year-on-year growth for the quarter.",
+      "quote": "registering a strong 47% year-on-year growth with broad-based contributions across all product categories.",
+      "horizon": "Q4 FY26"
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "115",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 5,
+      "unit": "cr",
+      "basis": "unspecified",
+      "quote": "Capital expenditure for the quarter was ₹ 3.4 billion, taking the 9M FY26 total to ₹ 10.9 billion, in-line with our Project Spring guidance of investing ₹ 12 billion to ₹ 16 billion annually through FY30.",
+      "metric": "capex",
+      "horizon": "FY30",
+      "speaker": "Shashank Yagnick",
+      "direction": "range",
+      "label_raw": "Project Spring annual capex",
+      "target_low": 12,
+      "target_high": 16
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Looking ahead, we are confident in the long-term potential of the FMEG segment and remain on track to achieve our Project Spring targets of 1.5x - 2x industry growth and EBITDA margins in the range of 8% to 10% by FY30",
+      "metric": "ebitda_margin",
+      "horizon": "FY30",
+      "speaker": "Shashank Yagnick",
+      "direction": "range",
+      "label_raw": "FMEG EBITDA margins",
+      "target_low": 8,
+      "target_high": 10
+     },
+     {
+      "page": 15,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "to refer to our Project Spring guidance, we've given a long-term guidance of 11% to 13%.",
+      "metric": "ebitda_margin",
+      "horizon": "medium_term",
+      "speaker": "Shashank Yagnick",
+      "direction": "range",
+      "label_raw": "Cables and Wires long-term EBITDA margins",
+      "target_low": 11,
+      "target_high": 13
+     }
+    ],
+    "call_date": "January 16, 2026",
+    "call_period": "Q3 FY26",
+    "reported_kpis": [
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "For the quarter ended 31st December 2025, we are pleased to report that our Company delivered 46% YoY growth in consolidated revenues",
+      "value": 46,
+      "metric": "revenue_growth",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBITDA for the quarter grew by 34% YoY with EBITDA margins at 12.7%.",
+      "value": 12.7,
+      "metric": "ebitda_margin",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 5,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "At the PAT level, the Company delivered its highest ever Q3 PAT at ₹ 6.3 billion, reflecting 36% YoY growth.",
+      "value": 6.3,
+      "metric": "revenue",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Revenues grew 30% YoY, crossing ₹200 billion milestone.",
+      "value": 30,
+      "metric": "revenue_growth",
+      "period": "9M FY26"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "The W&C business delivered very strong performance, recording 53% YoY revenue growth during the quarter.",
+      "value": 53,
+      "metric": "revenue_growth",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "The FMEG segment sustained its impressive growth momentum, delivering a 17% YoY increase in Q3 FY26",
+      "value": 17,
+      "metric": "revenue_growth",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 7,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "During Q3 FY26, EPC revenues grew by 4% YoY, reaching ₹ 4,069 million.",
+      "value": 4069,
+      "metric": "revenue",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Segment profitability stood at ₹ 272 million, translating to a margin of 6.7%.",
+      "value": 6.7,
+      "metric": "ebit_margin",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 8,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "For both domestic cables and wires, our volume growth is about 40%.",
+      "value": 40,
+      "metric": "volume_growth",
+      "period": "Q3 FY26"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 8,
+      "topic": "EBITDA Margin Decline",
+      "summary": "Analysts inquired about the reasons for the QoQ and YoY drop in EBITDA margins despite high volume growth and price hikes."
+     },
+     {
+      "page": 9,
+      "topic": "Exports Slowdown",
+      "summary": "Questions were raised regarding the reasons for weakness in exports and US market performance."
+     },
+     {
+      "page": 10,
+      "topic": "Channel Restocking vs Underlying Demand",
+      "summary": "Analysts pressed on how much of the robust volume growth was driven by dealer pre-stocking versus actual end-consumer demand."
+     },
+     {
+      "page": 13,
+      "topic": "A&P Spends Run Rate",
+      "summary": "Concerns were raised regarding whether the significantly higher advertising and promotion spend in Q3 is the new sustainable run rate."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 6,
+      "claim": "Demand remains robust across key sectors supported by government capex and real estate.",
+      "quote": "Looking at the broader environment, demand remains robust across key sectors. Government capex surged nearly 28.2% YoY... The real estate market remains strong",
+      "horizon": "medium_term"
+     },
+     {
+      "page": 6,
+      "claim": "Copper and aluminium prices saw unusually sharp escalation in a short period.",
+      "quote": "Between September 2025 and December 2025, copper and aluminium prices, in rupee terms, increased sequentially by approximately 21% and 11%, respectively",
+      "horizon": "Q3 FY26"
+     },
+     {
+      "page": 6,
+      "claim": "The company took a strategic decision to pass on raw material price increases in a staggered manner.",
+      "quote": "In order to avoid demand disruption, arising from elevated input costs, the Company took a strategic decision to pass on the increase in raw material prices in a staggered manner.",
+      "horizon": "Q3 FY26"
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "116",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [],
+    "call_date": "October 17, 2025",
+    "call_period": "Q2 FY26",
+    "reported_kpis": [
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "consolidated revenue grew by a strong 18% YoY",
+      "value": 18,
+      "metric": "revenue_growth",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBITDA margin, which stood at 15.8%.",
+      "value": 15.8,
+      "metric": "ebitda_margin",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 6,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "highest ever second quarter PAT at ~₹ 7.0 billion, reflecting 56% YoY growth.",
+      "value": 7,
+      "metric": "pat",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "highest ever second quarter PAT at ~₹ 7.0 billion, reflecting 56% YoY growth.",
+      "value": 56,
+      "metric": "pat_growth",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 6,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "closing the quarter with a net cash position of ₹ 29.4 billion.",
+      "value": -29.4,
+      "metric": "net_debt",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 6,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "Capital expenditure for the quarter was at ₹ 3.3 billion",
+      "value": 3.3,
+      "metric": "capex",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "The Wires & Cables business delivered a 21% YoY revenue growth",
+      "value": 21,
+      "metric": "revenue_growth",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "EBIT margins for the Wires & Cables segment stood at 15.1%",
+      "value": 15.1,
+      "metric": "ebit_margin",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 7,
+      "unit": "cr",
+      "basis": "reported",
+      "quote": "During Q2 FY 2026, EPC revenues declined 19% YoY to ₹ 4,024 million",
+      "value": 4024,
+      "metric": "revenue",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Segment's profitability stood at ₹ 730 million, translating to a margin of 18.1%.",
+      "value": 18.1,
+      "metric": "ebit_margin",
+      "period": "Q2 FY26"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 8,
+      "topic": "Volume vs value breakdown in Wires and Cables",
+      "summary": "Analyst inquired about the volume growth component within the 21% YoY sales growth for cables and wires, and categorization between cables and wires."
+     },
+     {
+      "page": 8,
+      "topic": "EPC segment revenue and margin outlook",
+      "summary": "Analyst asked about annualized revenue and margin profile expectations for the EPC segment going forward."
+     },
+     {
+      "page": 9,
+      "topic": "Copper price rally and dealer stocking impact",
+      "summary": "Analyst questioned whether the sharp rally in copper prices led to pre-emptive stocking by dealers and how it affected volume growth."
+     },
+     {
+      "page": 10,
+      "topic": "Export trends and US tariffs impact",
+      "summary": "Analyst asked about the impact of US export front-loading and sustainability of US export contribution amidst tariff uncertainties."
+     },
+     {
+      "page": 13,
+      "topic": "FMEG solar business margins and turnaround levers",
+      "summary": "Analyst inquired about the margin profile of the solar business versus the rest of FMEG and the levers to drive segment margins to 8% to 10%."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 5,
+      "claim": "India continues to stand out as the fastest-growing major economy, with strong domestic consumption.",
+      "quote": "In contrast, India continues to stand out as the fastest-growing major economy. While external challenges persist... India's strong domestic consumption base provides a significant buffer.",
+      "horizon": null
+     },
+     {
+      "page": 5,
+      "claim": "Government capex remains strong, growing 43% YoY till August 25.",
+      "quote": "Meanwhile, government capex remains strong, growing 43% YoY till August '25 with ~38% of the FY 2026 outlay already spent.",
+      "horizon": "FY26"
+     },
+     {
+      "page": 6,
+      "claim": "Wires and cables demand remained robust supported by government spending and project execution.",
+      "quote": "This performance was driven by higher government spending, improved project execution and a favourable commodity environment.",
+      "horizon": null
+     },
+     {
+      "page": 7,
+      "claim": "FMEG business achieved its third consecutive profitable quarter despite increase in A&P spends.",
+      "quote": "Our continued focus on premiumization as well as operating leverage benefit helped the FMEG business achieve its third consecutive profitable quarter despite increase in A&P spends.",
+      "horizon": null
+     },
+     {
+      "page": 7,
+      "claim": "EPC order book remains healthy, providing strong visibility for future growth.",
+      "quote": "Our EPC order book remains healthy, providing strong visibility for future growth.",
+      "horizon": null
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "117",
+   "kind": "annual_report",
+   "data": {
+    "segments": [
+     {
+      "name": "Wires and Cables",
+      "page": 9,
+      "share_pct": 87,
+      "revenue_cr": null
+     },
+     {
+      "name": "Fast-Moving Electrical Goods",
+      "page": 9,
+      "share_pct": 6,
+      "revenue_cr": null
+     },
+     {
+      "name": "Engineering, Procurement & Construction",
+      "page": 9,
+      "share_pct": 7,
+      "revenue_cr": null
+     }
+    ],
+    "citations": [
+     {
+      "page": 9,
+      "field": "business_description",
+      "quote": "As India’s largest manufacturer of cables and wires and a leading FMEG player, we deliver innovative electrical solutions across homes, industries and infrastructure – connecting people to a safer, smarter and brighter future."
+     },
+     {
+      "page": 9,
+      "field": "segments",
+      "quote": "Segment revenue 87%"
+     },
+     {
+      "page": 9,
+      "field": "segments",
+      "quote": "Segment revenue 6%"
+     },
+     {
+      "page": 9,
+      "field": "segments",
+      "quote": "Segment revenue 7%"
+     },
+     {
+      "page": 309,
+      "field": "key_audit_matters",
+      "quote": "Revenue recognition y Wires and cables and Fast-Moving Electrical Goods (FMEG) business y Estimation of contract cost - Engineering Procurement and Construction (EPC)"
+     }
+    ],
+    "top_risks": [
+     "Geopolitical risks arising from global economic uncertainties and its impact on supply chain, raw material sourcing and price volatility",
+     "Interest rate risk",
+     "Foreign currency risk",
+     "Commodity price risk",
+     "Cybersecurity risks"
+    ],
+    "pages_read": [
+     4,
+     9,
+     104,
+     115,
+     122,
+     123,
+     124,
+     134,
+     135,
+     136,
+     222,
+     223,
+     228,
+     260,
+     270,
+     276,
+     281,
+     282,
+     283,
+     293,
+     294,
+     308,
+     309,
+     310,
+     311,
+     317,
+     329,
+     384,
+     388,
+     400,
+     410,
+     411,
+     412,
+     430
+    ],
+    "fiscal_year": "FY26",
+    "auditor_opinion": "unmodified",
+    "key_audit_matters": [
+     "Revenue recognition - Wires and cables and Fast-Moving Electrical Goods (FMEG) business",
+     "Estimation of contract cost - Engineering Procurement and Construction (EPC)",
+     "Inventory Valuation - Wires & Cables"
+    ],
+    "business_description": "As India's largest manufacturer of cables and wires and a leading FMEG player, we deliver innovative electrical solutions across homes, industries and infrastructure – connecting people to a safer, smarter and brighter future.",
+    "related_party_highlights": [
+     "The related party transactions for the financial year are insignificant in commensurate with the turnover of the Company.",
+     "All transactions with related parties during the year were on arm's length basis and in the ordinary course of business."
+    ],
+    "contingent_liabilities_cr": 54.49
+   },
+   "model": "gemini-3.5-flash-lite"
+  }
+ ],
+ "pages": [
+  {
+   "document_id": "112",
+   "page_no": 3,
+   "text": "Polycab India Limited\nOctober 15, 2026\nPage 2 of 19\nModerator: Ladies and gentlemen, good day and welcome to the Polycab India Limited Q2 FY27 Earnings\nConference Call. As a reminder, all participant lines will be in the listen-only mode and there\nwill be an opportunity for you to ask questions after the presentation concludes. Should you need\nassistance during the conference call, please signal an operator by pressing star then zero on\nyour touchtone phone. Please note this conference is being recorded.\nI now hand the conference over to Mr. Niyant Maru, Chief Financial Officer, Polycab India\nLimited. Thank you, and over to you, sir.\nNiyant Maru: Thank you. A very good evening to everyone, and thank you for joining us. I hope all of you are\nstaying healthy and gearing up for the upcoming festive season. On this call, we shall discuss\nthe Q2 FY27 results, which were approved in the Board meeting held earlier today.\nWe will be referring to the earnings presentation, financial results, and financial statements,\nwhich are available on the stock exchanges as well as on the investor relations page of our\nwebsite. Joining me today from the management team, we have our Joint Managing Director,\nMr. Nikhil Jaisinghani; and Head of Investor Relations, Aditya Nathany.\nLet me now hand over the call to Nikhil for his comments. Over to you, Nikhil.\nNikhil Jaisinghani: Thanks, Niyant. Good evening, everyone. As we conclude the first half of FY27, I am pleased\nto share that Polycab has delivered its highest ever quarterly and half-yearly revenue and\nprofitability. This performance underscores the resilience of our operating model and the\nstrength of disciplined execution across the organization.\nThe Wires and Cables business continues to deliver robust growth, supported by healthy demand\ntrends, strong market positioning, and consistent execution. The FMEG segment continued to\nstrengthen its growth trajectory and recorded its seventh consecutive profitable quarter.\nAcross the organization, we remain focused on execution excellence, translating strategic\npriorities into tangible outcomes while building a stronger foundation for sustainable long-term\ngrowth. Encouragingly, the initiatives under our strategic roadmap, Project Spring, are\nprogressing in line with plan and are already beginning to yield meaningful results, reinforcing\nour confidence in both the strategy and our ability to execute it effectively.\nAs we look ahead, our priorities remain firmly anchored on sustaining growth momentum,\nfurther enhancing our competitive advantages, and investing in innovation, talent, and\ncapabilities. With a strong foundation in place and clear strategic direction, we are well-\npositioned to capitalize on emerging opportunities and create enduring value for all our\nstakeholders.\nWith that, I would now like to hand over to Niyant.\nNiyant Maru: Thank you, Nikhil. While the global macro environment remained volatile during the quarter,\nwe continue to believe that India remains one of the most compelling structural growth stories\nglobally."
+  },
+  {
+   "document_id": "112",
+   "page_no": 4,
+   "text": "Polycab India Limited\nOctober 15, 2026\nPage 3 of 19\nGeopolitical tensions, elevated energy prices, higher global bond yields, and disruptions across\ncertain international shipping routes have created near-term uncertainty across markets.\nHowever, India continues to navigate and grow, supported by strong domestic demand, healthy\ninvestment activity, accelerating infrastructure creation, and increasing manufacturing\ncompetitiveness.\nThe IMF, in its latest outlook, has raised India's growth outlook by 60 basis points despite higher\nglobal energy prices, citing stronger economic momentum, robust services activity, and\nsustained domestic demand. This confidence is reflected in the recent upward revisions to India's\ngrowth outlook by several other global agencies. Domestically, GDP growth for Q1 FY 2027\ncame in at 7.8%, underscoring the resilience of the economy despite an increasingly uncertain\nexternal backdrop.\nGlobal monetary conditions remain tight as central banks continue to combat inflation, resulting\nin higher policy rates and bond yields across major economies. In India, the Monetary Policy\nCommittee, MPC, unanimously raised the repo rate by 25 basis points to 5.5% and shifted the\npolicy stance from neutral to calibrated tightening, implying interest rate cuts are not anticipated\nin the near term.\nWhile the external environment remains challenging, India's strong domestic demand, robust\nbanking system, and sustained infrastructure investment continue to underpin the economic\nresilience. What gives us confidence is the breadth of growth visible across the economy. GST\ncollections continue to remain healthy, growing by 15% year-on-year.\nIn July, August, government capital expenditure remained significantly at higher levels, and\nbank credit growth continues to trend close to 15% to 20%. Power demand has remained robust,\nreflecting healthy activity across industrial, infrastructure, and commercial sectors.\nThe focus on infrastructure development continues, which is reflected in the government capex\nspend of INR 5.10 lakh crores during April to August 2026, implying an 18% year-on-year\ngrowth. The government has also approved another INR1.9 lakh crores of capital outlay for\nGreen Corridor Phase 3, which includes evacuation of 135 gigawatts of renewable energy and\ndeployment of battery energy storage systems.\nAll of this signals strong economic activity in India over the medium to long term. These\nstructural growth drivers continue to reinforce the long-term opportunity outlined under the\nProject Spring.\nWhile the near-term inflationary pressures are surfacing due to macroeconomic situations, both\nurban and rural demand continues to remain healthy, while government support measures are\nexpected to aid broader consumption growth going forward. Importantly, India's revenue base\nremains predominantly domestic, which provides a degree of resilience in periods of global\nuncertainty.\nContinuing on the momentum, the company delivered yet another remarkable quarter of strong\nperformance, underpinned by healthy revenue growth and profitability. Our performance reflects"
+  },
+  {
+   "document_id": "112",
+   "page_no": 5,
+   "text": "Polycab India Limited\nOctober 15, 2026\nPage 4 of 19\nnot only favorable demand conditions, but also the deliberate investments and strategic choices\nmade over the past several years.\nThe Wires and Cables business continues the positive momentum, leveraging its market\nleadership and execution capabilities, while the FMEG business has outperformed the market\nacross categories, supported by a growing product portfolio and a wider customer reach.\nThe progress we have achieved is underpinned by strong execution across our strategic priorities\nand continued investment in our growth platforms. We remain committed to operational\nexcellence, disciplined capital deployment, and creating greater value for our stakeholders and\ncustomers across every touch point.\nLooking ahead, we see significant opportunities across our markets. Our priority will be to\naccelerate our growth initiatives, strengthen our brands, deepen distribution, and build the\ninnovation and talent ecosystem needed to support the next phase of expansion.\nTo sum up, our outlook remains unchanged. While commodity volatility, geopolitical\ndevelopments, and logistics-related disruptions may continue to influence individual quarters,\nthe structural drivers of the demand remain firmly intact and in place.\nWe remain focused on disciplined execution of our Project Spring strategy, strengthening our\nmarket leadership position, and investing behind the significant long-term opportunities\nemerging across infrastructure, energy transition, manufacturing, urbanization, and exports.\nNow, we would like to update you with reference to the ongoing proceedings with respect to\nAsier Metals that we have filed an appeal before the Honorable National Company Law\nAppellate Tribunal, Principal Bench, New Delhi, and the Honorable NCLAT has stayed and\nkept in abeyance the order of admission in its entirety, including that of it being a commercial\ndispute of INR 2.79 crores to set aside the order of admission passed by NCLT and initiation of\nthe Corporate Insolvency Resolution Process, CIRP, against the company.\nThe company had gone for an early hearing on October 15, which is today, and we are of\nreasonable opinion that we have argued well on the hearing and are reasonably confident and\nhopeful that we have a strong case with grounds on merits and the judgment will land in our\nfavour.\nWe continue to monitor the situation and follow the due process as per law to get this resolved\nas quickly as possible. We do not expect any adverse or material impact on our financial or\nbusiness operations arising from the said situation.\nI would now hand over to Aditya to take you through the financial performance for the quarter.\nAditya Nathany: Thank you, Niyant. For the quarter ended September 30, 2026, we delivered an exceptional\nperformance reflecting the strength of our diversified business portfolio, disciplined execution\nand sustained demand across our end markets. Consolidated revenue grew by 53% year-on-year,\nwith all business segments contributing meaningfully to this growth momentum."
+  },
+  {
+   "document_id": "112",
+   "page_no": 6,
+   "text": "Polycab India Limited\nOctober 15, 2026\nPage 5 of 19\nThe company continued to maintain a strong operational performance during the quarter.\nEBITDA increased by 39% year-on-year, while EBITDA margins expanded by more than 50\nbasis points sequentially to 14.4%, supported by a favourable business mix and continued focus\non operational efficiencies.\nProfitability remained robust, with profit after tax reaching a record high of INR 9,900 million,\nrepresenting a 43% year-over-year increase. PAT margins stood at 10.0% for the quarter,\nreflecting healthy earnings growth and sustained margin resilience. Our financial position\nremains very strong.\nNet cash stood at INR 45.2 billion as of September 30th, 2026, compared to INR 29.4 billion a\nyear ago. We also witnessed further improvement in our working capital efficiency, with the\naverage working capital cycle reducing to approximately 11 days in second quarter fiscal '27.\nThis was aided by higher payable days arising from the increased use of letters of credit for our\nraw material procurement.\nAs these benefits gradually normalize, we expect the working capital cycle to trend towards our\nlong-term operating range of 45 to 50 days. During the first half of the year, we incurred capital\nexpenditures of INR 6.1 billion, reflecting our ongoing investments in capacity expansion,\nsupply chain capabilities and future growth platforms.\nOn a half year basis, I am pleased to share that H1 FY27 marked the strongest first half\nperformance in the company's history in terms of both top line and profitability. Revenue grew\nby 46% year-on-year, crossing a significant milestone of INR180 billion. EBITDA increased by\n36% year-on-year, with margins remaining healthy at 14.1%, while profit after tax grew by 38%\nyear-on-year, translating into PAT margins of 9.9%.\nLet me now turn to Slide 6 and discuss the performance of our Wires and Cables business. The\nWires and Cables segment delivered a strong quarter, recording 47% year-on-year revenue\ngrowth. Within this, the domestic Wires and Cables business grew by an impressive 50% year-\non-year, driven by healthy demand conditions, strong channel execution and favourable\ncommodity linked realizations.\nWe delivered a volume growth of mid-to high single-digit range on top of a strong base from\nthe corresponding quarter last year, demonstrating the underlying strength of demand. Within\nthe portfolio, wires continued to outpace cables in terms of growth.\nChannel sales also grew faster than institutional sales, underscoring the resilience and\neffectiveness of our distribution-led model. From a regional perspective, the West remained our\nlargest contributor, followed by the South, North and East, highlighting the broad-based nature\nof growth across markets.\nDespite challenging geopolitical environment, exports picked up strongly during the quarter as\nsales grew 17% year-on-year and grew 85% quarter-on-quarter. While exports accounted for a\nrelatively lower share of overall revenues, the moderation in contribution is largely attributable\nto the significant faster growth in the domestic market, which expanded the overall revenue base."
+  },
+  {
+   "document_id": "112",
+   "page_no": 7,
+   "text": "Polycab India Limited\nOctober 15, 2026\nPage 6 of 19\nWe continue to maintain a strong export order pipeline and remain confident about our long term\ngrowth prospects of this business.\nEBIT margins in the Wires and Cables segment stood at 14.2%. Margins improved sequentially,\nsupported by a favourable product mix and continued operational excellence initiatives. In line\nwith our Project Spring roadmap, we remain confident of sustaining medium- to long-term\nEBITDA margins within our guided range of 11% to 13%.\nTurning now to Slide 8 and our FMEG business. The FMEG segment delivered a breakthrough\nquarter, registering a remarkable 124% year-on-year growth with strong performance across all\nmajor product categories.\nNotably, this marks the 11th consecutive quarter of industry leading growth, reflecting the\neffectiveness of our strategy, execution capabilities and strengthening market position. Solar\nproducts, which constitute the largest category within our FMEG portfolio, continue to be the\nprimary growth driver, registering multi-fold growth during this quarter.\nThe segment continues to benefit from favourable structural tailwinds, including the PM Surya\nGhar Yojana, various state level support programs, and accelerating consumer adoption of\nrenewable energy solutions. We remain highly optimistic about the long term opportunity this\ncategory presents.\nThe broader FMEG portfolio comprising fans, lighting, switches, switchgear, conduits, pipes\nand fittings also delivered healthy growth. Performance was supported by sustained momentum\nin the real estate and construction sectors, alongside our focused efforts on product innovation,\ndistribution expansion, and deeper customer engagement.\nThe segment also achieved a major profitability milestone, with EBIT margins crossing the\ndouble-digit mark for the first time and recording a 10.1% margin during the quarter. Since\nachieving profitability in Q4 FY25, the business has consistently strengthened its earning profile\nwhile continuing to invest in talent, product development, innovation, and brand-building\ninitiatives.\nLooking ahead, we remain highly confident about the long-term growth trajectory of the FMEG\nbusiness. Our objective continues to be growing at 1.5x to 2x of the industry growth rate while\nsteadily enhancing profitability. Investments in distribution reach, product innovation, category\nexpansion, and brand equity will remain central to driving sustainable value creation.\nMoving to Slide 10 and our EPC business. The EPC segment reported revenues of INR 6,171\nmillion in Q2 FY27, representing a healthy year-on-year growth of 53%. Segment profitability\nremained strong at INR444 million, translating into an EBIT margin of 7.2%.\nOver the medium- to long-term, we continue to expect sustainable margins for the EPC business\nto remain in the high single-digit range, supported by disciplined project selection, efficient\nexecution, and a healthy order pipeline."
+  },
+  {
+   "document_id": "112",
+   "page_no": 8,
+   "text": "Polycab India Limited\nOctober 15, 2026\nPage 7 of 19\nIn closing, I would like to sincerely thank all our stakeholders for their unwavering trust and\ncontinued support. The performance delivered during the quarter reflects the strength of our\nbusiness model, the commitment of our teams, and the success of our long-term strategic\ninvestments. As we look ahead, we remain focused on executing our growth priorities,\nenhancing operational excellence, and creating sustainable value for all our stakeholders.\nWith that, we conclude our prepared remarks and would be happy to take your questions.\nModerator: Thank you very much. We will now begin the question-and-answer session. The first question\ncomes from the line of Kevin Shah with Aditya Birla Money.\nKevin Shah: And congratulations on a great set of numbers. Firstly, on the FMEG margin. So if you see the\n10.1% is already at the upper end of your projected targets. So could you highlight what are the\nkey drivers behind it, and which of these segments are profitable? Is this solely contributed by\nthe solar segment, and would you be looking to revise your Project Spring targets?\nAditya Nathany: Yes. Thank you, Kevin, for your question. For the FMEG margin question, I think there are few\nthings that have worked for us in this quarter and probably the kind of initiatives that we have\nput together over the past few years, and those strategies are actually reaping benefits.\nNow, definitely scale has increased in this quarter, and as I mentioned in my previous comments,\nall segments in the quarter have actually grown by multifolds, right. Beating the industry growth\nrates.\nSo that's very much a positive sign for us that all the categories are firing at all cylinders with\nkind of the strategies that we are implementing. So that's the first part. I think the scale definitely\nplays an important part, and definitely the operating leverage from here.\nThe second part, I think, to answer to that margin expansion of up to 10.1%, is premium mix has\nalso gone up in this quarter for various segments. Today, if you see, the fans mix is around 33%\nin the premium category and the lights also now reaching at 38%. So all of this is actually\ncontributing to the margin growth.\nAnd the other strategic thing that we have been doing in this segment for the past year or so is\nproviding a more solution-driven approach for our portfolio. Today, as you see, as we've already\nmentioned previously in various calls, that the kind of strategy that we are putting together,\nespecially in terms of the building verticals, these FMEG products are actually complementing\nto the way we are approaching the end customers.\nSo it's a kind of bouquet offering that we are doing, and it is reaping benefits for us. I think\nthere's a scale. That is why you see the kind of margins that we have generated in FMEG. So all\nthese strategies together is reaping benefits because if you see earlier also, our strategy was\nlargely on pan-India basis, right."
+  },
+  {
+   "document_id": "112",
+   "page_no": 9,
+   "text": "Polycab India Limited\nOctober 15, 2026\nPage 8 of 19\nToday, the strategy has moved for regional specific and given the kind of P&L strategy that we\nhave for each. That is driving a lot of profitability. The availability of the products in the market\nhas improved due tovarious strategic initiatives that we have implemented.\nOur Polyratna plans that we have put together in the market is also complementing towards this.\nSo I think all of this synthesized is getting us the results for FMEG. To answer your second\nquestion on the growth, I think when we started the Project Spring and we laid out our margin\nprofile, I think it's for FY30.\nSo over the longer term, I believe we would end up in that kind of a range of 8% to 10% of the\nEBITDA margin. Today, we are already at an EBIT margin of 10.1%, which is very high. I\nwould believe you would appreciate the kind of efforts that we have put together to get this\nsegment turnaround in the way we have been seeing the results in this quarter.\nKevin Shah: Understood. And just a follow-up on the margins. For the Wires and Cables margins also, there\nhas been a significant increase there. So can we say that this is mainly led by the channel mix\nimprovement? And what are the other drivers? And how much of it do you see it as sustainable\ngiven the potential increase in the competition in the distribution channel?\nAditya Nathany: So Kevin, I think when you look at the margins overall, I think it's a confluence of four or five\nthings that we have already highlighted in the previous calls. One definitely operating leverage\nhas a play into it.\nIf you see our margins, overall margins have expanded around 90 basis points sequentially. So\nthere is the operating leverage that is playing in this segment. Definitely, the business mix is\nplaying an important part as well, wires have grown far more better than the cables, so that's a\nhigh accretive margin business for us.\nDefinitely channel has also been better than institutional. So these are four or five things that are\nvery important, and if you see the kind of exports growth that we are also having, that is also\nsort of supporting to a certain extent.\nSo I think we are very much happy the way we have delivered, the kind of initiatives that we\nhave put together, and it is visible in the results at the moment. And 14.4% overall margins, we\nhave Wires and Cable at 14.2%, it is such a remarkable story, Kevin.\nKevin Shah: Understood. And secondly, in terms of the new suppliers that are coming into the market. So do\nyou what is the downside risk that you see to your Project Spring targets in terms of the growth\nas well as margins?\nAditya Nathany: So Kevin, you need to understand that the guidance that we have provided is for FY30. So it's a\nCAGR approach that we have taken in terms of formulating these growth rates. So then you may\nsee in some years you will find the margins have actually gone in the high single digits. Some\nyears you may find it at a very high margins, in the double digits. I think we would like to be in\nthat guidance range, I think, till FY30, and that's how we continue to maintain our stance of our\nguidance."
+  },
+  {
+   "document_id": "113",
+   "page_no": 3,
+   "text": "Polycab India Limited\nJuly 16, 2026\nPage 2 of 18\nModerator: Ladies and gentlemen, good day, and welcome to Polycab India Limited Q1 FY27 Earnings\nConference Call. As a reminder, all participant lines will be in the listen-only mode, and there\nwill be an opportunity for you to ask questions after the presentation concludes. Should you need\nassistance during the conference call, please signal an operator by pressing star then zero on\nyour touch-tone phone. Please note that this conference is being recorded.\nI now hand the conference over to Mr. Niyant Maru, Chief Financial Officer, Polycab India\nLimited. Thank you, and over to you, Mr. Maru.\nNiyant Maru: Good afternoon, everyone, and thank you for joining us. I hope all of you are staying healthy\nand safe. On this call, we shall discuss the Q1 FY27 results, which were approved in the Board\nmeeting earlier today. We will be referring to the earnings presentation, financial results and\nfinancial statements, which are available on the stock exchanges as well as on the Investor\nRelations page of our website.\nJoining me today from the management team, we have our Head of Strategy and Investor\nRelations, Mr. Shashank Yagnick. I am pleased to share that building on the momentum of last\nyear, the company delivered another quarter of strong performance, underpinned by healthy\nrevenue growth and profitability.\nOur performance reflects not only favourable demand conditions, but also the deliberate\ninvestments and strategic choices made over the past several years. The Wires & Cables business\nmaintained steady momentum, leveraging its market leadership and execution capabilities, while\nthe FMEG business continued its trajectory of steady improvement, supported by a richer\nproduct portfolio and a wider customer reach.\nThe progress we are seeing today is a direct outcome of our commitment to building a more\nagile, scalable and future-ready organization. We remain focused on operational excellence,\ndisciplined capital allocation and enhancing customer value across every touch point.\nLooking ahead, we see significant opportunities across our markets. Our priority will be to\naccelerate profitable growth, strengthen our brands, deepen the distribution and build the\ninnovation and talent ecosystem needed to support the next phase of expansion.\nThe global macroeconomic landscape continues to be shaped by ongoing geopolitical\ndevelopments. Disruptions across energy markets and global trade routes, particularly around\nthe Strait of Hormuz contributed to inflationary pressures during the first half of 2026.\nWhile oil prices have moderated from the peaks which we witnessed in April, they continue to\nremain volatile. Given the fluid nature of the geopolitical environment, uncertainty around the\nenergy crisis, supply chains and global trade flows may persist in the near term.\nThe IMF's latest outlook projects global growth approximately at 3% for 2026, supported by\nresilient economic activity and technology-driven investment cycle, while global inflation\nforecasts have been revised higher. The renewed energy shock has pushed every major central\nbank on to a firmer footing. The Fed held rates at 3.5% to 3.75% in June, but turned notably"
+  },
+  {
+   "document_id": "113",
+   "page_no": 4,
+   "text": "Polycab India Limited\nJuly 16, 2026\nPage 3 of 18\nmore hawkish, expecting rates to rise later this year. A similar stance was seen by the Bank of\nEngland, which held the rates at 3.75% to gauge the impact of the U.S.-Iran war.\nThe RBI held its repo rate at 5.25%, taking a neutral stance, but flagged accrued driven inflation\nand rupee volatility as the key swing factors for its next move. Against the global backdrop,\nIndia remains one of the strongest performing major economies globally. While the external\nenvironment has become more challenging, India continues to benefit from robust domestic\ndemand, public investment, healthy credit expansion and increasing private sector capital\nexpenditure.\nEconomic activity has remained resilient despite global volatility, reinforcing India's position as\none of the fastest-growing economies in the world. Government-led infrastructure spending, a\nbroadening manufacturing base and sustained momentum in services continue to remain key\ngrowth drivers. While services and consumption are driving growth, the government capex is\nprogressing well in the first 2 months of FY27 at INR 2.51 lakh crores versus INR 2.21 lakh\ncrores in April, May of last year, reflecting a healthy 14% growth.\nAt the same time, the real estate sector and formalization trends across the economy remains\nsupportive of medium-term growth prospects. On the investment flows front, although foreign\nportfolio flows were impacted by geopolitical tensions and global risk aversion, strong domestic\ninstitutional participation helped sustain market liquidity.\nOverall, while the global environment remains uncertain, India's structural growth story remains\nfirmly intact. A resilient domestic economy, strengthening investment cycle, a stable financial\nsystem and a continued policy focus on infrastructure and manufacturing provide a very solid\nfoundation for sustained growth.\nWe remain confident in the medium-term outlook for the Indian economy and the robust demand\nenvironment it continues to create for our business. Across the organization, our focus remains\non execution excellence translating strategy into outcomes and strengthening the foundation for\nlong-term growth. Looking ahead, our priorities remain very clear, sustaining growth\nmomentum, strengthening our competitive positioning and continuing to invest in innovation,\ntalent and capabilities.\nI would now hand over to Shashank to take you through the financial performance for the\nquarter.\nShashank Yagnick: Thank you, Niyant. For the quarter ended June 30, 2026, we delivered another strong set of\nresults, underscoring the resilience of our business model and the effectiveness of our execution\nstrategy. Consolidated revenues grew by 39% year-on-year, supported by sustained momentum\nacross both our wires and cables and FMEG businesses.\nOperating performance remained robust during the quarter. EBITDA increased by 32% year-\non-year and the margins stood at 13.8%, reflecting an improvement of approximately 70 basis\npoints sequentially over the previous quarter. At the bottom line, we achieved our highest ever\nquarterly Profit After Tax of INR 7,967 million, representing a growth of 33% year-on-year."
+  },
+  {
+   "document_id": "113",
+   "page_no": 5,
+   "text": "Polycab India Limited\nJuly 16, 2026\nPage 4 of 18\nPAT margins for the quarter came in at 9.7%. Finance costs for the quarter were INR 800\nmillion, while other income stood at INR 1,049 million.\nFor a detailed understanding of these line items, I would request you to refer to Slide number 17\nof the presentation. Our balance sheet continues to remain strong with a net cash position of INR\n39.9 billion. The average working capital cycle improved significantly to 15 days in Quarter 1\nFinancial Year 2027, aided by a temporary increase in payable days due to the use of letter of\ncredit for raw material procurement.\nAs these effects normalize, we expect the working capital cycle to settle within our long-term\noperating range of 45 to 50 days. Capital expenditure during the quarter amounted to INR 3.2\nbillion, reflecting our continued commitment to building capacity and strengthening future\ngrowth drivers.\nLet me now move to Slide 6 and discuss the performance of our Wires & Cables business. The\nWires & Cables segment registered a healthy 39% year-on-year growth during the quarter.\nWithin this, the domestic Wires & Cables business delivered an impressive 43% year-on-year\ngrowth, supported by robust market demand, effective execution across key channels and\nfavourable commodity-linked realizations.\nVolume growth for the quarter on a year-on-year basis was low to mid-single digits, which was\non top of a very strong base of Q1 of last year. From a category standpoint, wires grew faster\nthan cables during the quarter. Channel sales also outperformed institutional sales, highlighting\nthe strength of our distribution network.\nRegionally, the West remained the strongest contributor, followed by North, South and East,\nreflecting the broad-based nature of our market presence across the country.\nOur international business witnessed a decline on Y-o-Y basis, reflecting the impact of near-\nterm geopolitical developments. However, the underlying fundamentals remain strong and\nintact. We continue to maintain a healthy order book and remain confident of a strong recovery,\nsupported by a positive long-term outlook.\nEBIT margins for the Wires & Cables business stood at 13.3%. Sequential margin improvement\nwas driven by a favourable business mix and continued focus on operational excellence.\nConsistent with our Project Spring roadmap, we continue to maintain our medium- to long-term\nmargin guidance of 11% to 13% for this business.\nTurning now to Slide number 8 for our FMEG business. The FMEG segment delivered another\noutstanding quarter, recording 71% year-on-year growth with strong contributions across all\nproduct categories. This marks the tenth consecutive quarter in which we have outperformed\nindustry growth rates, reinforcing the strength of our business model and execution capabilities.\nSolar business, our largest category within the FMEG portfolio, continued to be the primary\ngrowth engine, delivering more than twofold growth year-on-year. The category continues to"
+  },
+  {
+   "document_id": "113",
+   "page_no": 6,
+   "text": "Polycab India Limited\nJuly 16, 2026\nPage 5 of 18\nbenefit from favourable structural trends, including the PM Surya Ghar Yojana, state-level\nincentive programs and increasing consumer adoption of renewable energy solutions.\nWe believe the long-term growth opportunity in this space is quite substantial. The rest of the\nportfolio, including fans, lighting, switches, switchgears, conduit pipes and fittings also\ndelivered healthy growth. This was driven by continued strength in the real estate and\nconstruction sectors, supported by our focus on product expansion, market development and\ndeeper customer engagement.\nThe profitability trajectory of the FMEG business also continued to improve, having turned\nprofitable in Q4 of financial year 2025. The business has steadily enhanced earnings while\nsimultaneously investing in people, innovation, product development and brand building.\nEBIT margins for the quarter were 8%, very much in line with the milestones laid out under\nProject Spring, where we target EBITDA margins of 8% to 10% by FY 2030. Looking ahead,\nwe remain optimistic about the long-term prospects of the FMEG segment. Our strategic\npriorities remain unchanged to grow at 1.5x to 2x of the industry growth while progressively\nenhancing profitability.\nOngoing investments in distribution reach, product innovation and brand strength will continue\nto drive support sustainable value creation over the coming years. Moving on to Slide number\n10 for an update on our EPC business. The EPC business reported revenues of INR 3,077 million\nduring the Quarter 1 Financial Year 2027, reflecting a year-on-year decline of 11%, primarily\ndue to the timing and execution cycle of projects. Despite the lower revenue base, profitability\nremained healthy at INR 338 million, translating into a margin of 11%.\nOver the medium to long term, we continue to expect sustainable operating margins for the EPC\nbusiness to remain in the high single-digit range. In closing, I would like to thank all our\nstakeholders for their continued trust and support. The quarter's performance reflects the strength\nof our diversified portfolio, disciplined execution and strategic investments across the growth\nplatforms.\nWith that, we conclude our prepared remarks, and we'll now be happy to take your questions.\nThank you.\nModerator: The first question comes from the line of Aniruddha Joshi with ICICI Securities.\nAniruddha Joshi: Yes. Congrats to entire team for posting for a solid result. Sir, two questions from my side. If\nyou can indicate the price hikes and volume growth in this quarter on a year-on-year basis. And\nnow considering the copper prices, how do you see the pricing working out for Q2? That is\nquestion number one. And secondly is in terms of accounting, as you alluded to earlier, the\nacceptances have gone up considerably and which is included in payable days. So, if you can\nquantify the actual creditors, the creditors or exponent creditors for capex, and third, the actual\nacceptances. And as the acceptances are part of payables whether the interest cost on the\nacceptances is booked through the expenses line? Or is it included in finance costs? Just as an\naccounting clarification."
+  },
+  {
+   "document_id": "113",
+   "page_no": 7,
+   "text": "Polycab India Limited\nJuly 16, 2026\nPage 6 of 18\nShashank Yagnick: So Anirudhha, thank you. I think in your two questions, you had 4. We'll try and answer all. So\nfirstly, on the copper price and in fact, the volume and price growth in this quarter. So I think I\ncan give you volume growth trajectory, which is put together, cable & wire domestic business\ngrew from about low to mid-single-digit volume growth.\nBut we must note that the Q1 of last year, our volume growth was very, very strong. We had a\nbase of about 26% volume growth, cable & wire put together, where again, cables was high and\nwires was north of 20%. So on that base, this time, we have recorded low to mid-single-digit\nkind of overall cable & wire business growth, where, this time, like we mentioned in the earlier\npart of the conversation, wires have outpaced cables.\nAnd on the copper price, I don't see we have given any guidance on that for Quarter 2. We will\ncontinue to focus on business and price will, of course, be something that we can't control. It's\nlike you are aware, it's a cost-plus model. So whatever is the cost, we'll pass it on, and we'll\ncontinue to focus on the business. So that is the first question.\nSecond question, I'll just briefly address by saying that -- so while acceptances have gone up, I\nthink the goods are still in transit. So hence, if you look at typically the way we operate, the\ninventory is usually on a higher side, say, around 100-110 days. Using LCs, we get payable days\naround, say, 80-90 days. And it's only a play of that. And if you look at receivables, you must\nbe aware our business happens 90% through channel, and majority of that again comes from\nchannel finance.\nSo our receivables are always low. But typically, considering the other parts of business,\nincluding EPC, we believe our receivables are usually within 20 to 30 days. So if you put\ntogether these 3 pieces, you will always figure that we are somewhere around the average range\nwe guide is 45 to 50 days. But this time, we were on the better side, and we ended up with 15\ndays in this quarter. So I think for more details into it, we can of course take it offline.\nModerator: Next question comes from the line of Sonali Salgaonkar with Jefferies.\nSonali Salgaonkar: Congratulations to the team for such a strong performance. My first question is a little strategic\nin nature. It would be nice to hear your thoughts on the upcoming data centre opportunity or any\nopportunity in optic fibres that you see? And my second question is in terms of exports. Now\nwe understand that 13% decline, was it largely because of Middle East? And how do we foresee\nthe coming quarters?\nShashank Yagnick: Thank you so much, Sonali, for these two questions. So firstly, on the data centre opportunity, I\nthink it's a very big opportunity. We are hopeful that material translation should happen from\nestimates to reality. Today, I think the installed base is somewhere around 1.6 gigawatt.\nWe have read reports where the estimation is somewhere around 8 gigawatt to 16 gigawatt or\n18 gigawatt. So we estimate that 1 megawatt translates into around INR 3.5 crores worth of\ncables with 50% to 60% being conventional and the balance being optical fibre. So a sizable\nchunk of demand can come from data centre. It's just a matter of timing. Definitely, a INR 20,000\nto 25,000 crores market is there, but that's over a period of maybe 6-8 years."
+  },
+  {
+   "document_id": "113",
+   "page_no": 8,
+   "text": "Polycab India Limited\nJuly 16, 2026\nPage 7 of 18\nThrough our distribution channel, we have supplied a majority chunk of the conventional piece\nin the existing installations. I think we have called out earlier publicly that in the data centres of\nVodafone Idea in Mohali, Pune and South of India, we have supplied the cables.\nSo, we continue to focus on that market. It's a dedicated focus area for us. And that, of course,\nis one such chunk of demand centre, which can actually explode and create another layer of\ndemand for cable and wire put together. So I think we definitely expect this to pick up in a bigger\nway.\nAnd like I mentioned, the opportunity could actually be from 8 gigawatt to 16 to 18 gigawatts,\nand that to over a period of 5 to 8 years. We need to see how it translates into reality. And on\nthe second part, which was exports, so like you rightly mentioned, Middle East got impacted in\nthe month of March. And certain geographies in the Middle East continue to be impacted.\nBut I'm happy to state that we have seen a good amount of momentum coming back in exports.\nToday, we have a very healthy order book. U.S., Europe and Latin America put together, we\nhave a very sizable order book.\nappy to state that even in Q1, we could do about 20-24% kind of a business from Middle\nEast, which again came from countries like Oman, Saudi and UAE put together. And North\nAmerica continued; the contribution from North America was somewhere around 45-50% in our\nQ1 turnover.\nAnd of course, Europe was about 18-20%. So broadly, we have been pretty broad-based. Last\nyear, we were happy to add 10 new geographies in our global footprint. And today, we believe\nthat all of that is going to pay rich dividends in the time to come.\nModerator: Next question comes from the line of Pulkit Patni with Goldman Sachs.\nPulkit Patni: Just one question. This is on the Bharat Net project. Given how steep a price increase have we\nseen in the fibre side, how do you see the profitability of these projects panning out over the next\ncouple of years? And also, we have seen that overall, the EPC revenue has been quite weak. Any\nparticular reason that's impacted this revenue? So just that question.\nShashank Yagnick: Sure. Thanks, Pulkit. So again, I think one was on Bharat Net and the high fibre prices. Happy\nto state that the strength of our procurement is such that we have been able to secure the fibre\nfor the execution period, which is next 2 to 3 years. So there is a INR 4,500 crores execution\npiece of the contract of INR 8,000 crores overall.\nSo within that, overall supply portion is around 30% of the overall value. Now for that portion,\nwe have already secured the fibre. So hence, we are technically not exposed to the high fibre\nprices that are happening today, and completely appreciate the fact that the fibre prices are\nobviously on the uptick."
+  },
+  {
+   "document_id": "113",
+   "page_no": 9,
+   "text": "Polycab India Limited\nJuly 16, 2026\nPage 8 of 18\nBut we have secured our fibre. Hence, we are not exposed and not impacted. And profitability,\nlike you mentioned, we have always guided that Bharat Net, which again forms part of our EPC\nbusiness, the expected margins are supposed to be high single digits.\nThis quarter, we have delivered EBIT of 11% in our EPC business, but we estimate that from a\nlong-term perspective, it should be high single digit. And also, I think since you mentioned that\nEPC has taken a hit in this quarter, I would say EPC business is the nature of business wherein\nyou shouldn't see on a 2 to 3 month basis. These are all milestone-linked payouts.\nSo if the milestone happens, say, after a period of 5 months, then possibly, the revenue\nrecognition will happen in second quarter and not in the first quarter. So that's the only way.\nOtherwise, materially, if you see on a full year basis, you will not see hopefully a dip.\nModerator: Next question comes from the line of Akshay Gattani with UBS.\nAkshay Gattani: Congratulations on great results. Sir, how should we look at full year volume growth? Like Q1,\nyou highlighted low to mid-single-digit volume growth on a high base. Q3, again, will have a\nhigh base. Q2 will have a slightly, I would say, moderate base and then this is becoming\nfavourable in Quarter 4. So how should we look at full year volume growth for Polycab this\nyear?\nShashank Yagnick: So Akshay, thanks for your question. So, see, I think best way to look at it is look backwards.\nSo if you look at Q4, I think the industry didn't have significant volume gains. Q3 was maybe\n40% for us. So similarly, quarter-on-quarter, you will have different volumes.\nBut I think we have always guided that we will do 1.5x of market growth, which is a mix of both\nvolume and value. So as long as there is growth in the volumes or growth in the market, we\ndefinitely do better than the industry growth rate. That is the only guidance we can give.\nBut if you look back, like I mentioned, overall full year FY26, we did 18% volume growth. So\nI think over a period of 10 to 12 months is a good time to look at a trend. 2 to 3 months period,\nI mean, you will have only 2 to 3 dots. You'll not be able to draw a trendline. So I think 10 to 12\nmonths is a good period. Over maybe 2-3 next quarters, you will see a trend, and you should\ndefinitely see 1.5x of market growth.\nAkshay Gattani: Got it. And second question, sir, on the wires growth this quarter, you highlighted wires have\noutperformed cables growth this quarter. So does this imply market share gain for Polycab in\nwires segment? And how much will be the market share, if you can quantify?\nShashank Yagnick: Okay, we'll have to obviously wait for other results to also get public, right? Only then we can\ncomment on that. And typically, we do this market share analysis or exercise typically, again at\na 10 to 12 month period. In last quarter, in fact, we updated that overall, we have gained 3% to\n4% market share."
+  },
+  {
+   "document_id": "114",
+   "page_no": 4,
+   "text": "Polycab India Limited\nMay 06, 2026\nPage 3 of 18\nat 3.5% to 3.75% at its March meeting, revising the inflation projections upwards and flagging\nsignificant uncertainty.\nThe Bank of England also held at 3.75% with markets now pricing 2 rate hikes this year. The\nECB maintained rates at 2% but revised its 2026 inflation projection sharply upward to 2.6%\nfrom 1.9% and also cutting the growth forecast. The Bank of Japan, which had hiked in\nDecember 2025, held in March, but faces a 70% market implied probability of a further hike in\nApril.\nThe era of coordinated global easing has also come to an end. India demonstrated strong\nunderlying momentum through most of the year, though Q4 brought its own set of pressures.\nIndia's full year FY26 GDP growth is projected at approximately 7.6%, the fastest pace in the\nrecent years and the fourth consecutive year India holds the position of the world's fastest-\ngrowing major economy.\nThe quarterly trajectory through the year has been impressive. Q1 at 7.8%, Q2 accelerating to\n8.4%, a 6-quarter high, while manufacturing and services both contributing strongly. Even Q3\nheld at a healthy 7.8%, underscoring the broad-based nature of the recovery. High frequency\nindicators through Q4, however, are beginning to signal some moderation.\nAir passenger traffic, port cargo volumes and e-way bill generation have shown softness in the\nJanuary to March period. However, on the opposite side, the consumption environment has been\nencouraging. Credit growth has sustained double-digit momentum with bank credit continuing\nto expand at healthy levels to March 2026.\nThe government capital expenditure has largely remained on track, spending about 86% of the\nrevised budget estimates till February 2026, providing a steady demand anchor for infrastructure\nand allied sectors. Investment activity has seen gathered momentum during the year with rising\ncapacity utilization and improving order pipelines signal that the private capex cycle is gradually\nbroadening.\nThe real estate sector has maintained healthy momentum with launches and sales across major\ncities tracking well. Encouragingly, for most of FY26, this growth was accompanied by\nstrikingly benign inflation. Headline CPI reached an all-time low in October 2025, supported by\neasing food prices and contained energy costs. March 2026 CPI has come at 3.4% year-on-year,\nstill comfortably below the RBI's target rate of 4%.\nCore CPI ex food and fuel remain stable, suggesting that underlying price pressures within the\ndomestic economy remain well anchored. This rare combination of strong growth and soft\ninflation is a genuine macroeconomic achievement for India and reflects the maturity of its\npolicy framework.\nThis favourable backdrop enabled the RBI to deliver a cumulative 125 basis points of rate cuts\nthrough the year, its most aggressive easing cycle in the recent year. Lower borrowing costs\nhave meaningfully supported household consumption, retail credit and investment demand. The"
+  },
+  {
+   "document_id": "114",
+   "page_no": 5,
+   "text": "Polycab India Limited\nMay 06, 2026\nPage 4 of 18\ntransmission of these cuts into lending rates has progressively improved, providing tangible\nrelief to both consumers and businesses.\nIndia's foreign exchange reserves, while moderating from their peak, remain still robust at\napproximately $682 billion, equivalent to over 11 months of import cover, providing a\nsubstantial buffer against external volatility. Domestic institutional investors have played a\ncritical stabilizing role in the equity market, absorbing the significant FDI outflows and\ndemonstrating the growing depth and maturity of India's capital markets.\nThat said, Q4 has introduced headwinds that warrant careful monitoring. The sharp rise in crude\noil prices and depreciation of the Indian rupee, which hit a record low of INR 94.83 per USD\nwill exert upward pressure on inflation in the quarters ahead. CPI is also expected to edge higher,\nand the RBI is likely to remain on an extended pause.\nHigh frequency indicators through January to March 2026 reflect some moderation in the\nmomentum, though diesel consumption, manufacturing output and consumer sentiments have\ncontinued to hold up. Overall, India's structural foundation, a resilient domestic demand base, a\nmaturing policy framework, a deepening financial system and an expanding manufacturing\nsector remains firmly intact.\nThe external environment is more challenging than it was a couple of years ago, but India's\nrelative position in the global growth landscape is arguably stronger than ever. We remain\nconfident in the medium-term trajectory of the Indian economy and the robust demand\nenvironment it continues to provide for our business. I would now like to hand over to Shashank\nto take you through the financial performance for the quarter and the financial year.\nShashank Yagnick: Thank you, Niyant. For the quarter ended March 31, 2026, we are pleased to report a strong\nperformance with consolidated revenue growing 27% year-on-year, driven by robust momentum\nin both cables and wires as well as FMEG segments. EBITDA for the quarter increased by 13%\nyear-on-year with margins at 13.1% despite multiple industry headwinds and softer trade\nsentiment amid the ongoing Middle East escalation.\nAt the profit level, the company delivered its highest ever quarterly PAT of INR7.9 billion,\nreflecting a growth of 7% year-on-year. PAT margins for the quarter stood at 8.9%. Finance\ncosts for the quarter were INR746 million, while other income stood at INR604 million. For a\nmore detailed breakdown of these items, I would encourage you to refer to Slide number28 of\nthe presentation.\nWe continue to maintain a strong balance sheet with a net cash position of INR 41.9 billion, our\nworking capital cycle has improved to 25 days in Quarter 4, primarily due to temporary increase\nin payable days arising from use of letter of credit for raw material procurement. On a normalized\nbasis, we expect the working capital cycle to revert to our steady-state range of 45 to 50 days."
+  },
+  {
+   "document_id": "114",
+   "page_no": 6,
+   "text": "Polycab India Limited\nMay 06, 2026\nPage 5 of 18\nCapital expenditure for the quarter stood at INR3.9 billion, taking the total capex for full\nfinancial year to approximately INR14.8 billion, and this is very much in line with the Project\nSpring guidance. Turning to our full year performance. FY26 has been a landmark year for the\ncompany with record high revenue, EBITDA and PAT.\nRevenue crossed INR 285 billion milestone, growing 29% year-on-year. EBITDA grew faster\nthan revenue, increasing by 35% year-on-year with margins expanding to 13.9%. PAT rose by\n32% year-on-year, surpassing INR 27 billion with PAT margins at 9.4%. This strong\nperformance underscores our financial strength and reinforces our position as the most profitable\ncompany in the electrical industry for the fourth consecutive year.\nAdditionally, we have retained our position as the largest company in the Indian electrical\nindustry by revenue for the second consecutive year, an important milestone for the organization.\nMoving on to Slide number 5. We are pleased to report combined market share gains -- continued\nmarket share gains even on a higher base.\nOur domestic wires and cable organized market share has now increased to 30-31% up from 18-\n19% in financial year 2019. And this is an improvement of approximately 300 basis points to\n400 basis points over FY25 levels of market share of 26-27%. This consistent gain in market\nshare reflects the strength of our execution under Project Spring and validates our long-term\nstrategy of investing in brand, distribution and manufacturing scale.\nImportantly, these gains are not cyclical but very much structural in nature, driven by a shift\ntowards organized players, increasing preference for quality and compliance and our ability to\nserve customers reliably across geographies. Our expanding distribution network, deeper\nchannel engagement and continued focus on premiumization have enabled us to capture\nincremental demand across both channel and institutional segments.\nAt the same time, our scale advantages and backward integration continue to support competitive\npositioning, allowing us to grow ahead of the industry. Even in a relatively volatile demand\nenvironment, our ability to gain market share highlights the resilience of our business model and\nthe trust we have built with our customers and partners.\nMore broadly, this momentum in market share is a key pillar of our growth strategy and gives\nus confidence in sustaining industry-leading growth over the near- to medium-term. FY26 also\nmarked an important inflection point in capital investment. For the first time in our history,\nannual capex exceeded INR 14.5 billion, underscoring our long-term commitment to growth in\nline with Project Spring.\nWe remain on track to execute our planned capex program of INR 60 billion to INR 80 billion\nover the next 5 years, which will further enhance our capabilities, scale and innovation. We have\nalso strengthened our balance sheet with net cash increasing to INR 41.9 billion, reflecting\ndisciplined cash flow management.\nIn line with our capital allocation strategy, we have proposed a dividend of INR 47 per share,\nresulting in a payout ratio of 27.2%. This represents a step forward towards our Project Spring"
+  },
+  {
+   "document_id": "114",
+   "page_no": 7,
+   "text": "Polycab India Limited\nMay 06, 2026\nPage 6 of 18\ngoal of achieving a 30% payout ratio by financial year 2030. Now let's move to Slide number 9\nfor a quick update on the Wires & Cables business.\nThe Wires & Cables segment delivered a strong 30% year-on-year growth during the quarter.\nWithin this quarter, the domestic cables business recorded an impressive 30% year-on-year\ngrowth, supported by resilient execution despite a challenging operating environment. Volume\ngrowth for the quarter remained in the low single digits as the industry faced multiple headwinds.\nIncluding temporary halts in construction activities across parts of West and North due to\npollution-related restrictions as well as softer demand sentiment impacted by the ongoing Middle\nEast escalation affecting both primary and secondary sales. Notably, cables outpaced wires in\nterms of growth for this quarter, while institutional sales grew faster than channel sales.\nFrom a regional standpoint, the West region led the performance, followed by South, North and\nEast, underscoring the strength and breadth of our Pan-India presence. As highlighted on Slide\n11, our products continue to play a critical role in nation building with strong participation across\nhigh-growth sectors such as renewable energy, metro rail, data centers and manufacturing.\nThese segments remain key structural drivers for sustained demand in the wires and cables\nbusiness. Our international business delivered robust performance, growing 18% year-on-year\nand contributing 4.4% of consolidated revenue, even amid the escalation in the Middle East that\nimpacted sales during the quarter. We remain confident in the long-term outlook.\nWith a healthy order book and a supportive demand trend, we expect a strong recovery and a\nstrong growth momentum going forward. I would like to highlight that we have significantly\nexpanded our global footprint to 94 countries, up from 48 countries in financial year 2019,\nreflecting our increasing global presence. Additionally, we have re-established our distribution\nnetwork in the United States, which we believe will enhance our reach and further strengthen\nour export business over time.\nEBIT margins for the Wires & Cables business stood at 13.1%. As mentioned earlier, margins\nwere slightly impacted by a few factors. Firstly, there was an unfavorable mix in business with\nthe international segment, a high margin accretive business being affected by the Middle East\nsituation. Secondly, the higher contribution from institutional sales compared to channel sales\nhad a moderating impact on the margins. Lastly, softer trade sentiment in March, which is a key\nmonth for Quarter 4 sales, impacted operating leverage for the quarter.\nMoving to Slide number 13 for an update on the FMEG business. The FMEG segment delivered\nan exceptional performance for this quarter, registering a strong 47% year-on-year growth with\nbroad-based contributions across all product categories.\nThis marks the ninth consecutive quarter of outperformance versus industry benchmarks,\nreaffirming the strength of our strategy and execution in this high potential segment. Let me\nwalk you through the key drivers of this growth, starting with fans. Despite the delayed summer\nonset in certain regions and temporary channel inventory adjustments following changes in BEE\nnorms, the segment delivered growth."
+  },
+  {
+   "document_id": "114",
+   "page_no": 8,
+   "text": "Polycab India Limited\nMay 06, 2026\nPage 7 of 18\nThis performance was driven by our continued focus on premiumization, expanding our energy-\nefficient product range and strengthening channel execution. As a result, premium fans now\ncontribute approximately 25% of FY26 segment revenues. In Lighting & Luminaries, we\nsustained growth despite a deflationary pricing environment, supported by both volume and\nvalue expansion.\nThe momentum was led by our growing premium portfolio, which now accounts for 35% of\nsegment revenues as energy-efficient and high-quality lighting solutions continue to see strong\ncustomer acceptance across markets. Our solar products business was a standout performer,\ndelivering 2-fold year-on-year growth and emerging as the largest category within the FMEG\nportfolio.\nThis growth is underpinned by strong structural tailwinds, including government initiatives,\nstate-level subsidy programs and rising consumer adoption of renewable energy solutions. Other\ncategories, including switchgears, conduit pipes and fittings and switches, also recorded healthy\ngrowth.\nThis was driven by sustained momentum in the real estate and construction sectors, along with\nour continued focus on portfolio expansion and deeper market penetration. Importantly, the\nFMEG business, which turned profitable in Q4FY25, has continued to deliver profitability,\nwhile we invest in talent, product development and brand building.\nEBIT margins for the quarter stood at 4.1%, in line with our Project Spring trajectory of\nachieving 8% to 10% EBITDA margins by financial year 2030. Looking ahead, we remain\nconfident in the long-term growth potential of the FMEG segment. We are well aligned with our\nProject Spring objectives of delivering 1.5x to 2x of industry growth while steadily improving\nour margins. Our continued investments in distribution expansion, product innovation and brand\nequity will be key enablers in unlocking sustained value in this business.\nMoving on to Slide 15. This slide provides an update on our EPC business. During Quarter 4\nFY26, EPC revenues marginally declined by 15% year-on-year, reaching INR 5,098 million,\nmajorly due to project execution cycle. Segment profitability stood at INR 386 million,\ntranslating to a margin of 7.6%. Looking ahead, the annual sustainable operating margin is\nexpected to remain in the mid- to high single digits over mid- to long term. Moving on to Slide\n17, which provides an update on our Project Spring.\nUnder Spring, we continue to make steady progress in line with our FY2030 strategic objectives.\nWithin the Wires & Cable segment, growth since the launch of this program has consistently\nexceeded our guidance, tracking at 1.5x to 2x of the industry growth with margins remaining far\nabove the guided range.\nWhile export contribution appears lower on a relative basis, exports on an absolute basis have\ncontinued to grow during FY26. The relative contribution decline is largely due to stronger\ndomestic growth, which has expanded the overall revenue base. We remain firm on track to\nachieve our target of greater than 10% contribution from exports by financial year 2030."
+  },
+  {
+   "document_id": "114",
+   "page_no": 9,
+   "text": "Polycab India Limited\nMay 06, 2026\nPage 8 of 18\nIn FMEG, we are also progressing well consistently, outpacing industry growth in line with our\ntarget of growing at 1.5x to 2x of market rate, while maintaining a clear focus on margin\nexpansion and progressing towards our EBITDA margin goal of 8% to 10% by FY2030. During\nFY26, we incurred capex of INR 14.8 billion, in line with our annual guidance of INR 12 billion\nto INR 16 billion per annum.\nWe also increased our dividend payout to approximately 27.2%, up from 26.3% last year as we\nmove steadily towards our stated objective of exceeding 30% by FY 2030. Overall, we believe\nwe have made a strong start to Project Spring and remain confident in our ability to deliver on\nour long-term strategic and financial goals.\nMoving on to the next few slides, which provide an update on the ESG commitments. During\nthe year, we have taken several important steps to strengthen our ESG framework. These include\nconducting a climate risk assessment, undertaking a double materiality assessment and aligning\nour internal policies more closely with ESG metrics and global best practices.\nLast year, we had outlined 10 measurable ESG goals across the 3 pillars of environment, social\nand governance. These goals span key areas such as carbon emissions, circular economy, waste\nmanagement, product stewardship, water management, diversity and inclusion, employee well-\nbeing, community engagement, supply chain responsibility and corporate governance, including\nethics and integrity.\nWe have made meaningful progress across these areas during the year as detailed on Slide 21.\nWe recognize that this is a long-term journey. However, with the right intent, a strong foundation\nand a deeply embedded culture of responsibility, we are confident that Polycab will not only\nkeep pace with evolving global expectations but also play a role in shaping them. Thank you for\nyour continued support and confidence in our journey. That concludes our update for the quarter\nand we will now be open to take your questions. Thank you.\nModerator: Thank you very much. We will now begin with the question and answer session. We will take\nthe first question from the line of Sonali Salgaonkar from Jefferies.\nSonali Salgaonkar: Congratulations on a great set of numbers despite the Middle East disruption. Sir, my first\nquestion is of the Cables & Wires sales growth of 30%, if we could break up on the approximate\ngrowth -- volume growth in Cables & Wires and also the price hikes that we have taken from\nJan till now in different tranches?\nShashank Yagnick: So Sonali, thank you for this question. So firstly, on the growth. Revenue growth, like you rightly\nmentioned, has been 30% for the quarter. And if I speak of volumes, it's been combined volume\ngrowth of low single digit for both cable and wire put together. Cables has, of course, outpaced\nwires. In terms of price hikes, we've taken approximately 18% to 19% price hike cumulatively\nfrom Jan to March.\nSonali Salgaonkar: Understood. That's helpful. Sir, secondly, how is the demand situation now? As we understand,\nit was severely impacted in March. March is a key month for your quarter. But since then, there"
+  },
+  {
+   "document_id": "114",
+   "page_no": 11,
+   "text": "Polycab India Limited\nMay 06, 2026\nPage 10 of 18\n` And to add to that, in U.S., we've started re-establishing our distribution network, which again\nis the largest market for export. So I think there, again, along with the tailwinds that we are\nseeing in the industry, I think all of this put together, we should have very sizeable business\ngrowth in exports. Plus the Middle East, which is currently severely impacted, we believe that\nit's a matter of time where that demand will come in a bigger way because a lot of\nreestablishment will need to be done there.\nSonali Salgaonkar: Sir, any outlook you would like to give at this point in time for FY '27 for the business as a\nwhole?\nShashank Yagnick: So see, like I mentioned today, in this financial year, we are at 5.4% export contribution to\noverall top line. And we have to get to 10% by FY30. So we are definitely inching towards that\nfigure. And of course, we are not limiting our domestic growth. So domestic growth is also\ngrowing at a very fast pace.\nBut at the same time, I think now that the trade barriers seem to be much more favorable. And I\nthink then we should continue to grow beyond 5% and difficult to give a firm number because\nthese are more institutional sales in nature, but it will definitely be higher than where we are\ntoday.\nSonali Salgaonkar: Not just for exports, overall business, domestic as well?\nShashank Yagnick: So again, Sonali, if you refer the Project Spring guidance, which also I referred during my\nspeech, is that we've committed in Cables & Wires, we will grow at 1.5x of market growth. So\nif market is growing, say, for example, 10-12%, we'll continue to deliver 1.5x of that growth.\nAnd that, I think we've consistently been delivering in the last few years as well. So we can\ndefinitely account for that kind of growth from us.\nModerator: The next question is from the line of Puneet Gulati from HSBC.\nPuneet Gulati: Congratulations on good numbers. First, if you can quantify what sort of impact you had in\nMarch on account of these Middle East-related disruptions?\nShashank Yagnick: See, we had low single-digit Cable & Wire volume growth. Typically, the Quarter 4 is highest,\nbest for the industry, not just for Polycab. So obviously, looking at higher base of last year, we\nwere able to still deliver some growth, but we were expecting much better growth. If you look\nat private manufacturing industries who use gas as a feedstock, they did not have visibility of\nsupply beyond 3-5 days.\nTheir supplies, their inputs were completely rationed by government. That definitely impacted\nthe demand from private sector. If you notice, our business model is such that 90% of our\nbusiness happens through channel. Now the trade sentiment itself, with all the raw material\nprices going up, even if you look at PVC prices went up by 60% to 80% in the first fortnight of\nMarch."
+  },
+  {
+   "document_id": "114",
+   "page_no": 12,
+   "text": "Polycab India Limited\nMay 06, 2026\nPage 11 of 18\nSo all of this going on plus the trade sentiment due to West Asia crisis, there was definitely some\nimpact in terms of lifting from our distributors, which is our primary sale, primarily because the\nsecondary sale was not moving at the pace at which we anticipate in the month of March. So\nbroadly, that's the outlook, I think, and that's very reflective of the industry also. And I think it's\nvery difficult to quantify that. But definitely, our volume growth aspirations were higher in\nMarch, typically in line with the industry. Typically, March is the best month and Q4 is the best\nquarter.\nPuneet Gulati: Right. And even on the margin side, you said you had a higher share of institutional sales than\nusual. And today, you said it's about 90% of business happens through channel. What would that\nnumber have been for last quarter?\nShashank Yagnick: So in last quarter, Puneet, what happened was institutional sales were higher by about 2-3%\ncompared to channel. And our margins usually in channel are 3-4% higher compared to\ninstitutional, which is you have to bid those tenders and win on L1. So our margins are better on\nchannel. And if institutional mix grows, then it moderates our margins.\nPuneet Gulati: Clearly, yes. Understood. And if you can also talk about what is the status on capacity utilization\nnow?\nShashank Yagnick: So see, here is where exactly you'll see the same number every time. It's mid-70s, 75-76%\nutilization. And that is because we've continued to expand our capacity. As soon as we reach 70-\n75% utilization, considering our AOP, we invest far ahead of time. So if you look at this year,\nagain, FY26, we've invested almost INR 1,500 crores, massive number.\nSo again, this capacity will get added when we discuss next time, we'll possibly again be sitting\nat somewhere around mid-70-80, right? So I think that's where we are. And we are continuing\nto expand, again, in line with our Project Spring guidance of INR 6,000 crores to INR 8,000\ncrores capex by financial year 2030.\nPuneet Gulati: And what is the peak utilization you can actually reach?\nShashank Yagnick: See, practically, I think at times, we have reached early 90s, but the standard percentages always\nremain around 80-85%. You don't expect a plant to operate at 90-plus percent. So 70-75% is\nthere. And we still have capacity and had there been demand, we would have possibly supplied\nmore.\nPuneet Gulati: Understood. That's helpful. And lastly, if I may, you have a significant amount of cash. I know\nthere is a nice capex plan, but you can fund it out of your own internal accrual as well. Is there\nany use of cash that you have in mind, acquisition or any new business that you want to enter?\nShashank Yagnick: See, currently, we are continuing to focus on these 2 things, which you rightly pointed out. One\nis pumping cash into our capex from internal accruals. Second is increasing the dividend payout,\nagain, which is already laid out in Project Spring guidance. This year, again, we've increased it\nand reached payout ratio of 27.2%."
+  },
+  {
+   "document_id": "114",
+   "page_no": 13,
+   "text": "Polycab India Limited\nMay 06, 2026\nPage 12 of 18\nSo these two remain the focus. Of course, we keep evaluating certain M&A proposals and\nopportunities inside India and outside of India. So if something really aligns with our strategy,\ndefinitely, we will like to invest in that. But so far, there is nothing that we can see in the near to\nmid term.\nModerator: We will take the next question from the line of Keyur Pandya from ICICI Prudential Life\nInsurance Company Limited.\nKeyur Pandya: The question is on the EBIT segment margin for the cables or overall EBITDA margin.\nBasically, it is within the guided range, but in the backdrop of, say, lower export mix or primary,\nsecondary sales and stocking, where do you see it settling, say, in next 2, 3 quarters? How should\nwe think of it?\nI think in last -- some of the interactions you have mentioned that channel stocking has happened.\nAnd since now copper prices are more or less where they are for last 3, 4 months, should we see\nsome deceleration in stocking? So considering all this, how should we think of profitability as\nwell as primary sales growth?\nShashank Yagnick: Keyur, on primary sales growth, I'll again refer you to the guidance we've given in Project\nSpring. And why I'm asking you to refer that again because that's very calibrated thought-\nthrough guidance. So if market grows, we will deliver 1.5x of that growth. If we are expecting\n12% market growth, then we should deliver 18% and plus. So that will continue. In terms of\nprice volatility, yes, we don't have any guidance on copper price. But whatever is the price, it is\nthe pattern of the industry that we pass through that price to our customers and so far, that is how\nit has happened.\nSo again, that's a very calibrated guidance which we have given that over long term, we should\nexpect 11% to 13% EBITDA margin. and in the near to mid term, we may expect 12% to 14%\nEBITDA. And we'll continue to deliver that kind of margins.\nKeyur Pandya: But in the near term, are you seeing any challenge to primary demand or secondary demand?\nShashank Yagnick: No. I think like I mentioned earlier, in our industry, if a capex is decided and especially the stage\nat which India is, if you look at certain announcements by Indian government where they are\npushing the pedal in terms of increasing renewable generation capacity, increasing the\ntransmission and distribution sector, a lot of capex is being pumped. So the demand can only\ndefer by 1 week, 2 weeks, 3 weeks. It cannot extinguish.\nSo if you look at full 12-month period coming ahead, I think the demand forecast is very robust\nand strong. And again, if you look at real estate sector, if you look at last 3 years, and we've seen\nsome data of top 8 cities, we've seen around 3.5-3.6 lakhs units launched and sold. So we've seen\nin the first 3 months of this calendar year also, about 0.8-0.9 lakh units have been launched.\nSo I think it's continuing. The growth momentum is continuing. In fact, the consumer sentiment\nalso is slightly on the improvement side. We believe that demand, not just for this year, but I\nthink next 2 to 3 years should be very robust. And the prime driver will continue to be the power"
+  },
+  {
+   "document_id": "115",
+   "page_no": 4,
+   "text": "Polycab India Limited\nJanuary 16, 2026\nPage 3 of 19\nAgainst this backdrop, the global economy is expected to grow at around 3.2% in 2025,\nreflecting a period of stabilization amid persistent trade tensions. Overall, the global\nenvironment in 2025 has been characterized by steady but uneven growth, improving inflation\ndynamics and cautious monetary easing across regions.\nIndia continues to stand out as a clear outperformer in this global landscape, demonstrating\nremarkable resilience and adaptability. With Q2 FY26 GDP growth at 8.2%, India continues to\nbe the fastest-growing major economy, underscoring the strength of its internal growth engines.\nIn November 2025, India overtook Japan to emerge as the fourth largest economy globally,\nreaching a GDP of USD 4.19 trillion.\nDomestic consumption has witnessed a notable revival following last year's direct and indirect\ntax. Credit growth has strengthened meaningfully, with total credit uptake reaching INR11\ntrillion in November '25 compared to INR9.5 trillion last year. 2-wheeler sales also increased by\n18.1% YoY over the September- November period, while passenger vehicle sales rose by 7.3%\nduring the same time frame, reflecting improving confidence among consumers and businesses\nalike.\nEncouragingly, this recovery has occurred alongside a continued moderation in inflation.\nHeadline inflation has trended lower, led by easing food prices, while lower global energy prices\nhave provided additional relief. Despite currency depreciation during the fiscal year, the pass-\nthrough to inflation has remained limited. Core inflation across both goods and services has\nstayed relatively benign.\nIn this favourable macro backdrop, the RBI delivered a 25 basis point policy rate cut, revising\nits growth forecast upwards to 7.3% for the year and lowering inflation projection to 2%. For\nthe next fiscal year, first half inflation expectation has been revised downwards to 4% compared\nto 4.5% earlier. The rare combination of strong growth and softer inflation enabled the Monetary\nPolicy Committee to proceed with the rate cut, taking cumulative easing to 125 basis points\nduring the calendar year.\nInvestment activity has also gathered momentum. Rising capacity utilization, strong investment\nannouncements, and improving credit offtake points to a broad-based recovery in economic\nactivity and increasing job creation.\nThe real estate sector remains healthy with launches and sales across the top 7 cities closely\ntracking the previous decade high. The affordable housing segment is also witnessing renewed\nmomentum supported by lower borrowing costs and rising household incomes. At the same time,\ngovernment capital expenditure has accelerated meaningfully with approximately 59% of the\nFY26 capex outlay already utilized by November 2025, a 28% YoY increase."
+  },
+  {
+   "document_id": "115",
+   "page_no": 5,
+   "text": "Polycab India Limited\nJanuary 16, 2026\nPage 4 of 19\nOverall, we are witnessing signs of recovery in consumption and this improving demand\nenvironment is expected to translate into a revival in private capex, complemented by sustained\npublic investment, providing strong confidence in India's growth outlook.\nI would now hand over to Shashank to take you through the financial performance for the quarter\nand the year.\nShashank Yagnick: Thank you, Niyant.\nLet me now take you through Slide 4 of the earnings presentation.\nFor the quarter ended 31st December 2025, we are pleased to report that our Company delivered\n46% YoY growth in consolidated revenues, driven by strong execution in the Wires and Cables\n(W&C) segment and healthy growth in the Fast Moving Electrical Goods (FMEG) business.\nEBITDA for the quarter grew by 34% YoY with EBITDA margins at 12.7%. Excluding the one-\noff impact of ~₹ 219 million on account of gratuity provisioning due to the implementation of\nthe new labour code, the EBITDA margins would have been ~13%.\nAt the PAT level, the Company delivered its highest ever Q3 PAT at ₹ 6.3 billion, reflecting\n36% YoY growth. PAT margins stood at 8.3% for the quarter.\nFinance costs came in at ₹ 687 million, while other income stood at ₹ 505 million. A detailed\nbreakdown of these line items is available on Slide 17 of the presentation.\nWe continue to maintain a strong balance sheet, closing the quarter with a net cash position of ₹\n30.3 billion. On working capital front, same as last quarter, inventory days continue to be higher\nas we built up inventory in anticipation of strong demand in Q4 FY26. And correspondingly,\ngiven the use of letters of credit for raw material procurement, payable days were also higher,\nresulting in the working capital cycle to be at 27 days at the end of Q3 FY26. We expect this to\nnormalize to our long-term steady range of 50 to 55 days in the coming quarters.\nCapital expenditure for the quarter was ₹ 3.4 billion, taking the 9M FY26 total to ₹ 10.9 billion,\nin-line with our Project Spring guidance of investing ₹ 12 billion to ₹ 16 billion annually through\nFY30.\nOn a 9-month basis, I'm proud to share that 9M FY26 revenues, EBITDA and PAT are the\nhighest ever in the company's history for any 9-month period. Revenues grew 30% YoY,\ncrossing ₹200 billion milestone. EBITDA grew 47% YoY, with margins strong at 14.2%. PAT\ngrew 47% YoY, with PAT margins of 9.6%."
+  },
+  {
+   "document_id": "115",
+   "page_no": 6,
+   "text": "Polycab India Limited\nJanuary 16, 2026\nPage 5 of 19\nWe now move to Slide 6.\nThe W&C business delivered very strong performance, recording 53% YoY revenue growth\nduring the quarter. This growth was led by domestic W&C business, which posted an\nexceptional 59% YoY growth, supported by robust demand conditions and sustained commodity\nprice inflation. In volume, the domestic W&C business recorded nearly 40% growth, reflecting\nhealthy underlying demand.\nThis strong performance underscores a further strengthening of our market position with\ncontinued market share gains in the domestic market during the quarter. Execution excellence\nunder Project Spring remains a key enabler driving superior market execution, improved\nrelationships with our channel partners and consistent outperformance.\nDuring the quarter, wires growth outperformed cables, driven by pre-stocking by channel\npartners amid elevated copper prices. Within the cable segment, institutional sales growth\noutpaced the channel sales, reflecting strong traction in project-led demand.\nLooking at the broader environment, demand remains robust across key sectors. Government\ncapex surged nearly 28.2% YoY in the first 8 months of FY26 reaching ₹ 6.6 trillion versus ₹\n5.1 trillion last year, also 12.4% higher than in the 8-month period in FY24. Additionally, the\ngovernment of India released a loan of ₹ 1.25 trillion to states for capital expenditure during the\nsame period.\nThe private capex cycle in India is showing signs of recovery aided by the monetary policy\nsupport and the stimulative impact of CST rate cuts on consumption, laying the foundation for\nsustained investment growth. The real estate market remains strong, following last year's record\nsales and launches, a trend that should continue to support wires demand in the coming years.\nOur international business maintained its steady momentum, recording a 5% YoY growth during\nthe quarter, despite a high base and contributing 6% to the consolidated revenues. Backed by a\nhealthy order book, we remain confident that this growth trajectory will continue in the coming\nquarters.\nSegment profitability was impacted during the quarter due to multiple factors, primarily on\naccount of continued commodity price inflation and depreciation of the Indian rupee. Between\nSeptember 2025 and December 2025, copper and aluminium prices, in rupee terms, increased\nsequentially by approximately 21% and 11%, respectively, which represents an unusually sharp\nescalation over a short period of time.\nIn order to avoid demand disruption, arising from elevated input costs, the Company took a\nstrategic decision to pass on the increase in raw material prices in a staggered manner. While\nthis approach resulted in near-term margin pressure at the Company level, it enables us to protect\nvolumes, gain market share and further strengthen relationships with our channel partners."
+  },
+  {
+   "document_id": "115",
+   "page_no": 7,
+   "text": "Polycab India Limited\nJanuary 16, 2026\nPage 6 of 19\nMoving on to Slide 8 for an update on the FMEG business.\nThe FMEG segment sustained its impressive growth momentum, delivering a 17% YoY increase\nin Q3 FY26, and consistently outperforming the industry in-line with our Project Spring growth\naspirations.\nWithin the segment, the solar business has been a standout performer, growing more than 2x\ncompared to the same quarter last year, driven by strong uptake under the central and state\nrooftop solar incentive scheme. With favourable support and strong demand visibility, we expect\nthis momentum to continue in the coming quarters. Other product categories delivered steady,\nin line performance, reinforcing the segment's balanced and resilient portfolio.\nImportantly, the FMEG segment remained profitable for the fourth consecutive quarter, even\nwhile strategically ramping up our A&P investments to strengthen brand presence and drive\nlong-term growth. As we continue to scale, we expect profitability to expand further, reflecting\nthe leverage in our business model.\nLooking ahead, we are confident in the long-term potential of the FMEG segment and remain\non track to achieve our Project Spring targets of 1.5x - 2x industry growth and EBITDA margins\nin the range of 8% to 10% by FY30, positioning the business for sustained growth and value\ncreation.\nMoving on to Slide 10, which provides an update on our EPC business.\nDuring Q3 FY26, EPC revenues grew by 4% YoY, reaching ₹ 4,069 million. This quarter, we\ncommenced execution of our existing orders under BharatNet scheme, which is expected to\ngenerate ₹ 4.5 billion over the next 3 years for project execution and an additional ₹ 3.5 billion\nfor 10 years for project O&M.\nSegment profitability stood at ₹ 272 million, translating to a margin of 6.7%. Looking ahead,\nthe annual sustainable operating margin is expected to remain in the high single digits over mid-\nto long term.\nThat was the update for the quarter. Thank you, and we are now open for questions.\nModerator: Thank you very much. The first question is from the line of Sonali Salgaonkar from Jefferies.\nPlease go ahead.\nSonali Salgaonkar: Congratulations on a strong revenue growth. I have 3 questions. First, a strong revenue growth\nin the C&W segment, would it be able to quantify what is a volume growth for this quarter YoY?\nShashank Yagnick: For both domestic cables and wires, our volume growth is about 40%."
+  },
+  {
+   "document_id": "115",
+   "page_no": 8,
+   "text": "Polycab India Limited\nJanuary 16, 2026\nPage 7 of 19\nSonali Salgaonkar: Right. And any more detail you would like to share as to which end-user industries contributed\nhigher, because 40% is very significantly higher?\nShashank Yagnick: We have witnessed sustained momentum in both government and private capex. The real estate\nsector, particularly in the top 7 cities, has seen healthy level of launches and sales, closely\ntracking with previous decadal highs. We are also seeing a recovery in affordable housing\nsegment. Additionally, due to the commodity price inflation, there has been some channel\nstocking happening for wires, which has also contributed to the higher surge in top-line.\nSonali Salgaonkar: Sir, my second question is on the EBITDA margin. We understand the reasons that you have\noutlined in your presentation as to why the QoQ drop was there in the EBITDA margins. So,\ntwo-three follow-up questions: firstly, such high volume growth would intensively result in good\noperating leverage, right? So that is one. Secondly, I think you did take a price hike of about 6%\nYoY. So, could you help us understand what exactly led to this fall of EBITDA margin both\nYoY and Q-o-Q?\nShashank Yagnick: There are multiple factors at play. The primary reason has been the sharp rise in commodity\nprices. From January 2025 till January 2026, the copper, in rupee terms, has risen almost 50%\nand aluminium almost 25%. And in this quarter itself, the 22% inflation has happened in copper\nprice compared to previous quarter.\nWe had taken a conscious call to pass it on in a staggered manner. While we have been revising\nprices, the full impact of the input cost increase has not yet been passed on. As a result, there is\ntypically a time lag in recovering the higher input costs, which has impacted margins in the near\nterm.\nChirayu Upadhyaya: So, Sonali, as Shashank mentioned, when the copper prices rises so high, you have to take a\nconscious call of how you want to pass on. Because if you look at this specific financial year,\nfrom April till December, the copper prices have risen by 35%, and this is including the rupee\ndepreciation. And similarly, if you look at aluminium, aluminium has risen by 27%.\nOut of the 35% of copper rise, 21% which happened within this quarter itself, and 11% of that\nhas happened in December itself, right? So, we have consistently passed on that cost price\ninflation to the end customers month-on-month, but we have taken a conscious call that such\nhigh 35% passing of inflation can't be done every month and hence, we will do it in a bit of a\nstaggered manner. So, we've been doing it. We've taken a bit of a price hike at the end of the\nquarter, we have again taken a bit of a price hike towards the beginning of this quarter as well.\nBut still, we haven't passed on the complete price hike or the commodity pricing inflation.\nHence, if you look at the financial statements, you realize that most of the decline in the EBITDA\nmargins have been at the gross margin level.\nYou are correct in mentioning that such high top-line growth will result into operating leverage,\nwhich is very much visible, if you look at everything below the gross margins. So, we have"
+  },
+  {
+   "document_id": "115",
+   "page_no": 9,
+   "text": "Polycab India Limited\nJanuary 16, 2026\nPage 8 of 19\nrealized a lot of improvement as far as our operating leverage and everything is concerned. But\nyes, this is a conscious call what we have taken.\nWhat you also need to appreciate is what we were able to achieve through this staggered passing\n- see, if you look at our performance in this year, our W&C segment has grown 35% YoY and\nthat too on a base where we are operating at 2x of the second largest player. The staggered\npassing on of copper prices to our end customers have also resulted in the improvement of\nloyalty of those customers with us because they don’t have to take the brunt of reduced demand,\nneither of lower margin.\nWe'll definitely be passing on whatever commodity inflation will be coming off, gradually, but\nthis is something that we have taken a strategic call. Since you've been following this sector for\nmany years, you will recall that even in FY22, similar commodity price inflations were there,\nwhere copper had gone up by 40%, whereas aluminium has gone up by almost 25%-27%.\nEven at that point of time, Polycab’s margins had taken a hit for a quarter or two, but then we\nhad gradually recovered back those margins. So, we believe that something similar should play\nout. There can be margin impact for a quarter or two. But if you take a more longer-term view,\nwe should be able to recover some of our margins back.\nSonali Salgaonkar: May I just ask what is the quantum of price hikes that we have taken at the start of this quarter -\nyou mentioned before?\nChirayu Upadhyaya: The total price hikes that we would have taken within this quarter will be almost 75% to 80% of\nwhatever commodity inflation was there.\nSonali Salgaonkar: Understand. Got it. And just one last question on the exports. While there has not been a de-\ngrowth, but how do you foresee the exports to shape up in the coming quarters? That’s it from\nmy side. Thank you.\nShashank Yagnick: So Sonali, on exports, the majority of the revenue that we have accrued during this quarter has\ncome from geographies other than U.S. As and when orders from U.S. comes in, they will further\nadd to the revenues. We have, in fact, seen strong performance in regions such as Middle East,\nLatin America. Overall, all geographies are contributing meaningfully, and we have a healthy\norder book, which is expected to translate into revenues for the segment in the coming quarters.\nSonali Salgaonkar: Any reason why the U.S. is weak this quarter? Is it tariff related?\nShashank Yagnick: Yes, it is tariff related. This remains a global overhang and is impacting players worldwide, not\njust in India. We are currently awaiting a final resolution on this matter.\nModerator: The next question is from the line of Akshay Gattani from UBS."
+  },
+  {
+   "document_id": "115",
+   "page_no": 14,
+   "text": "Polycab India Limited\nJanuary 16, 2026\nPage 13 of 19\nAnd hence, we are quite sure of absorption through whatever new demand is coming in.\nCommodity prices are obviously something which we can't control. And we wouldn't know how\nit will play out in Q4. To the best of our ability, we'll try and pass on whatever price hikes we\ncan to the end customers in such a way that the demand is not impacted.\nPulkit Patni: Okay. Secondly, on your ad spend, which is considerably higher and almost 3x of what your\nquarterly ad spends are, is this the new run rate? Is there some new thought process in terms of\ngaining market share? How should we look at this from an outer-year perspective?\nShashank Yagnick: See, you need to appreciate that this is the time of the year when festive activity is higher,\nparticularly in second half of the year. During this period, we make a conscious call to step up\nour investments in brand building, including associations with a few celebrities. So this is a\nstrategic call.\nChirayu Upadhyaya: Pulkit, as far as run rate is concerned, see, we've given a guidance that we want to spend around\n3% to 5% of B2C top-line every year on A&P. Even with this increased spend of this quarter,\nwe are hardly at around 1.5%, currently. So, every year going ahead, we can definitely see an\nimprovement or increase in our investments towards A&P.\nBut it will be difficult to say that this will be every year or every quarter run rate because first\nhalf of this year, we didn't spend materially on A&P. This quarter, we did spend. Q4 is again a\nquarter where you start doing more A&P because you are in pre-summer season and you want\nto do more spends for your fans sales.\nSo, there are those quarterly variations which happen. Second half of the year is always heavier\nas far as investments on A&P is concerned. But on a yearly level, going ahead, as we've been\nguiding, we want to take A&P spends up to 3% to 5% of B2C top-line, and that is something\nthat we'll plan to do gradually.\nModerator: The next question is from the line of Keyur Pandya from ICICI Prudential Life Insurance\nCompany Limited. Please go ahead.\nKeyur Pandya: First question is on the profitability side. Just want to understand, so Q-on-Q, generally Q4 is\nbigger than Q3, saying that backdrop, should sequentially margin be better than Q3 since we\nwill have better operating leverage?\nShashank Yagnick: Yes. I mean it should definitely get better.\nChirayu Upadhyaya: In Q4, as far as the gross margin level is concerned, as I initially mentioned, to the best of our\nability, we will try and pass on the price hikes, whatever are required to be done to the end\ncustomers. We are not sure whether copper prices will continue to move up or go down.\nWhatever it might be the mix we will try and pass on whatever it is to the end customer as much\nas possible."
+  },
+  {
+   "document_id": "115",
+   "page_no": 15,
+   "text": "Polycab India Limited\nJanuary 16, 2026\nPage 14 of 19\nKeyur Pandya: Understood. And just one more follow-up on the profitability side. So generally, we have\nmaintained profitability margin in a particular range of 12% to 14% for cables and wires. And\njust to reaffirm, our profitability is linked to percentage margins, right, and not some specific\nrupees per tonnage, something like that. So, copper inflation in general helps in maintaining\nthose percentage margins.\nShashank Yagnick: Yes, your understanding is correct. And if I had to add to that, to refer to our Project Spring\nguidance, we've given a long-term guidance of 11% to 13%. But in the near term, yes, what you\nmentioned is correct.\nKeyur Pandya: Understood. But basically, it is a percentage margin that is internalized. And not rupees per ton\nkind of metrics.\nShashank Yagnick: Yes. It's not rupees per ton. It's percentage annualized.\nModerator: The next question is from the line of Ashish Jain from Macquarie India.\nAshish Jain: Sir, my first question is on, again, cable and wire margins. So, one is the one-off employee cost.\nIs it booked in any specific segment or where is it in the segmental results?\nShashank Yagnick: No, it's not in a specific segment. It's across.\nAshish Jain: Okay. And this is one-off, right? This is not recurring from next quarter onwards because this is\na onetime for retirals or -- and secondly, like in the presentation, we have listed 300 bps impact\non margins due to unfavourable product mix and all. So that is largely higher institutional sales\nor -- because exports was anyways not doing that well for us. So, is it largely the higher\ninstitutional sales or there's something else also within that to drive such a margin here?\nShashank Yagnick: We've already explained this, but I'll briefly summarize. There are three to four key factors at\nplay. First, due to copper price inflation, we've delayed or staggered our pass-through of rising\nprices to our customers. Second, there has been an unfavourable business mix change wherein\ninstitutional business has grown faster than channel business in this quarter. Third, our\ncontribution from export has also marginally declined. So, all three factors coming together has\nresulted in some bit of drop in margins.\nChirayu Upadhyaya: Ashish, if you recall, in last year Q3, the contribution of exports to the Company's top line was\nat about 8.3%, whereas in this quarter, it is at about 6%. So that contribution has gone down.\nWhile obviously, you are correct in mentioning that exports for us has been relatively soft, but\neven within quarter-on-quarter comparison, the contribution has gone down. So that was one\npoint. The other 2 points were as Shashank mentioned.\nModerator: The next question is from the line of Umang Mehta from Kotak Securities."
+  },
+  {
+   "document_id": "115",
+   "page_no": 16,
+   "text": "Polycab India Limited\nJanuary 16, 2026\nPage 15 of 19\nUmang Mehta: I have two questions which are linked to each other. First one was in terms of cables, this\nacceleration from, say, 20% plus volumes to 40% now, which segments, I mean, from the data\nthat you see, which segments have seen the most kind of uptick versus last quarter?\nAnd the second one was given that 80% of your sales are through distributors, it would mean\nthat even a large portion of your cable sales are through distributors. Wouldn't they logically\ntend to upstock cables also when they see aluminium and copper kind of go up just like wires\nstocking happens? Those were the two questions.\nChirayu Upadhyaya: So Umang, as far as cable sales to distributors are concerned, distributors are kind of servicing\ninstitutional demand, right? So, depending on when the project requires a specific cable\nshipment, that is to the extent that the distributor would stock up on that product. Compared to\nwires, cables are significantly bulkier, so to store them over a certain extent, even the distributors\nwouldn’t be able to do so. Plus, cables, even in terms of average pricing, cables are very\nexpensive compared to wires. All those distributors would have a limit to the extent that capital\nis available to them. And if they lock it up in something which is cables and which might not\nhave a demand from an institutional project right away, then they might lose out on investing in\nproducts like wires or even in FMEG where there might have better demand.\nSo generally, even though cables are through distributors, we don't see distributors stocking up\ncables. To a small extent, it might be possible, but largely, this is a wires phenomenon, not cables\nphenomenon. Sorry, your first question was on cables. I couldn't get that. Can you repeat please?\nUmang Mehta: Yes. The question was that this acceleration from 20 plus to 30, which segments have seen the\nhighest uptick versus last quarter?\nChirayu Upadhyaya: So, you are aware that since we are not directly supplying to the end customers, we don't have a\nfull visibility on which sectors are generating what kind of demand. We get to know to the extent\nthat our distributors will give us visibility to or to the extent that we generate that demand from\nthe end customers for our distributors.\nSo, it will be very difficult for me to guide you that in specific this quarter, what will be the\nsegment which will be driving what percentage of demand for the cables. But maybe on a yearly\nbasis after the Q4 call, during the Q4 call, we will be able to give you much clearer or maybe a\nbit better guidance on the sectors that are generating what kind of demand.\nModerator: The next question is from the line of Achal Lohade from Nuvama Wealth Management Limited.\nAchal Lohade: Two questions. First, on the growth. If I understand right, essentially, the copper aluminium\nprice will be up 40%, 50% on a Y-o-Y basis. If we assume the same price continues for next 2,\n3 quarters, right? So do you see any impact on the demand given the budgets will take a hit in\nthat case or the customer will have to rework on in terms of their requirements? Is there any case\nfor such risk?"
+  },
+  {
+   "document_id": "116",
+   "page_no": 4,
+   "text": "The Company’s strong fundamentals, consistent performance, and commitment to excellence,\nare truly inspiring.\nI'm excited to work very closely with the leadership team to further strengthen the financial\nstrategy and continue delivering sustainable long-term value to all our stakeholders.\nWith that, I would like to hand over to Gandharv, to take the call ahead.\nGandharv Tongia: Thank you, Niyant. Before we move forward, I would like to make a moment to acknowledge\nan important transition within our leadership team. This will be my final earnings call as the\nExecutive Director and CFO, and I wanted to briefly reflect on what has been a truly remarkable\njourney.\nI joined the organization as Deputy CFO in 2018, and it has been a privilege to contribute to its\ntransformation, from a privately held Company to one of the top 100 listed companies in India\ntoday. When we went public in FY 2019, our market capitalization was around ₹ 8,000 crores.\nToday, it stands at over ₹ 1.1 lakh crores, a testament to our strong execution, disciplined\ngrowth and the trust of our shareholders, customers and partners.\nOver the years, we have delivered consistent growth across every key metric, becoming the\nlargest Company by revenue and profitability in the electrical industry and a sector leader in\nmargins, driven by our focus on efficiency and excellence.\nThese achievements reflect the collective effort of our teams, the guidance of our Board and\nthe spirit of collaboration that defines this organization. I'm deeply grateful for the trust and\nsupport I have received, and I leave with immense pride in what we have accomplished\ntogether.\nThank you, and I would request you to extend the same support to Niyant and the Company as\nit continues its next phase of growth.\nBefore I turn to the macroeconomic update, I would like to share a brief update on the income\ntax matter.\nAs you would recall, in December 2023, the Income Tax department had conducted a search\nat the Company. Following the search, assessment orders for AY 2014-2015 to AY 2023-2024\nwere issued during FY 2024-2025, resulting into a total tax demand of ₹ 525.63 million and\ninterest of ₹ 175.58 million.\nThe Company appealed these orders. During the quarter ended 30th September 2025, the\nCIT(A) allowed the Company's appeals in full, resulting in NIL tax demand. The order giving\neffect to the CIT(A) decision is currently pending before the assessing officer."
+  },
+  {
+   "document_id": "116",
+   "page_no": 5,
+   "text": "Now turning to the macroeconomic environment.\nMajor global economies are beginning to show signs of a slowdown in economic activity. In the\nU.S., indicators across the labour market, manufacturing and services sector point to easing\nmomentum. In the Eurozone, manufacturing is being weighed down by softness in both\nGermany and France, where reforms are progressing more slowly than expected, affecting\nbusiness sentiment. In China, manufacturing activity improved slightly in September 2025, but\nremains in contraction territory constrained by weak export orders.\nIn contrast, India continues to stand out as the fastest-growing major economy. While external\nchallenges persist, particularly around tariff-related uncertainties, India's strong domestic\nconsumption base provides a significant buffer. The recent GST rate revisions are expected to\nfurther boost consumption, especially as they coincide with the festive season.\nWhile rural consumption remains buoyant, supported by last year's good monsoon and this\nyear's above normal rainfall, urban demand has seen some moderation in wage growth.\nHowever, the combination of GST and income tax cuts and soft inflation is supporting\nconsumer sentiment.\nDespite a rise in industrial metal prices and weaker currency, India's inflation outlook remains\nbenign. Gold prices have risen sharply by over 40% this year, pushing headline inflation slightly\nhigher, but core inflation remains moderate at 4.4% in September and even lower at 3.1%,\nexcluding gold. With GST reductions likely to ease gold inflation further, it is expected that the\noverall inflation will remain under control.\nThe real estate sector remains healthy, though with some sign of moderation. Meanwhile,\ngovernment capex remains strong, growing 43% YoY till August '25 with ~38% of the FY 2026\noutlay already spent. This provides confidence that full year targets should be met easily.\nWhile some challenges persist, India's economic foundation remains strong, supported by\nsound fundamentals, proactive policy and resilient domestic demand, the economy is well\npositioned to navigate global headwinds and capitalize on long-term opportunities.\nI now hand over to Chirayu to take you through the financial performance for the quarter gone\nby.\nChirayu Upadhyaya: Thank you, Gandharv.\nLet me now take you through Slide 4 of the earnings presentation.\nFor the quarter ended 30th September 2025, we are pleased to report that our consolidated\nrevenue grew by a strong 18% YoY, driven primarily by robust performance in our Wires &\nCables business, supported by healthy growth in the FMEG business."
+  },
+  {
+   "document_id": "116",
+   "page_no": 6,
+   "text": "Our EBITDA for the quarter grew by 62% YoY, significantly outpacing revenue growth. This\ntranslated into a ~430 bps YoY and ~130 bps QoQ improvement in EBITDA margin, which stood\nat 15.8%. The margin expansion was supported by strong profitability in the larger Wires &\nCables business.\nAt the PAT level, the Company delivered its highest ever second quarter PAT at ~₹ 7.0 billion,\nreflecting 56% YoY growth. PAT margins improved by ~260 bps YoY, to stand at 10.7% for the\nquarter.\nFinance costs came in at ₹ 484 million, while other income stood at ₹ 454 million. A detailed\nbreakdown of the line items is available on Slide 19 of the presentation.\nWe continue to maintain a strong balance sheet, closing the quarter with a net cash position\nof ₹ 29.4 billion. On working capital front, inventory days were marginally higher as we built up\ninventory in anticipation of strong demand in Q3 FY 2026. Given the use of letters of credits for\nraw material procurement, payable days also increased correspondingly, resulting in the\nworking capital cycle temporarily reducing to 33 days at the end of Q2. We expect this to\nnormalize to our long-term steady range of 50 to 55 days over the coming quarters.\nCapital expenditure for the quarter was at ₹ 3.3 billion, taking the H1 FY 2026 expenditure to\naround ₹ 7.5 billion, in line with our Project Spring guidance of investing ₹ 12 billion - ₹ 16\nbillion annually through to FY 2030.\nOn a half yearly basis, I'm proud to share that our revenues, EBITDA and PAT are the highest\never in the Company's history for any half yearly period. Revenues grew 21% YoY, crossing the\n₹ 120 billion milestone. EBITDA grew 55% YoY with margins strong at 15.2%. PAT grew 53% YoY\nwith PAT margins of 10.4%.\nMoving on to Slide 6.\nThe Wires & Cables business delivered a 21% YoY revenue growth, supported by high-teen\nvolume expansion during the quarter. The domestic Wires & Cables business recorded a strong\n21% YoY growth despite a high base from the previous year, which had witnessed 28% YoY\ngrowth.\nThis performance was driven by higher government spending, improved project execution and\na favourable commodity environment. The continued momentum underscores our\nstrengthened market position and suggests market share gains in the domestic segment during\nthe quarter.\nBoth cables and wires performed strongly. Sales across both distribution and institutional\nchannels showed healthy traction, indicating broad-based demand. Regionally, the North led\ngrowth, followed by the West, South and East, reaffirming our strong pan-India presence."
+  },
+  {
+   "document_id": "116",
+   "page_no": 7,
+   "text": "Looking at the broader environment, demand remains robust across key sectors. Central\ngovernment capex spend continues to remain robust. Additionally, the Government of India\nreleased an extra ₹ 1 trillion in tax devolution to states on 1st of October ahead of the festive\nseason to accelerate capex and welfare spending, a timely fiscal boost for infrastructure and\ndevelopment projects.\nIndia's private capex cycle is also showing early signs of revival after a period of subdued\nactivity, supported by monetary easing such as rate cuts and liquidity infusion, fiscal stimulus\nlike front-loading of capex and tax cuts and regulatory reforms. While the capex to GDP ratio\nremains below its historical peak of ~35% in 2004 to 2008, currently standing at 30%, the\noutlook continues to improve.\nThe real estate market remains strong following last year's record sales and launches, a trend\nthat should continue to support wires demand in the coming years.\nOur International business continued its steady growth trajectory, recording a 25% YoY\nincrease during the quarter and contributing 6.5% to consolidated revenue. With a healthy\norder book in place, we expect this growth momentum to continue.\nOn profitability, EBIT margins for the Wires & Cables segment stood at 15.1%, improving by\n~270 bps YoY and ~40 bps QoQ, supported by operating leverage and favourable business mix.\nMoving on to Slide 8 for an update on the FMEG business.\nThe fans category continued to face headwinds due to the prolonged monsoon season and\nelevated channel inventory at the beginning of the quarter, registering marginal degrowth.\nLighting business gained traction due to festival demand, registering healthy growth. In\nswitches, switchgears and conduit solutions, healthy demand from real estate continues.\nThe solar products category was once again the standout performer, driven by robust demand\nunder central and state solar rooftop incentive schemes. With continued policy support and\nencouraging demand visibility, we expect this demand to continue. Our continued focus on\npremiumization as well as operating leverage benefit helped the FMEG business achieve its\nthird consecutive profitable quarter despite increase in A&P spends.\nNow moving on to Slide 10, which provides an update on our EPC business.\nDuring Q2 FY 2026, EPC revenues declined 19% YoY to ₹ 4,024 million, primarily due to project\nexecution cycle, same as was the case in Q1 FY 2026. Segment's profitability stood at ₹ 730\nmillion, translating to a margin of 18.1%.\nThis includes a one-time gain of approximately ₹ 300 million, excluding which margins would\nbe at around 10%, consistent with our mid- to long-term guidance. Our EPC order book remains\nhealthy, providing strong visibility for future growth."
+  },
+  {
+   "document_id": "116",
+   "page_no": 8,
+   "text": "Moving on to Slide 12, which provides an update on our Project Spring.\nUnder Project Spring, we continue to make steady progress in line with our FY 2030 strategic\nguidance. Within Wires & Cables, growth in the first two quarters since the project's launch has\nbeen ahead of guidance at 1.5x to 2x of the industry growth rate, with margins above the\nguided range.\nWhile export contribution appears lower, exports have actually grown 25% YoY in H1 FY 2026,\nand the relative decline is due to stronger domestic growth, expanding the consolidated base.\nWe remain on track toward our greater than 10% export contribution goal.\nIn FMEG, we continue to outpace industry growth in line with our plan of growing 1.5x to 2x\nthe market rate, while maintaining focus on margin improvement and progressing towards the\n8%-10% EBITDA target by FY 2030.\nWe incurred ₹ 7.5 billion in capex during H1, consistent with our annual guidance of spending\n₹ 12 billion to ₹ 16 billion annually. For FY 2025, we raised our dividend payout to 26.3% from\n25.5% last year, in line with our goal of crossing 30% dividend payout by FY 2030.\nOverall, we've made a strong start to Project Spring and remain confident of achieving our long-\nterm objectives.\nThat was the update for the quarter. Thank you, and we are now open for questions.\nModerator: The first question comes from the line of Sonali from Jefferies Group.\nSonali: Congratulations on a great set of numbers. Sir, my first question would be in this 21% YoY sales\ngrowth in cables and wires, approximately how much would be volume? And if you could\nfurther categorize them between cables and wires, that would be great.\nChirayu Upadhyaya: Thank you so much, Sonali. As far as the growth is concerned, the 21% revenue growth is on\nthe base of high teens volume growth, and the remaining is the value contribution. Both cables\nand wires have registered strong growth. As far as the revenue growth in both cables and wires\nare concerned, they are pretty much equal.\nAgain, on the volume terms, the growth will be a bit higher on the cable side, and a bit lower\non the wire side, but that is because of very high base of wires in Q2 of previous year. If you\nwould recall, in September of last year, we had seen an upward trend in copper prices in the\nlast 15 days, which had led to a lot of pre-emptive stocking by distributors. As a result, we sat\non a very high base as far as wires are concerned. Even on that, we were able to register double-\ndigit volume growth in the wires business - with in line revenue growth with cables. So that\nwas the breakup of volume versus value.\nSonali: Very helpful, sir. My second question is regarding the EPC segment. Now we understand that\nthere could be a time deferment between the execution and the time that we are going to"
+  }
+ ],
+ "dossier": {
+  "version": "61367bc9405e",
+  "data": {
+   "bear": [
+    {
+     "text": "P/E ratio currently trades at 36.7×.",
+     "cites": [
+      "fact:pe"
+     ]
+    },
+    {
+     "text": "Debtor days reached 48 days in FY26.",
+     "cites": [
+      "fact:debtor_days"
+     ]
+    },
+    {
+     "text": "Wires and Cables segment accounts for 87% of business.",
+     "cites": [
+      "doc:117:p9"
+     ]
+    }
+   ],
+   "bull": [
+    {
+     "text": "Revenue CAGR for 3 years reached 27% up to FY26.",
+     "cites": [
+      "fact:revenue_cagr_3y"
+     ]
+    },
+    {
+     "text": "Cash conversion cycle remained at 39 days in FY26.",
+     "cites": [
+      "fact:ccc_days"
+     ]
+    },
+    {
+     "text": "ROCE stood at 33% for FY26.",
+     "cites": [
+      "fact:roce"
+     ]
+    }
+   ],
+   "cash": {
+    "fcf": 2340,
+    "flag": null,
+    "cfo_ebitda": 117,
+    "cfo_pat_5y": 1.01
+   },
+   "name": "Polycab India",
+   "basis": "consolidated",
+   "facts": {
+    "pe": {
+     "key": "pe",
+     "unit": "x",
+     "label": "P/E",
+     "value": 36.7,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "cfo": {
+     "key": "cfo",
+     "unit": "cr",
+     "label": "Cash from operations",
+     "value": 3811,
+     "period": "FY26",
+     "source": "Screener consolidated cash flow, Mar 2026 column"
+    },
+    "fcf": {
+     "key": "fcf",
+     "unit": "cr",
+     "label": "Free cash flow",
+     "value": 2340,
+     "period": "FY26",
+     "source": "Screener consolidated cash flow, Mar 2026 column"
+    },
+    "roe": {
+     "key": "roe",
+     "unit": "pct",
+     "label": "ROE",
+     "value": 23,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "mcap": {
+     "key": "mcap",
+     "unit": "cr",
+     "label": "Market cap",
+     "value": 115743,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "roce": {
+     "key": "roce",
+     "unit": "pct",
+     "label": "ROCE",
+     "value": 33,
+     "period": "FY26",
+     "source": "Screener consolidated ratios, Mar 2026 column"
+    },
+    "price": {
+     "key": "price",
+     "unit": "rs",
+     "label": "Price",
+     "value": 7680,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "q_opm": {
+     "key": "q_opm",
+     "unit": "pct",
+     "label": "EBITDA margin",
+     "value": 14.4,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "q_pat": {
+     "key": "q_pat",
+     "unit": "cr",
+     "label": "Net profit, total",
+     "value": 990,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "q_pbt": {
+     "key": "q_pbt",
+     "unit": "cr",
+     "label": "Profit before tax",
+     "value": 1306,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "cfo_5y": {
+     "key": "cfo_5y",
+     "unit": "cr",
+     "label": "Cash from operations, 5 years",
+     "value": 8856,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated cash flow, Mar 2022 to Mar 2026, cumulative"
+    },
+    "fy_opm": {
+     "key": "fy_opm",
+     "unit": "pct",
+     "label": "EBITDA margin",
+     "value": 13.9,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "fy_pat": {
+     "key": "fy_pat",
+     "unit": "cr",
+     "label": "Net profit",
+     "value": 2708,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "pat_5y": {
+     "key": "pat_5y",
+     "unit": "cr",
+     "label": "Net profit, 5 years",
+     "value": 8756,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2022 to Mar 2026, cumulative"
+    },
+    "ccc_days": {
+     "key": "ccc_days",
+     "unit": "days",
+     "label": "Cash conversion cycle",
+     "value": 39,
+     "period": "FY26",
+     "source": "Screener consolidated ratios, Mar 2026 column"
+    },
+    "de_ratio": {
+     "key": "de_ratio",
+     "unit": "x",
+     "label": "Debt to equity",
+     "value": 0.02,
+     "period": "Sep 2026",
+     "source": "Screener consolidated balance sheet, Sep 2026 column: borrowings / (equity + reserves)"
+    },
+    "q_ebitda": {
+     "key": "q_ebitda",
+     "unit": "cr",
+     "label": "EBITDA",
+     "value": 1422,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "fy_ebitda": {
+     "key": "fy_ebitda",
+     "unit": "cr",
+     "label": "EBITDA",
+     "value": 4013,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "net_worth": {
+     "key": "net_worth",
+     "unit": "cr",
+     "label": "Net worth",
+     "value": 13094,
+     "period": "Sep 2026",
+     "source": "Screener consolidated balance sheet, Sep 2026 column: equity + reserves"
+    },
+    "q_pat_yoy": {
+     "key": "q_pat_yoy",
+     "unit": "pct",
+     "label": "Net profit growth YoY, total",
+     "value": 42.9,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 vs Sep 2025"
+    },
+    "q_revenue": {
+     "key": "q_revenue",
+     "unit": "cr",
+     "label": "Revenue",
+     "value": 9899,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "borrowings": {
+     "key": "borrowings",
+     "unit": "cr",
+     "label": "Borrowings",
+     "value": 272,
+     "period": "Sep 2026",
+     "source": "Screener consolidated balance sheet, Sep 2026 column"
+    },
+    "cfo_ebitda": {
+     "key": "cfo_ebitda",
+     "unit": "pct",
+     "label": "CFO / EBITDA",
+     "value": 117,
+     "period": "FY26",
+     "source": "Screener consolidated cash flow, Mar 2026 column"
+    },
+    "cfo_pat_5y": {
+     "key": "cfo_pat_5y",
+     "unit": "x",
+     "label": "CFO / PAT, 5 years",
+     "value": 1.01,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated cash flow, Mar 2022 to Mar 2026, cumulative"
+    },
+    "fy_revenue": {
+     "key": "fy_revenue",
+     "unit": "cr",
+     "label": "Revenue",
+     "value": 28884,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "debtor_days": {
+     "key": "debtor_days",
+     "unit": "days",
+     "label": "Debtor days",
+     "value": 48,
+     "period": "FY26",
+     "source": "Screener consolidated ratios, Mar 2026 column"
+    },
+    "pat_cagr_3y": {
+     "key": "pat_cagr_3y",
+     "unit": "pct",
+     "label": "Net profit CAGR, 3 years",
+     "value": 28.3,
+     "period": "3 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2023 to Mar 2026"
+    },
+    "pat_cagr_5y": {
+     "key": "pat_cagr_5y",
+     "unit": "pct",
+     "label": "Net profit CAGR, 5 years",
+     "value": 25,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2021 to Mar 2026"
+    },
+    "fy_pat_growth": {
+     "key": "fy_pat_growth",
+     "unit": "pct",
+     "label": "Net profit growth",
+     "value": 32.4,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 vs Mar 2025"
+    },
+    "q_opm_yoy_bps": {
+     "key": "q_opm_yoy_bps",
+     "unit": "bps",
+     "label": "EBITDA margin change YoY",
+     "value": -140,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 vs Sep 2025"
+    },
+    "q_revenue_yoy": {
+     "key": "q_revenue_yoy",
+     "unit": "pct",
+     "label": "Revenue growth YoY",
+     "value": 52.8,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 vs Sep 2025"
+    },
+    "ebitda_cagr_3y": {
+     "key": "ebitda_cagr_3y",
+     "unit": "pct",
+     "label": "EBITDA CAGR, 3 years",
+     "value": 29.6,
+     "period": "3 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2023 to Mar 2026"
+    },
+    "ebitda_cagr_5y": {
+     "key": "ebitda_cagr_5y",
+     "unit": "pct",
+     "label": "EBITDA CAGR, 5 years",
+     "value": 29.3,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2021 to Mar 2026"
+    },
+    "interest_cover": {
+     "key": "interest_cover",
+     "unit": "x",
+     "label": "Interest cover",
+     "value": 15.9,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column: (PBT + interest) / interest"
+    },
+    "revenue_cagr_3y": {
+     "key": "revenue_cagr_3y",
+     "unit": "pct",
+     "label": "Revenue CAGR, 3 years",
+     "value": 27,
+     "period": "3 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2023 to Mar 2026"
+    },
+    "revenue_cagr_5y": {
+     "key": "revenue_cagr_5y",
+     "unit": "pct",
+     "label": "Revenue CAGR, 5 years",
+     "value": 26.9,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2021 to Mar 2026"
+    },
+    "fy_revenue_growth": {
+     "key": "fy_revenue_growth",
+     "unit": "pct",
+     "label": "Revenue growth",
+     "value": 28.9,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 vs Mar 2025"
+    }
+   },
+   "flags": [],
+   "stats": {
+    "calls": 7,
+    "seconds": 107,
+    "tokens_in": 71671,
+    "tokens_out": 16264,
+    "cached_calls": 0,
+    "cost_usd_est": 0.0622,
+    "dropped_bullets": 0
+   },
+   "header": {
+    "pe": 36.7,
+    "roe": 23,
+    "roce": 33,
+    "price": 7680,
+    "mcap_cr": 115743,
+    "screener_url": "https://www.screener.in/company/POLYCAB/consolidated/"
+   },
+   "lender": false,
+   "sector": null,
+   "symbol": "POLYCAB",
+   "numbers": {
+    "cagr": [
+     {
+      "y3": 27,
+      "y5": 26.9,
+      "key": "revenue",
+      "label": "Revenue"
+     },
+     {
+      "y3": 29.6,
+      "y5": 29.3,
+      "key": "ebitda",
+      "label": "EBITDA"
+     },
+     {
+      "y3": 28.3,
+      "y5": 25,
+      "key": "pat",
+      "label": "Net profit"
+     }
+    ],
+    "tiles": [
+     {
+      "key": "q_revenue",
+      "unit": "cr",
+      "label": "Revenue",
+      "value": 9899,
+      "change": {
+       "unit": "pct",
+       "label": "YoY",
+       "value": 52.8
+      },
+      "period": "Q2 FY27"
+     },
+     {
+      "key": "q_opm",
+      "unit": "pct",
+      "label": "EBITDA margin",
+      "value": 14.4,
+      "change": {
+       "unit": "bps",
+       "label": "YoY",
+       "value": -140
+      },
+      "period": "Q2 FY27"
+     },
+     {
+      "key": "q_pat",
+      "unit": "cr",
+      "label": "Net profit, total",
+      "value": 990,
+      "change": {
+       "unit": "pct",
+       "label": "YoY",
+       "value": 42.9
+      },
+      "period": "Q2 FY27"
+     },
+     {
+      "key": "roce",
+      "unit": "pct",
+      "label": "ROCE",
+      "value": 33,
+      "period": "FY26"
+     }
+    ],
+    "annual": {
+     "cfo": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       150,
+       221,
+       296,
+       362,
+       1230,
+       244,
+       1252,
+       512,
+       1428,
+       1296,
+       1809,
+       3811
+      ]
+     },
+     "fcf": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       -52,
+       -26,
+       18,
+       179,
+       949,
+       -45,
+       1061,
+       -8,
+       969,
+       438,
+       853,
+       2340
+      ]
+     },
+     "opm": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       9.4,
+       9.5,
+       8.7,
+       10.8,
+       11.9,
+       12.8,
+       12.6,
+       10.4,
+       13.1,
+       13.8,
+       13.2,
+       13.9
+      ]
+     },
+     "pat": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       164,
+       185,
+       233,
+       359,
+       500,
+       766,
+       886,
+       917,
+       1282,
+       1803,
+       2046,
+       2708
+      ]
+     },
+     "roce": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       17,
+       17,
+       16,
+       22,
+       28,
+       29,
+       23,
+       21,
+       27,
+       31,
+       30,
+       33
+      ]
+     },
+     "ebitda": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       442,
+       492,
+       480,
+       729,
+       950,
+       1129,
+       1111,
+       1264,
+       1843,
+       2492,
+       2964,
+       4013
+      ]
+     },
+     "revenue": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       4707,
+       5202,
+       5500,
+       6770,
+       7986,
+       8830,
+       8792,
+       12204,
+       14108,
+       18039,
+       22408,
+       28884
+      ]
+     },
+     "borrowings": {
+      "labels": [
+       "Mar 2015",
+       "Mar 2016",
+       "Mar 2017",
+       "Mar 2018",
+       "Mar 2019",
+       "Mar 2020",
+       "Mar 2021",
+       "Mar 2022",
+       "Mar 2023",
+       "Mar 2024",
+       "Mar 2025",
+       "Mar 2026",
+       "Sep 2026"
+      ],
+      "values": [
+       546,
+       796,
+       856,
+       800,
+       272,
+       157,
+       282,
+       118,
+       191,
+       161,
+       202,
+       236,
+       272
+      ]
+     }
+    },
+    "quarterly": {
+     "opm": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       14.4,
+       13.1,
+       13.6,
+       12.4,
+       11.5,
+       13.8,
+       14.7,
+       14.5,
+       15.8,
+       12.7,
+       13.1,
+       13.8,
+       14.4
+      ]
+     },
+     "pat": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       430,
+       417,
+       553,
+       402,
+       445,
+       464,
+       734,
+       600,
+       693,
+       630,
+       786,
+       797,
+       990
+      ]
+     },
+     "ebitda": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       609,
+       570,
+       762,
+       583,
+       632,
+       720,
+       1025,
+       858,
+       1021,
+       966,
+       1161,
+       1136,
+       1422
+      ]
+     },
+     "revenue": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       4218,
+       4340,
+       5592,
+       4698,
+       5498,
+       5226,
+       6986,
+       5906,
+       6477,
+       7636,
+       8864,
+       8210,
+       9899
+      ]
+     }
+    }
+   },
+   "pending": [],
+   "version": 1,
+   "built_at": "2026-10-29T12:39:40.063Z",
+   "business": {
+    "cites": {
+     "description": "doc:117:p9"
+    },
+    "risks": [
+     "Geopolitical risks arising from global economic uncertainties and its impact on supply chain, raw material sourcing and price volatility",
+     "Interest rate risk",
+     "Foreign currency risk",
+     "Commodity price risk",
+     "Cybersecurity risks"
+    ],
+    "segments": [
+     {
+      "cite": "doc:117:p9",
+      "name": "Wires and Cables",
+      "share_pct": 87,
+      "revenue_cr": null
+     },
+     {
+      "cite": "doc:117:p9",
+      "name": "Fast-Moving Electrical Goods",
+      "share_pct": 6,
+      "revenue_cr": null
+     },
+     {
+      "cite": "doc:117:p9",
+      "name": "Engineering, Procurement & Construction",
+      "share_pct": 7,
+      "revenue_cr": null
+     }
+    ],
+    "description": "As India's largest manufacturer of cables and wires and a leading FMEG player, we deliver innovative electrical solutions across homes, industries and infrastructure – connecting people to a safer, smarter and brighter future.",
+    "related_party": [
+     "The related party transactions for the financial year are insignificant in commensurate with the turnover of the Company.",
+     "All transactions with related parties during the year were on arm's length basis and in the ordinary course of business."
+    ]
+   },
+   "documents": [
+    {
+     "id": 112,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/77b6d277-0ffc-440d-ba8a-2bd9bc3dc43e.pdf",
+     "type": "transcript",
+     "label": "Q2 FY27 call (Oct 2026)",
+     "pages": 20,
+     "period_label": "Q2 FY27"
+    },
+    {
+     "id": 113,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e47a217c-cefa-4ff6-8e34-6bbd07d42b13.pdf",
+     "type": "transcript",
+     "label": "Q1 FY27 call (Jul 2026)",
+     "pages": 19,
+     "period_label": "Q1 FY27"
+    },
+    {
+     "id": 114,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f66f17ac-c40f-4309-afca-3e66af0956a0.pdf",
+     "type": "transcript",
+     "label": "Q4 FY26 call (May 2026)",
+     "pages": 19,
+     "period_label": "Q4 FY26"
+    },
+    {
+     "id": 115,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c54bf2c3-22fa-45e1-bf1a-2194e7b46183.pdf",
+     "type": "transcript",
+     "label": "Q3 FY26 call (Jan 2026)",
+     "pages": 20,
+     "period_label": "Q3 FY26"
+    },
+    {
+     "id": 116,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7a5825e0-67d1-41af-96e0-d78387aaba8d.pdf",
+     "type": "transcript",
+     "label": "Q2 FY26 call (Oct 2025)",
+     "pages": 19,
+     "period_label": "Q2 FY26"
+    },
+    {
+     "id": 117,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ff6bcced-1327-449f-8a82-6fd651a0124f.pdf",
+     "type": "annual_report",
+     "label": "FY26 annual report",
+     "pages": 450,
+     "used_pages": [
+      4,
+      9,
+      104,
+      115,
+      122,
+      123,
+      124,
+      134,
+      135,
+      136,
+      222,
+      223,
+      228,
+      260,
+      270,
+      276,
+      281,
+      282,
+      283,
+      293,
+      294,
+      308,
+      309,
+      310,
+      311,
+      317,
+      329,
+      384,
+      388,
+      400,
+      410,
+      411,
+      412,
+      430
+     ],
+     "period_label": "FY26"
+    }
+   ],
+   "say_vs_do": {
+    "note": null,
+    "items": [
+     {
+      "id": 1,
+      "call": "Q2 FY27 call",
+      "cite": "doc:112:p6",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "In line with our Project Spring roadmap, we remain confident of sustaining medium- to long-term EBITDA margins within our guided range of 11% to 13%.",
+      "scope": "wires and cables business",
+      "actual": null,
+      "metric": "ebitda_margin",
+      "status": "pending",
+      "horizon": "Medium term",
+      "said_on": "2026-10-15",
+      "speaker": "Aditya Nathany",
+      "label_raw": "Wires and Cables",
+      "revised_to": null,
+      "target_text": "11–13%",
+      "metric_label": "EBITDA margin"
+     },
+     {
+      "id": 2,
+      "call": "Q2 FY27 call",
+      "cite": "doc:112:p8",
+      "note": "No numeric target",
+      "basis": "unspecified",
+      "quote": "Today, we are already at an EBIT margin of 10.1%, which is very high. I would believe you would appreciate the kind of efforts that we have put together to get this segment turnaround in the way we have been seeing the results in this quarter.",
+      "scope": "FMEG business",
+      "actual": null,
+      "metric": "ebitda_margin",
+      "status": "unverifiable",
+      "horizon": "FY30",
+      "said_on": "2026-10-15",
+      "speaker": "Aditya Nathany",
+      "label_raw": "FMEG",
+      "revised_to": null,
+      "target_text": "Qualitative",
+      "metric_label": "EBITDA margin"
+     },
+     {
+      "id": 3,
+      "call": "Q2 FY27 call",
+      "cite": "doc:112:p7",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "Our objective continues to be growing at 1.5x to 2x of the industry growth rate while steadily enhancing profitability.",
+      "scope": "FMEG business",
+      "actual": null,
+      "metric": "other:revenue_growth_multiple",
+      "status": "pending",
+      "horizon": "Medium term",
+      "said_on": "2026-10-15",
+      "speaker": "Aditya Nathany",
+      "label_raw": "FMEG",
+      "revised_to": null,
+      "target_text": "1.5× to 2×",
+      "metric_label": "Revenue growth multiple"
+     },
+     {
+      "id": 4,
+      "call": "Q1 FY27 call",
+      "cite": "doc:113:p5",
+      "note": "Period not started; guided for the FMEG business, so it is checked against what management reports",
+      "basis": "unspecified",
+      "quote": "EBIT margins for the quarter were 8%, very much in line with the milestones laid out under Project Spring, where we target EBITDA margins of 8% to 10% by FY 2030.",
+      "scope": "FMEG business",
+      "actual": null,
+      "metric": "ebitda_margin",
+      "status": "pending",
+      "horizon": "FY30",
+      "said_on": "2026-07-15",
+      "speaker": "Shashank Yagnick",
+      "label_raw": "FMEG",
+      "revised_to": null,
+      "target_text": "8–10%",
+      "metric_label": "EBITDA margin"
+     },
+     {
+      "id": 5,
+      "call": "Q1 FY27 call",
+      "cite": "doc:113:p5",
+      "note": "Period not started; guided for the FMEG business, so it is checked against what management reports",
+      "basis": "unspecified",
+      "quote": "Our strategic priorities remain unchanged to grow at 1.5x to 2x of the industry growth while progressively enhancing profitability.",
+      "scope": "FMEG business",
+      "actual": null,
+      "metric": "revenue_growth",
+      "status": "pending",
+      "horizon": "FY30",
+      "said_on": "2026-07-15",
+      "speaker": "Shashank Yagnick",
+      "label_raw": "FMEG",
+      "revised_to": null,
+      "target_text": "1.5× to 2×",
+      "metric_label": "Revenue growth"
+     },
+     {
+      "id": 6,
+      "call": "Q1 FY27 call",
+      "cite": "doc:113:p5",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "Consistent with our Project Spring roadmap, we continue to maintain our medium- to long-term margin guidance of 11% to 13% for this business.",
+      "scope": "wires and cables business",
+      "actual": null,
+      "metric": "ebit_margin",
+      "status": "pending",
+      "horizon": "Medium term",
+      "said_on": "2026-07-15",
+      "speaker": "Shashank Yagnick",
+      "label_raw": "Wires & Cables",
+      "revised_to": null,
+      "target_text": "11–13%",
+      "metric_label": "Operating margin"
+     },
+     {
+      "id": 7,
+      "call": "Q4 FY26 call",
+      "cite": "doc:114:p12",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "and in the near to mid term, we may expect 12% to 14% EBITDA.",
+      "scope": null,
+      "actual": null,
+      "metric": "ebitda_margin",
+      "status": "pending",
+      "horizon": "Medium term",
+      "said_on": "2026-05-15",
+      "speaker": "Shashank Yagnick",
+      "label_raw": "EBITDA margin",
+      "revised_to": null,
+      "target_text": "12–14%",
+      "metric_label": "EBITDA margin"
+     },
+     {
+      "id": 9,
+      "call": "Q4 FY26 call",
+      "cite": "doc:114:p6",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "execute our planned capex program of INR 60 billion to INR 80 billion over the next 5 years",
+      "scope": null,
+      "actual": null,
+      "metric": "capex",
+      "status": "pending",
+      "horizon": "Medium term",
+      "said_on": "2026-05-15",
+      "speaker": "Shashank Yagnick",
+      "label_raw": "capex program",
+      "revised_to": null,
+      "target_text": "₹6,000 cr to ₹8,000 cr",
+      "metric_label": "Capex"
+     },
+     {
+      "id": 10,
+      "call": "Q4 FY26 call",
+      "cite": "doc:114:p7",
+      "note": "Period not started",
+      "basis": "unspecified",
+      "quote": "achieving a 30% payout ratio by financial year 2030.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:dividend_payout",
+      "status": "pending",
+      "horizon": "FY30",
+      "said_on": "2026-05-15",
+      "speaker": "Shashank Yagnick",
+      "label_raw": "dividend payout ratio",
+      "revised_to": null,
+      "target_text": "At least 30%",
+      "metric_label": "Dividend payout"
+     },
+     {
+      "id": 11,
+      "call": "Q3 FY26 call",
+      "cite": "doc:115:p5",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "Capital expenditure for the quarter was ₹ 3.4 billion, taking the 9M FY26 total to ₹ 10.9 billion, in-line with our Project Spring guidance of investing ₹ 12 billion to ₹ 16 billion annually through FY30.",
+      "scope": null,
+      "actual": null,
+      "metric": "capex",
+      "status": "pending",
+      "horizon": "Through FY30",
+      "said_on": "2026-01-15",
+      "speaker": "Shashank Yagnick",
+      "label_raw": "Project Spring annual capex",
+      "revised_to": null,
+      "target_text": "₹1,200 cr to ₹1,600 cr",
+      "metric_label": "Capex"
+     }
+    ],
+    "credibility": {
+     "score": null,
+     "missed": 0,
+     "pending": 9,
+     "resolved": 0,
+     "delivered": 0,
+     "near_miss": 0
+    }
+   },
+   "balance_sheet": {
+    "cites": {
+     "auditor": "doc:117:p309"
+    },
+    "wc_days": {
+     "ccc": 39,
+     "debtor": 48,
+     "payable": null,
+     "inventory": null
+    },
+    "de_ratio": 0.02,
+    "net_worth": 13094,
+    "borrowings": 272,
+    "contingent_cr": 54.49,
+    "interest_cover": 15.9,
+    "auditor_opinion": "unmodified",
+    "key_audit_matters": [
+     "Revenue recognition - Wires and cables and Fast-Moving Electrical Goods (FMEG) business",
+     "Estimation of contract cost - Engineering Procurement and Construction (EPC)",
+     "Inventory Valuation - Wires & Cables"
+    ],
+    "contingent_pct_networth": 0.4
+   },
+   "seed_questions": [
+    "What factors drive the FMEG margin reaching 10.1%?",
+    "How will copper price fluctuations impact Q3 margins?",
+    "What is the status of the IBC hearing for Asier Metals?"
+   ],
+   "analyst_concerns": [
+    {
+     "cite": "doc:112:p7",
+     "topic": "FMEG margins",
+     "summary": "Analyst asked about the drivers behind the strong FMEG margin reaching 10.1% and whether Project Spring targets would be revised."
+    },
+    {
+     "cite": "doc:112:p8",
+     "topic": "Wires and Cables margins and competition",
+     "summary": "Analyst inquired about the sustainability of high Wires and Cables margins and potential risks from new entrants in the distribution channel."
+    },
+    {
+     "cite": "doc:112:p9",
+     "topic": "Volume growth breakdown",
+     "summary": "Analyst asked for the exact breakdown of volume growth vs value growth in cables and wires."
+    },
+    {
+     "cite": "doc:112:p9",
+     "topic": "NCLAT / IBC proceedings",
+     "summary": "Analyst inquired about the status and timeline of the IBC hearing regarding Asier Metals."
+    },
+    {
+     "cite": "doc:112:p11",
+     "topic": "Exports and Data Centers",
+     "summary": "Analyst asked about export outlook and opportunities in optical fiber cables and data centers."
+    },
+    {
+     "cite": "doc:113:p6",
+     "topic": "Price hikes, volume growth and copper prices",
+     "summary": "Analyst asked about price hikes and volume growth in the quarter and how pricing will work out for Q2 considering copper prices."
+    },
+    {
+     "cite": "doc:113:p6",
+     "topic": "Working capital and acceptances",
+     "summary": "Clarification sought on actual creditors, capex creditors, acceptances, and whether interest on acceptances is booked in expenses or finance costs."
+    },
+    {
+     "cite": "doc:113:p7",
+     "topic": "Data centre opportunity and optic fibres",
+     "summary": "Asked for thoughts on the upcoming data centre opportunity and opportunities in optic fibres."
+    },
+    {
+     "cite": "doc:113:p7",
+     "topic": "Exports slowdown",
+     "summary": "Inquired whether the 13% decline in exports was largely due to the Middle East and how coming quarters are foreseen."
+    },
+    {
+     "cite": "doc:113:p7",
+     "topic": "Bharat Net project and EPC revenue",
+     "summary": "Asked about profitability of Bharat Net projects given steep price increases in fibre, and reasons for weak EPC revenue."
+    },
+    {
+     "cite": "doc:113:p8",
+     "topic": "Full year volume growth",
+     "summary": "Inquired how to look at full year volume growth given high bases in certain quarters."
+    }
+   ],
+   "what_matters_now": [
+    {
+     "text": "Revenue reached ₹9,899 cr in Q2 FY27 with a YoY growth rate of 52.8%.",
+     "cites": [
+      "fact:q_revenue",
+      "fact:q_revenue_yoy"
+     ]
+    },
+    {
+     "text": "EBITDA margin changed YoY by −140 bps to reach 14.4% in Q2 FY27.",
+     "cites": [
+      "fact:q_opm",
+      "fact:q_opm_yoy_bps"
+     ]
+    },
+    {
+     "text": "Management targeted an EBITDA margin of 11–13% for the medium term in the Q2 FY27 call.",
+     "cites": [
+      "doc:112:p6"
+     ]
+    }
+   ],
+   "narrative_vs_numbers": [
+    {
+     "id": 1,
+     "cite": "doc:112:p2",
+     "cites": [],
+     "claim": "The Wires and Cables business continues to deliver robust growth supported by healthy demand.",
+     "quote": "The Wires and Cables business continues to deliver robust growth, supported by healthy demand trends, strong market positioning, and consistent execution.",
+     "verdict": "too_early",
+     "evidence": "The facts do not contain information about the Wires and Cables business or demand trends."
+    },
+    {
+     "id": 2,
+     "cite": "doc:112:p2",
+     "cites": [],
+     "claim": "Project Spring initiatives are progressing in line with plan and yielding results.",
+     "quote": "Encouragingly, the initiatives under our strategic roadmap, Project Spring, are progressing in line with plan and are already beginning to yield meaningful results",
+     "verdict": "too_early",
+     "evidence": "The facts do not provide details on Project Spring initiatives."
+    },
+    {
+     "id": 3,
+     "cite": "doc:112:p2",
+     "cites": [],
+     "claim": "FMEG segment recorded its seventh consecutive profitable quarter.",
+     "quote": "The FMEG segment continued to strengthen its growth trajectory and recorded its seventh consecutive profitable quarter.",
+     "verdict": "too_early",
+     "evidence": "The facts do not contain data regarding the FMEG segment or its profitable quarters."
+    },
+    {
+     "id": 4,
+     "cite": "doc:112:p5",
+     "cites": [],
+     "claim": "Exports picked up strongly with 17% YoY growth and 85% QoQ growth.",
+     "quote": "Despite challenging geopolitical environment, exports picked up strongly during the quarter as sales grew 17% year-on-year and grew 85% quarter-on-quarter.",
+     "verdict": "too_early",
+     "evidence": "The facts do not mention export sales growth figures."
+    },
+    {
+     "id": 5,
+     "cite": "doc:113:p3",
+     "cites": [],
+     "claim": "Wires & cables business maintained steady momentum leveraging market leadership and execution capabilities.",
+     "quote": "The Wires & Cables business maintained steady momentum, leveraging its market leadership and execution capabilities, while the FMEG business continued its trajectory of steady improvement",
+     "verdict": "too_early",
+     "evidence": "The facts do not mention the Wires & Cables business or FMEG performance."
+    },
+    {
+     "id": 6,
+     "cite": "doc:113:p5",
+     "cites": [],
+     "claim": "Wires grew faster than cables and channel sales outperformed institutional sales during the quarter.",
+     "quote": "From a category standpoint, wires grew faster than cables during the quarter. Channel sales also outperformed institutional sales, highlighting the strength of our distribution network.",
+     "verdict": "too_early",
+     "evidence": "The facts do not provide a breakdown between wires and cables or channel and institutional sales."
+    },
+    {
+     "id": 7,
+     "cite": "doc:113:p5",
+     "cites": [],
+     "claim": "Solar business continued to be the primary growth engine in FMEG, delivering more than twofold growth year-on-year.",
+     "quote": "Solar business, our largest category within the FMEG portfolio, continued to be the primary growth engine, delivering more than twofold growth year-on-year.",
+     "verdict": "too_early",
+     "evidence": "The facts do not contain data on the Solar business or FMEG portfolio."
+    },
+    {
+     "id": 8,
+     "cite": "doc:114:p3",
+     "cites": [],
+     "claim": "Demand sentiment was impacted by geopolitical developments in the Middle East.",
+     "quote": "The demand sentiment to an extent was impacted by geopolitical developments in the Middle East",
+     "verdict": "too_early",
+     "evidence": "The facts do not report on demand sentiment or geopolitical developments in the Middle East."
+    },
+    {
+     "id": 9,
+     "cite": "doc:114:p6",
+     "cites": [],
+     "claim": "Domestic wires and cable organized market share increased to 30-31%.",
+     "quote": "Our domestic wires and cable organized market share has now increased to 30-31%",
+     "verdict": "too_early",
+     "evidence": "The facts do not provide market share percentages for domestic wires and cable."
+    },
+    {
+     "id": 10,
+     "cite": "doc:114:p7",
+     "cites": [],
+     "claim": "FMEG segment delivered 47% year-on-year growth for the quarter.",
+     "quote": "registering a strong 47% year-on-year growth with broad-based contributions across all product categories.",
+     "verdict": "too_early",
+     "evidence": "The facts do not mention the FMEG segment growth rate for the quarter."
+    }
+   ]
+  }
+ }
+}

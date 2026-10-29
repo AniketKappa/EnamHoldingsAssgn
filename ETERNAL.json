@@ -1,0 +1,2155 @@
+{
+ "state": {
+  "t0": 1793277338854,
+  "docs": [
+   {
+    "id": 106,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/64f36e3b-87e9-426e-be3e-515dca4525d2.pdf",
+    "label": "Q2 FY27 call (Oct 2026)",
+    "pages": 16,
+    "status": "extracted",
+    "said_on": "2026-10-15",
+    "doc_type": "transcript",
+    "period_end": "2026-09-30",
+    "period_label": "Q2 FY27"
+   },
+   {
+    "id": 107,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/faa4f0f7-06e4-4066-9d68-3da95dfe02d9.pdf",
+    "label": "Q1 FY27 call (Jul 2026)",
+    "pages": 17,
+    "status": "extracted",
+    "said_on": "2026-07-15",
+    "doc_type": "transcript",
+    "period_end": "2026-06-30",
+    "period_label": "Q1 FY27"
+   },
+   {
+    "id": 108,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/60af607c-5f1b-4d5d-8425-4929efa6aad1.pdf",
+    "label": "Q4 FY26 call (May 2026)",
+    "pages": 18,
+    "status": "extracted",
+    "said_on": "2026-05-15",
+    "doc_type": "transcript",
+    "period_end": "2026-03-31",
+    "period_label": "Q4 FY26"
+   },
+   {
+    "id": 109,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/91f3f29f-c5c0-49b5-b425-a22374bf08ad.pdf",
+    "label": "Q3 FY26 call (Jan 2026)",
+    "pages": 18,
+    "status": "extracted",
+    "said_on": "2026-01-15",
+    "doc_type": "transcript",
+    "period_end": "2025-12-31",
+    "period_label": "Q3 FY26"
+   },
+   {
+    "id": 110,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/69f3f58b-c856-4abf-9548-ab8c8f1a398e.pdf",
+    "label": "Q2 FY26 call (Oct 2025)",
+    "pages": 18,
+    "status": "extracted",
+    "said_on": "2025-10-15",
+    "doc_type": "transcript",
+    "period_end": "2025-09-30",
+    "period_label": "Q2 FY26"
+   },
+   {
+    "id": 111,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4b6a4218-6bde-4c99-b10c-39ec7553cc42.pdf",
+    "label": "FY26 annual report",
+    "pages": 422,
+    "status": "extracted",
+    "said_on": null,
+    "doc_type": "annual_report",
+    "period_end": "2026-03-31",
+    "period_label": "FY26"
+   }
+  ],
+  "done": [
+   "resolve",
+   "financials",
+   "documents",
+   "extract",
+   "annual_report",
+   "ledger",
+   "synthesis"
+  ],
+  "name": "Eternal",
+  "judged": [
+   {
+    "id": 1,
+    "cite": "doc:106:p3",
+    "cites": [],
+    "claim": "Competitive intensity in food delivery was higher in Q2 compared to previous quarters.",
+    "quote": "Generally, the competitive intensity last quarter in food delivery was higher compared to the previous few quarters, and partly also driven by Zomato.",
+    "verdict": "too_early",
+    "evidence": "No facts are available regarding comparative competitive intensity in food delivery across quarters."
+   },
+   {
+    "id": 2,
+    "cite": "doc:106:p4",
+    "cites": [],
+    "claim": "Bulk of the expansion of new quick commerce stores will be in smaller cities.",
+    "quote": "Directionally, we've also mentioned in the letter that the bulk of the expansion of these new stores will be in smaller cities.",
+    "verdict": "too_early",
+    "evidence": "No facts are provided regarding the geographic distribution of quick commerce store expansion."
+   },
+   {
+    "id": 3,
+    "cite": "doc:106:p5",
+    "cites": [],
+    "claim": "Steady state SKU mix for quick commerce is about 90-95% 1P.",
+    "quote": "Jignanshu, we are at that steady state now where about 90-95% is 1P, and we don't expect any more incremental working capital change on that account",
+    "verdict": "too_early",
+    "evidence": "No facts are provided detailing the steady state SKU mix for quick commerce."
+   },
+   {
+    "id": 4,
+    "cite": "doc:106:p6",
+    "cites": [],
+    "claim": "Agentic commerce adoption in India is close to zero.",
+    "quote": "in India, agentic commerce adoption is close to zero.",
+    "verdict": "too_early",
+    "evidence": "No facts mention agentic commerce adoption rates in India."
+   },
+   {
+    "id": 5,
+    "cite": "doc:107:p3",
+    "cites": [],
+    "claim": "Most of the growth in Blinkit is from existing cities rather than geographical expansion.",
+    "quote": "Most of it is from existing cities.",
+    "verdict": "too_early",
+    "evidence": "No facts discuss whether Blinkit growth is driven by existing cities or new expansions."
+   },
+   {
+    "id": 6,
+    "cite": "doc:107:p4",
+    "cites": [],
+    "claim": "First quarter was the peak of competitive intensity seen till date in quick commerce.",
+    "quote": "First quarter, so far, was the peak of competitive intensity that we have seen till date because the number of players is higher and everybody was more aggressive.",
+    "verdict": "too_early",
+    "evidence": "No facts provide data on competitive intensity peaks in quick commerce quarters."
+   },
+   {
+    "id": 7,
+    "cite": "doc:107:p5",
+    "cites": [],
+    "claim": "Discount-led growth in quick commerce is not sustainable.",
+    "quote": "we strongly feel that discount-led growth is not sustainable in the business.",
+    "verdict": "too_early",
+    "evidence": "No facts address the sustainability of discount-led growth in quick commerce."
+   },
+   {
+    "id": 8,
+    "cite": "doc:107:p10",
+    "cites": [],
+    "claim": "Inventory losses in Blinkit have been fairly asymptotic and are netted out of gross profit.",
+    "quote": "It has been fairly asymptotic so far. We don't expect it to be materially much better.",
+    "verdict": "too_early",
+    "evidence": "No facts mention inventory losses or gross profit netting for Blinkit."
+   },
+   {
+    "id": 9,
+    "cite": "doc:108:p3",
+    "cites": [],
+    "claim": "Quick commerce monthly transacting user additions remain strong due to marketing spends for new customer acquisition.",
+    "quote": "MTU additions remain strong because we continue to spend on marketing for new customer acquisition.",
+    "verdict": "too_early",
+    "evidence": "No facts report monthly transacting user additions or marketing spends."
+   },
+   {
+    "id": 10,
+    "cite": "doc:108:p4",
+    "cites": [],
+    "claim": "Dark store expansion is on track to reach 3,000 stores by March.",
+    "quote": "On store addition, we're on track on our guidance for March of 3,000 stores. We remain firmly on track.",
+    "verdict": "too_early",
+    "evidence": "No facts provide guidance or current count regarding dark store expansion targets."
+   }
+  ],
+  "sector": null,
+  "symbol": "ETERNAL",
+  "pending": [],
+  "version": "f73486cdb2fc",
+  "synthesis": {
+   "log": [],
+   "bear": [
+    {
+     "text": "P/E registered 638× now.",
+     "cites": [
+      "fact:pe"
+     ]
+    },
+    {
+     "text": "Net profit growth declined −30.6% in FY26.",
+     "cites": [
+      "fact:fy_pat_growth"
+     ]
+    },
+    {
+     "text": "Interest cover registered 2.6× in FY26.",
+     "cites": [
+      "fact:interest_cover"
+     ]
+    }
+   ],
+   "bull": [
+    {
+     "text": "Revenue achieved a 3 years CAGR of 97.3% up to FY26.",
+     "cites": [
+      "fact:revenue_cagr_3y"
+     ]
+    },
+    {
+     "text": "Cash conversion cycle recorded 2 days in FY26.",
+     "cites": [
+      "fact:ccc_days"
+     ]
+    },
+    {
+     "text": "Debt to equity reached 0.18× in Sep 2026.",
+     "cites": [
+      "fact:de_ratio"
+     ]
+    }
+   ],
+   "model": "gemini-3.5-flash-lite",
+   "dropped": 0,
+   "seed_questions": [
+    "What drives the 60% net order value growth target over the medium term?",
+    "How does management plan to achieve the $1 billion EBITDA target by FY29?",
+    "What are the unit economics and costs for expanding quick commerce stores into smaller towns?"
+   ],
+   "what_matters_now": [
+    {
+     "text": "Revenue reached ₹24,138 cr with YoY growth of 77.6% in Q2 FY27.",
+     "cites": [
+      "fact:q_revenue",
+      "fact:q_revenue_yoy"
+     ]
+    },
+    {
+     "text": "EBITDA stood at ₹752 cr with an EBITDA margin of 3.1% in Q2 FY27.",
+     "cites": [
+      "fact:q_ebitda",
+      "fact:q_opm"
+     ]
+    },
+    {
+     "text": "Management targeted $1 billion EBITDA by FY29 while keeping store count at 3,000 for FY27.",
+     "cites": [
+      "doc:108:p3",
+      "doc:108:p4"
+     ]
+    }
+   ]
+  }
+ },
+ "extracts": [
+  {
+   "document_id": "106",
+   "kind": "transcript",
+   "data": {
+    "dropped": 1,
+    "guidance": [
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "broadly, over the next 1 or 2 years, we expect the margins to remain flattish.",
+      "metric": "ebitda_margin",
+      "horizon": "medium_term",
+      "speaker": "Akshant Goyal",
+      "direction": "qualitative",
+      "label_raw": "food delivery business margins over the next 1 or 2 years",
+      "target_low": null,
+      "target_high": null
+     },
+     {
+      "page": 8,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "What we are saying here is that as we accelerate store addition, which is starting OND... NOV growth pickup starting the December quarter on a YoY basis?",
+      "metric": "other:nov_growth",
+      "horizon": "Q3 FY27",
+      "speaker": "Akshant Goyal",
+      "direction": "qualitative",
+      "label_raw": "Blinkit NOV growth starting the December quarter",
+      "target_low": null,
+      "target_high": null
+     }
+    ],
+    "call_date": "October 21, 2026",
+    "call_period": "Q2 FY27",
+    "reported_kpis": [
+     {
+      "page": 11,
+      "unit": "cr",
+      "basis": "unspecified",
+      "quote": "We gave guidance last time that in steady state it could get to about INR 11 lakh per day per store. We are at INR 9 lakh today.",
+      "value": 9,
+      "metric": "other:nov_per_store_per_day",
+      "period": "Q2 FY27"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 3,
+      "topic": "Competitive intensity and food delivery margins",
+      "summary": "Analysts asked whether discounting has increased and if food delivery margins have peaked out."
+     },
+     {
+      "page": 3,
+      "topic": "Quick commerce store expansion in tier 2 and tier 3 cities",
+      "summary": "Questions regarding the rationale, geographies, unit economics, and costs of expanding into smaller towns."
+     },
+     {
+      "page": 4,
+      "topic": "Dark.ai monetization, capex, and business model",
+      "summary": "Analysts inquired about dark.ai's target audience, monetization potential, infrastructure costs, and right to win."
+     },
+     {
+      "page": 5,
+      "topic": "Quick commerce indirect cost structure and contribution margins",
+      "summary": "Questions on why indirect costs are growing quickly despite store growth and higher NOV per store."
+     },
+     {
+      "page": 6,
+      "topic": "Competition in quick commerce and impact on expansion",
+      "summary": "Inquiries regarding how management's read on 12 months of heightened competition gives confidence to reaccelerate store additions."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 3,
+      "claim": "Competitive intensity in food delivery was higher in Q2 compared to previous quarters.",
+      "quote": "Generally, the competitive intensity last quarter in food delivery was higher compared to the previous few quarters, and partly also driven by Zomato.",
+      "horizon": "Q2 FY27"
+     },
+     {
+      "page": 4,
+      "claim": "Bulk of the expansion of new quick commerce stores will be in smaller cities.",
+      "quote": "Directionally, we've also mentioned in the letter that the bulk of the expansion of these new stores will be in smaller cities.",
+      "horizon": null
+     },
+     {
+      "page": 5,
+      "claim": "Steady state SKU mix for quick commerce is about 90-95% 1P.",
+      "quote": "Jignanshu, we are at that steady state now where about 90-95% is 1P, and we don't expect any more incremental working capital change on that account",
+      "horizon": null
+     },
+     {
+      "page": 6,
+      "claim": "Agentic commerce adoption in India is close to zero.",
+      "quote": "in India, agentic commerce adoption is close to zero.",
+      "horizon": null
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "107",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [],
+    "call_date": "July 22, 2026",
+    "call_period": "Q1 FY27",
+    "reported_kpis": [],
+    "analyst_concerns": [
+     {
+      "page": 4,
+      "topic": "Competitive intensity in quick commerce",
+      "summary": "Analysts asked about the peak of competitive intensity, predictability of subsidies, and sustainability of discounting."
+     },
+     {
+      "page": 5,
+      "topic": "Blinkit Average Order Value (AOV)",
+      "summary": "Inquiries regarding the consecutive drop in AOV, seasonality impact, and future trajectory."
+     },
+     {
+      "page": 7,
+      "topic": "Blinkit Capex vs Cash Flow",
+      "summary": "Questions on the difference between stated per-store capex and actual capex in the cash flow statement due to warehousing lumpiness."
+     },
+     {
+      "page": 6,
+      "topic": "Food Delivery and MTU Growth",
+      "summary": "Queries on whether the increase in MTUs is driven by new users or conversion from ATUs, and response to competition."
+     },
+     {
+      "page": 11,
+      "topic": "Working Capital and Inventory Days",
+      "summary": "Questions on how inventory days were reduced further and the sustainability of working capital levels."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 3,
+      "claim": "Most of the growth in Blinkit is from existing cities rather than geographical expansion.",
+      "quote": "Most of it is from existing cities.",
+      "horizon": null
+     },
+     {
+      "page": 4,
+      "claim": "First quarter was the peak of competitive intensity seen till date in quick commerce.",
+      "quote": "First quarter, so far, was the peak of competitive intensity that we have seen till date because the number of players is higher and everybody was more aggressive.",
+      "horizon": null
+     },
+     {
+      "page": 5,
+      "claim": "Discount-led growth in quick commerce is not sustainable.",
+      "quote": "we strongly feel that discount-led growth is not sustainable in the business.",
+      "horizon": null
+     },
+     {
+      "page": 10,
+      "claim": "Inventory losses in Blinkit have been fairly asymptotic and are netted out of gross profit.",
+      "quote": "It has been fairly asymptotic so far. We don't expect it to be materially much better.",
+      "horizon": null
+     },
+     {
+      "page": 10,
+      "claim": "Non-metro cities are growing faster in Blinkit as they are growing off a smaller base.",
+      "quote": "the non-metro cities are obviously growing faster because they're also growing off a smaller base.",
+      "horizon": null
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "108",
+   "kind": "transcript",
+   "data": {
+    "dropped": 1,
+    "guidance": [
+     {
+      "page": 3,
+      "unit": "other",
+      "basis": "unspecified",
+      "quote": "overall EBITDA guidance or indication of $1 billion by FY29.",
+      "metric": "ebitda",
+      "horizon": "FY29",
+      "speaker": "Akshant Goyal",
+      "direction": "point",
+      "label_raw": "EBITDA by FY29",
+      "target_low": null,
+      "target_high": 1
+     },
+     {
+      "page": 4,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "On store addition, we're on track on our guidance for March of 3,000 stores.",
+      "metric": "store_count",
+      "horizon": "FY27",
+      "speaker": "Akshant Goyal",
+      "direction": "point",
+      "label_raw": "dark stores by March",
+      "target_low": 3000,
+      "target_high": 3000
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "NOV growth CAGR of 60% for quick commerce",
+      "metric": "other:nov_growth",
+      "horizon": "medium_term",
+      "speaker": "Akshant Goyal",
+      "direction": "point",
+      "label_raw": "quick commerce NOV CAGR",
+      "target_low": 60,
+      "target_high": 60
+     }
+    ],
+    "call_date": "April 28, 2026",
+    "call_period": "Q4 FY26",
+    "reported_kpis": [],
+    "analyst_concerns": [
+     {
+      "page": 4,
+      "topic": "Quick commerce competitive intensity and growth",
+      "summary": "Analysts questioned whether the 100% growth guidance for FY27 holds and how the 60% medium-term CAGR accounts for competition."
+     },
+     {
+      "page": 3,
+      "topic": "Dark store expansion and store metrics",
+      "summary": "Inquiries regarding the pace of dark store additions and orders per day per store stability."
+     },
+     {
+      "page": 5,
+      "topic": "Food delivery and quick commerce contribution margins",
+      "summary": "Questions on the slight dip in contribution per order and path to long-term margins."
+     },
+     {
+      "page": 9,
+      "topic": "Customer retention and average order values",
+      "summary": "Discussions around lower customer order frequencies and average order value trends."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 3,
+      "claim": "Quick commerce monthly transacting user additions remain strong due to marketing spends for new customer acquisition.",
+      "quote": "MTU additions remain strong because we continue to spend on marketing for new customer acquisition.",
+      "horizon": null
+     },
+     {
+      "page": 4,
+      "claim": "Dark store expansion is on track to reach 3,000 stores by March.",
+      "quote": "On store addition, we're on track on our guidance for March of 3,000 stores. We remain firmly on track.",
+      "horizon": "FY27"
+     },
+     {
+      "page": 13,
+      "claim": "Active delivery partners growth is driven by an increase in part-timers working on platforms.",
+      "quote": "We are seeing more and more part-timers also delivering and that actually increases the active partners",
+      "horizon": null
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "109",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 4,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "I just wanted to tie up that guidance that you're saying that if competition is not irrational, it's only then you'll open 3,500 to 4,000 stores",
+      "metric": "store_count",
+      "horizon": "medium_term",
+      "speaker": "Akshant Goyal",
+      "direction": "range",
+      "label_raw": "Blinkit",
+      "target_low": 3500,
+      "target_high": 4000
+     },
+     {
+      "page": 5,
+      "unit": "other",
+      "basis": "unspecified",
+      "quote": "You've maintained your $3 billion NOV guidance for going-out in FY30",
+      "metric": "revenue",
+      "horizon": "FY30",
+      "speaker": "Akshant Goyal",
+      "direction": "point",
+      "label_raw": "District going-out NOV",
+      "target_low": 3,
+      "target_high": 3
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "our confidence on margins going to 5% to 6% of NOV remains high",
+      "metric": "ebitda_margin",
+      "horizon": "medium_term",
+      "speaker": "Akshant Goyal",
+      "direction": "range",
+      "label_raw": "Blinkit",
+      "target_low": 5,
+      "target_high": 6
+     }
+    ],
+    "call_date": "January 21, 2026",
+    "call_period": "Q3 FY26",
+    "reported_kpis": [],
+    "analyst_concerns": [
+     {
+      "page": 3,
+      "topic": "Quick Commerce Margins and Competition",
+      "summary": "Analysts questioned why quick commerce margins improved despite falling store throughput and irrational competition."
+     },
+     {
+      "page": 4,
+      "topic": "Store Throughput and Assortment",
+      "summary": "Questions were raised regarding the decline in store throughput and whether assortment expansion negatively impacts store metrics."
+     },
+     {
+      "page": 7,
+      "topic": "Going-Out Business Losses",
+      "summary": "Analysts inquired about the sudden jump in going-out losses and investments made during the quarter."
+     },
+     {
+      "page": 6,
+      "topic": "Capex and Working Capital",
+      "summary": "Concerns were raised about increasing capex per store and working capital days."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 4,
+      "claim": "Competitive intensity has been high with competitors offering lower MOVs, zero delivery fees, and discounting.",
+      "quote": "Last quarter, we saw competitive intensity getting amped up because a lot of competitors went to low MOVs for zero delivery fees, but we're also seeing a lot of discounting happen in the market.",
+      "horizon": null
+     },
+     {
+      "page": 6,
+      "claim": "Assortment expansion in quick commerce has a temporary negative impact on store throughput.",
+      "quote": "there is always that negative impact of assortment expansion on throughput that we will continue seeing in the business, and in this quarter, that's resulted in a slight dip.",
+      "horizon": null
+     },
+     {
+      "page": 7,
+      "claim": "District Pass membership program was launched to drive multi-category usage on the app.",
+      "quote": "We decided to launch District Pass membership program which we initially did not plan for in this quarter, and a large part of the increase in losses is on account of rolling that out",
+      "horizon": null
+     },
+     {
+      "page": 13,
+      "claim": "Bistro is filling a cuisine gap in the market and does not cannibalize the Zomato food delivery business.",
+      "quote": "There is a cuisine gap in the market which Bistro fills, and that is also why we don't see this business cannibalizing the Zomato business, wherever we have these stores.",
+      "horizon": null
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "110",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 10,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "you plan to operate around 2,100 stores by the December quarter and 3,000 by March 2027.",
+      "metric": "store_count",
+      "horizon": "Q3 FY26",
+      "speaker": "Akshant Goyal",
+      "direction": "point",
+      "label_raw": "Blinkit stores by December quarter",
+      "target_low": 2100,
+      "target_high": 2100
+     },
+     {
+      "page": 10,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "3,000 by March 2027.",
+      "metric": "store_count",
+      "horizon": "FY27",
+      "speaker": "Akshant Goyal",
+      "direction": "point",
+      "label_raw": "Blinkit stores by March 2027",
+      "target_low": 3000,
+      "target_high": 3000
+     },
+     {
+      "page": 10,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "I do expect the year-on-year growth to remain above 100% for the next one or two years at least.",
+      "metric": "revenue_growth",
+      "horizon": "medium_term",
+      "speaker": "Akshant Goyal",
+      "direction": "at_least",
+      "label_raw": "Blinkit NOV growth for next one or two years",
+      "target_low": 100,
+      "target_high": null
+     },
+     {
+      "page": 11,
+      "unit": "other",
+      "basis": "unspecified",
+      "quote": "FY27 should be better than FY26, in terms of losses in the business.",
+      "metric": "other:loss",
+      "horizon": "FY27",
+      "speaker": "Akshant Goyal",
+      "direction": "qualitative",
+      "label_raw": "District losses in FY27",
+      "target_low": null,
+      "target_high": null
+     }
+    ],
+    "call_date": "October 16, 2025",
+    "call_period": "Q2 FY26",
+    "reported_kpis": [
+     {
+      "page": 10,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Currently if you look at the growth rate, it's much higher at 137%.",
+      "value": 137,
+      "metric": "revenue_growth",
+      "period": "Q2 FY26"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 3,
+      "topic": "Blinkit marketing spends and CAC",
+      "summary": "Analysts questioned whether elevated marketing spends and customer acquisition costs will continue."
+     },
+     {
+      "page": 6,
+      "topic": "Food delivery growth and margins",
+      "summary": "Concerned about muted food delivery growth and the margin impact from platform fee hikes."
+     },
+     {
+      "page": 8,
+      "topic": "District profitability trajectory",
+      "summary": "Asked about the timeline for reduction of losses in the District business."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 3,
+      "claim": "Marketing spends on Blinkit are expected to continue at elevated levels in the near term.",
+      "quote": "So, till the point that we keep seeing this trend, we will keep investing however much that we can to basically power more growth. So, you should expect this to continue in the next quarter as well.",
+      "horizon": "near_term"
+     },
+     {
+      "page": 11,
+      "claim": "Food delivery growth rate is expected to see a slow uptick in the near term.",
+      "quote": "outside of that, as we’ve also mentioned in the letter, we expect a slow uptick in growth rate in the near term and there is no silver bullet that we have as of now.",
+      "horizon": "near_term"
+     },
+     {
+      "page": 8,
+      "claim": "District absolute losses are expected to remain range bound around current levels.",
+      "quote": "we expect the absolute losses to sort of remain range bound around the current levels.",
+      "horizon": "near_term"
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "111",
+   "kind": "annual_report",
+   "data": {
+    "segments": [
+     {
+      "name": "India food ordering and delivery",
+      "page": 278,
+      "share_pct": null,
+      "revenue_cr": 10159
+     },
+     {
+      "name": "Hyperpure supplies (B2B business)",
+      "page": 278,
+      "share_pct": null,
+      "revenue_cr": 5366
+     },
+     {
+      "name": "Quick Commerce business",
+      "page": 278,
+      "share_pct": null,
+      "revenue_cr": 37779
+     },
+     {
+      "name": "Going Out",
+      "page": 278,
+      "share_pct": null,
+      "revenue_cr": 973
+     },
+     {
+      "name": "All other segments (residual)",
+      "page": 278,
+      "share_pct": null,
+      "revenue_cr": 87
+     }
+    ],
+    "citations": [
+     {
+      "page": 224,
+      "field": "business_description",
+      "quote": "India food ordering and delivery comprises of online marketplace platform through which the Group facilitates listing and online ordering of food items by connecting end users, restaurant partners and independent delivery partners."
+     },
+     {
+      "page": 278,
+      "field": "segments",
+      "quote": "India food ordering and delivery 10,159"
+     },
+     {
+      "page": 61,
+      "field": "top_risks",
+      "quote": "Competition | Governance"
+     },
+     {
+      "page": 273,
+      "field": "related_party_highlights",
+      "quote": "Remuneration to KMP Salaries and other employee benefits (1) 146 165"
+     },
+     {
+      "page": 190,
+      "field": "auditor_opinion",
+      "quote": "In our opinion and to the best of our information and according to the explanations given to us, and based on the consideration of reports of the other auditors on separate financial statements of the subsidiaries and the trust referred to in the Other Matters section below, the aforesaid consolidated financial statements give the information required by the Companies Act, 2013 (the “Act”) in the manner so required and give a true and fair view in conformity with the Indian Accounting Standards prescribed under section 133 of the Act, (“Ind AS”) and other accounting principles generally accepted in India, of the consolidated state of affairs of the Group as at 31st March 2026..."
+     },
+     {
+      "page": 191,
+      "field": "key_audit_matters",
+      "quote": "1. Fair valuation of investment in other entities"
+     }
+    ],
+    "top_risks": [
+     "Competition",
+     "Regulatory Compliances",
+     "Stakeholder Management",
+     "Data privacy, cybersecurity and responsible AI",
+     "Macroeconomic and geopolitical risk"
+    ],
+    "pages_read": [
+     60,
+     61,
+     68,
+     69,
+     104,
+     105,
+     106,
+     170,
+     173,
+     183,
+     190,
+     191,
+     192,
+     194,
+     213,
+     224,
+     225,
+     226,
+     273,
+     277,
+     278,
+     302,
+     303,
+     304,
+     306,
+     337,
+     383,
+     394
+    ],
+    "fiscal_year": "FY26",
+    "auditor_opinion": "unmodified",
+    "key_audit_matters": [
+     "Fair valuation of investment in other entities",
+     "Revenue Recognition",
+     "Impairment Assessment of Goodwill"
+    ],
+    "business_description": "Eternal operates an e-commerce platform facilitating food ordering and delivery, farm-to-fork supplies for restaurants, quick commerce, and a going-out segment combining dining-out and entertainment ticketing. Through its various subsidiaries and apps, it connects end users, merchant partners, and independent delivery personnel.",
+    "related_party_highlights": [
+     "Remuneration to KMP: Salaries and other employee benefits of INR 146 crores and directors remuneration and sitting fees of INR 5 crores.",
+     "Expense charged on the Group by Airveda Technologies Private Limited: AQI monitoring devices subscription & maintenance of INR 0 crore.",
+     "Donation income from ACAD Foundation of INR 0 crore."
+    ],
+    "contingent_liabilities_cr": null
+   },
+   "model": "gemini-3.5-flash-lite"
+  }
+ ],
+ "pages": [
+  {
+   "document_id": "106",
+   "page_no": 2,
+   "text": "Page 1 of 15\nEternal Limited\n(formerly known as Zomato Limited)\nQ2FY27 Earnings Conference Call Transcript\nOctober 21, 2026\nManagement representatives:\n1. Albinder Singh Dhindsa – Chief Executive Officer, Eternal Limited\n2. Akshant Goyal – Chief Financial Officer, Eternal Limited\n3. Kunal Swarup – Head, Corporate Development, Eternal Limited"
+  },
+  {
+   "document_id": "106",
+   "page_no": 3,
+   "text": "Page 2 of 15\nModerator: Ladies and gentlemen, a very good evening, and welcome to Eternal Limited's Q2FY27\nearnings conference call. From Eternal's management team, we have with us today\nAlbinder Singh Dhindsa, Akshant Goyal and Kunal Swarup.\nBefore we begin, a few quick announcements for the attendees. Anything said on this\ncall, which reflects outlook for the future, or which could be construed as a forward-\nlooking statement, may involve risks and uncertainties. Such statements or comments\nare not guarantees of future performance, and actual results may differ from those\nstatements.\nAdditionally, please note that this earnings call is scheduled for a duration of 45 minutes,\nand we will be starting directly with the Q&A section of the call. If you wish to ask a\nquestion, please use the raise hand feature available on your Zoom dashboard. We will\nannounce your name on the call and unmute your line, post which you can proceed with\nyour question. We will wait for a minute while the question queue assembles.\nThe first question is from the line of Garima Mishra from Kotak. Please go ahead.\nGarima Mishra: Hi, thank you so much for the opportunity. First question, could you comment on the\ncompetitive scenario in the food delivery business? Has discounting been more\naggressive in 2Q than it was in the previous few quarters? In this context, should we\nassume that margins of the food delivery business have peaked out and any surplus\nwould just be reinvested towards growth?\nAkshant Goyal: Hi Garima, Akshant here. Generally, the competitive intensity last quarter in food\ndelivery was higher compared to the previous few quarters, and partly also driven by\nZomato. We've been aggressively investing in growth, and we are seeing good outcomes\non certain investments that we've experimented with in the last few quarters, and\nthey're paying off well.\nIn both new customer acquisition as well as in driving frequency of our existing\ncustomer base, we have increased the amount of investments we have done\nconsistently over the last few quarters, and that trend is likely to continue.\nDirectionally, we want to maintain margins broadly and reinvest in growth as much as it\nmakes sense to continue to drive the growth upwards. That's what the operating\nprinciple is. It's hard to project or comment on margin trajectory every quarter but\nbroadly, over the next 1 or 2 years, we expect the margins to remain flattish.\nGarima Mishra: Sure, that's helpful. On the quick commerce business, the new store addition targets\nthat you've laid out are more aggressive than they have been in the past and imply a\nhigher run rate of store additions in FY28 versus FY27. What is giving you this\nconfidence? Of course, there are some things you've laid out already in the letter but"
+  },
+  {
+   "document_id": "106",
+   "page_no": 4,
+   "text": "Page 3 of 15\nwhat kind of geographies would this entail expansion into? And does this automatically\nmean that the tier 2, tier 3 cities would account for the lion's share of these incremental\nstore additions, particularly those in FY28?\nAkshant Goyal: That's right, Garima. Directionally, we've also mentioned in the letter that the bulk of the\nexpansion of these new stores will be in smaller cities. We do expect that to be the focus\nfrom here on, and we are seeing great outcomes in terms of payback on these stores in\nthese markets that we've expanded into in the last few quarters.\nGarima Mishra: Great, that’s it from me for now. I’ll come back in the queue.\nAkshant Goyal: Thank you.\nModerator: Thank you. Next question is from the line of Aditya Soman from CLSA. Please go ahead.\nAditya Soman: Hi, good evening. I have two questions. Firstly, on dark.ai. You've included some\ndisclosure on it being sort of a privacy-focused LLM for power users. First, is that\ncorrect? And second, can you elaborate a little more on what capex this could entail and\nhow you see monetization? And is this within Eternal?\nAnd then on quick commerce, again, just dialing down on that store expansion. On the\ncost side, is there a meaningful difference in the cost to serve a smaller town today? And\nhow do you expect to overcome that over time? Or is it just a function of you having a\nhigher market share in these small towns?\nAkshant Goyal: Hi Aditya. Yes, dark.ai is definitely in Eternal. Anything in this letter is safe to assume is\npart of Eternal. On your other question, this product has been in the works for about a\nyear, and it's not monetized yet, so all the costs here are accounted for in our ‘Others’\nsegment. So they are already carved out. They're not very meaningful at this stage, and\nwe don't expect the capex or cost to become meaningful, at least as of now, unless, of\ncourse, we receive a blockbuster response to this product. Then there might be a\nscenario under which we may have to invest in infrastructure, GPUs, etc., and we'll\nupdate everyone if that happens.\nAs a base case, we think this could be a high gross margin business, which could fund\nitself largely and get to profitability pretty soon. That's the outlook right now. It's very\nearly. Once we launch, we'll iterate on what's the right monetization here and how much\nwe need to invest to continue to grow the business. We'll take those calls closer to the\nlaunch time, and maybe after that, once we get some feedback from our customers. At\nthis point, there's nothing that we want to highlight.\nOn your question on tier 2 markets, I think what you're asking is whether these markets,\nfrom a unit economics standpoint, are any different/ better / worse-off than the larger"
+  },
+  {
+   "document_id": "106",
+   "page_no": 7,
+   "text": "Page 6 of 15\nwill lead how things shape up in India, and India will follow in some sense. Most of this\ndebate would get settled before any meaningful action or any meaningful change in\ncustomer behavior happens in India.\nGaurav Malhotra: Just last question. On food, we see new players entering. Are we picking up anything as\nto what has suddenly got a few players interested in food? It's a fairly penetrated\ncategory and it's surprising that people are planning to enter this category at this\njuncture.\nAkshant Goyal: It doesn't make sense to us at all either and we are equally surprised.\nGaurav Malhotra: Okay, cool. Thank you.\nModerator: Thank you. Next question is from the line of Manish Adukia from Goldman Sachs. Please\ngo ahead.\nManish Adukia: Hi, good evening, thank you for taking my questions. I have a couple of questions on\nquick commerce and then one on dark.ai. On quick commerce, I wanted to probe a little\nbit more on your comment that you now have a better read on competition. Maybe\nAkshant or Albinder, if you can just elaborate on what exactly you mean by that?\nAkshant Goyal: What we mean is that we went through a period over the last 12 months where I would\nsay the competitive intensity significantly increased in quick commerce, including new\nplayers entering and the market becoming a 5 / 6 / 7 player market. We have that 12-\nmonth period behind us. We know how it impacted our business, we know our strengths\nversus other players, and we have some idea of how other players are thinking about this\nmarket — what are they investing on, what are they building, what's their strategy, etc. All\nthat information and data help us feel more confident about reaccelerating expansion.\nDoing this last year would have been fraught with risk because we didn't know how some\nof these things would have panned out, and payback on investments are very important\nfor us. We were in a period in the last 12 months, where the visibility on those things\nreduced. But now, as we mentioned last time also, competition is more predictable now,\nand that provides an opportunity for us to become more aggressive on infrastructure\nexpansion.\nManish Adukia: Very clear. You called that out in the context of your growth and being able to expand in a\nclearer manner versus what you could, let's say, 12 months ago. But does that better read\non competition also give you more comfort around your $1 billion Adjusted EBITDA\nguidance that you have for FY29? Or, from your standpoint, is that not really material\nversus what you thought a few months ago?"
+  },
+  {
+   "document_id": "106",
+   "page_no": 8,
+   "text": "Page 7 of 15\nAkshant Goyal: I would prefer the second option of your answer — no comments on that at this point. It's\nvery early on that three-year journey; we're still two quarters in, so I don't want to jump\ntoo much into the future. We maintain that guidance as of now.\nManish Adukia: Very clear. And then when you're guiding for growth to pick up in Blinkit from 79%, are\nyou specifically referring to the December quarter, or is that a more generic comment\nfor the next 12 months?\nAkshant Goyal: No, it was a specific comment. What we are saying here is that as we accelerate store\naddition, which is starting OND, we don't expect that to hit the margins in the short term.\nLonger term, of course, margins will continue expanding, but we don't expect that there\nshould be a short-term margin reduction on account of accelerated store addition.\nManish Adukia: Sorry, just to confirm — when you talk about growth picking up, are you talking about\nstore growth pickup or NOV growth pickup, in that shareholder letter response?\nAkshant Goyal: It was NOV growth.\nManish Adukia: Right. And just to push on that, you're talking about NOV growth pickup starting the\nDecember quarter on a YoY basis?\nAkshant Goyal: That's right.\nManish Adukia: Understood, thank you for clarifying. Just a last question on dark.ai. One, how does this\nfit into what you already do in District, Zomato, Blinkit? Just trying to understand your\ncompetence in being able to build this business versus somebody else. And second, I\nknow it's still early from a monetization lens or how you will think about go-to-market\nhere, but in your own assessment, just trying to think from a business model perspective\n— this is like an application layer on top of open-source models. Is this something that\nyou think can become very meaningful, or is this just one other thing that you're trying\nand you'll see how it evolves over time?\nAkshant Goyal: It's definitely nascent. We don't have a point of view on whether this could become big or\nnot. If it works, it will become really big; it's more like a zero-to-one bet at this point. If it\nworks, it's a global business and it will generate extremely high shareholder value over\nthe next few years. But if it doesn't work, it's something we'll kill. So that's the space we\nare in.\nOn the right to win, in these AI businesses, we think no one has the right to win. It's a\nnascent market, both consumer and enterprise AI, and most of the new large businesses\ncoming out are actually startups. As I mentioned in response to the previous question,\nthis is something we've been working on for about a year. And there are one or two more\ninitiatives on the enterprise AI side that we have spoken about in the past, including"
+  },
+  {
+   "document_id": "106",
+   "page_no": 9,
+   "text": "Page 8 of 15\nNugget. Again, those are businesses or products we've been working on for the last\nmany years. We expect the next 12 months to tell us whether any of this will become\nmeaningful. These are all businesses where any of them, if they scale, is going to deliver\na multibillion-dollar market cap outcome. We definitely want to take a shot at these\nopportunities where either we have some unique capability which gives us the right to\nwin, which is true for the enterprise AI products that we are working on, or we have some\nunique insight on the consumer side that we think no one else is building and we can\ntake it to the market first. Dark.ai is a little bit of that.\nManish Adukia: Thank you so much for taking me through your thought process.\nModerator: Thank you. Next question is from the line of Gaurav Rateria from Morgan Stanley. Please\ngo ahead.\nGaurav Rateria: Hi, congrats on a good set of numbers. My first question is on the quality of growth that\nyou talked about, that it should be led by MTU growth and this number can grow to a\nmuch larger number. This could potentially be true, led by your foray into the smaller\ncities, which are really playing out well. I just want to understand how you are seeing the\nMTU growth in the top 8 cities. What is the penetration level that we have already hit\nthere? Is there a north star metric that we can look at in any one of the cities where you\nhave hit a certain ratio, at which other cities can also catch up to?\nAkshant Goyal: Gaurav, even in larger cities, we are still seeing extremely good levels of growth, and that\nis driven by both new customer acquisition as well as category and assortment\nexpansion. For example, in our mature cities, Blinkit MTU is already multiple times that\nof Zomato, and we don't see any plateau there yet. We don't want to speculate on how\nlarge the top markets can be but suffice to say that whether you look at NOV growth or\nMTU growth, the larger markets are still growing at a very rapid pace.\nGaurav Rateria: Got it. Second question on food delivery. The margins that you want to keep stable right\nnow, I mean you are already in the band that you had talked about. But it looks like the\nbusiness still has a lot of operating leverage, which can deliver margin expansion. Is this\nstrategy of keeping the margin stable more in the near term to counter the competition,\nif any? Or is it more to further expand the TAM and lead to overall market or overall pie\nexpansion in the country?\nAkshant Goyal: Gaurav, it's more the latter. What you said first, it might help us compete with the new\nentrants. But primarily, we started investing, as I mentioned, not just now but over the\nlast few quarters, and those investment levels are going up, and that's also delivering\ngrowth as we can see. What we're trying to do here is expand the market and expand the\ngrowth for the business, which eventually leads to higher growth on absolute Adjusted\nEBITDA profits. That's what we're trying to solve for, not the percentage margin. We feel\nthat we can drive more growth in absolute Adjusted EBITDA by investing more in growth"
+  },
+  {
+   "document_id": "106",
+   "page_no": 10,
+   "text": "Page 9 of 15\nrather than optimizing for margins. We've been doing that consistently for a few quarters\nnow, and we will continue on that path until we see the outcomes.\nGaurav Rateria: Got it. Last question on dark.ai. How should one think about it? Is it more like an\napplication layer or more like your own reasoning model? And the moment, let's say when\nyou get more confidence for launching it into production, what kind of investment would\nit require, not in terms of quantification, but what kind of investments you need to make\nlike hardware, software? What nature of investments will it require for you to scale it,\nonce it goes into the production stage? Thank you.\nAkshant Goyal: That will be largely hardware and compute. Those are the investments we will need here,\nwhich we are already doing, since we've been running it on a pilot for the last few months\ninternally within Zomato. That's what it is.\nGaurav Rateria: Thank you.\nModerator: Thank you. Next question is from the line of Swapnil Potdukhe from JM Financial. Please\ngo ahead.\nSwapnil Potdukhe: Hi, thanks for the opportunity. Hello? Can you hear me?\nAkshant Goyal: Yes, Swapnil. Hi. Please go ahead.\nSwapnil Potdukhe: Hi, thanks for the opportunity. The first question is on your question number 10, where\nyou mentioned about some mature cities, with more than 70% of NOV being EBITDA\npositive. Can you help us understand what exactly you mean by mature cities, and if\npossible, name them? And are these cities predominantly in North India? I'm just trying\nto understand that.\nAkshant Goyal: Mature cities are cities which have been operating for more than 2-3 years now. They will\ninclude the metros and some of our older cities, which may not be metros but are in the\ntop 15, top 20 cities. I don't want to name any specific city here.\nSwapnil Potdukhe: Okay. But is there any skew towards North India specifically, or is it spread across?\nAkshant Goyal: It's spread across.\nSwapnil Potdukhe: Okay. And just a related question to that, what percentage of our NOV now comes from\nthe top 8 cities?\nAkshant Goyal: We are not sharing that data.\nSwapnil Potdukhe: Has that percentage moved significantly from the last time, when you mentioned\nsomewhere around 70%? If you can just qualitatively get that answer."
+  },
+  {
+   "document_id": "106",
+   "page_no": 11,
+   "text": "Page 10 of 15\nAkshant Goyal: It is reducing directionally.\nSwapnil Potdukhe: And the second question is with respect to your contribution margin in Blinkit. I can see\nthat your NOV per store has gone up, and this happened last quarter also, but your\ncontribution has been flat. Which means the uplift that you should ideally get from dark\nstore or warehousing cost has not necessarily flowed down to your contribution. Is there\nany particular reason to call out here why that has not happened?\nAkshant Goyal: Investment in new stores.\nKunal Swarup: Also, Swapnil, the NOV per store can also go up because the store sizes have increased,\nbut therefore the cost will also increase. Both are not necessarily correlated. And the\nother factor is also gross profit. While NOV per store can increase, it doesn't necessarily\ntranslate into gross profit because the mix can be different. There are various factors at\nplay, and there won't be a linear correlation between NOV per store going up and\ncontribution.\nSwapnil Potdukhe: Okay. And then you talked about there not being much difference between quick\ncommerce and e-commerce in your mind. Does that realistically put your TAM at around\n30-35 crore transacting users on e-commerce today, assuming all the use cases that are\ncurrently served by e-commerce will eventually move to quick commerce? Is that how\none should read that?\nAkshant Goyal: We are not aware of the 35 crore TAM that you mentioned. No one has disclosed that. If\nthat is the number, then yes, you're right, but we don't know whether that number is true\nor not.\nSwapnil Potdukhe: But directionally, you're basically saying that all the use cases that can be served on e-\ncommerce will eventually move to quick commerce.\nAkshant Goyal: Maybe not some categories like fashion, etc., that is different. What we're saying here is\nthat the MTU addition can still be meaningful from here. Now whether the 37 million\nbecomes 350 million as you are saying, or 100 million or 200 million, we honestly have no\npoint of view on that.\nSwapnil Potdukhe: Just the last one, on your AI agents. Can you make out what percentage of your traffic is\nactually coming from these AI agents today? And are there any defensive measures you\ncan take to block this traffic if you don't intend to give them access? I'm just trying to\nunderstand what measures you can take if you think that you don't want to service that\nkind of traffic.\nAlbinder Singh Dhindsa: Swapnil, right now we are friendly to the traffic. We also keep investing in whatever are\nthe latest protocols that we need to build on our end to make these transactions more"
+  },
+  {
+   "document_id": "106",
+   "page_no": 12,
+   "text": "Page 11 of 15\nuser-friendly from an agentic point of view. Right now, the traffic is negligible. While we\nkeep doing this to make sure that we are also able to see what is happening, collect data\nand prepare ourselves in case this is something which gets traction, but so far there is\nno traction. So far, we don't even have a plan to figure out how to block them if we need\nto.\nAlso, we don't really have a lot of use cases where there is nuisance traffic from agents,\nbecause we are more of a transaction platform across the board. We don't have to block\ntraffic which is causing problems for us. In the near term, unless we need to block them\nto block transactions, there isn’t a use case for us to want to block agents.\nSwapnil Potdukhe: Got it. Thanks a lot for taking my questions and all the best.\nModerator: Thank you. Next question is from the line of Rishi Jhunjhunwala from IIFL. Please go\nahead.\nRishi Jhunjhunwala: Yes, thanks for the opportunity. A couple of questions. One, despite the fact that our\noverall store count in QC has grown by almost 50% YoY, the NOV per day as well as orders\nper day per dark store continued to grow pretty healthily at 16-17%, and I'm assuming\nthat these numbers would be higher for stores which have been opened 6 or 9 months\nago or anything prior to that. Incrementally, you're talking about nearly doubling dark\nstores over the next 6 to 7 quarters. Just wanted to understand, from a metric\nperspective, do you believe incremental dark stores will ensure that these NOV per day\nand orders per day remain in the range where we are? Or is there still significant scope\nfor these to continue to improve?\nAkshant Goyal: Rishi, it's very hard to predict that, and we're not solving for that either. Eventually, the\nidea is to make sure that we see good ROCE on the investments we are making. We keep\nupdating investors on what’s our framework for that and what our outlook is on each of\nthose metrics which influence that ROCE.\nBasis what we know today, yes, we think NOV per day should go up. We gave guidance\nlast time that in steady state it could get to about INR 11 lakh per day per store. We are at\nINR 9 lakh today. We do think it will go up directionally over time, but there could be\nsome quarters where the growth in the number of stores is lumpy, and therefore it may\nnot be linearly upwards. But directionally, yes, it should go up. And even if that view\nchanges, what I'm trying to say is that it can change, but we could still deliver a high\nROCE in the business because margins go up or something else happens. It's very hard to\ncommit to this going up continuously over the longer term.\nRishi Jhunjhunwala: Understood. And the second question is on dark.ai. Just wanted to understand from a\nlong-term strategy perspective. You've already invested significantly in the 3-4"
+  },
+  {
+   "document_id": "108",
+   "page_no": 2,
+   "text": "Page 1 of 17\nEternal Limited\n(formerly known as Zomato Limited)\nQ4FY26 Earnings Conference Call Transcript\nApril 28, 2026\nManagement representatives:\n1. Albinder Singh Dhindsa – Chief Executive Officer, Eternal Limited\n2. Akshant Goyal – Chief Financial Officer, Eternal Limited\n3. Kunal Swarup – Head, Corporate Development, Eternal Limited"
+  },
+  {
+   "document_id": "108",
+   "page_no": 3,
+   "text": "Page 2 of 17\nModerator: Ladies and gentlemen, a very good evening, and welcome to Eternal Limited's Q4FY26\nearnings conference call. From Eternal's management team, we have with us today\nAlbinder Singh Dhindsa, Akshant Goyal and Kunal Swarup.\nBefore we begin, a few quick announcements for the attendees. Anything said on this\ncall, which reflects outlook for the future, or which could be construed as a forward-\nlooking statement, may involve risks and uncertainties. Such statements or comments\nare not guarantees of future performance, and actual results may differ from those\nstatements.\nAdditionally, please note that this earnings call is scheduled for a duration of 45 minutes,\nand we will be starting directly with the Q&A section of the call. If you wish to ask a\nquestion, please use the raise hand feature available on your Zoom dashboard. We will\nannounce your name on the call and unmute your line, post which you can proceed with\nyour question. We will wait for a minute while the question queue assembles.\nThe first question is from the line of Gaurav Malhotra from Axis. Please go ahead.\nGaurav Malhotra: Hi, thank you for the opportunity. I had three questions. First question is on the overall\nEBITDA guidance or indication of $1 billion by FY29. Now we do know that food delivery is\nsort of at a steady clip and it's also growing at 19-20%. We do know about District\nEBITDA guidance of FY30. If I just sort of strip it back, and we know the NOV growth\nCAGR of 60% for quick commerce, then the implied margin for quick commerce comes\nto around, say, roughly 3-3.5%, give or take. Is that the number which we are expecting\nfrom a margin perspective in the next three to four years?\nAkshant Goyal: Hi, Gaurav. Broadly the math is fine. We're not giving any specific guidance, and\ntherefore the numbers could move a little bit depending on how things pan out. But, the\nway you did the math is broadly in line with how we're thinking about it.\nGaurav Malhotra: Okay, thank you. Just two more quick questions. We see that your fixed cost in quick\ncommerce has been sort of flattish this quarter and yet the MTU numbers have been\nquite strong. Just wanted to get a sense as to how to reconcile these two numbers.\nThe second question is on the dark stores. I remember you had mentioned that maybe\nyou'll pick up the additions in this quarter, but sort of flattish again. Just wanted to get a\nsense on the dark store guidance of 3,000 by March. These are the only two questions.\nAkshant Goyal: Gaurav, MTU additions remain strong because we continue to spend on marketing for\nnew customer acquisition. So those spends haven't come down in the last quarter and\nhence the overall fixed cost remains in line with the previous quarter and the MTU\naddition also remains strong. We feel a lot of our competitors in the market have pulled\nback on this so we're seeing extremely low cost of customer acquisition and we,"
+  },
+  {
+   "document_id": "108",
+   "page_no": 4,
+   "text": "Page 3 of 17\ntherefore, continue to see value in keeping marketing spends high at this point.\nOn store addition, we're on track on our guidance for March of 3,000 stores. We remain\nfirmly on track. We're not going to give any guidance beyond that. At least at this point,\nwe don't think it makes sense. We've given overall guidance of 60% CAGR and that would\nobviously mean some reasonable store expansion, but we're not planning to give out any\nspecific number guidance on that.\nGaurav Malhotra: Just a follow-up. Essentially, if 3,000 stores happen, that means the general growth for\nFY27 will not be 100% as you had indicated earlier. It will be, say, in the 70-80%, right? Is\nthe understanding correct?\nAkshant Goyal: Yes, it will not be 100%, but we are not guiding to a specific number. We need that\nflexibility in the medium term and short term to respond to how the market dynamics\nare. We know that the street is looking for some guidance, so what we have done here is\nactually given a more longer term three-year guidance. In the short term, we will respond\nto the market situation and if there are options for acceleration, we'll do that. We're not\nclosing the door on any options for us over the next 12 months.\nGaurav Malhotra: Thank you so much.\nModerator: Thank you. Next question is from the line of Manish Adukia from Goldman Sachs. Please\ngo ahead.\nManish Adukia: Thank you. Hi, good afternoon. Thank you for taking my questions. My first question is\nactually a follow-up from Gaurav's previous question.\nAkshant, like Gaurav asked, the 100% guidance now does not hold true for FY27, given\nwhat you saw in the market in terms of competition, etc. Now, when you give your\nmedium term guidance of 60% CAGR, what margin of safety or room for error are you\nbuilding in that guidance? If competition were to remain as is or were to get slightly\nworse from here, what are the range of outcomes for the 60% CAGR?\nThe reason I'm asking is because from a near term perspective, it could maybe help us\nunderstand the building blocks as to where you could see the next three-year growth end\nup to get to 60%. That may help us just build a little bit more conviction. That's my first\nquestion.\nAkshant Goyal: Hi, Manish. We've addressed that in question three of the letter. We've tried to give you\nthe building blocks of what the 60% CAGR guidance is based upon. It's a function of\nassortment expansion, geographical expansion as well as more demand densification in\nthe cities where we are present today and we might also get into newer cities. Any sort\nof intensifying competitive activity isn’t going to last beyond the three-year period that"
+  },
+  {
+   "document_id": "108",
+   "page_no": 5,
+   "text": "Page 4 of 17\nyou mentioned. We are fairly comfortable and confident that over a period of three\nyears, we should be able to deliver this CAGR of growth.\nManish Adukia: Sure, thank you Akshant for that. Where I was coming from was also the building blocks\nin terms of, and I know you don't want to give like a three-year store guidance, but if you\nwere to think about user growth versus frequency versus average order value, if you can\nmaybe give us a pecking order of what drives the most amount of growth versus\nfollowed by the second, followed by the third, that would also be helpful.\nAkshant Goyal: We can't project with that accuracy at this point, unfortunately. We are also learning as\nwe're building this market. These things might change so we don't want to put out\nnumbers here, which we then have to defend on the next call.\nManish Adukia: Right. Let me just ask last question on that topic. From a user number perspective, given\nthat there is a fair bit of competition and there are like a few well-capitalized players in\nthe market and given as the market already is today, you don't see a concern in terms of\nMTU or user penetration reaching closer to saturation levels in the foreseeable future?\nAkshant Goyal: No, we don’t.\nManish Adukia: Very clear. Thank you. Second question is on the June quarter where you're seeing a\nmeaningful expectation of acceleration in quarter-on-quarter growth. Outside of the\nreversal of average order value and the fewer days that you had in the March quarter, are\nthere any other drivers that we need to be aware of, whether it's greater store add or\nanything else or it's just these two factors of AOV and fewer days?\nAkshant Goyal: The only other factor will be seasonality. It's a different season so we see different\nconsumption patterns and summer driving growth in certain categories. Overall, that will\nalso lead to a slightly higher growth, other than the two drivers you mentioned.\nManish Adukia: Very clear. Thank you. Those are the questions that I had for now. I'll jump back in the\nqueue.\nAkshant Goyal: Thank you.\nModerator: Thank you. Next question is from the line of Aditya Soman from CLSA. Please go ahead.\nAditya Soman: Hi, good evening. Two questions, firstly, when we look at the contribution per order in\nthe quarter, we've seen a slight dip. Is this largely a function of AOV which obviously falls\nseasonally or anything more to read in the sort of drop in contribution per order?\nAnd then the second question is on the food delivery side. We've seen Swiggy sort of\nrollout Toing quite aggressively, which is obviously a different model with a different"
+  },
+  {
+   "document_id": "109",
+   "page_no": 3,
+   "text": "Page 2 of 17\nModerator: Ladies and gentlemen, a very good evening, and welcome to Eternal Limited's Q3FY26\nearnings conference call. From Eternal's management team, we have with us today\nAkshant Goyal, Albinder Singh Dhindsa, and Kunal Swarup.\nBefore we begin, a few quick announcements for the attendees. Anything said on this\ncall, which reflects the outlook for the future, or which could be construed as a forward-\nlooking statement, may involve risks and uncertainties. Such statements or comments\nare not guarantees of future performance, and actual results may differ from those\nstatements.\nAdditionally, please note that this earnings call is scheduled for a duration of 45 minutes,\nand we will be starting directly with the Q&A section of the call. If you wish to ask a\nquestion, please use the raise hand feature available on your Zoom dashboard. We will\nannounce your name on the call and unmute your line, post which you can proceed with\nyour question. We will wait for a minute while the question queue assembles.\nModerator: The first question is from the line of Manish Adukia from Goldman Sachs. Please go\nahead.\nManish Adukia: Hi, good evening. Thank you so much for taking my questions and congratulations on a\ngood quarter.\nMy first question is on the quick commerce margins or losses, and congratulations on\nthe breakeven there. In this quarter, if you look at the numbers, your gross margin didn't\nreally expand, store throughput was down about 6% QoQ, but despite that, your\ncontribution margin expanded 90 basis points, EBITDA expanded about 130 basis points,\nand all of this is while you say that the competition is irrational.\nIf you assume competition remains irrational, which is what you are assuming, then why\nshould, directionally, margins not continue to improve at the same pace as what you did\nin this quarter? I would love to get your thoughts on that. That's my first question, please.\nAkshant Goyal: Hi, Manish. Akshant here. It's very hard to predict the trajectory of margin, which is what\nwe have also mentioned in one of the questions in the letter, in the near term.\nCompetitive intensity, even if it's high, is not steady always. On our last conference call,\nwe mentioned that the competitive intensity is now easing off and then it changed.\nSo, the margins are a function of various things. Competitive intensity is one of it and\neven within a quarter or even in a longer period, there are various variables which are\ngeography specific and so on. So yes, directionally we say that margin should expand,\nbut we're not able to confidently say that the pace of margin expansion will be the same\nas what happened in the last quarter because the competitive intensity was high and"
+  },
+  {
+   "document_id": "109",
+   "page_no": 4,
+   "text": "Page 3 of 17\ntherefore going forward should also be the same. It’s a multi-variable problem with no\nlinear correlation with just one variable.\nManish Adukia: I appreciate that, Akshant. Thank you. Follow-on question then on competition. One, if\nyou can clarify quarter on quarter, your store throughput was down about 6% or 7%.\nWhat explains that?\nAnd maybe a related question. In the previous quarter, you mentioned that you want to\ngrow at 100% YoY or expect to grow 100% YoY at least for the next one to two years. Now\nyou're saying that the 100% YoY growth is contingent upon competition not staying\nirrational. I just wanted to tie up that guidance that you're saying that if competition is\nnot irrational, it's only then you'll open 3,500 to 4,000 stores and only then you'll achieve\n100% YoY growth. Is that understanding correct? And my first question was just on store\nthroughput.\nAkshant Goyal: Yeah, right.\nAlbinder Singh Dhindsa: The way competitive intensity affects us is in which form it comes. Last quarter, we saw\ncompetitive intensity getting amped up because a lot of competitors went to low MOVs\nfor zero delivery fees, but we're also seeing a lot of discounting happen in the market.\nTherefore, it becomes a lot more complex for us to be able to say which way things will\nmove and how will we respond. But what you've said is broadly correct.\nAkshant Goyal: On store throughput, Manish, it's a function of the fact that our assortment is now\nexpanding and it's possible therefore that there are quarters when some of the store\nexpansion, the driver of which is assortment expansion is not as fast moving as some of\nthe main SKUs. Over the long term, we don't see that as a concern, and the fact that\nassortment is expanding is also reflecting in our margins which were better last quarter\ndespite the throughput being lower as you mentioned.\nManish Adukia: Got it. And just my last question on this topic. Your growth is good, you said like for like\n130% YoY and you're expanding margins. So where is competition showing up? I mean, as\nof today it's not really impacting you. Is that the way to read it? What needs to change for\ncompetition to start impacting your numbers?\nAkshant Goyal: We're not saying that, Manish. There's always a way to look at things and one can argue\nthat in absence of irrational competition, that we're pointing out, things would have been\nmuch better than what they are today. That's also one perspective. The competition is\nimpacting us in terms of our outcomes and numbers, but it may or may not impact the\ndecisions that we take in that particular quarter.\nFor example, in the last quarter we didn't see these freebies impacting our market share\ntoo much, and hence we sort of sustained our pricing, but as you might have seen last"
+  },
+  {
+   "document_id": "109",
+   "page_no": 5,
+   "text": "Page 4 of 17\nweek, we did drop our delivery charges in some markets because we saw some impact.\nOverall, there's definitely an impact of competition and it impacts our margins, it\nimpacts our top-line growth, it impacts our store expansion plans and various other\nthings.\nManish Adukia: Got it. Last question before I jump back in the queue. You've maintained your $3 billion\nNOV guidance for going-out in FY30, which would imply north of 30% CAGR over the next\nfour years. Last quarter, of course, was about 20% growth. One, why is the growth as low\nas it is right now? And two, what explains that meaningful expansion that is being built\ninto your guidance?\nAkshant Goyal: A large part of our growth in this business, going forward, is going to be from market\nshare growth. There are sub-segments within District business like events and movies\nwhere we are a significantly smaller market player even now compared to our\ncompetitors. For us to deliver 30% CAGR over the next three to four years, it doesn't\nnecessarily mean that the industry has to grow that much. Lot of it can also come from\nmarket share gains, and that is what we are building into our plans right now.\nManish Adukia: Very helpful. Thanks a lot. I'll jump back in the queue.\nModerator: Thank you. Next question is from the line of Ankur Rudra from JP Morgan. Please go\nahead.\nAnkur Rudra: Hey, thank you. Nice to see a quick commerce break even here. Maybe to start with,\ncould you highlight whether the slower growth in orders this time seems to have slowed\ndown a bit more than your headline revenues in the quick commerce business, and it\nagain has not been impacted by GST. Is that a reflection of the more aggressive stance\nfrom a competitive perspective? Did you lose some share to peers?\nAlbinder Singh Dhindsa: Yes, some of it is an impact of that, Ankur.\nAnkur Rudra: Got it. Going forward, do you think this will normalize?\nAlbinder Singh Dhindsa: We have no idea. It depends on how the overall market behaves.\nAnkur Rudra: Got it. Maybe just another follow-up on the previous question. Your addition has slowed\ndown this time. It should imply better store vintage, and the older stores should ideally\nhave better NOV per store. I think you made a comment about that. I'm just curious to\nsee why it's not coming up. Why the NOV or throughput per store per day is not\nexpanding if we see a better vintage?\nAkshant Goyal: Ankur, that's again a function. As I mentioned, a lot of our store additions, not just last\nquarter but last two, three quarters, has been towards assortment expansion and as we"
+  },
+  {
+   "document_id": "109",
+   "page_no": 6,
+   "text": "Page 5 of 17\nnow further expand assortment, the turnover of this long tail is not as high as what we\nstarted the business with. So, there is always that negative impact of assortment\nexpansion on throughput that we will continue seeing in the business, and in this\nquarter, that's resulted in a slight dip. I don't think we should read too much into that at\nthis point. We should bounce back and NOV per day per store we believe will continue to\ngrow.\nKunal Swarup: Also, part of the impact was on account of the GST change. If in absence of that 3%,\nimpact would have been --\nAnkur Rudra: Yeah, I saw that. I was hoping it'll expand, given it has slowed down a bit, but I understand\nthe answer. Just a couple of points on the cash flow. I can see that capex has gone up a\nbit this time despite fewer stores being added versus last quarter, and your working\ncapital days seem to be expanding. If you can comment on those two factors, please.\nAkshant Goyal: Ankur, as we mentioned in the letter, our framework for thinking about capex and net\nworking capital is ROCE and it's a young business. We don't have a playbook for how\nmuch NWC is going to give us what kind of ROCE, etc. We are open-minded and first\nprinciples on this.\nIn the past, we've shared some assumptions on what capex per store could be going\nforward and what our net working capital days in the business could be. Broadly, we are\nhovering around the same range right now, but especially on capex, it will go up on a per\nstore basis going forward because there's a lot of automation opportunity here which\nwill increase productivity.\nEven though we might see capex per store going up over the next few quarters, we don't\nexpect net working capital to be beyond those 18 days that we had shared earlier, so that\nshould remain within range and hence, as a consequence of that, the ROCE outcome\nshould still be north of 40%. That's what we're solving for.\nAnkur Rudra: Understood. Thank you and best of luck.\nAkshant Goyal: Thank you.\nModerator: Thank you. Next question is from the line of Swapnil Potdukhe from JM Financial. Please\ngo ahead.\nSwapnil Potdukhe: Hi, thanks for the opportunity and congrats on breaking even in the quick commerce\nbusiness. My first question is with respect to your contribution margin expansion that\nhappened in Blinkit, 90 basis points improvement. This was despite 20 basis points of\ntake rate coming off. Where exactly, if you can pinpoint, did you see a meaningful"
+  },
+  {
+   "document_id": "109",
+   "page_no": 7,
+   "text": "Page 6 of 17\nimprovement or the play out within the contribution expenses between the take rate to\ncontribution margin expenses?\nAlbinder Singh Dhindsa: Swapnil, it's mostly to do with the mix change. Impact of seasonality is also over there\nand then some of the other factors also impact what product mix we end up selling in the\nquarter.\nAkshant Goyal: And on the cost efficiencies, most of the benefit as you see, are on the cost side below\ngross profit. There's no one particular factor. It's largely operating leverage, which is\nresulting in lower costs and higher productivity in warehouses that's resulting in\nincrease in margins.\nSwapnil Potdukhe: Got it. And going ahead, given that you also mentioned that you have cut down your\ndelivery fees in certain markets, in my opinion, it will put some pressure on your take\nrates. So, how much contribution margin expansion will realistically be possible for us to\nsustain, let's say, in the next quarter or so?\nAkshant Goyal: For the next quarter or even two, we don't want to comment on anything, Swapnil. I hope\nyou'll appreciate that, and we've mentioned that in the letter, trying to explain what the\nvarious reasons are on why this might be a little volatile in the short term. It is very hard\nto talk about whether the margins will expand at all or if they do, by how much in the next\nquarter.\nSwapnil Potdukhe: Okay.\nAkshant Goyal: Just to add, in the long term, in our letter we have mentioned that our confidence on\nmargins going to 5% to 6% of NOV remains high, and we've shared data on a couple of\ncities in our business where we are already at 5% Adjusted EBITDA margin. The way we\nthink about margins is therefore long term. We have extremely high confidence in the\nbusiness model to deliver the margins that we need to get to the ROCE that I mentioned.\nBut in the short term, we want to take the right decisions for the business which would\nmean taking a margin hit if we have to do that and we're open about that. We're not\nsaying that it’s going to happen next quarter. These decisions are going to be tactical\nand taken in real time. Hence, a lot of it depends on how the market shapes up over the\nnext three to six months, and that's why the unpredictability on margin from here on.\nSwapnil Potdukhe: Got it. Can you just clarify, because there have been a few changes in the labor code this\ntime around, and how much of those costs are already baked in your margins today and\nare coming from the two impacts essentially that I want to understand about. One is the\nimpact because of the gig worker cost going up towards their social security benefits,\nand secondly because of the changes on the gratuity side for some of the fixed term\ncontract labor. If any of that is already in the margin or going ahead, will we have to face\nthat challenge?"
+  },
+  {
+   "document_id": "109",
+   "page_no": 8,
+   "text": "Page 7 of 17\nAkshant Goyal: As we have mentioned in question 11, the new labor codes do not impact our long-term\nmargin guidance. That doesn't change. As far as any potential impact on account of code\non social security is concerned, we will get to know that once the rules are\noperationalized and notified. From what we know today, the business will either be able\nto absorb that cost or we'll pass it on to customers.\nOn your second part on gratuity and leave encashment, our assessment right now is that\nthere's no impact on our business on account of that. But again, there are a few\noutstanding questions there that we will get more clarity on over the next few days. And\nif there is any impact, then the next quarter will reflect that, but I don't expect that to be\nmeaningful at all.\nSwapnil Potdukhe: Got it. Just the last one on the going-out side. Our previous thought process was that\nthe losses in that business will be around INR 60 crore to INR 70 crore maybe, quarter\nwise. There has been a sudden jump in this particular quarter and against that we didn't\nhave that kind of growth as well, 20% YoY. Is there any scale up in investments that you\nhave made that is going to sustain or how should we look at that or was there a bunch of\nsome investments this quarter itself?\nAkshant Goyal: It's more the latter. We decided to launch District Pass membership program which we\ninitially did not plan for in this quarter, and a large part of the increase in losses is on\naccount of rolling that out and that will not impact the top-line numbers in this quarter\ngiven the effect will be compounding over the next few months.\nBut it's the right step, and it's going to drive multi-category usage on the app. We'll keep\nevaluating whether we need to continue this investment or not. Irrespective of that, as\nwe have mentioned in question 13, we now expect the losses to come down sequentially\nfrom here towards breakeven in the next four to six quarters.\nSwapnil Potdukhe: Got it, Akshant. That's very clear. Thanks a lot for taking my questions and all the best.\nAkshant Goyal: Thank you.\nModerator: Thank you. Next question is from the line of Garima Mishra from Kotak Securities. Please\ngo ahead.\nGarima Mishra: Thank you so much for the opportunity. First, if I refer to your second quarter letter, you\nmentioned that for the Blinkit business, GST cuts bring down basket pricing by 3%, and\nthis should help in higher demand. Did this play out in the manner you had envisaged in\nQ3?"
+  },
+  {
+   "document_id": "110",
+   "page_no": 9,
+   "text": "Page 8 of 17\nAkshant Goyal: That's right, Manish. That's how I would also characterize the current situation. In terms\nof your first part of the question, whether we're totally macro-dependent, or can we do\nsomething else for growth, it's not like that those attempts to expand the market have\nnot been done in the past, but the headwinds have been strong, including the soft\ndiscretionary demand in India in the last few months.\nBut from our side, we'll continue to focus on creating newer use cases to order food\nfrom restaurants and hope that the macro environment improves, which will bring\ngrowth back in the business to the levels that we think it should grow at.\nManish Adukia: Sure. Thanks, Akshant, and sorry to push you on this one, but why keep that 20%+\nguidance? Why not make it like 15%+? I'm just trying to think that what gives you\nconfidence that there's a 20%+ market and not a 15% market or like a whatever low-\nteens or mid-teens market?\nAkshant Goyal: Guidance cannot be always close to the current growth levels. Then it's not really a\nguidance. So, the reality is the current growth rate number, which is around 15%, but\nwhether you give guidance of 10% or 20%, you will have no basis for that. It's a judgment\ncall and in the last letter we did say that for this financial year, we're unlikely to be at\n20%, and we're expecting a 15% sort of year-on-year growth. But longer-term, our view\non 20% remains as of now. And if that changes, we'll communicate, but that's where we\nare right now.\nManish Adukia: No, sure. Appreciate it. Thank you. And maybe just a couple of questions on the quick\ncommerce business. I think again in the previous call, you had called out that as you\ntransition to 1P, the benefit of that also should be immediate, but now, given your focus\non growth, I think focus on growth was always there, but this time you've mentioned that\nit will take four to six quarters. So again, what has changed between the last three\nmonths for you to change that view on immediate transition of margin versus four to six\nquarters on 1P transition?\nAkshant Goyal: So, what we mean by four to six quarters is the timeframe to fully realize it. What we\nmeant last time and maybe we can clarify if there was any confusion is that the\nrealization of the margin gains will start happening immediately, which has happened\neven in this quarter. But the overall margin accretion of 1% will take some while, because\nit requires you to negotiate with brands, you're signing contracts directly with brands,\nand that process cannot happen in one shot.\nManish Adukia: Right, very clear. A follow on that. I mean, your gross margin, 300 basis points of\nexpansion in the QC business and I think contribution about 70. So, what you explained in\nthe shareholders’ letter is that incremental 230 basis points of cost was all linked to the\nfirst mile bit and some bit of let's say gross differential, I don't know in mix, etc. Just so"
+  },
+  {
+   "document_id": "110",
+   "page_no": 10,
+   "text": "Page 9 of 17\nyou can explain that differential as to what drove the 230 basis points of cost, was it all\nfirst mile or was it something else that was there?\nAkshant Goyal: So, the entire margin expansion is not just on account of this business model change.\nThere is actually a meaningful margin expansion outside of that also. Right now, I would\nsay, therefore with respect to this 3 percentage point gross profit increase, the cost\nside increase is on account of the supply chain costs that were moved from the sellers to\nus. We're not giving a split of how much of the contribution margin gain is because of the\nbusiness model change and how much of it is because of other efficiency and operating\nleverage, but that's what I wanted to highlight that it's a combination of both.\nManish Adukia: Thank you so much. Last question from me. Of course, like overall growth profile of the\nbusiness, especially on the quick commerce side, continues to be extremely strong. If\nyou can and I know you've shared this data in the past, can you give some color on, let's\nsay, your most penetrated or mature city. What is the growth looking like there? This\nwould help us build confidence as we think about the next couple of years because your\nstore rollouts will aid overall growth, but would love to understand how maybe your top\none or two mature cities are doing on growth?\nAkshant Goyal: Manish, we do keep sharing these data points from time to time, and what I can say right\nnow is nothing material has changed for us to highlight at this point. So, if you had good\nconfidence in the business last quarter, I believe that should continue.\nManish Adukia: Thanks a lot. All the best.\nModerator: Thank you. Next question is from the line of Swapnil Potdukhe from JM Financial. Please\ngo ahead.\nSwapnil Potdukhe: Hi, thanks for the opportunity. I have two or three questions. First, on your store\nexpansion strategy and related to that. So obviously, you have mentioned that you plan\nto operate around 2,100 stores by the December quarter and 3,000 by March 2027.\nNow, if I were to just extrapolate that and ask you, what would happen to your NOV\ngrowth because you had earlier guided for 100% NOV / GOV growth this year, but, the\nkind of accelerated investments that you're doing on store side, will it be fair to assume\nthat, we could be at a very, if not 100%, but close to 100% kind of a growth rate on NOV in\nFY27 as well?\nAkshant Goyal: Yes, Swapnil, I agree. Currently if you look at the growth rate, it's much higher at 137%.\nSo, I do expect the year-on-year growth to remain above 100% for the next one or two\nyears at least."
+  },
+  {
+   "document_id": "110",
+   "page_no": 11,
+   "text": "Page 10 of 17\nSwapnil Potdukhe: Got it. And the second question is with respect to your contribution margin not\nimproving meaningfully, despite the fact that your gross margins expanded 300 basis\npoints and then you alluded to the fact that there is some first mile-related investments\nthat you have done. Now, my question over here is if you're getting into those first mile,\nat some point of time, you will also probably see some benefits of doing first mile on your\nown, right?\nAnd in that context, will it be fair to say that the 100 basis points of benefit that you're\nsuggesting because of the inventory model, that could actually be much higher than that\nover a period of time, not necessarily now, but one year, two years later?\nAlbinder Singh Dhindsa: Swapnil, the overall percentage of our cost which resides in the first mile for brands is\nway too small to make a significant dent here, so it will not change.\nSwapnil Potdukhe: Okay, got it. The second question is on food delivery growth. So obviously that 14%\ngrowth could have been much higher, in my opinion, given the changes that you had\nmade on the minimum order value side. I mean, is there anything else you could have\ndone or is it because of the fact that you made that change in the middle of August, if I'm\nnot wrong, and hence the full benefit of that is yet to be realized and possibly in the\nDecember quarter you would see that benefit coming in. Apart from that, is there any\nother trick up your sleeve that you can use to accelerate growth in the food delivery\nbusiness.\nAkshant Goyal: You're right, Swapnil. The full impact of that change will appear in the December quarter\nand outside of that, as we’ve also mentioned in the letter, we expect a slow uptick in\ngrowth rate in the near term and there is no silver bullet that we have as of now.\nSwapnil Potdukhe: Got it. Got it. And just on the District business. We have been in this INR 50-60 crore loss\nrange for the last couple of quarters. When exactly will we see these losses coming\ndown? I mean, you have suggested around similar kind of losses in the near term at least,\nbut from a medium-term perspective, where will be the inflection point where we will\nstart seeing some improvement in the losses in that business?\nAkshant Goyal: So, Swapnil, FY27 should be better than FY26, in terms of losses in the business. That's\nhow I would put it without really pinpointing a particular quarter, but it should happen in\nthe next few quarters.\nSwapnil Potdukhe: Got it. Good. So those are my questions. Thanks a lot for the opportunity and all the best.\nAkshant Goyal: Thank you.\nModerator: Thank you. Next question is from the line of Ashwin Mehta from Ambit. Please go ahead."
+  },
+  {
+   "document_id": "110",
+   "page_no": 12,
+   "text": "Page 11 of 17\nAshwin Mehta: Yeah, hi. Thanks for the opportunity. Just one question. So, Akshant, we've added\nalmost 1,200 odd dark stores over the last year. Any sense that we can give either over\nthe last two quarters, or the last four quarters in terms of, where these dark store\nadditions have happened. What's the proportion towards tier 1, tier 2, tier 3, and is the\nskew towards, say, tier 2, tier 3 increasing in the recent times?\nAkshant Goyal: Hi Ashwin. So, more than 70-75% of our store addition continues to be in the top 10\ncities. While the number of city count seems to be exploding, but number of stores in\nthese long tail cities is really small. So, majority of the business and the success of the\nbusiness is still linked to how well we do in the top 8 to 10 cities, and that remains the\nfocus.\nAshwin Mehta: Okay. So, do you envisage, as you possibly densify some of these tail cities as well, that\nthe middle mile or the warehousing related expenses also start to kick in? At this point in\ntime if we are just kind of testing waters here, then maybe that is on the lower side at\nthis point in time. Would that be a fair assessment?\nAkshant Goyal: Not really Ashwin, because most of these tail cities are being serviced by warehouses\nwhich also serve large cities. There have been only very few locations or states where we\ndid not have that back end infrastructure and where we had to open a cluster across a\nbunch of cities, and then a warehouse to service them.\nBut our network design on stores already takes into account the fact that we have to be\nmindful of the backend warehousing cost and in locations where that doesn't make\nsense because you don't have a large city that is already being serviced, we have sort of\nstayed away from expanding into those markets. So therefore, the cost of expansion\ninto the tail cities is not very high, at this point in time for us from a backend supply chain\ncost perspective.\nAshwin Mehta: Fair enough. And the last one is in terms of there's this ‘Others’ segment where we put in\nour new initiatives, the losses there are now comparable to the losses on the going-out\nside. So, any outlook here? What is the area where bigger investments are going and how\nshould these trend?\nAkshant Goyal: So, Ashwin, most of these losses are on account of our expansion in the Bistro business,\nwhich is a 10-minute food delivery service that we're building, and I will try and give some\nupdate on that business in the next quarter.\nAshwin Mehta: Sure, Akshant. Thanks, and all the best.\nAkshant Goyal: Thank you."
+  }
+ ],
+ "dossier": {
+  "version": "f73486cdb2fc",
+  "data": {
+   "bear": [
+    {
+     "text": "P/E registered 638× now.",
+     "cites": [
+      "fact:pe"
+     ]
+    },
+    {
+     "text": "Net profit growth declined −30.6% in FY26.",
+     "cites": [
+      "fact:fy_pat_growth"
+     ]
+    },
+    {
+     "text": "Interest cover registered 2.6× in FY26.",
+     "cites": [
+      "fact:interest_cover"
+     ]
+    }
+   ],
+   "bull": [
+    {
+     "text": "Revenue achieved a 3 years CAGR of 97.3% up to FY26.",
+     "cites": [
+      "fact:revenue_cagr_3y"
+     ]
+    },
+    {
+     "text": "Cash conversion cycle recorded 2 days in FY26.",
+     "cites": [
+      "fact:ccc_days"
+     ]
+    },
+    {
+     "text": "Debt to equity reached 0.18× in Sep 2026.",
+     "cites": [
+      "fact:de_ratio"
+     ]
+    }
+   ],
+   "cash": {
+    "fcf": null,
+    "flag": null,
+    "cfo_ebitda": null,
+    "cfo_pat_5y": null
+   },
+   "name": "Eternal",
+   "basis": "consolidated",
+   "facts": {
+    "pe": {
+     "key": "pe",
+     "unit": "x",
+     "label": "P/E",
+     "value": 638,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "roe": {
+     "key": "roe",
+     "unit": "pct",
+     "label": "ROE",
+     "value": 0.38,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "mcap": {
+     "key": "mcap",
+     "unit": "cr",
+     "label": "Market cap",
+     "value": 314601,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "price": {
+     "key": "price",
+     "unit": "rs",
+     "label": "Price",
+     "value": 326,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "q_opm": {
+     "key": "q_opm",
+     "unit": "pct",
+     "label": "EBITDA margin",
+     "value": 3.1,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "q_pat": {
+     "key": "q_pat",
+     "unit": "cr",
+     "label": "Net profit, total",
+     "value": 125,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "q_pbt": {
+     "key": "q_pbt",
+     "unit": "cr",
+     "label": "Profit before tax",
+     "value": 323,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "fy_opm": {
+     "key": "fy_opm",
+     "unit": "pct",
+     "label": "EBITDA margin",
+     "value": 2.2,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "fy_pat": {
+     "key": "fy_pat",
+     "unit": "cr",
+     "label": "Net profit",
+     "value": 366,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "ccc_days": {
+     "key": "ccc_days",
+     "unit": "days",
+     "label": "Cash conversion cycle",
+     "value": 2,
+     "period": "FY26",
+     "source": "Screener consolidated ratios, Mar 2026 column"
+    },
+    "de_ratio": {
+     "key": "de_ratio",
+     "unit": "x",
+     "label": "Debt to equity",
+     "value": 0.18,
+     "period": "Sep 2026",
+     "source": "Screener consolidated balance sheet, Sep 2026 column: borrowings / (equity + reserves)"
+    },
+    "q_ebitda": {
+     "key": "q_ebitda",
+     "unit": "cr",
+     "label": "EBITDA",
+     "value": 752,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "fy_ebitda": {
+     "key": "fy_ebitda",
+     "unit": "cr",
+     "label": "EBITDA",
+     "value": 1208,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "net_worth": {
+     "key": "net_worth",
+     "unit": "cr",
+     "label": "Net worth",
+     "value": 31275,
+     "period": "Sep 2026",
+     "source": "Screener consolidated balance sheet, Sep 2026 column: equity + reserves"
+    },
+    "q_pat_yoy": {
+     "key": "q_pat_yoy",
+     "unit": "pct",
+     "label": "Net profit growth YoY, total",
+     "value": 92.3,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 vs Sep 2025"
+    },
+    "q_revenue": {
+     "key": "q_revenue",
+     "unit": "cr",
+     "label": "Revenue",
+     "value": 24138,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "borrowings": {
+     "key": "borrowings",
+     "unit": "cr",
+     "label": "Borrowings",
+     "value": 5757,
+     "period": "Sep 2026",
+     "source": "Screener consolidated balance sheet, Sep 2026 column"
+    },
+    "fy_revenue": {
+     "key": "fy_revenue",
+     "unit": "cr",
+     "label": "Revenue",
+     "value": 54364,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "debtor_days": {
+     "key": "debtor_days",
+     "unit": "days",
+     "label": "Debtor days",
+     "value": 12,
+     "period": "FY26",
+     "source": "Screener consolidated ratios, Mar 2026 column"
+    },
+    "fy_pat_growth": {
+     "key": "fy_pat_growth",
+     "unit": "pct",
+     "label": "Net profit growth",
+     "value": -30.6,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 vs Mar 2025"
+    },
+    "q_opm_yoy_bps": {
+     "key": "q_opm_yoy_bps",
+     "unit": "bps",
+     "label": "EBITDA margin change YoY",
+     "value": 136,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 vs Sep 2025"
+    },
+    "q_revenue_yoy": {
+     "key": "q_revenue_yoy",
+     "unit": "pct",
+     "label": "Revenue growth YoY",
+     "value": 77.6,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 vs Sep 2025"
+    },
+    "interest_cover": {
+     "key": "interest_cover",
+     "unit": "x",
+     "label": "Interest cover",
+     "value": 2.6,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column: (PBT + interest) / interest"
+    },
+    "revenue_cagr_3y": {
+     "key": "revenue_cagr_3y",
+     "unit": "pct",
+     "label": "Revenue CAGR, 3 years",
+     "value": 97.3,
+     "period": "3 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2023 to Mar 2026"
+    },
+    "revenue_cagr_5y": {
+     "key": "revenue_cagr_5y",
+     "unit": "pct",
+     "label": "Revenue CAGR, 5 years",
+     "value": 93.7,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2021 to Mar 2026"
+    },
+    "fy_revenue_growth": {
+     "key": "fy_revenue_growth",
+     "unit": "pct",
+     "label": "Revenue growth",
+     "value": 168.6,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 vs Mar 2025"
+    }
+   },
+   "flags": [],
+   "stats": {
+    "calls": 7,
+    "seconds": 127,
+    "tokens_in": 57309,
+    "tokens_out": 11361,
+    "cached_calls": 0,
+    "cost_usd_est": 0.0456,
+    "dropped_bullets": 0
+   },
+   "header": {
+    "pe": 638,
+    "roe": 0.38,
+    "roce": null,
+    "price": 326,
+    "mcap_cr": 314601,
+    "screener_url": "https://www.screener.in/company/ETERNAL/consolidated/"
+   },
+   "lender": false,
+   "sector": null,
+   "symbol": "ETERNAL",
+   "numbers": {
+    "cagr": [
+     {
+      "y3": 97.3,
+      "y5": 93.7,
+      "key": "revenue",
+      "label": "Revenue"
+     },
+     {
+      "y3": null,
+      "y5": null,
+      "key": "ebitda",
+      "label": "EBITDA"
+     },
+     {
+      "y3": null,
+      "y5": null,
+      "key": "pat",
+      "label": "Net profit"
+     }
+    ],
+    "tiles": [
+     {
+      "key": "q_revenue",
+      "unit": "cr",
+      "label": "Revenue",
+      "value": 24138,
+      "change": {
+       "unit": "pct",
+       "label": "YoY",
+       "value": 77.6
+      },
+      "period": "Q2 FY27"
+     },
+     {
+      "key": "q_opm",
+      "unit": "pct",
+      "label": "EBITDA margin",
+      "value": 3.1,
+      "change": {
+       "unit": "bps",
+       "label": "YoY",
+       "value": 136
+      },
+      "period": "Q2 FY27"
+     },
+     {
+      "key": "q_pat",
+      "unit": "cr",
+      "label": "Net profit, total",
+      "value": 125,
+      "change": {
+       "unit": "pct",
+       "label": "YoY",
+       "value": 92.3
+      },
+      "period": "Q2 FY27"
+     }
+    ],
+    "annual": {
+     "cfo": {
+      "labels": [
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       -2144,
+       -1018,
+       -693,
+       -844,
+       646,
+       308,
+       632,
+       null,
+       null
+      ]
+     },
+     "fcf": {
+      "labels": [
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       -2165,
+       -1028,
+       -750,
+       -945,
+       444,
+       -623,
+       -1114,
+       null,
+       null
+      ]
+     },
+     "opm": {
+      "labels": [
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       -19.7,
+       -170.8,
+       -88.5,
+       -23.4,
+       -44.2,
+       -17.1,
+       0.4,
+       3.1,
+       2.2
+      ]
+     },
+     "pat": {
+      "labels": [
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       -107,
+       -1010,
+       -2386,
+       -816,
+       -1222,
+       -971,
+       351,
+       527,
+       366
+      ]
+     },
+     "roce": {
+      "labels": [
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       -115,
+       -135,
+       -12,
+       -13,
+       -6,
+       1,
+       3,
+       2,
+       null
+      ]
+     },
+     "ebitda": {
+      "labels": [
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       -92,
+       -2243,
+       -2305,
+       -467,
+       -1851,
+       -1211,
+       43,
+       637,
+       1208
+      ]
+     },
+     "revenue": {
+      "labels": [
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       466,
+       1313,
+       2605,
+       1994,
+       4192,
+       7079,
+       12114,
+       20243,
+       54364
+      ]
+     },
+     "borrowings": {
+      "labels": [
+       "Mar 2018",
+       "Mar 2019",
+       "Mar 2020",
+       "Mar 2021",
+       "Mar 2022",
+       "Mar 2023",
+       "Mar 2024",
+       "Mar 2025",
+       "Mar 2026",
+       "Sep 2026"
+      ],
+      "values": [
+       186,
+       348,
+       326,
+       527,
+       70,
+       507,
+       749,
+       2045,
+       4592,
+       5757
+      ]
+     }
+    },
+    "quarterly": {
+     "opm": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       -1.7,
+       1.6,
+       2.4,
+       4.2,
+       4.7,
+       3,
+       1.2,
+       1.6,
+       1.8,
+       2.3,
+       2.8,
+       2.9,
+       3.1
+      ]
+     },
+     "pat": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       36,
+       138,
+       175,
+       253,
+       176,
+       59,
+       39,
+       25,
+       65,
+       102,
+       174,
+       92,
+       125
+      ]
+     },
+     "ebitda": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       -47,
+       51,
+       86,
+       177,
+       226,
+       162,
+       72,
+       115,
+       239,
+       368,
+       486,
+       594,
+       752
+      ]
+     },
+     "revenue": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       2848,
+       3288,
+       3562,
+       4206,
+       4799,
+       5405,
+       5833,
+       7167,
+       13590,
+       16315,
+       17292,
+       20211,
+       24138
+      ]
+     }
+    }
+   },
+   "pending": [],
+   "version": 1,
+   "built_at": "2026-10-29T12:37:46.175Z",
+   "business": {
+    "cites": {
+     "risks": "doc:111:p61",
+     "description": "doc:111:p224"
+    },
+    "risks": [
+     "Competition",
+     "Regulatory Compliances",
+     "Stakeholder Management",
+     "Data privacy, cybersecurity and responsible AI",
+     "Macroeconomic and geopolitical risk"
+    ],
+    "segments": [
+     {
+      "cite": "doc:111:p278",
+      "name": "India food ordering and delivery",
+      "share_pct": null,
+      "revenue_cr": 10159
+     },
+     {
+      "cite": "doc:111:p278",
+      "name": "Hyperpure supplies (B2B business)",
+      "share_pct": null,
+      "revenue_cr": 5366
+     },
+     {
+      "cite": "doc:111:p278",
+      "name": "Quick Commerce business",
+      "share_pct": null,
+      "revenue_cr": 37779
+     },
+     {
+      "cite": "doc:111:p278",
+      "name": "Going Out",
+      "share_pct": null,
+      "revenue_cr": 973
+     },
+     {
+      "cite": "doc:111:p278",
+      "name": "All other segments (residual)",
+      "share_pct": null,
+      "revenue_cr": 87
+     }
+    ],
+    "description": "Eternal operates an e-commerce platform facilitating food ordering and delivery, farm-to-fork supplies for restaurants, quick commerce, and a going-out segment combining dining-out and entertainment ticketing. Through its various subsidiaries and apps, it connects end users, merchant partners, and independent delivery personnel.",
+    "related_party": [
+     "Remuneration to KMP: Salaries and other employee benefits of INR 146 crores and directors remuneration and sitting fees of INR 5 crores.",
+     "Expense charged on the Group by Airveda Technologies Private Limited: AQI monitoring devices subscription & maintenance of INR 0 crore.",
+     "Donation income from ACAD Foundation of INR 0 crore."
+    ]
+   },
+   "documents": [
+    {
+     "id": 106,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/64f36e3b-87e9-426e-be3e-515dca4525d2.pdf",
+     "type": "transcript",
+     "label": "Q2 FY27 call (Oct 2026)",
+     "pages": 16,
+     "period_label": "Q2 FY27"
+    },
+    {
+     "id": 107,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/faa4f0f7-06e4-4066-9d68-3da95dfe02d9.pdf",
+     "type": "transcript",
+     "label": "Q1 FY27 call (Jul 2026)",
+     "pages": 17,
+     "period_label": "Q1 FY27"
+    },
+    {
+     "id": 108,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/60af607c-5f1b-4d5d-8425-4929efa6aad1.pdf",
+     "type": "transcript",
+     "label": "Q4 FY26 call (May 2026)",
+     "pages": 18,
+     "period_label": "Q4 FY26"
+    },
+    {
+     "id": 109,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/91f3f29f-c5c0-49b5-b425-a22374bf08ad.pdf",
+     "type": "transcript",
+     "label": "Q3 FY26 call (Jan 2026)",
+     "pages": 18,
+     "period_label": "Q3 FY26"
+    },
+    {
+     "id": 110,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/69f3f58b-c856-4abf-9548-ab8c8f1a398e.pdf",
+     "type": "transcript",
+     "label": "Q2 FY26 call (Oct 2025)",
+     "pages": 18,
+     "period_label": "Q2 FY26"
+    },
+    {
+     "id": 111,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4b6a4218-6bde-4c99-b10c-39ec7553cc42.pdf",
+     "type": "annual_report",
+     "label": "FY26 annual report",
+     "pages": 422,
+     "used_pages": [
+      60,
+      61,
+      68,
+      69,
+      104,
+      105,
+      106,
+      170,
+      173,
+      183,
+      190,
+      191,
+      192,
+      194,
+      213,
+      224,
+      225,
+      226,
+      273,
+      277,
+      278,
+      302,
+      303,
+      304,
+      306,
+      337,
+      383,
+      394
+     ],
+     "period_label": "FY26"
+    }
+   ],
+   "say_vs_do": {
+    "note": null,
+    "items": [
+     {
+      "id": 1,
+      "call": "Q2 FY27 call",
+      "cite": "doc:106:p3",
+      "note": "No numeric target",
+      "basis": "unspecified",
+      "quote": "broadly, over the next 1 or 2 years, we expect the margins to remain flattish.",
+      "scope": "food delivery business",
+      "actual": null,
+      "metric": "ebitda_margin",
+      "status": "unverifiable",
+      "horizon": "Medium term",
+      "said_on": "2026-10-15",
+      "speaker": "Akshant Goyal",
+      "label_raw": "food delivery business margins over the next 1 or 2 years",
+      "revised_to": null,
+      "target_text": "Qualitative",
+      "metric_label": "EBITDA margin"
+     },
+     {
+      "id": 2,
+      "call": "Q2 FY27 call",
+      "cite": "doc:106:p8",
+      "note": "No numeric target",
+      "basis": "unspecified",
+      "quote": "What we are saying here is that as we accelerate store addition, which is starting OND... NOV growth pickup starting the December quarter on a YoY basis?",
+      "scope": "quick commerce business",
+      "actual": null,
+      "metric": "other:nov_growth",
+      "status": "unverifiable",
+      "horizon": "Q3 FY27",
+      "said_on": "2026-10-15",
+      "speaker": "Akshant Goyal",
+      "label_raw": "Blinkit NOV growth starting the December quarter",
+      "revised_to": null,
+      "target_text": "Qualitative",
+      "metric_label": "Net order value growth"
+     },
+     {
+      "id": 3,
+      "call": "Q4 FY26 call",
+      "cite": "doc:108:p3",
+      "note": "Period not started",
+      "basis": "unspecified",
+      "quote": "overall EBITDA guidance or indication of $1 billion by FY29.",
+      "scope": null,
+      "actual": null,
+      "metric": "ebitda",
+      "status": "pending",
+      "horizon": "FY29",
+      "said_on": "2026-05-15",
+      "speaker": "Akshant Goyal",
+      "label_raw": "EBITDA by FY29",
+      "revised_to": null,
+      "target_text": "$1 billion",
+      "metric_label": "EBITDA"
+     },
+     {
+      "id": 4,
+      "call": "Q4 FY26 call",
+      "cite": "doc:108:p4",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "On store addition, we're on track on our guidance for March of 3,000 stores.",
+      "scope": "quick commerce business",
+      "actual": null,
+      "metric": "store_count",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-05-15",
+      "speaker": "Akshant Goyal",
+      "label_raw": "dark stores by March",
+      "revised_to": null,
+      "target_text": "3,000",
+      "metric_label": "Store count"
+     },
+     {
+      "id": 5,
+      "call": "Q4 FY26 call",
+      "cite": "doc:108:p3",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "NOV growth CAGR of 60% for quick commerce",
+      "scope": "quick commerce business",
+      "actual": null,
+      "metric": "other:nov_growth",
+      "status": "pending",
+      "horizon": "Medium term",
+      "said_on": "2026-05-15",
+      "speaker": "Akshant Goyal",
+      "label_raw": "quick commerce NOV CAGR",
+      "revised_to": null,
+      "target_text": "60%",
+      "metric_label": "Net order value growth"
+     },
+     {
+      "id": 6,
+      "call": "Q3 FY26 call",
+      "cite": "doc:109:p4",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "I just wanted to tie up that guidance that you're saying that if competition is not irrational, it's only then you'll open 3,500 to 4,000 stores",
+      "scope": "quick commerce business",
+      "actual": null,
+      "metric": "store_count",
+      "status": "pending",
+      "horizon": "Medium term",
+      "said_on": "2026-01-15",
+      "speaker": "Akshant Goyal",
+      "label_raw": "Blinkit",
+      "revised_to": null,
+      "target_text": "3,500 to 4,000",
+      "metric_label": "Store count"
+     },
+     {
+      "id": 8,
+      "call": "Q3 FY26 call",
+      "cite": "doc:109:p7",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "our confidence on margins going to 5% to 6% of NOV remains high",
+      "scope": "quick commerce business",
+      "actual": null,
+      "metric": "other:margin_on_nov",
+      "status": "pending",
+      "horizon": "Medium term",
+      "said_on": "2026-01-15",
+      "speaker": "Akshant Goyal",
+      "label_raw": "Blinkit",
+      "revised_to": null,
+      "target_text": "5–6%",
+      "metric_label": "Margin on net order value"
+     },
+     {
+      "id": 11,
+      "call": "Q2 FY26 call",
+      "cite": "doc:110:p10",
+      "note": "No actual in the tables or later calls",
+      "basis": "unspecified",
+      "quote": "I do expect the year-on-year growth to remain above 100% for the next one or two years at least.",
+      "scope": "quick commerce business",
+      "actual": null,
+      "metric": "other:nov_growth",
+      "status": "unverifiable",
+      "horizon": "FY26",
+      "said_on": "2025-10-15",
+      "speaker": "Akshant Goyal",
+      "label_raw": "Blinkit NOV growth for next one or two years",
+      "revised_to": null,
+      "target_text": "At least 100%",
+      "metric_label": "Net order value growth"
+     },
+     {
+      "id": 12,
+      "call": "Q2 FY26 call",
+      "cite": "doc:110:p11",
+      "note": "No numeric target",
+      "basis": "unspecified",
+      "quote": "FY27 should be better than FY26, in terms of losses in the business.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:loss",
+      "status": "unverifiable",
+      "horizon": "FY27",
+      "said_on": "2025-10-15",
+      "speaker": "Akshant Goyal",
+      "label_raw": "District losses in FY27",
+      "revised_to": null,
+      "target_text": "Qualitative",
+      "metric_label": "Loss"
+     }
+    ],
+    "credibility": {
+     "score": null,
+     "missed": 0,
+     "pending": 5,
+     "resolved": 0,
+     "delivered": 0,
+     "near_miss": 0
+    }
+   },
+   "balance_sheet": {
+    "cites": {
+     "auditor": "doc:111:p190"
+    },
+    "wc_days": {
+     "ccc": 2,
+     "debtor": 12,
+     "payable": null,
+     "inventory": null
+    },
+    "de_ratio": 0.18,
+    "net_worth": 31275,
+    "borrowings": 5757,
+    "contingent_cr": null,
+    "interest_cover": 2.6,
+    "auditor_opinion": "unmodified",
+    "key_audit_matters": [
+     "Fair valuation of investment in other entities",
+     "Revenue Recognition",
+     "Impairment Assessment of Goodwill"
+    ],
+    "contingent_pct_networth": null
+   },
+   "seed_questions": [
+    "What drives the 60% net order value growth target over the medium term?",
+    "How does management plan to achieve the $1 billion EBITDA target by FY29?",
+    "What are the unit economics and costs for expanding quick commerce stores into smaller towns?"
+   ],
+   "analyst_concerns": [
+    {
+     "cite": "doc:106:p3",
+     "topic": "Competitive intensity and food delivery margins",
+     "summary": "Analysts asked whether discounting has increased and if food delivery margins have peaked out."
+    },
+    {
+     "cite": "doc:106:p3",
+     "topic": "Quick commerce store expansion in tier 2 and tier 3 cities",
+     "summary": "Questions regarding the rationale, geographies, unit economics, and costs of expanding into smaller towns."
+    },
+    {
+     "cite": "doc:106:p4",
+     "topic": "Dark.ai monetization, capex, and business model",
+     "summary": "Analysts inquired about dark.ai's target audience, monetization potential, infrastructure costs, and right to win."
+    },
+    {
+     "cite": "doc:106:p5",
+     "topic": "Quick commerce indirect cost structure and contribution margins",
+     "summary": "Questions on why indirect costs are growing quickly despite store growth and higher NOV per store."
+    },
+    {
+     "cite": "doc:106:p6",
+     "topic": "Competition in quick commerce and impact on expansion",
+     "summary": "Inquiries regarding how management's read on 12 months of heightened competition gives confidence to reaccelerate store additions."
+    },
+    {
+     "cite": "doc:107:p4",
+     "topic": "Competitive intensity in quick commerce",
+     "summary": "Analysts asked about the peak of competitive intensity, predictability of subsidies, and sustainability of discounting."
+    },
+    {
+     "cite": "doc:107:p5",
+     "topic": "Blinkit Average Order Value (AOV)",
+     "summary": "Inquiries regarding the consecutive drop in AOV, seasonality impact, and future trajectory."
+    },
+    {
+     "cite": "doc:107:p7",
+     "topic": "Blinkit Capex vs Cash Flow",
+     "summary": "Questions on the difference between stated per-store capex and actual capex in the cash flow statement due to warehousing lumpiness."
+    },
+    {
+     "cite": "doc:107:p6",
+     "topic": "Food Delivery and MTU Growth",
+     "summary": "Queries on whether the increase in MTUs is driven by new users or conversion from ATUs, and response to competition."
+    },
+    {
+     "cite": "doc:107:p11",
+     "topic": "Working Capital and Inventory Days",
+     "summary": "Questions on how inventory days were reduced further and the sustainability of working capital levels."
+    }
+   ],
+   "what_matters_now": [
+    {
+     "text": "Revenue reached ₹24,138 cr with YoY growth of 77.6% in Q2 FY27.",
+     "cites": [
+      "fact:q_revenue",
+      "fact:q_revenue_yoy"
+     ]
+    },
+    {
+     "text": "EBITDA stood at ₹752 cr with an EBITDA margin of 3.1% in Q2 FY27.",
+     "cites": [
+      "fact:q_ebitda",
+      "fact:q_opm"
+     ]
+    },
+    {
+     "text": "Management targeted $1 billion EBITDA by FY29 while keeping store count at 3,000 for FY27.",
+     "cites": [
+      "doc:108:p3",
+      "doc:108:p4"
+     ]
+    }
+   ],
+   "narrative_vs_numbers": [
+    {
+     "id": 1,
+     "cite": "doc:106:p3",
+     "cites": [],
+     "claim": "Competitive intensity in food delivery was higher in Q2 compared to previous quarters.",
+     "quote": "Generally, the competitive intensity last quarter in food delivery was higher compared to the previous few quarters, and partly also driven by Zomato.",
+     "verdict": "too_early",
+     "evidence": "No facts are available regarding comparative competitive intensity in food delivery across quarters."
+    },
+    {
+     "id": 2,
+     "cite": "doc:106:p4",
+     "cites": [],
+     "claim": "Bulk of the expansion of new quick commerce stores will be in smaller cities.",
+     "quote": "Directionally, we've also mentioned in the letter that the bulk of the expansion of these new stores will be in smaller cities.",
+     "verdict": "too_early",
+     "evidence": "No facts are provided regarding the geographic distribution of quick commerce store expansion."
+    },
+    {
+     "id": 3,
+     "cite": "doc:106:p5",
+     "cites": [],
+     "claim": "Steady state SKU mix for quick commerce is about 90-95% 1P.",
+     "quote": "Jignanshu, we are at that steady state now where about 90-95% is 1P, and we don't expect any more incremental working capital change on that account",
+     "verdict": "too_early",
+     "evidence": "No facts are provided detailing the steady state SKU mix for quick commerce."
+    },
+    {
+     "id": 4,
+     "cite": "doc:106:p6",
+     "cites": [],
+     "claim": "Agentic commerce adoption in India is close to zero.",
+     "quote": "in India, agentic commerce adoption is close to zero.",
+     "verdict": "too_early",
+     "evidence": "No facts mention agentic commerce adoption rates in India."
+    },
+    {
+     "id": 5,
+     "cite": "doc:107:p3",
+     "cites": [],
+     "claim": "Most of the growth in Blinkit is from existing cities rather than geographical expansion.",
+     "quote": "Most of it is from existing cities.",
+     "verdict": "too_early",
+     "evidence": "No facts discuss whether Blinkit growth is driven by existing cities or new expansions."
+    },
+    {
+     "id": 6,
+     "cite": "doc:107:p4",
+     "cites": [],
+     "claim": "First quarter was the peak of competitive intensity seen till date in quick commerce.",
+     "quote": "First quarter, so far, was the peak of competitive intensity that we have seen till date because the number of players is higher and everybody was more aggressive.",
+     "verdict": "too_early",
+     "evidence": "No facts provide data on competitive intensity peaks in quick commerce quarters."
+    },
+    {
+     "id": 7,
+     "cite": "doc:107:p5",
+     "cites": [],
+     "claim": "Discount-led growth in quick commerce is not sustainable.",
+     "quote": "we strongly feel that discount-led growth is not sustainable in the business.",
+     "verdict": "too_early",
+     "evidence": "No facts address the sustainability of discount-led growth in quick commerce."
+    },
+    {
+     "id": 8,
+     "cite": "doc:107:p10",
+     "cites": [],
+     "claim": "Inventory losses in Blinkit have been fairly asymptotic and are netted out of gross profit.",
+     "quote": "It has been fairly asymptotic so far. We don't expect it to be materially much better.",
+     "verdict": "too_early",
+     "evidence": "No facts mention inventory losses or gross profit netting for Blinkit."
+    },
+    {
+     "id": 9,
+     "cite": "doc:108:p3",
+     "cites": [],
+     "claim": "Quick commerce monthly transacting user additions remain strong due to marketing spends for new customer acquisition.",
+     "quote": "MTU additions remain strong because we continue to spend on marketing for new customer acquisition.",
+     "verdict": "too_early",
+     "evidence": "No facts report monthly transacting user additions or marketing spends."
+    },
+    {
+     "id": 10,
+     "cite": "doc:108:p4",
+     "cites": [],
+     "claim": "Dark store expansion is on track to reach 3,000 stores by March.",
+     "quote": "On store addition, we're on track on our guidance for March of 3,000 stores. We remain firmly on track.",
+     "verdict": "too_early",
+     "evidence": "No facts provide guidance or current count regarding dark store expansion targets."
+    }
+   ]
+  }
+ }
+}

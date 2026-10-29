@@ -1,0 +1,3289 @@
+{
+ "state": {
+  "t0": 1793276985933,
+  "docs": [
+   {
+    "id": 100,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7873abcb-7f97-487d-a474-028b0a26feea.pdf",
+    "label": "Q2 FY27 call (Oct 2026)",
+    "pages": 20,
+    "status": "extracted",
+    "said_on": "2026-10-15",
+    "doc_type": "transcript",
+    "period_end": "2026-09-30",
+    "period_label": "Q2 FY27"
+   },
+   {
+    "id": 101,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b101e24e-b807-4c74-9025-90009f4b47a5.pdf",
+    "label": "Q1 FY27 call (Aug 2026)",
+    "pages": 23,
+    "status": "extracted",
+    "said_on": "2026-08-15",
+    "doc_type": "transcript",
+    "period_end": "2026-06-30",
+    "period_label": "Q1 FY27"
+   },
+   {
+    "id": 102,
+    "url": "https://cms-assets.bajajfinserv.in/is/content/bajajfinance/bajaj-finance-q4-fy26-earnings-conference-call-transcript?scl=1&fmt=pdf",
+    "label": "Q4 FY26 call (Apr 2026)",
+    "pages": 18,
+    "status": "extracted",
+    "said_on": "2026-04-15",
+    "doc_type": "transcript",
+    "period_end": "2026-03-31",
+    "period_label": "Q4 FY26"
+   },
+   {
+    "id": 103,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6eb34dc2-bde9-4df5-8b93-aad3d461140e.pdf",
+    "label": "Q3 FY26 call (Feb 2026)",
+    "pages": 13,
+    "status": "extracted",
+    "said_on": "2026-02-15",
+    "doc_type": "transcript",
+    "period_end": "2025-12-31",
+    "period_label": "Q3 FY26"
+   },
+   {
+    "id": 104,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/39ea369b-a7b8-42e8-b787-2d1df4efa020.pdf",
+    "label": "Q2 FY26 call (Dec 2025)",
+    "pages": 19,
+    "status": "extracted",
+    "said_on": "2025-12-15",
+    "doc_type": "transcript",
+    "period_end": "2025-09-30",
+    "period_label": "Q2 FY26"
+   },
+   {
+    "id": 105,
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a2357f0b-2828-4790-8a02-61064bd1929b.pdf",
+    "label": "FY26 annual report",
+    "pages": 450,
+    "status": "extracted",
+    "said_on": null,
+    "doc_type": "annual_report",
+    "period_end": "2026-03-31",
+    "period_label": "FY26"
+   }
+  ],
+  "done": [
+   "resolve",
+   "financials",
+   "documents",
+   "extract",
+   "annual_report",
+   "ledger",
+   "synthesis"
+  ],
+  "name": "Bajaj Finance",
+  "judged": [
+   {
+    "id": 1,
+    "cite": "doc:100:p3",
+    "cites": [],
+    "claim": "AUM growth was secular across urban and rural consumer finance, MFI, CV, tractor, and LAS.",
+    "quote": "In general, AUM growth was pretty secular. I'll quickly go through -- I've jumped actually to Panel 52. If you see, the growth is pretty secular",
+    "verdict": "too_early",
+    "evidence": "No facts are available regarding segment-wise AUM growth for urban and rural consumer finance, MFI, CV, tractor, and LAS."
+   },
+   {
+    "id": 2,
+    "cite": "doc:100:p4",
+    "cites": [],
+    "claim": "The company stopped doing short-tenor gold loan schemes in August.",
+    "quote": "We have since August stopped doing short-tenor schemes as a firm.",
+    "verdict": "too_early",
+    "evidence": "No facts are available regarding the cessation of short-tenor gold loan schemes."
+   },
+   {
+    "id": 3,
+    "cite": "doc:100:p5",
+    "cites": [],
+    "claim": "Capital raise is principally driven by the growth story of India and the company.",
+    "quote": "The Board's decision of raising additional capital is principally driven by mainly growth story of India and of the company and its subsidiaries.",
+    "verdict": "too_early",
+    "evidence": "No facts are available regarding the strategic drivers behind capital raise decisions."
+   },
+   {
+    "id": 4,
+    "cite": "doc:101:p4",
+    "cites": [],
+    "claim": "AUM growth was secular and broad-based across segments.",
+    "quote": "AUM growth was secular and broad-based, as you can see from the composition summary later in the deck.",
+    "verdict": "too_early",
+    "evidence": "No facts are available regarding segment-wise AUM composition and broad-based growth."
+   },
+   {
+    "id": 5,
+    "cite": "doc:101:p4",
+    "cites": [],
+    "claim": "Gold loan business sustained strong momentum, growing by 112%.",
+    "quote": "Gold loan business sustained its strong momentum, grew by 112%. Business is now 4% of AUM.",
+    "verdict": "too_early",
+    "evidence": "No facts are available regarding gold loan business momentum or its percentage share of AUM."
+   },
+   {
+    "id": 6,
+    "cite": "doc:101:p4",
+    "cites": [],
+    "claim": "MSME growth slowed down due to proactive risk actions taken since last July.",
+    "quote": "MSME grew by 2%. As you're aware, since last July, we've been pruning business due to sort of risk actions that we've taken.",
+    "verdict": "too_early",
+    "evidence": "No facts are available regarding MSME portfolio growth rates or risk actions."
+   },
+   {
+    "id": 8,
+    "cite": "doc:102:p3",
+    "cites": [],
+    "claim": "MSME portfolio growth remained muted due to proactive risk actions, but management expects worst is behind by June 2026.",
+    "quote": "MSME continue to see muted growth. It grew by 6% only on account of a set of proactive risk actions that we have been taking since Q2 FY'26.",
+    "verdict": "too_early",
+    "evidence": "No facts are available regarding MSME portfolio growth percentages or management expectations for June 2026."
+   },
+   {
+    "id": 9,
+    "cite": "doc:102:p4",
+    "cites": [],
+    "claim": "Captive 2W and 3W financing book will wind down to under INR 1,500 crore by September 2026, aiding credit cost and GNPA.",
+    "quote": "This book will principally just wind down to less than INR 1,500-odd crores by September '26, it will lead to further improvement in GNPA and should result in lower credit cost for FY27.",
+    "verdict": "too_early",
+    "evidence": "No facts are available regarding captive 2W and 3W financing book wind down targets by September 2026."
+   },
+   {
+    "id": 10,
+    "cite": "doc:102:p4",
+    "cites": [],
+    "claim": "Company is pursuing deep FinAI transformation across all aspects of business rather than just use-case deployments.",
+    "quote": "Fundamentally, transformation is about reshaping the business model and in general, covers all aspects of business. I just want to highlight that we are doing transformation",
+    "verdict": "too_early",
+    "evidence": "No facts are available regarding FinAI transformation across business operations."
+   }
+  ],
+  "sector": null,
+  "symbol": "BAJFINANCE",
+  "pending": [],
+  "version": "49f776586837",
+  "synthesis": {
+   "log": [],
+   "bear": [
+    {
+     "text": "Gross NPA reached 1.06% in Q2 FY27.",
+     "cites": [
+      "fact:q_gnpa"
+     ]
+    },
+    {
+     "text": "Net profit growth slowed to 15.2% in FY26.",
+     "cites": [
+      "fact:fy_pat_growth"
+     ]
+    },
+    {
+     "text": "Gross NPA change YoY dropped by −18 bps in Q2 FY27.",
+     "cites": [
+      "fact:q_gnpa_yoy_bps"
+     ]
+    }
+   ],
+   "bull": [
+    {
+     "text": "Net profit grew 28.7% YoY to ₹6,367 cr in Q2 FY27.",
+     "cites": [
+      "fact:q_pat_yoy",
+      "fact:q_pat"
+     ]
+    },
+    {
+     "text": "Borrowings reached ₹5,01,982 cr with a debt to equity ratio of 4.08× in Sep 2026.",
+     "cites": [
+      "fact:borrowings",
+      "fact:de_ratio"
+     ]
+    },
+    {
+     "text": "Return on equity stood at 18.2% currently.",
+     "cites": [
+      "fact:roe"
+     ]
+    }
+   ],
+   "model": "gemini-3.5-flash-lite",
+   "dropped": 0,
+   "seed_questions": [
+    "How will management achieve the 20–25% AUM growth target in the medium term?",
+    "What actions explain the MSME segment asset quality deterioration mentioned by analysts?",
+    "How does the capital raise impact Tier 1 capital and future earnings dilution?"
+   ],
+   "what_matters_now": [
+    {
+     "text": "Revenue grew 22.8% YoY to ₹24,546 cr in Q2 FY27.",
+     "cites": [
+      "fact:q_revenue_yoy",
+      "fact:q_revenue"
+     ]
+    },
+    {
+     "text": "Management delivered AUM growth of 22.4% for FY26 against the targeted 22–23%.",
+     "cites": [
+      "doc:103:p4",
+      "doc:102:p2"
+     ]
+    },
+    {
+     "text": "Revenue growth missed the 26–27% target for FY27, reaching 20.7%.",
+     "cites": [
+      "doc:100:p11",
+      "fact:actual_5"
+     ]
+    }
+   ]
+  }
+ },
+ "extracts": [
+  {
+   "document_id": "100",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 4,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "we remain quite clear about ending the year with close to 2,800 on stand-alone gold branches.",
+      "metric": "store_count",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "point",
+      "label_raw": "gold loan branches",
+      "target_low": 2800,
+      "target_high": 2800
+     },
+     {
+      "page": 4,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "We are well on track to deliver between 60 million to 62 million new loans in FY27.",
+      "metric": "volume_growth",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "new loans",
+      "target_low": 60000000,
+      "target_high": 62000000
+     },
+     {
+      "page": 4,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "We are clear about adding between 18 MM to 20 MM customers to the franchise in FY27.",
+      "metric": "other:customer_addition",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "new customers",
+      "target_low": 18000000,
+      "target_high": 20000000
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We remain pretty comfortable place to deliver a 25 to 40 basis point improvement in FY27 on opex-to-NTI.",
+      "metric": "ebitda_margin",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "opex-to-NTI improvement",
+      "target_low": 0.25,
+      "target_high": 0.4
+     },
+     {
+      "page": 11,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "I would say probably between 26%, 27% growth we should deliver now on a full year basis.",
+      "metric": "revenue_growth",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "full year growth",
+      "target_low": 26,
+      "target_high": 27
+     },
+     {
+      "page": 11,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "medium term, we maintain a guidance of 20% to 25% on a year lower here and a year higher there.",
+      "metric": "aum_growth",
+      "horizon": "medium_term",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "medium term growth",
+      "target_low": 20,
+      "target_high": 25
+     }
+    ],
+    "call_date": "19 October 2026",
+    "call_period": "Q2 FY27",
+    "reported_kpis": [
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "AUM, as you can see, grew by 26.5% to INR 5,84,624 crores",
+      "value": 26.5,
+      "metric": "aum_growth",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 3,
+      "unit": "cr",
+      "basis": "unspecified",
+      "quote": "grew by 26.5% to INR 5,84,624 crores",
+      "value": 584624,
+      "metric": "aum",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "PAT grew by 29% to INR6,367 crores.",
+      "value": 29,
+      "metric": "pat_growth",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 3,
+      "unit": "cr",
+      "basis": "unspecified",
+      "quote": "PAT grew by 29% to INR6,367 crores.",
+      "value": 6367,
+      "metric": "pat",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "ROA for the quarter came in at 4.6% and ROE came in at 20.6%.",
+      "value": 4.6,
+      "metric": "other:roas",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "ROA for the quarter came in at 4.6% and ROE came in at 20.6%.",
+      "value": 20.6,
+      "metric": "other:roe",
+      "period": "Q2 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "GNPA and NNPA came in at 1.06 and 42 basis points.",
+      "value": 1.06,
+      "metric": "gnpa",
+      "period": "Q2 FY27"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 5,
+      "topic": "Gold Loan Short-Term Schemes",
+      "summary": "Analysts asked why short-term gold loans are not offered and how they impact LTV and customer delinquencies."
+     },
+     {
+      "page": 8,
+      "topic": "MSME Asset Quality",
+      "summary": "Concerned about the continuation of GNPA deterioration in the MSME segment."
+     },
+     {
+      "page": 14,
+      "topic": "Capital Raise Dilution",
+      "summary": "Questioned the timing and large quantum of the capital raise given existing Tier 1 and potential subsidiary stake sales."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 3,
+      "claim": "AUM growth was secular across urban and rural consumer finance, MFI, CV, tractor, and LAS.",
+      "quote": "In general, AUM growth was pretty secular. I'll quickly go through -- I've jumped actually to Panel 52. If you see, the growth is pretty secular",
+      "horizon": "Q2 FY27"
+     },
+     {
+      "page": 4,
+      "claim": "The company stopped doing short-tenor gold loan schemes in August.",
+      "quote": "We have since August stopped doing short-tenor schemes as a firm.",
+      "horizon": null
+     },
+     {
+      "page": 5,
+      "claim": "Capital raise is principally driven by the growth story of India and the company.",
+      "quote": "The Board's decision of raising additional capital is principally driven by mainly growth story of India and of the company and its subsidiaries.",
+      "horizon": null
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "101",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 4,
+      "unit": "count",
+      "basis": "organic",
+      "quote": "By year-end we foresee 2,700 to 2,800 branches, all goes well, maybe 3,000 branches and AUM of between INR29,000 crores and INR31,000 crores, all organic.",
+      "metric": "store_count",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "branches",
+      "target_low": 2700,
+      "target_high": 2800
+     },
+     {
+      "page": 4,
+      "unit": "cr",
+      "basis": "organic",
+      "quote": "By year-end we foresee 2,700 to 2,800 branches, all goes well, maybe 3,000 branches and AUM of between INR29,000 crores and INR31,000 crores, all organic.",
+      "metric": "aum",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "gold loan AUM",
+      "target_low": 29000,
+      "target_high": 31000
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Overall, we are confident of delivering 25 to 40 basis points improvement for FY '27 in opex to NTI.",
+      "metric": "ebitda_margin",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "opex to NTI improvement",
+      "target_low": 0.25,
+      "target_high": 0.4
+     },
+     {
+      "page": 6,
+      "unit": "cr",
+      "basis": "unspecified",
+      "quote": "I mean this year the digital platform will deliver INR50,000 crores of business.",
+      "metric": "other:digital_platform_volume",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "point",
+      "label_raw": "digital platform business volume",
+      "target_low": 50000,
+      "target_high": 50000
+     },
+     {
+      "page": 6,
+      "unit": "cr",
+      "basis": "unspecified",
+      "quote": "I am targeting that next year we should be delivering INR100,000 crores volume between customer centricity, AI and tech transformation and digital transformation",
+      "metric": "other:digital_platform_volume",
+      "horizon": "FY28",
+      "speaker": "Rajeev Jain",
+      "direction": "point",
+      "label_raw": "digital platform volume next year",
+      "target_low": 100000,
+      "target_high": 100000
+     }
+    ],
+    "call_date": "2026-07-30",
+    "call_period": "Q1 FY27",
+    "reported_kpis": [
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Profit growth was strong at 28% and ROE crossed 20%",
+      "value": 28,
+      "metric": "pat_growth",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "ROA came in at 4.7% and ROE at 20.4%.",
+      "value": 20.4,
+      "metric": "other:roe",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "ROA came in at 4.7% and ROE at 20.4%.",
+      "value": 4.7,
+      "metric": "other:roa",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "loan loss to average AUF in the new frame that we talked about improving to 1.54% versus same time during the same period, 1.87%.",
+      "value": 1.54,
+      "metric": "credit_cost",
+      "period": "Q1 FY27"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "GNPA and NNPA came in line, 0.96% and 0.39%.",
+      "value": 0.96,
+      "metric": "gnpa",
+      "period": "Q1 FY27"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 7,
+      "topic": "Guidance revision",
+      "summary": "Analysts questioned why management has not raised full-year growth guidance despite strong Q1 performance."
+     },
+     {
+      "page": 7,
+      "topic": "Macro overlay and credit cost",
+      "summary": "Inquiries regarding the necessity of creating additional management overlays and macroeconomic provisions given strong credit metrics."
+     },
+     {
+      "page": 11,
+      "topic": "Cost of funds",
+      "summary": "Questions regarding the trajectory of cost of funds and liquidity strategy for the upcoming quarters."
+     },
+     {
+      "page": 11,
+      "topic": "AI Opex",
+      "summary": "Concerns over controlling opex and token costs associated with scaling AI initiatives."
+     },
+     {
+      "page": 17,
+      "topic": "Gold loan and PL competitive intensity",
+      "summary": "Discussion on intense competition in gold loans and potential cannibalization of personal loans."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 4,
+      "claim": "AUM growth was secular and broad-based across segments.",
+      "quote": "AUM growth was secular and broad-based, as you can see from the composition summary later in the deck.",
+      "horizon": "Q1 FY27"
+     },
+     {
+      "page": 4,
+      "claim": "Gold loan business sustained strong momentum, growing by 112%.",
+      "quote": "Gold loan business sustained its strong momentum, grew by 112%. Business is now 4% of AUM.",
+      "horizon": "Q1 FY27"
+     },
+     {
+      "page": 4,
+      "claim": "MSME growth slowed down due to proactive risk actions taken since last July.",
+      "quote": "MSME grew by 2%. As you're aware, since last July, we've been pruning business due to sort of risk actions that we've taken.",
+      "horizon": "Q1 FY27"
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "102",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We foresee gold loan portfolio to probably cross 5-odd percent of total AUM by FY'27.",
+      "metric": "other:gold_loan_aum_share",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "at_least",
+      "label_raw": "gold loan portfolio share of total AUM",
+      "target_low": 5,
+      "target_high": null
+     },
+     {
+      "page": 6,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "In terms of customer franchise, we continue to be confident of adding 15 - 17 million new customers in FY27.",
+      "metric": "other:customer_additions",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "new customers",
+      "target_low": 15000000,
+      "target_high": 17000000
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "In terms of AUM, we're confident of a 20% to 24% AUM growth, aided by new businesses that we've launched in the last few years as they begin to scale.",
+      "metric": "aum_growth",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "AUM growth",
+      "target_low": 20,
+      "target_high": 24
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "NIM, we expect marginal moderation. It's a little bit contingent on how interest rates play out, caused by geopolitical tensions.",
+      "metric": "nim",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "qualitative",
+      "label_raw": "NIM",
+      "target_low": null,
+      "target_high": null
+     },
+     {
+      "page": 6,
+      "unit": "bps",
+      "basis": "unspecified",
+      "quote": "On opex to NTI, we expect to see continued improvement of 25 to 40 basis points from current levels.",
+      "metric": "other:opex_to_nti_improvement",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "opex to NTI improvement",
+      "target_low": 25,
+      "target_high": 40
+     },
+     {
+      "page": 8,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "So on an annual basis, 175 goes down to 145 to 160? Rajeev Jain: That's perfect.",
+      "metric": "credit_cost",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "credit cost to AUM",
+      "target_low": 1.45,
+      "target_high": 1.6
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "ROA came in as of fourth quarter at 4.6%. We continue to guide for 4.4% to 4.6%.",
+      "metric": "other:roa",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "ROA",
+      "target_low": 4.4,
+      "target_high": 4.6
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Return on equity came in at 20% in the current quarter, we continue to guide for 19% to 20%.",
+      "metric": "other:roe",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "Return on equity",
+      "target_low": 19,
+      "target_high": 20
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "And GNPA and NNPA, we expect them to remain range bound and well within our long-term guidance.",
+      "metric": "gnpa",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "qualitative",
+      "label_raw": "GNPA",
+      "target_low": null,
+      "target_high": null
+     },
+     {
+      "page": 9,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We orchestrate these 4 to deliver an outcome of 4.3% to 4.7% ROA and 20% to 22% ROE to investors on a long-term basis.",
+      "metric": "other:roa",
+      "horizon": "medium_term",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "ROA",
+      "target_low": 4.3,
+      "target_high": 4.7
+     },
+     {
+      "page": 9,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We orchestrate these 4 to deliver an outcome of 4.3% to 4.7% ROA and 20% to 22% ROE to investors on a long-term basis.",
+      "metric": "other:roe",
+      "horizon": "medium_term",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "ROE",
+      "target_low": 20,
+      "target_high": 22
+     }
+    ],
+    "call_date": "2026-04-29",
+    "call_period": "Q4 FY26",
+    "reported_kpis": [
+     {
+      "page": 2,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "In Q4, AUM grew by 22.4% and PAT grew by 26.7%.",
+      "value": 22.4,
+      "metric": "aum_growth",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 2,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "In Q4, AUM grew by 22.4% and PAT grew by 26.7%.",
+      "value": 26.7,
+      "metric": "pat_growth",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 2,
+      "unit": "cr",
+      "basis": "unspecified",
+      "quote": "In Q4, AUM grew by a record INR 25,500-odd crores.",
+      "value": 25500,
+      "metric": "other:aum_addition",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 2,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "We booked 12.9 million loans and added 3.93 million new customers to the franchise.",
+      "value": 12900000,
+      "metric": "volume_growth",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 2,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "We booked 12.9 million loans and added 3.93 million new customers to the franchise.",
+      "value": 3930000,
+      "metric": "other:customer_additions",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 2,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "Overall, the customer franchise as of FY'26, March stood at 119.3 million customers.",
+      "value": 119300000,
+      "metric": "other:customer_franchise",
+      "period": "FY26"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "The gold loan portfolio continued to witness strong momentum. It grew by 115%.",
+      "value": 115,
+      "metric": "other:gold_loan_aum_growth",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Cost of funds improved by 4 basis points in Q4 and came in at 7.41%.",
+      "value": 7.41,
+      "metric": "other:cost_of_funds",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "cr",
+      "basis": "unspecified",
+      "quote": "Deposit book came in at INR 68,533 crores. It contributed to 16% of consolidated borrowings.",
+      "value": 68533,
+      "metric": "other:deposits",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Opex to NTI, going back to the earlier point that I made, came in at 33.8% in Q4 as against 33.6%.",
+      "value": 33.8,
+      "metric": "other:opex_to_nti",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "And loan loss to average AR is reducing from 1.75% to 1.65% , this is really how we will report going forward as a company.",
+      "value": 1.65,
+      "metric": "credit_cost",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "GNPA, NNPA came in at 1.01% and NNPA came in at 41 basis points.",
+      "value": 1.01,
+      "metric": "gnpa",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "GNPA, NNPA came in at 1.01% and NNPA came in at 41 basis points.",
+      "value": 0.41,
+      "metric": "other:nnpa",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Provision coverage ratio was at 60% as against 54% same time last year.",
+      "value": 60,
+      "metric": "other:pcr",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 6,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "Overall, last year, we booked 52.5 million loans and added 17.5 million new customers on a full year basis.",
+      "value": 52500000,
+      "metric": "volume_growth",
+      "period": "FY26"
+     },
+     {
+      "page": 6,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "Overall, last year, we booked 52.5 million loans and added 17.5 million new customers on a full year basis.",
+      "value": 17500000,
+      "metric": "other:customer_additions",
+      "period": "FY26"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "AUM, I talked about grew 22%. PAT grew 24%, ROA, and opex to NTI I talked about it, showed an improvement of 36 basis points",
+      "value": 22,
+      "metric": "aum_growth",
+      "period": "FY26"
+     },
+     {
+      "page": 6,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "AUM, I talked about grew 22%. PAT grew 24%, ROA, and opex to NTI I talked about it, showed an improvement of 36 basis points",
+      "value": 24,
+      "metric": "pat_growth",
+      "period": "FY26"
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "ROA came in as of fourth quarter at 4.6%.",
+      "value": 4.6,
+      "metric": "other:roa",
+      "period": "Q4 FY26"
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Return on equity came in at 20% in the current quarter, we continue to guide for 19% to 20%.",
+      "value": 20,
+      "metric": "other:roe",
+      "period": "Q4 FY26"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 7,
+      "topic": "Credit cost guidance methodology",
+      "summary": "Analyst inquired whether the FY27 credit cost guidance of 145-160 bps accounts for the reporting presentation change of recoveries and potential adverse geopolitical impacts."
+     },
+     {
+      "page": 8,
+      "topic": "NIM expansion requirements for ROA targets",
+      "summary": "Analyst questioned if achieving the long-term ROA guidance and FY27 ROA target of 4.4-4.6% requires stable or expanding NIMs."
+     },
+     {
+      "page": 10,
+      "topic": "Segment-level AUM growth drivers",
+      "summary": "Analyst asked which segments will grow faster than overall AUM and which segments might lag, particularly regarding core segments and MSME."
+     },
+     {
+      "page": 12,
+      "topic": "AI capex and payback timeline",
+      "summary": "Analyst asked about capex investments in AI infrastructure, expected return on investment, and timeline for P&L impact."
+     },
+     {
+      "page": 13,
+      "topic": "Provision coverage ratio sustainability",
+      "summary": "Analyst asked whether the elevated PCR across Stage 1 and Stage 2 provides a cushion that will unwind during next year."
+     },
+     {
+      "page": 14,
+      "topic": "Profit growth outperforming AUM growth",
+      "summary": "Analyst questioned if ROA and growth guidance implies FY27 profit growth exceeding 35% compared to 22% AUM growth."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 2,
+      "claim": "AUM reached and crossed the milestone of INR 5 lakh crore, closing the quarter at approximately INR 510,000 crore.",
+      "quote": "During the quarter, the company crossed the milestone of INR 5 lakh crores AUM. It's a proud moment for us as a company to end the quarter at approximately INR 510,000 crores.",
+      "horizon": "Q4 FY26"
+     },
+     {
+      "page": 3,
+      "claim": "MSME portfolio growth remained muted due to proactive risk actions, but management expects worst is behind by June 2026.",
+      "quote": "MSME continue to see muted growth. It grew by 6% only on account of a set of proactive risk actions that we have been taking since Q2 FY'26.",
+      "horizon": "FY27"
+     },
+     {
+      "page": 4,
+      "claim": "Captive 2W and 3W financing book will wind down to under INR 1,500 crore by September 2026, aiding credit cost and GNPA.",
+      "quote": "This book will principally just wind down to less than INR 1,500-odd crores by September '26, it will lead to further improvement in GNPA and should result in lower credit cost for FY27.",
+      "horizon": "H1 FY27"
+     },
+     {
+      "page": 4,
+      "claim": "Company is pursuing deep FinAI transformation across all aspects of business rather than just use-case deployments.",
+      "quote": "Fundamentally, transformation is about reshaping the business model and in general, covers all aspects of business. I just want to highlight that we are doing transformation",
+      "horizon": "FY27"
+     },
+     {
+      "page": 6,
+      "claim": "FY27 management guidance remains contingent upon easing geopolitical tensions and macroeconomic stability.",
+      "quote": "FY27 assessment is based on expectations of easing geopolitical tensions and macro stability.",
+      "horizon": "FY27"
+     },
+     {
+      "page": 12,
+      "claim": "AI call center agents operate at one-third of the cost of traditional voice agents.",
+      "quote": "AI call center agent is one-third of the cost, straight.",
+      "horizon": null
+     },
+     {
+      "page": 15,
+      "claim": "Company aims to grow credit at 2x system growth to become a top financial services lender over the next 5 to 7 years.",
+      "quote": "We should largely be growing 2x. I would say, given our relative market share, not our absolute size, given our relative market share, we should be as a firm aspiring to grow 2x",
+      "horizon": "medium_term"
+     }
+    ]
+   },
+   "model": "gemini-3.8-flash"
+  },
+  {
+   "document_id": "103",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "overall, we've taken a view that the top line growth or AUM growth will gravitate between 22% and 23%, but more likely to be 22% on a full year basis.",
+      "metric": "aum_growth",
+      "horizon": "FY26",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "AUM growth",
+      "target_low": 22,
+      "target_high": 23
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We're likely to be between 7.55% to 7.60% in terms of cost of funds as we exit the year.",
+      "metric": "other:cost_of_funds",
+      "horizon": "FY26",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "cost of funds",
+      "target_low": 7.55,
+      "target_high": 7.6
+     },
+     {
+      "page": 4,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "We now expect 17 to 18 million customers to be added to the franchise in FY '26.",
+      "metric": "other:customer_addition",
+      "horizon": "FY26",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "customers to be added",
+      "target_low": 17,
+      "target_high": 18
+     },
+     {
+      "page": 7,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We foresee that the number next year as we enter could be anywhere between 165 to 175 basis points",
+      "metric": "credit_cost",
+      "horizon": "FY27",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "credit cost",
+      "target_low": 1.65,
+      "target_high": 1.75
+     }
+    ],
+    "call_date": "03 February 2026",
+    "call_period": "Q3 FY26",
+    "reported_kpis": [
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Core operating AUM was up 22%.",
+      "value": 22,
+      "metric": "aum_growth",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Core profit growth came in at 23% growth and PAT, which, as I said, grew by 23% as well.",
+      "value": 23,
+      "metric": "other:pat_growth",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "ROE at a core operating level before the one-time accelerated ECL provision and one-time charge-off new labor code came in at 19.6%.",
+      "value": 19.6,
+      "metric": "other:roe",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "GNPA and NNPA, principally an outcome metric, stood at 121 basis points and 47 basis points.",
+      "value": 1.21,
+      "metric": "gnpa",
+      "period": "Q3 FY26"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "reported",
+      "quote": "Annualized number came in at 1.91%.",
+      "value": 1.91,
+      "metric": "credit_cost",
+      "period": "Q3 FY26"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 6,
+      "topic": "ECL Provisioning and LGD Floors",
+      "summary": "Analysts questioned the rationale behind implementing permanent LGD floors and accelerated provisions now and whether it implies higher steady-state credit costs."
+     },
+     {
+      "page": 8,
+      "topic": "BHFL Stake Sale Gain",
+      "summary": "Inquiries regarding the utilization of the exceptional gain from the BHFL stake sale and its impact on net worth and provisions."
+     },
+     {
+      "page": 7,
+      "topic": "MSME Portfolio Stress",
+      "summary": "Questions concerning the slowdown in the unsecured MSME segment and the timeline for revival."
+     },
+     {
+      "page": 8,
+      "topic": "Vehicle Finance Strategy",
+      "summary": "Concerns regarding market share, AUM targets, and the impact of lower ROAs in the vehicle finance segment."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 3,
+      "claim": "Core performance of the company remained strong across all key metrics.",
+      "quote": "the core performance of the company, eliminating one-time charges of new labor code and the accelerated ECL provision that we've taken in Q3 remained pretty strong.",
+      "horizon": "Q3 FY26"
+     },
+     {
+      "page": 3,
+      "claim": "Company has implemented minimum loss given default floor across all lines of businesses as a permanent change.",
+      "quote": "the company has further strengthened its provisioning framework by implementing a minimum loss given default floor across all lines of our businesses.",
+      "horizon": "medium_term"
+     },
+     {
+      "page": 4,
+      "claim": "Geographic presence has mostly peaked out, focusing more on deepening rather than broadening.",
+      "quote": "Geographic presence, as I've made a point in the past that we have mostly peaked out. It's deepening rather than broadening",
+      "horizon": null
+     },
+     {
+      "page": 10,
+      "claim": "Consumer leverage remains an area of concern.",
+      "quote": "if there is only one red flag that I continue to have is that consumer leverage continues to remain an area of concern.",
+      "horizon": null
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "104",
+   "kind": "transcript",
+   "data": {
+    "dropped": 0,
+    "guidance": [
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We expect full year credit cost to be at the upper end of guided range of 1.85% to 1.95% now.",
+      "metric": "credit_cost",
+      "horizon": "FY26",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "full year credit cost",
+      "target_low": 1.85,
+      "target_high": 1.95
+     },
+     {
+      "page": 4,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "We now expect to add 16 to 17 million new customers in FY '26.",
+      "metric": "other:customer_addition",
+      "horizon": "FY26",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "new customers in FY 26",
+      "target_low": 16000000,
+      "target_high": 17000000
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "And we now think the growth will be in the region of 22-23% as compared to our earlier assessment of 24-25%",
+      "metric": "aum_growth",
+      "horizon": "FY26",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "AUM growth for FY 26",
+      "target_low": 22,
+      "target_high": 23
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "For FY '26, we expect cost of funds to be in the region of overall full year to be between 7.5% to 7.55%.",
+      "metric": "other:cost_of_funds",
+      "horizon": "FY26",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "cost of funds",
+      "target_low": 7.5,
+      "target_high": 7.55
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "We now expect MSME business to grow in the current full fiscal by 10-12% only.",
+      "metric": "other:msme_growth",
+      "horizon": "FY26",
+      "speaker": "Rajeev Jain",
+      "direction": "range",
+      "label_raw": "MSME business",
+      "target_low": 10,
+      "target_high": 12
+     }
+    ],
+    "call_date": "10 November 2025",
+    "call_period": "Q2 FY26",
+    "reported_kpis": [
+     {
+      "page": 3,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Assets under management grew 24% to INR 462,261 crores, led by secular growth across businesses.",
+      "value": 24,
+      "metric": "aum_growth",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 3,
+      "unit": "cr",
+      "basis": "unspecified",
+      "quote": "Assets under management grew 24% to INR 462,261 crores, led by secular growth across businesses.",
+      "value": 462261,
+      "metric": "other:aum",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 4,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "Customer franchise, a key driver of our growth momentum for future years, expanded to cross 110 million to end at 110.64 million.",
+      "value": 110640000,
+      "metric": "other:customer_franchise",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 4,
+      "unit": "count",
+      "basis": "unspecified",
+      "quote": "We added 4.13 million new customers in Q2 alone.",
+      "value": 4130000,
+      "metric": "other:customer_addition",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "cost of funds continue to improve, improved by 27 basis points in Q2 and came in at 7.52%.",
+      "value": 7.52,
+      "metric": "other:cost_of_funds",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "Opex to NTI improved to 32.6% as against 33.2% in Q2 last year.",
+      "value": 32.6,
+      "metric": "ebitda_margin",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 4,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "loan loss to average AUF came in at 2.05% compared to 2.02% in Q1 from a sequential standpoint.",
+      "value": 2.05,
+      "metric": "credit_cost",
+      "period": "Q2 FY26"
+     },
+     {
+      "page": 5,
+      "unit": "pct",
+      "basis": "unspecified",
+      "quote": "GNPA and NNPA came in at 124 basis points and 60 basis points.",
+      "value": 1.24,
+      "metric": "gnpa",
+      "period": "Q2 FY26"
+     }
+    ],
+    "analyst_concerns": [
+     {
+      "page": 10,
+      "topic": "MSME growth and restructuring",
+      "summary": "Analysts questioned the asset quality experience in MSME, restructuring numbers, and whether stress is more pronounced than expected."
+     },
+     {
+      "page": 10,
+      "topic": "Festive momentum and demand",
+      "summary": "Inquiries regarding whether the festive season momentum is sustaining across all product segments."
+     },
+     {
+      "page": 14,
+      "topic": "Gold loan market dynamics",
+      "summary": "Questions on how the gold loan market will evolve over a 2-3 year horizon with increased competition and varying gold prices."
+     }
+    ],
+    "narrative_claims": [
+     {
+      "page": 3,
+      "claim": "MSME growth moderated to 18% as part of a risk-first approach to ensure portfolio resilience.",
+      "quote": "MSME growth, which we have flagged in last quarter, moderated to 18% as part of our risk-first approach to ensure portfolio resilience and long-term sustainability.",
+      "horizon": "Q2 FY26"
+     },
+     {
+      "page": 4,
+      "claim": "The company has adopted a measured stance on its deposit program to deliver cost of funds efficiencies.",
+      "quote": "the company has adopted a measured stance on its deposit program with higher focus on delivering cost of funds efficiencies to the businesses.",
+      "horizon": "FY26"
+     },
+     {
+      "page": 6,
+      "claim": "Structural reforms in income tax and GST have lifted customer sentiment and spurred consumption.",
+      "quote": "Clearly, the structural reforms in income tax and GST by the government has lifted customer sentiment and spurt consumption, led to a very strong season.",
+      "horizon": "medium_term"
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "document_id": "105",
+   "kind": "annual_report",
+   "data": {
+    "segments": [],
+    "citations": [
+     {
+      "page": 41,
+      "field": "fiscal_year",
+      "quote": "In FY2026, BFL crossed C 5 lakh crore in AUM and disbursed over 50 million loans."
+     },
+     {
+      "page": 66,
+      "field": "business_description",
+      "quote": "It is a deposit-taking Non-Banking Financial Company (NBFC-D) registered with the Reserve Bank of India (RBI) and is classified as a NBFC-Investment and Credit Company (NBFC-ICC). The Company is engaged in the business of lending, partnership and services, payments and acceptance of deposits."
+     },
+     {
+      "page": 84,
+      "field": "top_risks",
+      "quote": "As an NBFC, the Company is exposed to credit, liquidity, operational and market risks..."
+     },
+     {
+      "page": 119,
+      "field": "top_risks",
+      "quote": "...focused on risk types such as Operational Risk, Cyber security, Information security, Outsourcing Risk, Conduct Risk, etc."
+     },
+     {
+      "page": 331,
+      "field": "contingent_liabilities_cr",
+      "quote": "Disputed claims against the Company not acknowledged as debts 153.90, PF matters under appeal 110.76, VAT matters under appeal 4.31, ESI matters under appeal 5.14, Bank Guarantees 0.50"
+     },
+     {
+      "page": 3,
+      "field": "related_party_highlights",
+      "quote": "...approval of the Members be and is hereby accorded to the Company for entering into and/or continuing with arrangements/contracts/agreements/ transactions... with Bajaj Housing Finance Limited (‘BHFL’) being a related party of the Company, for an aggregate amount not exceeding H 18,152 crore..."
+     },
+     {
+      "page": 399,
+      "field": "auditor_opinion",
+      "quote": "In our opinion and to the best of our information and according to the explanations given to us, the aforesaid consolidated financial statements give the information required by the Companies Act, 2013..."
+     },
+     {
+      "page": 399,
+      "field": "key_audit_matters",
+      "quote": "Assessment of impairment loss allowance based on expected credit loss (ECL) on Loans"
+     },
+     {
+      "page": 400,
+      "field": "key_audit_matters",
+      "quote": "Information Technology ('IT') Systems and Controls impacting Financial Reporting"
+     }
+    ],
+    "top_risks": [
+     "Credit risk",
+     "Liquidity risk",
+     "Operational risk",
+     "Market risk",
+     "Cyber security and Information security risk"
+    ],
+    "pages_read": [
+     3,
+     19,
+     20,
+     38,
+     41,
+     45,
+     66,
+     68,
+     70,
+     72,
+     74,
+     84,
+     89,
+     103,
+     112,
+     116,
+     119,
+     125,
+     132,
+     165,
+     170,
+     174,
+     259,
+     260,
+     261,
+     282,
+     289,
+     331,
+     399,
+     400,
+     401,
+     402,
+     403,
+     428
+    ],
+    "fiscal_year": "FY2026",
+    "auditor_opinion": "unmodified",
+    "key_audit_matters": [
+     "Assessment of impairment loss allowance based on expected credit loss (ECL) on Loans",
+     "Information Technology (IT) Systems and Controls impacting Financial Reporting"
+    ],
+    "business_description": "Bajaj Finance Limited is a deposit-taking Non-Banking Financial Company engaged in lending, partnership and services, payments, and acceptance of deposits. It offers a diversified lending portfolio across retail, MSMEs, and commercial customers with a deep presence across urban and rural India.",
+    "related_party_highlights": [
+     "Material related party transactions between the Company and Bajaj Housing Finance Limited for an aggregate amount not exceeding ₹18,152 crore."
+    ],
+    "contingent_liabilities_cr": 273.71
+   },
+   "model": "gemini-3.5-flash-lite"
+  }
+ ],
+ "pages": [
+  {
+   "document_id": "100",
+   "page_no": 2,
+   "text": "Page 1 of 19\n“Bajaj Finance Limited\nQ2 FY27 Earnings Conference Call”\nOctober 19, 2026\nMANAGEMENT: MR. RAJEEV JAIN – VICE CHAIRMAN AND MANAGING\nDIRECTOR – BAJAJ FINANCE LIMITED\nMR. SANDEEP JAIN – CHIEF OPERATING OFFICER AND\nCHIEF FINANCIAL OFFICER – BAJAJ FINANCE LIMITED"
+  },
+  {
+   "document_id": "100",
+   "page_no": 3,
+   "text": "Bajaj Finance Limited\nOctober 19, 2026\nPage 2 of 19\nModerator: Ladies and gentlemen, good day, and welcome to Bajaj Finance Q2 FY27 Earnings\nConference Call. As a reminder, all participant lines will be in the listen-only mode,\nand there will be an opportunity for you to ask questions after the presentation\nconcludes. Should you need assistance during this conference call, please signal\nan operator by pressing star then zero on your touchtone phone.\nI'm pleased to welcome Mr. Rajeev Jain, Vice Chairman and Managing Director; and\nMr. Sandeep Jain, COO and CFO; and other senior members of the management\nteam. I now invite Mr. Rajeev Jain for his opening remarks, post which we will open\nthe floor for the Q&A session. Thank you, and over to you, Mr. Jain.\nRajeev Jain: Thank you for hosting us. Very good evening to all of you, or good morning,\ndepending on the geography you're in. Welcome to the BFL Q2 earnings call. The\ninvestor deck for Q2 has been uploaded on our website. I hope you had a chance to\ngo through the same. I'll quickly focus on key updates for the quarter and our\nmanagement assessment before Q&A. I expect to between 15 to 20 odd minutes.\nLet's quickly jump to Panel 4 in terms of the quarter went by. Overall, I would say it\nis an excellent quarter with strong performance across all key metrics, of AUM, new\ncustomer addition, credit cost, profit growth, ROA and ROE. AUM, as you can see,\ngrew by 26.5% to INR 5,84,624 crores, delivering net AUM addition of close to INR\n38,000 crores in the quarter. PBT grew by 29% to INR 8,537 crores in Q2. This is\nbefore the macroeconomic provision that we've created of another INR 337 crores\nto grew by 34% to INR 8,874 crores.\nPAT grew by 29% to INR6,367 crores. Before macro overlay provision, it grew by\n34% to INR6,619 crores. In Q2, company booked just a tad below INR13.5 million\nnew loans and added 4.5 million new customers. Overall customer franchise stood\nat just a tad below 129 million customers.\nROA for the quarter came in at 4.6% and ROE came in at 20.6%. Opex to total income\nwas 33% and net NPA came in at 42 basis points. Overall, I would say, a pretty good\nquarter for the firm and first half for the firm.\nIn general, AUM growth was pretty secular. I'll quickly go through -- I've jumped\nactually to Panel 52. If you see, the growth is pretty secular, urban consumer\nfinance grew by 43%, rural consumer finance by 63%. MFI grew on a low base, grew\n54%, CV and Tractor on low base grew 89%, LAS grew 42%, captive book, as you're\naware, as I've been talking for the last 2 quarters, continues to wind down and\nwould create significant tailwinds for us in terms of credit costs as you move\nforward is now down to just INR2,400-odd crores."
+  },
+  {
+   "document_id": "100",
+   "page_no": 4,
+   "text": "Bajaj Finance Limited\nOctober 19, 2026\nPage 3 of 19\nMSME grew by 3%. It should now start to grow actually. So, we should start to see\nas we get in the second half, a double-digit kind of growth momentum in the\nbusiness. Gold loan book portfolio continued to grow, it's now 4.1% of balance\nsheet. It was just a tad above INR24,000 crores as of Q2.\nWe added 320 odd gold loan branches during the quarter. Total network is now\nacross 2,000 branches. It's at 2,022 branches, and we remain quite clear about\nending the year with close to 2,800 on stand-alone gold branches.\nThe rest of the business, as you can see, grew in the corridor of 20% to 30%. So,\noverall pretty secular growth across all lines of business, in a way, if I look at the\ngross loan growth because capital book is dialing down, you should add another\nINR1,000-odd crores that's virtually INR39,000 crores of book growth that we are\nprincipally talking about. These are fascinating numbers even for me, I would say.\nI didn't imagine we'll be growing quarterly between INR38,000 crores and\nINR39,000 crores on a run rate basis because that's been the case for the last two\nquarters now.\nI'll go back to panel 5, 6 and 7 to quickly give you highlights of the quarter. New\nloans grew 11% to 13.5 million. There is some level of noise in year-on-year number\nbecause last year's season was earlier this year’s season is later. We are well on\ntrack to deliver between 60 million to 62 million new loans in FY27. We added, as I\nsaid, 4.42 million new customers during the quarter. We are clear about adding\nbetween 18 MM to 20 MM customers to the franchise in FY27.\nOverall franchise I talked about, stood at 129 million and Cross-Sell franchise stood\nat 82 million. Liquidity buffer remained strong at just a tad below 20,000 crores.\nCost of funds came down sequentially by 9 basis points and came in at 7.31%.\nDeposit book is 14%. We've increased rates in Q2. And hopefully, we will see some\nmomentum here as we move forward. Opex to total income improved to 33%. And\ndespite continued investments that we are making in gold loan branches, MFI\nbranches and technology transformation.\nWe remain pretty comfortable place to deliver a 25 to 40 basis point improvement\nin FY27 on opex-to-NTI. Now on credit quality, loan loss to average AUF improved\nto 1.56% from 1.88% last year. As a measure of prudence, we recognized, as I said,\na macroeconomic overlay of 337 crores. Excluding this provision, the loan losses\nand provisions actually declined year-on-year by 12% and loan loss to average AUF\nin the process would look to be like 1.32%.\nYou may see here that the Stage 2 and Stage 3 assets actually increased by 1,601\ncrores. It actually includes a 1,047 crores increase in Stage 2 in the gold loan\nbusiness, due to the short tenure schemes that we have actually launched when\nthe new RBI guidelines came out and that has had an impact. We have since August\nstopped doing short-tenor schemes as a firm. We don't see any credit cost impact"
+  },
+  {
+   "document_id": "100",
+   "page_no": 5,
+   "text": "Bajaj Finance Limited\nOctober 19, 2026\nPage 4 of 19\nas a result of it already out of the 1,099 crores, which is close to 1,100 crores came\nfrom gold loan in Stage 2, 550 crores has already been resolved and has flown back\nto Stage 1. So, it's a transient movement for the quarter is really what we see it to\nbe and don't see any impact on credit costs or even otherwise or in terms of auction\nand so on and so forth.\nVintage credit performance across our 3MOB, 6MOB, 9MOB continues to reflect\nsignificant and sustained improvement in the portfolio. And we are reasonably\ncomfortable with the credit cost outlook for FY27. Of course, we remain in a VUCA\nworld, so we'll take quarterly derived. GNPA and NNPA of course, if first quarter --\nfirst half is to go by, we remain pretty comfortably placed on credit quality at this\npoint in time for FY27. PCR remained pretty strong at 60%. GNPA and NNPA came\nin at 1.06 and 42 basis points. ROE, ROA I talked about 4.6% and 20.6%.\nLet me just cover now on capital raised because that's something that we\nannounced recently on October 1 as you're aware the Board approved subject to\nshareholder approval. 11,700 crores of QIP and preferential warrants by Bajaj\nFinserv to the tune of 5,800 crores in accordance of course, with subject to\napprovals by the shareholders.\nThe Board's decision of raising additional capital is principally driven by mainly\ngrowth story of India and of the company and its subsidiaries. That's the principal\nreason why we're raising capital. And we are very also clear that without having to\ndilute in any given manner, the sustainability of the medium-term goals of ROA and\nROE that we have actually outlined to shareholders.\nIt's pretty much for growth that we are looking to raise capital as we move forward.\nQuickly, let me now cover panel 9 to 11. I won't cover too much, but we continue to\ndouble down on FINAI transformation. We now have scaled our AI unit to 328 odd\npeople. Given the breadth and the depth of the work that we're doing, the facial\nrecognition camera technology is now deployed in close to 534 stores and 1,163\nservice branches. We're getting a lot of learnings from these deployments. AI bots\nare now handling 75% of our DIY customer service volumes, disbursements, you\ncan see the numbers, year-on-year 111%.\nSo, as we deepen our understanding of enterprise AI and deploy it, we get\nexperience, we get learnings. We're becoming more and more effective, both in\nterms of cost and in terms of experience of the customer and of the employee.\nOverall company has no 130-odd agents and 65 agentic applications. We are well\non track to deliver 180-odd agentic applications and 600-odd agents for the year.\nSo, I won’t cover Panel 13 and 14, just the only point I'll cover on Panel 13 - 14 is that\nwe’ve launched our first customer risk model from a risk management standpoint,\nwe'll book 500,000 accounts in our B2B business, look at its 3MOB performance."
+  },
+  {
+   "document_id": "100",
+   "page_no": 6,
+   "text": "Bajaj Finance Limited\nOctober 19, 2026\nPage 5 of 19\nand based on that, start to evaluate that for other lines of businesses. So, it's in a\ntesting phase.\nOverall, from a modelling standpoint, it does show a 15% - 20% improvement in\nterms of our risk outcomes. Let's see how the models perform in reality and based\non that, then we'll start to take review. We are working on our B2C model as well at\nthis point in time, subject to the 3MOB performance we would launch our B2C\nmodel as well if the performance by January for our B2B business holds based on\nour assessment at this point in time.\nQuickly, BHFL on subsidiaries, Panel 14, good quarter for them as well. Their\ndisbursements in AUM grew 25%, Sambhav loans which are affordable loans\ncrossed 500 crores in monthly disbursement. Opex-to-NTI continues to improve.\nWe continue to make progress on a year-on-year basis, improved from 19.7% to\n19.1%, and the PAT grew 18% despite very, very intense competitive environment\nthat they continue to face and ROE improved as a result of improving leverage to\n12.7% from 12.2% and their asset quality remains healthy. BFSL had a good quarter.\nPAT grew 36%. It added 121,000 customers.\nTo summarize and then open it up for questions. Overall, I would just say that the\nfirst half principally demonstrates the strength and scalability of our business\nmodel at this scale to grow 26% is I would say, good growth to be in while\nmaintaining credit costs that, as I've said, that probably it's likely that in the 4 years,\nthis is likely to be one of the lowest years on credit costs. We are well on track for\nthat.\nAnd FINAI is moving rapidly from individual deployments to enterprise-wide\ntransformation, both for employees and for consumers as we move forward.\nThat's really from me. Just last point on portfolio quality, which is Panel 59 to 62,\nwe principally remain green on all business metrics. You may see a gold loan\nvariation there, but I've already explained the point. And as I said, 55-odd percent\nhas already got resolved. So, it's a transient point. With that, I'm happy to take\nquestions.\nModerator: Thank you very much. We will now begin the question-and-answer session. First\nquestion is from Piran Engineer from CITIC International. Please go ahead.\nPiran Engineer: Yes. Hi, team. Thanks for taking my question and congrats on the quarter. Just I\nmay slip in two questions because they are short to answer. Firstly, on gold loans,\nwhy aren't you all offering short-term gold loans? Isn't that easier from an LTV\nperspective because you're discounting only, say, three months or six months of\ninterest versus 12 months?\nRajeev Jain: Go ahead with the second one, Piran?"
+  },
+  {
+   "document_id": "100",
+   "page_no": 10,
+   "text": "Bajaj Finance Limited\nOctober 19, 2026\nPage 9 of 19\nKuntal Shah: Hi team. Thanks for the call. My specific question is, what are the reasons you see\nthis overlay? And how does it relate to earlier overlays or a permanent change in\nthe ECL models basically because how do we think about frequency and size of\ndiscrete overlays going forward versus embedding them in ECL model\nassessment?\nRajeev Jain: This is over and above ECL model Kuntal. Point number one. That's why it's overlay.\nI think that's a first point to clarify, which means it remains available to the\nmanagement to use. I think that's just first point from a clarification standpoint. I'll\nlet Sandeep respond to.\nKuntal Shah: So, is it a policy to overlay good times to releasing bad time?\nRajeev Jain: I will just make a point before, Is it to build resilience? The answer is yes. Okay? So,\nthe fundamental reason for creating overlay, let me articulate it not because we\nsee stress building. I want us to remember always that this is bullet proofing of the\nbusiness. It is for resilience.\nWe are a cyclical business. We will see credit costs go up marginally, credit costs go\ndown marginally. It is for those marginal periods of when we go to two point, we\nwent to a peak of from 1.75 to 2.15. Let me give you a cycle view of us as a firm. I\nmean that's a very low cycle view somebody could articulate argue that we go from\n1.75% in a low period to historically.\nNow the number would reduce further, as I've said, to 2.15%. That's really, if you\nsee last two has been. That's really a cyclicality for us as a firm. We would like to\nfurther strengthen that, I would say, narrow the band further so that we can in a\ncyclical business, reduce cyclicality is the and which is what we call resilience is\nthe way thinking about the business model. And Sandeep, do you want to add\nsomething else?\nSandeep Jain: Kuntal very clearly, we continue to rest our model on empirical data. which is what\nanybody would build a model on. That's point Number one. Point number two is,\nwhile we do look at forward economic factor and guidance to look at what kind of\noverlays one should have from a macro perspective, which is with the internal part\nof, I would say, ECL framework itself.\nAt times it fails to capture the potential effect of what's happening in the real world.\nSo let me give a clear example, El Nino that we are seeing in the country, we are at\n87% monsoon at this point in time or the oil price, which is now constantly hovering\nat USD100 to USD110 kind of price.\nThe cascading impact of this on the economy on the interest rate on the inflation\nis very difficult to factor in the macro model. And that's where the management"
+  },
+  {
+   "document_id": "100",
+   "page_no": 11,
+   "text": "Bajaj Finance Limited\nOctober 19, 2026\nPage 10 of 19\njudgment comes into picture. Let me also be very clear. It's not a perfect science.\nIt's an estimate of the management in terms of which portfolio could get impacted.\nWe believe it's point time unsecured businesses barring salary because salary may\nnot get impacted so much because of oil price and inflation, but the sell-from\ncustomers could really get impacted. We have done stress testing on those set of\ncustomers and propose a higher provisioning on the customers who are in Stage 1\nin the unsecured non-salary portfolio.\nWe've also done stress testing of Stage 2 outstanding of the customer and support\nadditional provision on par. We did not do stress testing specifically on stage 3\nbecause stage 3 if you remember last year in quarter 3, we have already introduced\nLGD flooring, which captures, I would say, a significant higher provisioning\ncoverage than what is required for the kind of portfolio that we manage.\nSo, I think keeping in mind all those things, we keep doing this on a quarterly basis.\nAnd based on the evolving and emerging situation, we decided if there's a need for\nus to have overlay. The statistical modelling technically could argue the 60% floor\nprobably needs to release today.\nLet me make that point. So, I'll compound your point further you may say that\nmeans you have more than even this the answer is probably yes. But we have just\nspoken the resilience. I want to make one last one, Kuntal. Sometime very soon, we\nwill cross the point where the largest nonbank merged into a bank.\nWe are seized one, we have product move, we'll be proud of that moment as and\nwhen it happens, but we are also seized of the importance of resilience in our\nbalance sheet that is needed to continue to grow from there on and get to as per\nlast as I say INR11 lakh crores number by FY30. So that's all I would just say from a\nlast point standpoint.\nKuntal Shah: No. Thanks. This really helps. But can you just quantify what is the current stock as\nof today of macro and management overlay?\nSandeep Jain: The overall macro provision stands at about INR226 crores. Is my memory is correct\nthat's a number. On the management overlay side, we have created a provision of\nINR512 crores, INR185 crores was taken in last quarter and INR327 crores we have\ntaken in the current quarter.\nApart from that, the LGD flooring that we have created would also carry a number\nbetween INR350 crores to INR500 crores of additional provision that is already\nsitting in stage 1, 2, 3 assets, mainly because the actual number of the empire may\nsuggest a lower number. But because we have applied the principle of LGD floor,\nwe continue to make provisioning at a higher rate. So that number could be in the\nregion of INR350 crores to INR500 crores is what our estimate at this point in time."
+  },
+  {
+   "document_id": "100",
+   "page_no": 12,
+   "text": "Bajaj Finance Limited\nOctober 19, 2026\nPage 11 of 19\nKuntal Shah: Thanks. This is good conservative stance and thanks for this clarification. I will join\nthe queue.\nModerator: Thank you very much. Next question is from the line of Kunal Shah from Citi. Please\ngo ahead.\nKunal Shah: Yes. Hi, so the first question is on growth guidance. Last time you said like you\nreview post the second quarter, you said it's very fascinating to see almost 26%\ngrowth plus the capital raise is also for the growth story. So, what would be the\ngrowth guidance here onwards for near and medium term? So that's the first\nquestion?\nAnd second, in terms of the overall margins, cost of funds are down 9 basis points,\nbut given that we are in the rate hike scenario, we had still seen some margin\ncompression and NIMs on calculated basis appear to be down. So how do we see\nonce cost of funds start to see up? What is the outlook on margins, yes?\nRajeev Jain: So, I would say FY27, two quarters gone. We're seeing the early onset of festival\nfirst 9, 10 days. I would say probably between 26%, 27% growth we should deliver\nnow on a full year basis. I think that's just medium term, we maintain a guidance of\n20% to 25% on a year lower here and a year higher there.\nSo that's the second point. On NIM, clearly, at this point in time, we are baking in\ntwo more increases in the current year that would take us to 6% kind of rates. You\nwould see marginal moderation on NIM. As you move from here, we should be able\nto manage comfortably is what I would say in terms of NIM because part of that\nwould come from opex to NTI. Part of this would come in from, of course, some\ncredit costs as you're seeing. So overall profitability and return ratio, we should be\nable to continue to navigate is what I would say to you.\nKunal Shah: But moderation in NIM would be only marginal. That's what we are suggesting?\nRajeev Jain: Yes, at this point in time, yes. Answer is yes. You've seen, I think 10 - 12 basis points\ncompression in Q1 to Q2.\nSandeep Jain: Yes. I think H1 NIM over March is about 5 basis points lower. The Q1 was marginally\nhigher. Q2 was 10- 12 basis points lower than Q1. So, we are seeing moderation in\nNIM. It remains manageable.\nKunal Shah: From a Q2 level, not much of an impact on margins?\nSandeep Jain: I'm not saying that. That's what you are saying. I think we continue to remain in\ncost of fund increased environment. We do mindful of it. In the last quarter, we\nhave done a significant amount of interest rate hedging that has brought down the\ncost of fund effectively in the last quarter at BFL and BHFL level."
+  },
+  {
+   "document_id": "101",
+   "page_no": 3,
+   "text": "Bajaj Finance Limited\nJuly 30, 2026\nPage 2 of 22\nModerator: Ladies and gentlemen, good day, and welcome to Bajaj Finance Limited Q1\nFY '27 Earnings Conference Call hosted by JP Morgan. This event is not for\nthe members of the press. If you are a member of the press, please\ndisconnect and reach out separately. Please note that this call and your\nquestions will be recorded and the recording will be made available\npublicly. By participating in the event, you consent to such recording,\ndistribution and publication.\nAs a reminder, all participant lines will be in the listen-only mode and there\nwill be an opportunity for you to ask questions after the presentation\nconcludes. Should you need assistance during this conference call, please\nsignal an operator by pressing star, then zero on your touchtone phone.\nI now hand the conference over to Mr. Anuj Singla from JP Morgan. Thank\nyou, and over to you, sir.\nAnuj Singla: Thank you, Neerav. Good evening, everyone. This is Anuj Singla from\nJPMorgan. Thank you very much for joining us for the Bajaj Finance Q1 FY\n'27 Earnings Call. To discuss the earnings, I'm pleased to welcome Mr.\nRajeev Jain, Vice Chairman and Managing Director; and Mr. Sandeep Jain,\nCOO and CFO; and other senior members of the management team. On\nbehalf of JP Morgan, I would like to thank Bajaj Finance management for\ngiving us the opportunity to host them.\nI now invite Rajeev for his opening remarks, post which we will open the\nfloor for Q&A. With that, over to you, Rajeev.\nRajeev Jain: Thank you, Anuj. Thank you, JP Morgan team. Unfortunately, Sandeep is\nnot here. There is a bereavement in his family. So he's not here. I was just\nspeaking to him and I told him the first time in 19 years since I know that\nhe was not there for AGM. When he was not even CFO, he was always there\nassisting the CFO, but it was unavoidable.\nVery good evening. I have the senior management team members, the rest\nof them are all here. Welcome to BFL Q1 earnings call. The investor deck\nhas been uploaded on our website. I hope you've had a chance to go\nthrough the same. I'll quickly focus on key updates for the quarter and\nmanagement assessment before Q&A. I expect to take about 15-odd\nminutes."
+  },
+  {
+   "document_id": "101",
+   "page_no": 4,
+   "text": "Bajaj Finance Limited\nJuly 30, 2026\nPage 3 of 22\nLet's jump to panel number five. Excellent quarter, I would say. I mean, I've\nused this word after a long time, probably six - seven quarters, across all\nmetrics actually, volume momentum, new customer addition. We added 5\nmillion new customers. AUM, we added a record INR37,000 crores of AUM\nin a quarter. Profit growth was strong at 28% and ROE crossed 20% despite\nthe overhang still there on account of BHFL dilution. So, a pretty good\nquarter, I would say. ROA came in at 4.7% and ROE at 20.4%. Opex to NTI\ncame in at 33.4%, marginally higher than last year. It will smoothen out as\nI cover over the next few panels.\nPanel six, seven and eight is what I'll quickly cover the key high points. AUM\ngrowth was secular and broad-based, as you can see from the composition\nsummary later in the deck. Gold loan business sustained its strong\nmomentum, grew by 112%. Business is now 4% of AUM. By year-end we\nforesee 2,700 to 2,800 branches, all goes well, maybe 3,000 branches and\nAUM of between INR29,000 crores and INR31,000 crores, all organic.\nRural consumer finance and urban consumer finance grew by 49% and\n38% due to organic volume growth on one hand, but also increase in SKU\nprices. So out of, let's say, 40% average growth, 20% is on account of SKU\nprice increase and 20% is organic growth. We foresee further risk in terms\nof SKU prices going up is what the indication that we are principally getting\nfrom OEMs, let's see. MSME grew by 2%. As you're aware, since last July,\nwe've been pruning business due to sort of risk actions that we've taken.\nIt should come back into growth momentum by Q3 or so.\nNIMs remained steady in Q1. Deposit book came in at INR68,500 crores. It's\nnow 15% of the balance sheet. Opex to NTI came in at 33.4%. The marginal\nincrease principally reflects our accelerated investments in gold loan and\nMFI branch expansion as well as impact of new labor code. So new labor\ncode contributed to 10 basis points, INR60 crores. Since you count\ndecimals, I'm making the point on decimals. So, labor code, gold loan and\nMFI branches. Overall, we are confident of delivering 25 to 40 basis points\nimprovement for FY '27 in opex to NTI. Fulltime employee head count stood\nat 73,261. We added 1,650 employees. Excluding gold loan and MFI, the net\naddition was 811.\nOn credit quality now, credit performance principally remained quite\nstrong with loan loss to average AUF in the new frame that we talked about"
+  },
+  {
+   "document_id": "101",
+   "page_no": 5,
+   "text": "Bajaj Finance Limited\nJuly 30, 2026\nPage 4 of 22\nimproving to 1.54% versus same time during the same period, 1.87%. Now\nboth numbers are comparable.\nAs a measure of prudence, we've recognized an additional management\nand macroeconomic provision of INR296 crores during current quarter on\naccount of what's happening geopolitically and the monsoon uncertainty.\nOf course, monsoon has covered a lot of ground, I would say, in the last 15-\nodd days, but I think we still have some distance to cover on monsoon\nbefore we say that the super El Nino did not impact the country. If you\nexclude this provision because this is a macroeconomic overlay of\nprovision, loan loss to AUF for the current quarter would have been 1.31%.\nNew Stage 2 and Stage 3 contribution was 1.87% from 1.94% in the\nprevious quarter. We expect continued improvement at this juncture on\nthis metric over the coming quarters. Vintage performance, which is\nprincipally how the portfolio churns across 3MOB, 6MOB, 9MOB continue\nto reflects, significant and sustained improvement and is now running\nbelow FY '20 our pre-COVID benchmark.\nI keep reminding people within the company and otherwise that pre-COVID\nremains my benchmark. People say our size was smaller. I don't agree with\nthat point. I've made this point many times. Across businesses, now we're\nlooking lower than or equal to our pre-COVID benchmark. And we, in\ngeneral, remain quite optimistic about the credit cost outlook for FY '27.\nGNPA and NNPA came in line, 0.96% and 0.39%. Provision coverage is at\n60%. We'll continue to hold there structurally. On portfolio credit quality, all\nbusinesses are green. You may see a marginal dip in business loan, but I\nhave pencilled as green because it's just a denominator effect rather than\na numerator effect, the 3MOB, 6MOB and some vintages of 9, we are\nbeginning to see significant improvement even over FY '20.\nFinAI, while if some of you were there on the AGM, I've covered a lot, but if\nyou're not there I'll just cover some points that are principally not covered.\nWe showed five different examples in production. If it was a physical one,\nI would have showed it in as a live demo, but on VC it was difficult to do a\nlive demo."
+  },
+  {
+   "document_id": "101",
+   "page_no": 6,
+   "text": "Bajaj Finance Limited\nJuly 30, 2026\nPage 5 of 22\nWe're doubling down on Fin AI transformation. We're expanding the AI unit\nfrom 230 to 400 people. We're also adding another 300 people in digital\nplatform unit. It will principally augment our customer centricity, rapidly\naccelerate our technology transformation and strengthen our lowest risk\nframework. I mean this year the digital platform will deliver INR50,000\ncrores of business.\nI am targeting that next year we should be delivering INR100,000 crores\nvolume between customer centricity, AI and tech transformation and\ndigital transformation, all these three as they come together, that's really\nwhat we are aiming to do so that from a push business, we rapidly\ntransition towards being a full business. In Q1, on Fin AI, 27 bots are now\nlive. But as we get deeper and deeper into this, we find more and more\nopportunities. So it's a continuous transformation frame.\nOn data for AI, 45 million customer interactions were analyzed in the\nquarter through voice and text AI initiatives, and it resulted in 4 lakh\nadditional offers and delivered INR517 crores of disbursements just as a\nresult of better insight into the consumer. On product and service\ndiscovery, banners, videos, podcasts are enabling faster and more\nefficient marketing. You will see massive acceleration in this from\nNovember, December. massive both from a GEO, SEO and otherwise.\nSo, in underwriting processes, we are seeing 20% plus efficiency using AI.\nOn disbursements, AI, voice and text bots did INR2,500 crores, we will do\nINR11,000 crores INR12,000 in the full year this year. On service, AI bots are\nnow handling 71% of our DIY customer service volumes. 17 agentic\napplications have now got deployed out of 118, and we'll rapidly accelerate\nas we get into the year.\nI'm on panel 13. I'll just cover two odd points that it gives you texture on\nour data intelligence, consumer, agentic AI and custom AI models. The\ninteresting thing is custom AI model, which is on track to go live in Q2. That\nshould help us for our B2B business generate 0.5 million customers that\nwe could not do earlier. It will go live for the next business which will be our\nB2C business that will go live by October, November. So we are beginning\nto have confidence to use to build models using AI, which are faster,\nnumber one, and gives us insight that our traditional models did not give\nus. That's on AI, I would say."
+  },
+  {
+   "document_id": "101",
+   "page_no": 7,
+   "text": "Bajaj Finance Limited\nJuly 30, 2026\nPage 6 of 22\nI would go to subsidiaries. BHFL did its second AGM yesterday. Strong\nquarter, I would say, highest ever quarterly AUM addition. Disbursements\ngrew 33%. AUM grew 24%. They continue to remain under pressure on\nattrition, given the intense competitive activity in the business.\nTheir Opex to NTI, which they can control, continues to improve, came in\nat 19.6% against 21% a year ago. And both their PAT and PBT grew by 23%.\nROE improved to 12.5%. Asset quality remained pristine at 29 basis points\nand NNPA at 12 basis points. BFSL, strong AUM growth. Profit growth was\nsofter at 22%, company is beginning to mature now and we have plans to\ncontinue to scale the business.\nTo summarize, I would just say and open it up for questions, I would say we\nbegan FY'27 with reasonably strong momentum. It should lead to\naccelerating growth, credit costs that are structurally improving. Of\ncourse, I would flag geopolitical tensions as an area to continue to watch\nfor. Monsoon, hopefully, should be behind us in the 30 days. If we continue\nto maintain strong profitability ratios, which are being reinvested to remain\na growth-oriented company. That's from me for the quarter. It's a clean\nquarter. I shouldn't have questions, but let's do questions.\nModerator: Thank you very much. We'll now begin the question-and-answer session.\nThe first question is from the line of Abhijit Tibrewal from Motilal Oswal.\nPlease go ahead.\nAbhijit Tibrewal: Congratulations on an excellent quarter, like you said. Sir, the question is\nthat fact that it was an excellent quarter, despite that, you've not seen any\nchange in your assessment for FY'27. This kind of a growth in the first\nquarter itself, don't you think this year we can grow at maybe a higher rate\nalso drawing from the fact that what you just alluded, business and\nprofessional loans should turn from yourself acknowledge that maybe\nfrom third quarter we can start growing it. So don't you think this 22% to\n24% corridor that we have given for AUM growth can maybe see some\nupside.\nAnd the other thing is on credit cost as well sir, starting the year, if I\nexclude the management overlay and the macro provisions that you have\ncreated. Credit cost of about 1.3% - 1.32% thereabouts. So there also, do"
+  },
+  {
+   "document_id": "102",
+   "page_no": 1,
+   "text": "Page 1 of 18\nBajaj Finance Limited\nQ4 FY'26 Earnings Conference Call\nApril 29, 2026\nMANAGEMENT: MR. RAJEEV JAIN – VICE CHAIRMAN AND MANAGING\nDIRECTOR – BAJAJ FINANCE LIMITED\nMR. SANDEEP JAIN – CHIEF OPERATING OFFICER AND\nCHIEF FINANCIAL OFFICER – BAJAJ FINANCE LIMITED\nMODERATOR: MR. AJIT KUMAR – JM FINANCIAL LIMITED"
+  },
+  {
+   "document_id": "102",
+   "page_no": 2,
+   "text": "Bajaj Finance Limited\nApril 29, 2026\nPage 2 of 18\nModerator: Ladies and gentlemen, good day, and welcome to Bajaj Finance Limited Q4 FY'26\nEarnings Conference Call, hosted by JM Financial Limited. As a reminder, all\nparticipant lines will be in the listen only mode and there will be an opportunity for\nyou to ask questions after the presentation concludes. Should you need assistance\nduring the conference call, please signal an operator by pressing star then zero on\nyour touch note phone. Please note that this conference is being recorded.\nI now hand the conference over to Mr. Ajit Kumar, Executive Director, JM Financial\nLimited. Thank you, and over to you, Mr. Kumar.\nAjit Kumar: Thank you, Neerav. Good evening, everyone. This is Ajit Kumar from JM Financial.\nWelcome to Q4 FY'26 Earnings Call of Bajaj Finance Limited. On behalf of JM\nFinancial, I would like to thank Bajaj Finance management for giving us the\nopportunity to host them. To discuss the earnings, I'm pleased to welcome Mr.\nRajeev Jain, Vice Chairman and Managing Director; Mr. Sandeep Jain, Chief\nOperating Officer and Chief Financial Officer; and other senior members of the\nmanagement team.\nI now invite Mr. Rajeev Jain for his opening remarks, post which we will open the\nfloor for Q&A. Over to you, Rajeev.\nRajeev Jain: Thank you, Ajit. Thank you, JM. Good evening or good morning, depending on the\ngeography that you're in, and welcome to BFL Q4 earnings call. The investor deck\nfor Q4 has been uploaded on our website. I hope you had an opportunity to go\nthrough the same. I'll focus on key updates for Q4, year gone by, and management\nassessment before open the floor for Q&A. I expect to take between 20 to 25-odd\nminutes.\nLet me just quickly jump to panel number 4. Let me just clarify and it's given in\nyellow there that these numbers are before onetime actions and a set of\npresentation changes. Overall, I would say, from a company standpoint, it was a\npretty strong quarter across all key metrics of volume, new customer addition, AUM\ngrowth, credit cost, profit growth, return on assets and return on equity.\nDuring the quarter, the company crossed the milestone of INR 5 lakh crores AUM.\nIt's a proud moment for us as a company to end the quarter at approximately INR\n510,000 crores. In Q4, AUM grew by 22.4% and PAT grew by 26.7%. In Q4, AUM grew\nby a record INR 25,500-odd crores. We booked 12.9 million loans and added 3.93\nmillion new customers to the franchise. Overall, the customer franchise as of FY'26,\nMarch stood at 119.3 million customers.\nLet me now go to Panel 5. It's a little busy slide. There are set of one-timers\npertaining to Q4 FY'25 and Q4 FY'26."
+  },
+  {
+   "document_id": "102",
+   "page_no": 3,
+   "text": "Bajaj Finance Limited\nApril 29, 2026\nPage 3 of 18\nThe principal objective of this panel is to provide a simplified reconciliation of core\nfinancial performance with that of reported numbers. That's the objective. Let me\nstart, first of all, with Q4 FY'25 last year. In Q4 last year, the company had recorded\nan additional ECL provision of INR 359 crores. Also in Q4 FY'25, the company had\nrecorded a tax benefit of INR 348 crores. That's Q4 last year.\nIn Q4 this year, the company has taken an additional ECL provision of INR 142\ncrores towards management and macroeconomic overlay. That's point number\none. Two, the company has also revised disclosure of recoveries against written-\noff loans. This was earlier presented under other operating income. It will\nhenceforth effective Q4 FY'26 will be reported under loan losses and provisions as\na net number. This has no impact on PBT and PAT for the quarter, but changes the\nratios. It principally leads to redefining 2 key metrics, which are important for\ninvestors and for us as management, which is opex to NTI and loan loss to average\nAR.\nAs a result of this change, the opex to NTI is increasing from 33.2%, which is what\nit has come in to 33.8% as a result of this reporting change. And loan loss to average\nAR is reducing from 1.75% to 1.65% , this is really how we will report going forward\nas a company. The analysts will have to adjust the numbers to reflect this.\nI will summarize once again, this panel principally is intended to help clearly depict\nthe core profitability, which has seen a growth of 26% on PBT, as you can see, and\n27% for PAT. I'll quickly cover the key points on Panel 6, 7 and 8. I'll only cover the\nhigh points. As I already said, AUM crossed INR 5 lakh crores. The growth was pretty\nsecular across all businesses. The gold loan portfolio continued to witness strong\nmomentum. It grew by 115%. The business now contributes to 3.5% overall AUM.\nWe foresee gold loan portfolio to probably cross 5-odd percent of total AUM by\nFY'27.\nOther lines of businesses also continue to grow in a healthy manner. That's covered\nin Panel 67 later in the slides. MSME continue to see muted growth. It grew by 6%\nonly on account of a set of proactive risk actions that we have been taking since\nQ2 FY'26. We expect that it should come back to double-digit growth or the\ncompany growth momentum between Q2 and Q3 of FY'27. Cost of funds improved\nby 4 basis points in Q4 and came in at 7.41%. NIM remained steady.\nDeposit book came in at INR 68,533 crores. It contributed to 16% of consolidated\nborrowings. Opex to NTI, going back to the earlier point that I made, came in at\n33.8% in Q4 as against 33.6%. These are new numbers. Otherwise, it came in at\n33.2% an improvement of 10 basis points versus Q4 last year. There was a marginal\nincrease sequentially, primarily due to, I'm talking sequential on account of cost of\nnew Labour Code and accelerated gold loan branch expansion."
+  },
+  {
+   "document_id": "102",
+   "page_no": 4,
+   "text": "Bajaj Finance Limited\nApril 29, 2026\nPage 4 of 18\nAI implementation continues to accelerate across the length and the breadth of\nthe company, and I'll cover that shortly. Full-time employees stood at 71,613\nemployees. We added just a tad below 1,800 employees in Q4, 50% of them were\nactually in gold loan and MFI. Loan loss to average AUM as what investors have\nbeen used to came in at 175 basis points or 1.75% as against 1.97% in same period\nlast year or Q4 FY25.\nStage 2 and Stage 3 assets, just to give you a texture on credit quality, have\nsequentially reduced by INR 430-odd crores. We've seen continued improvement\non this metric through FY26 over the last 3 quarters. The vintage credit\nperformance, which does not show up in loan loss to average AUM across 3 MOB,\n6 MOB, 9 MOB continues to reflect significant improvement in credit quality and\ngives me reasonably high degree of optimism about credit cost outlook for FY27.\nI'll also cover 2 key points, which will further reflect our confidence on credit cost\noutlook for next fiscal, which I'll cover in a moment, but GNPA, NNPA came in at\n1.01% and NNPA came in at 41 basis points. Provision coverage ratio was at 60% as\nagainst 54% same time last year. The point that I made on credit quality, a\nreasonable amount of credit cost in the previous year came in from the MSME lines\nof business, which, as I said, we've already taken proactive reduction by close to\n30%.\nThat's why it grew by 6% in full year where the company grew by 22.5%. It should\nbe back in growth mode. And I think in our assessment, the worst is behind us by\nJune '26. The captive 2-wheeler and 3-wheeler business, which now contributes\nto less than 1% of AUM, but even in Q4 accounted for 13% of GNPA and 5% of overall\ncredit cost in Q4. This book will principally just wind down to less than INR 1,500-\nodd crores by September '26, it will lead to further improvement in GNPA and\nshould result in lower credit cost for FY27. Let me now just cover FinAI\ntransformation. There are 5 panels. They may seem heavy, but I want to spend just\na moment to make a point that why we're providing reasonable amount of coverage\non FinAI transformation that there's a principal difference between deploying use\ncases and transformation.\nFundamentally, transformation is about reshaping the business model and in\ngeneral, covers all aspects of business. I just want to highlight that we are doing\ntransformation, and we are not just doing use case deployment. That's why we are\npresenting the expanse of the work company is doing on AI. So that's just one point\nI want to leave.\nWe expect FY27 to be probably the busiest year from a FinAI transformation in\nterms of outcomes, inputs and outputs as a firm and significant amount of time,\neffort and energy of management team over the last 15-18 months is going into it.\nAnd should start to reflect in terms of the way consumer and employees\nexperience us as a company in FY27."
+  },
+  {
+   "document_id": "102",
+   "page_no": 5,
+   "text": "Bajaj Finance Limited\nApril 29, 2026\nPage 5 of 18\nJust to give you some texture on the transformation work, I'm on Panel 9. The\ncompany -- I mean, the biggest part of AI is about whether you have the talent or\nnot. We have 203 people in the firm who are dedicated as the AI unit. We are\nexpanding that to 363-odd resources by June'27. So we continue to expand the AI\nresourcing to ensure it can meet our aspirations and ambitions of becoming an\nFinAI firm.\nThe step number 1 in FinAI transformation clearly is about Data for AI, 52 million\nvoice-to-data conversion happened, around 2.3 million text-to-data conversion\nhappened and leading to significantly better insights on engagements or\nconversations with customers. AI-generated digital banners and videos are\nenabling faster and cost-efficient marketing and discovery infrastructure.\nAlmost 100% of our videos are now AI-generated. On customer engagement, 27 AI,\nvoice and text BOT’s are now live and all customer engagement is going into BOT\ninterface by June'26. By June'26, any communication across any channel by us as\na firm, whether for sales, service, DMS would have a text AI BOT in it. So across 32\ndifferent lines of businesses that we run, plus a whole host of services.\nAnd we send, as I've said in the past, 260-odd million pieces of communication on\na monthly basis. All of them will have a bot embedded in it. On customer\nonboarding, AI-based data extraction, auto fill application, product level scans,\nlabel scans, auto QC are increasingly reducing manual effort, improving\ncontrollership and straight-through processing.\nThere are a whole host of numbers I've given here. The idea is to all the way\nbetween Panel 9, 10 and 13, there are numbers that you can see here. As I said, the\nintent is to principally give you a texture that how we are structurally going process\nby process and asking a question, why can AI not be deployed in these processes\nrather than why it can be deployed.\nThe most important dimension, I'm on Panel 12 is we'll start to deploy agentic\nplatforms from an architecture and road map standpoint. In FY27, we expect to\ndeploy 600-plus autonomous agents and across operations, DMS, HR, technology\nand risk. That's really on AI. We can take more questions. I don't want to take more\ntime talking about it.\nLet me just quickly go to full year performance. That's Panel 20. At a core-to-core\nlevel, it was a strong year for the company across all key metrics. And I think I'm\nreasonably confident that we are getting back into a strong growth momentum\nacross all key metrics as a firm. We crossed 2 milestones, as I said, INR 5 lakh crores\nAUM and 50 million new loans. The year so far has started off pretty well. It's likely\nfor the first time, we've never done 5 million loans in a month."
+  },
+  {
+   "document_id": "102",
+   "page_no": 6,
+   "text": "Bajaj Finance Limited\nApril 29, 2026\nPage 6 of 18\nI mean, while the West Asia conflict is going on one hand, when we look at the\nconsumer momentum on the ground, it's very likely we'll cross 5 million-plus loans\nin the month. Our last peak was 4.6-odd million loans, and that was in festival\nperiod. So clearly, the company continues to generate momentum.\nOverall, last year, we booked 52.5 million loans and added 17.5 million new\ncustomers on a full year basis. AUM, I talked about grew 22%. PAT grew 24%, ROA,\nand opex to NTI I talked about it, showed an improvement of 36 basis points despite\nrapid expansion of gold loan branches, reasonable expansion of MFI branches by\nthe firm last year.\nSo that's really on the full year performance. You guys anyway track it, so I don't\nhave to cover that. Let me cover what is important as to how do we see the outlook\nto be. Just on the previous year gone by, the Board of Directors have\nrecommended a dividend to shareholders of INR 6 per equity share.\nSo that's a 600% dividend. It's broadly in line with the dividend last year as we had\noutlined that part of the dilution that we do in BHFL will be shared with the\nshareholders. So, we've in that spirit, continue to stay on course of that as well. So\nthat's really last year. Let me now go to important panel as to how do we see the\nmanagement assessment to be from a next fiscal standpoint.\nAs I said, the year so far seems to have started pretty well. We are well on course\nto cross 5 million loans in a single month as a firm. I'm on Panel 28. Of course, I must\njust flag that the FY27 assessment is based on expectations of easing geopolitical\ntensions and macro stability. That -- I'm sure, it's understood, but I thought it's\nimportant I make the point yet again that it's contingent upon easing geopolitical\ntensions and macro stability.\nSubject to that, the first point is on transformation making the business AI ready. I\nhave already talked about it. We will see significant acceleration and deployment\nof AI use cases across revenue, cost, customer engagement, underwriting,\ncontrollership, security as a firm. In terms of customer franchise, we continue to\nbe confident of adding 15 - 17 million new customers in FY27.\nIn terms of AUM, we're confident of a 20% to 24% AUM growth, aided by new\nbusinesses that we've launched in the last few years as they begin to scale. Even\nlast year, they contributed 3% of the total growth. Rather 3.5% of total growth even\nin the previous fiscal. And as we gain greater confidence, our market share in those\nbusinesses and their contribution to the business should grow.\nNIM, we expect marginal moderation. It's a little bit contingent on how interest\nrates play out, caused by geopolitical tensions. On opex to NTI, we expect to see\ncontinued improvement of 25 to 40 basis points from current levels. On credit cost,"
+  },
+  {
+   "document_id": "102",
+   "page_no": 7,
+   "text": "Bajaj Finance Limited\nApril 29, 2026\nPage 7 of 18\nthis is a new credit cost metric, which, as I said we just reported a 165 basis points\nor 1.65% credit cost to AUM, the revised metric.\nWe expect this to continue to trend down. The reasons I talked about earlier, which\nis winding down of 2-wheeler portfolio and in the MSME business being out of the\nwoods by June'26. In terms of profitability, we are pretty optimistic about the profit\ngrowth. ROA came in as of fourth quarter at 4.6%. We continue to guide for 4.4% to\n4.6%.\nReturn on equity came in at 20% in the current quarter, we continue to guide for\n19% to 20%. And GNPA and NNPA, we expect them to remain range bound and well\nwithin our long-term guidance. I think that's really all I have to cover. Just quickly\non BHFL, company has already reported its performance.\nThey had a good quarter on disbursements, AUM, asset quality, opex and profit,\ntheir disbursements and AUM growth remained strong at 23%. Their loan approvals\nare up a record 37%, opex to NTI continued to improve for them, came in at 19.2%\nas against 21.8%. I'm sure Atul has shared what his long-term view on where he\nforesees opex to NTI to get to, to be a pre-eminent mortgage company in this\ncountry.\nPBT for them in Q4 grew by 20% and PAT excluding onetime reversals, grew by\n20% and asset quality continue to remain very, very healthy with GNPA and NNPA\nat 27 and 11 basis points respectively. BFSL though small, continues to grow,\ndelivered a 77% growth in AUM and their profits were up 50%.\nWe added 124,000 new customers in Q4 and delivered an ROE of 10.5%. So that's\nreally on BFL Q4 and its subsidiaries, the management guidance for FY27. Just the\nlast point, which I did not cover, I should have covered in terms of portfolio quality\nacross Panel 70 onwards, continue to all be in green are seeing sequential\nimprovements across all portfolios.\nOnly business loan and professional loans is yellow, which I've articulated twice\nover the last 20 minutes on how we foresee that this should turn. This will not turn\ngreen in a quarter because the denominator also has a role to play as it starts to\ngrow by Q2 or Q3, we will start to see this turn to green. That's really the quarter\ngone by, year gone by and our guidance or management assessment for next year.\nWe are happy to take questions with management.\nModerator: Thank you very much. We will now begin with the question and answer session. The\nfirst question is from the line of Abhishek Murarka from HSBC. Please go ahead.\nAbhishek Murarka: Hi, Rajeev, hi Sandeep. Thanks for taking my question. So just to get this whole\nguidance of credit costs very clear, if you don't mind, can I refer to the press release\nwhere you've given a summary of consolidated financial results?"
+  },
+  {
+   "document_id": "102",
+   "page_no": 8,
+   "text": "Bajaj Finance Limited\nApril 29, 2026\nPage 8 of 18\nRajeev Jain: Please.\nAbhishek Murarka: Yes, so there, your number is gross loan provisions of INR 2,126 crores and then\nINR 260 crores of recovery. So the net loan provision is INR 1,866 crores. That INR\n1,866 crores works out to 165 bps in 4Q. And against that, you're guiding for 145 to\n160 bps next year, full year. Is that the right understanding? Yes, that is perfect,\nright?\nRajeev Jain: Yes.\nAbhishek Murarka: And just the annual number, INR 7,934 that works out to 175. So on an annual basis,\n175 goes down to 145 to 160?\nRajeev Jain: That's perfect.\nAbhishek Murarka: Perfect. Okay. So now in this 145 to 160, as you said this takes into account the de-\nescalation of geopolitical issues. So here, you have not accounted for any kind of\nadverse impact of this geopolitical issues, right?\nRajeev Jain: No.\nAbhishek Murarka: If anything comes up second half or something, then this may go up depending on\nhow things play out in?\nRajeev Jain: Yes. The important point, however, you finish Abhishek?\nAbhishek Murarka: No. That is it. Please go ahead.\nRajeev Jain: I would just say the more important point or a meta point in this is we are entering\nthe year on credit costs with tailwinds. Headwind over headwind virtually would\nconsume twice the fuel. Thankfully, we are entering the year with tailwinds. We\nhave momentum. We can navigate even if the environment weaken. I think that's\nhow I am looking at the business at this point in time.\nSandeep Jain: So I think what Rajeev is trying to say is some level of conservatism in terms of\ndoing the number crunching and giving a guidance of 145 to 160 has been done.\nWe have to wait and see how situation evolves eventually.\nRajeev Jain: No, I'm also making a point that we have tailwinds on credit cost. We don't have\nheadwinds. So that itself is a big help.\nModerator: Thank you. Abhishek, I will request you to come back for a follow-up question. Next\nquestion is from the line of Shreya Shivani from Nomura. Please go ahead.\nShreya Shivani: Yes. Thank you for the opportunity. My question is on the long-term guidance of\nROA probably inching towards 4.3 - 4.7 percentage. I mean for FY27, I understand\nyou've given the explanation on opex and probably that will be the bigger driver."
+  },
+  {
+   "document_id": "102",
+   "page_no": 9,
+   "text": "Bajaj Finance Limited\nApril 29, 2026\nPage 9 of 18\nBut if you can help us get into the details of this 4.3 to 4.7 over the longer term that\nyou've spoken about?\nAlso for FY27, as per the, the basic math that I was picking up, you may need a little\nbit more NIM expansion to achieve the ROA guidance for FY27. Is my understanding\ncorrect or not? Please let us know. Yes.\nRajeev Jain: Sorry, just repeat the last point.\nShreya Shivani: So for FY27 also, as per my math, you will need a NIM expansion also or at least a\nNIM stable flat NIM or an expanding NIM to achieve the ROA guidance for FY27?\nRajeev Jain: Yes. Okay. Got it. See, the answer is to the second part is, no. See, look, if you go\nback to -- if you go to Panel 35, which is a 19-year long snapshot, feels like --\ndoesn't feel like that long actually, 19 years. If you see since FY20, forget FY21, but\neven if you take FY18, '19, 4.2%, 4.1%, FY22, 4.2%, FY23, 5.3%, 5.1%, 4.6%, 4.3%.\nI think numbers speak for themselves. I'll add a dimension of ROE. ROE guidance of\n20 to 22 last 6 years, adjusted for COVID speaks for themselves and during this\nperiod, as you can see from a balance sheet standpoint, the balance sheet moved\nfrom INR115,000 crores to now INR510,000 crores.\nSo it should give you confidence that we can continue to sustain the ROA, at times\nby expanding margins, at times by reducing cost, at times by reducing credit cost.\nThese are the 3 principal levers either 4 levers rather, growth, margin expansion,\noperating expense and credit costs, depending on how -- what the environment\nis, what is the state of the business. We orchestrate these 4 to deliver an outcome\nof 4.3% to 4.7% ROA and 20% to 22% ROE to investors on a long-term basis.\nSandeep Jain: Yes. And just to help you with the math on 4.6%, the guidance metric for the next\nyear on ROA. And that's the reason why Rajeev when he presented the financial\nstatement and numbers, he said, look at the core financial performance. If you look\nat core financial performance for last year, the ROA came in at 4.6%. And the\nguidance that we are giving for next year is 4.4% to 4.6%.\nI don't think that there will be a need for NIM expansion in the next year to be able\nto deliver that. We have to ensure that we grow nicely, which is where the 22% to\n24% guidance has been given. And we have to ensure that we remain reasonably\nanchored on the operating performance of the company, which is opex to NTI as a\nmetric and loan loss to credit -- loan loss to average AR. As we deliver that, I think\nthere is enough and more headroom available in the ROA profile of the company.\nModerator: Thank you very much. Next question is from the line of Kunal Shah from Citigroup.\nPlease go ahead."
+  },
+  {
+   "document_id": "102",
+   "page_no": 10,
+   "text": "Bajaj Finance Limited\nApril 29, 2026\nPage 10 of 18\nKunal Shah: Yes. So on the growth guidance, 22% to 24% apart from SME, which is almost\nbottomed out, we have started to see the sequential growth and we will get into\ndouble digits. Ex of that when we and the newer businesses, where do we see we\nwould be able to grow at a pace faster than the overall AUM growth? And which\nsegments do you still believe could continue to lag, so particularly on our core\nsegments as well. If you can highlight that, that would be helpful? Yes.\nSandeep Jain: Yes. So Kunal, the idea would be to maintain the portfolio mix. I think that's very,\nvery dear to us. That gives us the right balance of risk and profitability. So that's\ngoing to be the agenda for next year as well. Having said so, I think when you look\nat current year number of 22.4% of AUM growth, this is impacted by two things:\none, the captive 2-wheeler 3-wheeler financing business has seen an attrition of\n60%. That's almost INR6,500 crores of attrition that we have recorded in the\ncurrent year on account of winding down of captive business. That's one.\nSecond, MSME, the growth used to be 25%, 28%, 30%, has been brought down to\n6%. These 2 business, one, the impact of captive dial down will be much, much\nlesser in the next year. MSME should start to come back into some growth\nmomentum to double-digit number from second half onwards. These 2 things\nshould provide tailwind on the overall growth number.\nHaving said so, there are a few businesses which are in nature, like gold loan\nfinancing, tractors, CV and so on and so forth. They may grow faster than rest of\nthe business because of very, very low base. Of course, gold is not -- no longer a\nlow base it's INR18,000 crores in the balance sheet. But given that we are taking a\ngrowth stance in that business of doubling down on our branch presence in that\nbusiness in the next year, we are reasonably hopeful that, that should lead the\noverall growth profile of the company for the next year as well.\nAnd Rajeev did make a point that the current contribution of gold loan is about 3.5%\nof the balance sheet. All goes well, which should start to look towards 5% kind of\nnumber in the next year as well. So these are some of the business where we see\nthere could be an additional growth potential. Having said so, we find secular\ngrowth opportunity across all businesses, and our market share in most of the\nbusinesses continues to remain small, allowing us significant headroom for growth\nperspective.\nRajeev Jain: Just the last point I'll make, Kunal, if you plot Panel 63 of composition of our\nbalance sheet over a period of even last 5 years, you will not see material\nmovement at all actually. So you will see very little movement. Number one, the\nbase of each one of them is very large. I mean there are moments like gold loans\nthat come once in a while. Otherwise, you will see a reasonable secular growth and\na reasonably diversified portfolio."
+  },
+  {
+   "document_id": "103",
+   "page_no": 2,
+   "text": "Page 1 of 12\nBajaj Finance Limited\nQ3 FY '26 Earnings Conference Call\nFebruary 03, 2026\nMANAGEMENT: MR. RAJEEV JAIN – VICE CHAIRMAN AND MANAGING\nDIRECTOR – BAJAJ FINANCE LIMITED\nMR. SANDEEP JAIN – CHIEF OPERATING OFFICER AND\nCHIEF FINANCIAL OFFICER – BAJAJ FINANCE LIMITED\nMODERATOR: MR. SUBRAMANIAN IYER – MORGAN STANLEY"
+  },
+  {
+   "document_id": "103",
+   "page_no": 3,
+   "text": "Bajaj Finance Limited\nFebruary 03, 2026\nPage 2 of 12\nModerator: Ladies and gentlemen, good evening, and welcome to Bajaj Finance Limited Q3 FY '26 Earnings Call hosted by\nMorgan Stanley. This event is not for members of the press. If you are a member of the press, please disconnect\nand reach out separately. For important disclosures, please see the Morgan Stanley disclosure website at\nwww.morganstanley.com/researchdisclosures.\nPlease note that this call and your questions will be recorded and may in certain circumstances be distributed to\nclients and/or made publicly available. By participating in this event, you consent to such recording, distribution\nand publication. I will now hand the conference over to Mr. Subramanian Iyer with Morgan Stanley. Thank you,\nand over to you, sir.\nSubramanian Iyer: Thank you, Emily. Good evening, everyone. This is Subramanian Iyer from Morgan Stanley. Thank you very\nmuch for joining us for the Bajaj Finance Q3 FY'26 Earnings Call. To discuss the earnings, I'm pleased to welcome\nMr. Rajeev Jain, Vice Chairman and Managing Director; Mr. Sandeep Jain, COO and CFO; and other senior\nmembers of the management team.\nOn behalf of Morgan Stanley, I would like to thank Bajaj Finance management for giving us the opportunity to\nhost them. I now invite Mr. Rajeev Jain for his opening remarks, post which we'll open the floor for Q&A. With\nthat, over to you, Rajeev.\nRajeev Jain: Thank you, Subbu. Thank you, Morgan Stanley, for hosting this call. I have with me in the room, Sandeep Jain,\nthe three Deputy CEOs and the other two Chief Operating Officers. Good evening. Welcome, everybody, to the\nearnings call. The investor -- I'll be referring to the investor deck, which has been uploaded on our website. I hope\nyou had a chance to go through the same. I'll focus on key updates for the quarter before we move to Q&A. So, I\nhope to take 15-odd minutes. I'll cover 8-10 panels very quickly.\nOverall, from a commentary standpoint, I would just say I'm on Panel 4 that the core performance of the company,\neliminating one-time charges of new labor code and the accelerated ECL provision that we've taken in Q3 remained\npretty strong. So let me cover that. There'll be a follow-through panel that I'll cover after that. So the core\nperformance remained pretty strong across all key metrics, namely AUM growth.\nAUM grew by INR 23,622 crores. Opex to NTI came in at 32.8%. Core profit growth came in at 23% growth and\nPAT, which, as I said, grew by 23% as well. ROE at a core operating level before the one-time accelerated ECL\nprovision and one-time charge-off new labor code came in at 19.6%. Net NPA came in at 47 basis points. The\none-timers in the P&L are principally two that we've actually taken.\nFirstly, to enhance balance sheet resilience amidst a volatile global economic environment, the company has\nfurther strengthened its provisioning framework by implementing a minimum loss given default floor across all\nlines of our businesses. And we'll cover that in detail as I cover through the presentation or part of Q&A. I must\nmake an important point that it's purely done as a proactive and voluntary measure by the company. And it's a\npermanent change to further bulletproof our balance sheet and the resilience of the firm.\nAnd going forward as well, the company will continue to apply the defined LGD floors as we've determined for\nthe future as well. So, one, it's one-time. And two, it will have some level of impact as we -- small, annualized\nimpact as well as we get into next fiscal. The company's principally taken -- let me just cover the INR 1,406 crores\nprovision that was made on an accelerated basis. The Stage 1 PCR as a result of this moved from 74 basis points\nto 98 basis points.\nSo that's -- I mean, you know virtually 1% of the assets are now in Stage 1 as you acquired, which is the point I\nwas referring to earlier that would have an annualized impact as well as we get into future years as well. Stage 2\nPCR have been increased from -- 30.1% to close to 37% and Stage 3 has moved from 52% to 61%. As I said, these\nare -- these changes are principally permanent in nature and strengthen the balance sheet, create further resiliency\nto the business model and to the firm amidst the volatile global environment that we think we are principally in.\nThe second impact is the one-time exceptional charge of INR 265 crores that we have taken towards increasing\ngradually liability on account of the new labor code released by the Government of India on 21st November. This\nwill also have an annualized impact as we get into next fiscal. We'll cover that based on the Q&A. The annualized\nimpact is expected to be between INR 100 crores to INR 125 crores annually.\nThese items you know principally had an impact on -- of course, on both AUM and profit numbers. I'm on Panel\n5, which talks on the left-hand side about the before accelerated charges and on the right-hand side about the after\naccelerated charges. I've covered Panel 5 clearly. I can give -- so -- and what we are more focused on principally"
+  },
+  {
+   "document_id": "103",
+   "page_no": 4,
+   "text": "Bajaj Finance Limited\nFebruary 03, 2026\nPage 3 of 12\nis the core operating performance. These two are one-time charges that we have taken, given, as I explained, one\nis gratuity related and another being voluntary in nature.\nThis takes me to the third important event in the quarter, which is gain on sale of BHFL shares. This is another\nexceptional item that is figuring in the financials of Q3. It's recognized in the stand-alone P&L statement of BFL.\nOn a consolidated basis, it has a -- it's below the line item. As part of MPS compliance, 2% of BHFL stake was\nsold by Block sale and as a result, the BHFL shareholding by BFL in BHFL now stands at 86.7%. The resulting\ngain was INR 1,416 crores and has been recognized in stand-alone financials as an exceptional item.\nLet me now jump to the more routine metrics that we principally talk about, which is Panel 6. As a result of the\nINR 1,416 crores, you will see two lines. There's a change. You will see on top the reported number, which is\n22%, the core growth number, which is 22%. The INR 1,416 crores also gets knocked off from the AUM, and\nthat's why you see two numbers there. We are focused on core operating performance. Core operating AUM was\nup 22%. New loans booked were up 15%.\nWe booked a record 14 million loans in Q3 versus 12 million loans that we did in last year Q3. Customer franchise,\njust we added 4.76 million customers. We are virtually adding between 4.2 million to 4.5 million new customers\nevery quarter. We now expect 17 to 18 million customers to be added to the franchise in FY '26. It will be on back\nof 17 million customers we added in the previous fiscal as well. The overall franchise stood at 115 million. We\nare well on course to cross 120 million franchise in the current year.\nThe cross-sell franchise continued to expand and stood at 74 million. Geographic presence, as I've made a point\nin the past that we have mostly peaked out. It's deepening rather than broadening, that's happening, more products\nin geography rather than new geographies, as you can continue to see, also is resulting in operating leverage as a\nfirm. Active distribution, 241,000 is where we are present in. Liquidity buffer stood at INR 15,100 crores. Cost of\nfunds came in at 7.45%.\nIt is an improvement of 7 basis points sequentially and COF is expected to be -- we had outlined at the beginning\nof the year from a guidance standpoint, the number to be between 7.55% to 7.65%. We're likely to be between\n7.55% to 7.60% in terms of cost of funds as we exit the year. The deposit book, as we had outlined, as part of the\nstrategy in the current year to optimize that deposits growth will be slower. Deposits contributed 17% of\nconsolidated borrowing as of December '25.\nIn terms of outlook, in terms of operating efficiencies, just on that from an outlook standpoint, given that we are\nin -- the year is virtually coming to an end, overall, we've taken a view that the top line growth or AUM growth\nwill gravitate between 22% and 23%, but more likely to be 22% on a full year basis. Given the actions that we\nhave taken in the MSME business, that's something that you'll see, which has grown in this -- in quarter 3 only by\n11%.\nWe think it will still take us two to three more quarters before we are back to 20s growth in that business. So based\non the conscious decision that the company has taken to slow it down, we will have some level of impact. And the\nsecond order impact is on account of the captive 2-wheeler financing book, which is winding down. Based on both\nthese, we think the overall full year growth will be between 22% to 23%. Operating efficiencies continue to deliver\nbenefit, net interest income grew by 21%. NIMs were steady. That's an important point.\nNTI grew by 19%. Opex to NTI continued to improve, came in at 32.8%. The AI implementation, for the first\ntime, we have now started to cover metrics on AI, which I'll cover in a few panels down the line. We've now started\nto metricize AI, it is moving to what I would call gear two in the company where from innovation, we are now\ntracking implementation and the benefits that it's delivering to the business.\nAnd we thought that time has come post second LRS or the Investor Day that we did, that we’ll start to publish AI\nbenefit metrics to the street. Full-time employees stood at 69,000, virtually 70,000, including all the three\ncompanies. Fixed-term contract folks stood at 78,000. Let me just go to credit cost, which has been an important\nmetric of profit growth or the direction of the business came in at INR 3,625 crores.\nThe core metric came in at INR 2,043 crores, a growth of 9%. So, as I said, we are tracking core because INR\n1,406 crores is principally a voluntary decision that we've taken. Year-on-year basis, loan losses and provisions\ngrew by 9%. Annualized number came in at 1.91%. After a while we've seen a sub 2% number. And we think\nfrom here on, the number will continue to slide down as we get into next fiscal as well."
+  },
+  {
+   "document_id": "103",
+   "page_no": 5,
+   "text": "Bajaj Finance Limited\nFebruary 03, 2026\nPage 4 of 12\nIn Q3, point number 17 is important. The Stage 2 and 3 on a net basis was down INR 93 crores. The formation\nhad been slowly going down, but there was a decrease after a while in the current quarter came in at INR 93 crores.\nStage 2 decreased by INR 287 crores and Stage 3 increase of INR 194 crores, net-net leading to a decrease of INR\n93 crores.\nThe vintage credit performance, which is what we've been tracking since February this year, has across 3MOB,\n6MOB and 9MOB and that's what gives us significant confidence as we get into next fiscal from a credit cost\noptimism standpoint that we are in a good corner as a firm from a credit cost standpoint. GNPA and NNPA,\nprincipally an outcome metric, stood at 121 basis points and 47 basis points. Pre-provision profit grew by 19%.\nThat's a core metric in that sense.\nAnd PBT grew by -- as I've already covered that by 23% adjusted for one-timers, it actually de-grew by 6%. ROA\ncame in at 4.6% at a core level, ROE came in at 19.6% and capital adequacy came in at 21.45%. Let me just\nquickly shift now to the FINAI transformation. I'm on Panel 9. This is the first attempt that we're making to start\nto democratize AI implementation -- that we are doing to the investors.\nThe way you should read it is -- at a starting level, there's data for AI, then there is product and service discovery,\nthen there's customer engagement, then there is what are we doing at point of sale and branches, what are we doing\nfor customer onboarding. So, it's a full life cycle of a customer, as I've been saying to everybody that -- we are not\ntesting AI. We are deploying AI across the board, across life cycle.\nThese are a few metrics we thought which are relevant and important, which demonstrate that how AI is beginning\nto change the business. So, voice to text conversion of all customer interactions that we do -- AI listened to 20\nmillion calls and converted voice to text and gave us data. Text to data conversion happened for 5.2 lakh customers.\nAnd as a result of that, we generated 100,000 new offers on which we did not have information earlier.\nSo how you're seeing it move is that the first capability did not exist in Q1 and Q2. It just got deployed. So, we'll\nbe able to listen to 100 million calls next year, and we'll be able to convert voice to text as we move forward, in\nthe beginning for sales, then for service and then for DMS.\nSimilarly, in terms of 100% of videos are now generated by us using AI, 100% of banners are generated using AI,\n2.7 lakh videos were generated, 1.2 lakh banners were generated. At customer engagement level, we have 11 AI\ntext BOTs that are live that engage with the customer. So rather than sending dumb SMSs for 11 products now,\nwe have an AI text BOT, which allows you to engage and interact and responds to your queries. The company has\n26 products. All 26 will be live between April and May'26.\nSo, there will be no communication that we'll be sending, which will not have a -- whether service or sales, which\nwill not have a conversational BOT embedded in it. At branch and point of sale, existing customer face match that\nwe're doing, we did 46 million face matches to ensure this is the same customer, if it's an ETB customer who had\nactually principally come in, giving us much better control over identity.\nCustomer onboarding in terms of document -- ensuring that auto fill of document happens, whether it's PAN card\nor Aadhaar. There are 43 such documents that the company has now mapped, which an image extracts with a 95%\n- 96% accuracy and populates data in our platforms, delivering significant productivity for our employees. Just on\nPanel 7, auto quality check of documents is now 41%. We intend -- we believe that as we sharpen the model, it\nwill take us to between 85% and 90% over a period of next 15-odd months.\nThe loan disbursements through AI call center came in at INR 1,600-odd crores. Data converting -- data from\nthose calls led to another INR 325 crores of volumes. So, this is just our first attempt. On technology development,\nwe are clearly seeing between 25% - 45% efficiencies emerging in terms of the development process depending\non if it's a legacy platform, then the benefit is much lower or rather, I would say, none. But if it's a digital\ninfrastructure, then the efficiencies can be as high as 45% - 47%. So significant work is being done.\nOn Panel 11, it will just give you a texture on where we are principally headed over the next six months. We are\ninvesting very deep in Agents. We believe that the company would have 800+ autonomous agents across sales,\noperations, HR, IT, risk and DMS in the next fiscal. That's one of the things we are most excited about. The second\nthing we're excited about is Consumer AI, which will be on app and web, you will see AI injection, AI summaries\nstart to emerge between May and June 2026."
+  },
+  {
+   "document_id": "103",
+   "page_no": 6,
+   "text": "Bajaj Finance Limited\nFebruary 03, 2026\nPage 5 of 12\nWe are building an altogether new Consumer AI platform in addition to the current 82 million app installs that we\nhave. We expect that by May-June '27, we'll have an altogether new Consumer AI platform for us as a firm, which\nmay allow the same 100 million customers, to go into classic mode or AI mode. So, it will not be another platform.\nIt will allow the customer to choose an option between an AI platform or a classic platform.\nData intelligence, we are continuing -- we're investing very deeply in data annotation across voice, data, text,\nimages and structured data to improve our intelligence on the consumer significantly so that the velocity of the\nbusiness can improve. So that's really on FINAI. We'll continue to provide update on a quarterly basis from here\non, to you, as to how we are transforming the business.\nBHFL has already done its results yesterday. They've had a very good quarter. AUM grew 23% and despite very\nhigh competitive intensity and higher portfolio attrition and the PAT growth was 21% and ROE was 2.3%. Asset\nquality for them remained quite healthy at 27 basis points and NNPA of 11 basis points.\nBFSL had a very good quarter. AUM grew 63%, profits grew 74%, and they added 104,000 customers in the\nquarter and delivered an ROE of 13%.\nLastly, I'll just make a point, some of you were there for the Annual Investor Day, I would just request you all to\ngo through our annual investor day deck, which covers in detail as to what on a rolling basis is our ambition as a\nfirm, which is to be a customer-centric company serving all needs of the customer. We foresee that we will be a\n200 million customer company in the next 3 to 4 years' time. The market share of current franchise or the future\nfranchise is very, very large. We want to have a larger and larger share of that customer's wallet.\nWe want to be clearly a technology leader in financial services in India. And you can see that conversation leading\nto the earlier FINAI point that I was making. And we want to clearly be the lowest risk business in India. In a way,\nit demonstrates the balance sheet resilience action that we have taken is coming in from these three, they are all\nconnected. They are showing up in Q3 financials in that manner.\nAnd you will continue to see acceleration of these three areas as we progress well into FY '27. I'm 21 minutes into\nit. I think that's really all from me, and we are happy to take questions.\nJust before Subbu opens it up for questions, last point, which I usually do, which is on Panel 58, 59, 60 and 61,\nother than business and professional loans, we are principally all green. In general, we are quite optimistic about\nthe credit cost outlook as we step into FY '27, is how I would conclude and happy to take questions.\nModerator: Our first question today comes from Viral Shah with IIFL Capital Services Limited.\nViral Shah: Hi, thank you for the opportunity for letting me ask the question. So, Rajeev first with regards to the ECL\nprovisioning, I'm sure I think there will be -- this will be the one thing that people are going to ask.\nBut I was wanting to check and get a sense of the structural change that you mentioned in your commentary. What\nwe are seeing is that there is an increase in Stage 1 and 2 PCR. So, does this mean that your steady state credit\ncost could look higher than what otherwise it would have been? And if yes, then basically what would be your\nsay on guidance for FY '27? And secondly, if you can just comment with regards to your growth outlook more for\nFY '27? That's two questions.\nRajeev Jain: I'll give the easier one first. The first one requires a little longer explanation. We'll provide FY '27 guidance along\nwith Q4 results, which is normally what we do every year. So, we'll provide that guidance along with Q4 results.\nI'd rather let Sandeep give an answer I've already spoken for 25 minutes. Answer is same, so don't worry.\nSandeep Jain: Yes. So, I think as Rajeev called out, these are the actions that we have taken on a voluntary basis. We looked at\nall the products in the company, and their current coverage ratios. We looked at where we want the coverage ratio\nto be as we go along from here. Rather than making a provisioning in one of the stages, we ensure that it follows\nthe process. We redefine the loss given default metric by defining a floor across businesses and ensure that they\nare uniformly applied across all the stages.\nI'll give you an example. So, for example for a business, we define LGD floor at 80%, which means the moment\na customer goes into NPA, we would have at least 80% provisioning coverage done. The ECL for Stage 1, Stage\n2 gets calculated as a combination of probably the default, exposure default and LGD. We'll ensure that the LGD\neven for Stage 1 and Stage 2, is revised to 80% to ensure that it also reflects the rightful provisioning at that level\nas well. So, it has been done on a holistic basis across all businesses by redefining the LGD floor. That's point\nnumber one."
+  },
+  {
+   "document_id": "103",
+   "page_no": 7,
+   "text": "Bajaj Finance Limited\nFebruary 03, 2026\nPage 6 of 12\nPoint number two, yes, this will have a cascading impact because as the balance sheet grows, we will have\nadditional impact coming on account of higher coverage ratios that we want to incrementally maintain. However,\nI would say that those numbers will not be significant in nature.\nAll goes well in the next year based on the estimates that we have done, the number could range between INR 300\ncrores to INR 400 crores of additional provisioning, which will ensure that not only are we taking action in the\ncurrent year, we are also continuing to take the similar action as we go along from here. The incremental impact\nwill not be significant. It will be spread across the year, which is over the quarter and we will ensure that the\nresilience point that Rajeev referred to is continued to be maintained as we go along from here.\nViral Shah: Got it. That's very clear.\nRajeev Jain: We could have taken a view to do an overlay, given the environment, global environment, not local environment,\nwe took a view to do a permanent provisioning change. I think it's an extremely important point that I must make.\nOver and above and creating a floor that at a design level that this is what -- because, look, ECL models need 10-\nyear data to be built. I mean at the end of the day, that's really how -- and logically should not have events, which\nis both are not true. So, after considerable thought process we have taken this decision and it's permanent in nature.\nSandeep Jain: And as the Board and committee approved the change, I think they were also very clear in communication that\nwe should make permanent change and continue to follow it on a go-forward basis. They would not like to have\na judgment coming into play, which could have been the case had we created this in the form of overlay. I think\nthat's the point.\nViral Shah: Got it. And just an additional thing over here. So, I understand that this is a decision by the Board to do this. But\nis there any, I would say, timeline wherein they will periodically want to re-evaluate whether this is the new\nnormal could we say a year or two, three years down the line or this is cast in stone?\nRajeev Jain: I want to correct you, this is by management, point number one. Two, fully supported and ratified by the Board.\nThree, we've taken a view that this is how we'll run for two to three years and then take a view. Your question is\ncorrect.\nViral Shah: Got it. Very clear, Rajeev.\nRajeev Jain: And guidance we will give along with Q4.\nModerator: The next question comes from Abhijit Tibrewal with Motilal Oswal.\nAbhijit Tibrewal: Yes, good evening. And thank you for taking my question. Just two things. One is, Rajeev, you just explained this\nwas a management decision, which was fully supported and ratified by the Board.\nBut just trying to understand, I mean, why this decision now and you spoke about this decision being taken in the\ncontext of global uncertainty. I mean if you look at it, right, I mean, yesterday, we concluded the U.S. tariff deal,\nright? I mean so to that extent, things might actually start looking better from here.\nIf we think about it last two to three years, India on the retail side of lending, right, has seen a credit cycle in\nalmost every other retail product, but for home loans, LAP and maybe gold loans. So, what is it that really\nprompted this? While I appreciate the fact that it just gives more resilience to your balance sheet. But the fact that\nwe are now looking at higher LGDs on each of the products, what was the rationale behind doing it and doing it\nnow?\nSandeep Jain: So, Abhijit as you would recollect, the recent times have been extremely volatile, not only in terms of just the\nexternal environment, also in terms of how the credit quality in general has behaved for various players. We have\nseen issues coming in and going from unsecured business to MFI to MSME and so on and so forth. We want to\nensure -- we want to use this opportunity to ensure that the balance sheet and the P&L are shockproof.\nAnd one of the ways of doing that is to create a permanent change in ECL model and ensure that we are more\nthan adequately covered from a provisioning perspective. And that's the call that we have taken in the current\nquarter. This could have been done in quarter 4, could have been done in previous quarter, could have been done\none year down the line. Whenever we would have done, the same question would have been asked why now."
+  },
+  {
+   "document_id": "103",
+   "page_no": 8,
+   "text": "Bajaj Finance Limited\nFebruary 03, 2026\nPage 7 of 12\nThey can never be answered for a why now. I think as we found the last few quarters to be highly volatile and\ngiven that we were not aware about what's happening, what's going to happen last evening, we were quite clear\nthat given the volatile macro-economic and global environment that we were living in, it was important for us to\nprotect ourselves with additional provisioning.\nRajeev Jain: I'll just make added point from -- so that the question is in addition to why now to the direction of travel on credit\ncosts, okay. We foresee that the number next year as we enter could be anywhere between 165 to 175 basis points,\nthat's the number, including the permanent provisions that we're talking about. That's the direction that we are\nprincipally headed in.\nYou will see that now it could be 165, 170, 175, but I'm just giving you a direction, but that is where -- and I made\nthe point in the past many times that I'm chasing as a firm FY19-20 metric. That is really where we used to be.\nNext year, it will be 4x that size. And as a result, the several cuts in the business and so on and so forth that the\nfirm has taken over the last 12 months to ensure that credit is our business.\nAnd if we get that right and it must reflect in the annualized number that we are talking about. So just break this\nto, what we've done now, including the permanent change the number would look between 165 and 175 basis\npoints at this juncture is how we think about it.\nSandeep Jain: I think on a lighter note, Rajeev, there could not be a better occasion to communicate and give the message to\nDeputy CEO’s and CRO than making them accountable on our earnings call.\nRajeev Jain: We will deliver that.\nSandeep Jain: Yes. I want to say that...\nAbhijit Tibrewal: And then just a follow-up on that. I mean, this quarter, maybe it was just a coincidence that, I mean, we sold a\nstake in BHFL and like we had seen in the consolidated that comes below the line. Given that, over the course of\ntime, you will have to kind of keep reducing your stake in BHFL to meet the MPS, can we expect that rather than\nthat accreting to your net worth, it will predominantly be utilized for further improving the value chain?\nSandeep Jain: We were expecting that this question will be raised regarding the timing of the provisioning. I think as I recollect\nsame time last year, I think this was quarter 2 earnings call when we had done IPO of BHFL, the same question\nwas asked, why not utilize the gain -- exceptional gain in terms of making incremental provision? I had noted on\nthe point. I'm not saying that the points are correlated, but this was a point asked last time as well.\nWe did have a gain of INR 1,416 crores, and we did make a provision through a floor introduction for LGD of\nINR 1,406 crores in the current quarter. And I think I'll stop here. I think the most important thing is as we get\nmore opportunities in future in whatever ways and means, we would like to further enhance our provisioning\nresiliency from a balance sheet perspective to again ensure that we are shockproof and resilient as a business\nmodel.\nAbhijit Tibrewal: I just wanted to squeeze in one last question on business. On the MSME side, I mean, you've explained for the\nlast couple of quarters that whatever we've been seeing in unsecured MSME is predominantly because of customer\noverhead really. Was there some problem or some customer cohorts which were also impacted by tariffs and\nwhich could get better now that this U.S. tariff reduction got announced yesterday? What I'm trying to understand\nis some...\nRajeev Jain: We saw some -- not material. So, it is yet to play through. And we are mostly -- as I was making a point that over\nthe next two quarters, we think we'll be done. But as you're looking at the 3 MOB, 6 MOB, 9 MOB of the MSME\nbusiness, we think by June quarter or so, that business should also be back in -- between July and September\nquarter, that business should also be back in the 20s growth.\nSandeep Jain: Yes, if I may just add on the MSME point, I think we had called out this last quarter as well that looking at the\nportfolio, looking at the information at industry level, leverage, location, bureau and so on and so forth, we have\ntaken a set of policy actions on underwriting and credit policy, which led to about 25%-30% reduction in volume.\nWe are clear that until the time that we see full revival of the portfolio, we call it incipient stress, but we have to\nsee full revival of the portfolio. Early readings are looking good. See would like to continue to hold the credit\npolicy as tight as possible. Maybe sometime in Q1-Q2 next year as we see full revival, we are more than happy to\ngrow the business again.\nModerator: Our next question comes from Piran Engineer with CLSA."
+  },
+  {
+   "document_id": "104",
+   "page_no": 2,
+   "text": "Page 1 of 18\nBajaj Finance Limited\nQ2 FY '26 Earnings Conference Call\nNovember 10, 2025\nMANAGEMENT: MR. RAJEEV JAIN – VICE CHAIRMAN AND MANAGING\nDIRECTOR – BAJAJ FINANCE LIMITED\nMR. SANDEEP JAIN – CHIEF OPERATING OFFICER AND\nCHIEF FINANCIAL OFFICER – BAJAJ FINANCE LIMITED\nMODERATOR: MR. ANUJ SINGLA – JP MORGAN"
+  },
+  {
+   "document_id": "104",
+   "page_no": 3,
+   "text": "Page 2 of 18\nModerator: Ladies and gentlemen, good evening, and welcome to Bajaj Finance Limited Q2 FY '26 Earnings\nConference Call co-hosted by JP Morgan. This event is not for members of the press. If you are\na member of the press, please disconnect and reach out separately. Please note that this call and\nyour questions will be recorded and the recording will be made publicly available. By\nparticipating in this event, you consent to such recording, distribution and publication.\nAll participant lines are in listen-only mode and there will be an opportunity for you to ask\nquestions after the presentation concludes. If you do need assistance during this conference call,\nplease signal an operator by pressing star then zero on your touch-tone phone.\nI'll now hand the conference over to Mr. Anuj Singla from JP Morgan. Thank you, and over to\nyou, sir.\nAnuj Singla: Thank you, Neerav. Good evening, everyone. This is Anuj Singla from JP Morgan. Thank you\nvery much for joining us for the Bajaj Finance Q2 FY '26 Earnings Call. To discuss the earnings,\nI'm pleased to welcome Mr. Rajeev Jain, Vice Chairman and Managing Director; Mr. Sandeep\nJain, COO and CFO; and other senior members of the management team.\nOn behalf of JPMorgan, I would like to thank Bajaj Finance management for giving us the\nopportunity to host them.\nI now invite Mr. Rajeev Jain for his opening remarks, post which we will open the floor for\nQ&A. With that, over to you, Rajeev sir.\nRajeev Jain: Good evening all of you, the investor deck for Q2 FY '26 has already been uploaded on our\nwebsite. I hope you had a chance to go through the same. I'll quickly focus on key updates for\nthe quarter before we move to Q&A.\nOverall, good quarter across key metrics of AUM growth, opex to NTI and profitability. ROA\nand ROE remained steady. Q2 credit cost was elevated. We expect full year credit cost to be at\nthe upper end of guided range of 1.85% to 1.95% now.\nIn terms of growth drivers, if I move to panel number 47 actually -- so I'll keep moving panels,\nso be with me. Assets under management grew 24% to INR 462,261 crores, led by secular\ngrowth across businesses.\nNew lines of businesses, namely gold loans, new car loans, CV, tractor are growing in a healthy\nmanner and contributed to 3% of overall AUM growth in Q2. MSME growth, which we have\nflagged in last quarter, moderated to 18% as part of our risk-first approach to ensure portfolio\nresilience and long-term sustainability.\nThe captive 2-wheeler and 3-wheeler finance business is getting phased out as per the plan,\nstrengthening overall asset quality trends from FY'27 onwards perspective. It now only\ncontributes to 1.5% of overall AUM."
+  },
+  {
+   "document_id": "104",
+   "page_no": 4,
+   "text": "Page 3 of 18\nCustomer franchise, a key driver of our growth momentum for future years, expanded to cross\n110 million to end at 110.64 million. We added 4.13 million new customers in Q2 alone. We\nnow expect to add 16 to 17 million new customers in FY '26.\nIn general, from a growth standpoint, if I look at the outlook, the company has decided to take a\nprudent and balanced stance on AUM growth for FY '26. And we now think the growth will be\nin the region of 22-23% as compared to our earlier assessment of 24-25% due to a set of risk\nactions that we have taken in MSME business, and the revised assessment provided by BHFL\non its AUM growth for FY '26.\nSo we now would circle up our guidance to 22- 23% growth for full year versus 24-25% that we\nhad pencilled in January'25, when we talked about. In terms of cost of funds and liquidity, cost\nof funds continue to improve, improved by 27 basis points in Q2 and came in at 7.52%.\nFor FY '26, we expect cost of funds to be in the region of overall full year to be between 7.5%\nto 7.55%. NIM came in flat, in line with Q1. Deposit book, which contributes to 18% of the\noverall consolidated borrowing grew by 5% year-on-year.\nFor FY '26, in general, as you saw in the trends in Q1 as well, the company has adopted a\nmeasured stance on its deposit program with higher focus on delivering cost of funds efficiencies\nto the businesses. And we'll share greater detail on deposits business as part of LRS that we'll\npublish for FY '26.\nIn terms of operating efficiencies, company continued to deliver efficiencies. Opex to NTI\nimproved to 32.6% as against 33.2% in Q2 last year. AI implementation across each line of\nbusiness continues to move forward and should start to reflect in cost and productivity benefits\nover the next 12-18 months. In general, we remain very, very excited about the FinAI\ntransformation.\nOn risk and credit quality, loan loss to average AUF came in at 2.05% compared to 2.02% in Q1\nfrom a sequential standpoint. Credit costs principally remained elevated in Q2. However, the\ngood news is that the vintage metrics when we look at the portfolio across 3 MOB, 6 MOB, 9\nMOB are showing significant improvement.\nAs a result, we expect full year credit cost to come within 1.85% to 1.95% for FY'26, and we\nexpect significant improvements in credit costs for FY'27. On credit cost, let me just give you a\ndouble-click on it to give you some texture. So MSME business remains under watch and\ncompany has taken significant risk actions.\nWe have virtually cut MSME business by 25% in our unsecured MSME volumes. We now\nexpect MSME business to grow in the current full fiscal by 10-12% only. The captive 2- and 3-\nwheeler business continues to -- which contributes to 1.5% of AUM, but accounts for 9% of the\noverall loan loss also continues to run down. That should also lead to significant improvement\nin loan loss to average AUM metric in second half of the year and also in FY'27."
+  },
+  {
+   "document_id": "104",
+   "page_no": 5,
+   "text": "Page 4 of 18\nGNPA and NNPA came in at 124 basis points and 60 basis points. In general, let me just flag\nthat on a first quarter to second quarter, the number goes up or moves up sequentially because\nof number of -- a high number of days between Q1 and Q2. So you will see that even in last year\nas well. So the number moves anywhere between 15 to 18 basis points...\nSandeep Jain: 18 to 20...\nRajeev Jain: 18 to 20 basis points as Sandeep is correcting me, which is really how it is for the last 2-3 years,\nif you look at the trends. On portfolio credit quality, the management assessment for rural B2C\nand MFI has been improved from yellow to green, as you can see it in the numbers itself in the\nportfolio quality panel.\nLastly, but most importantly, I would like to just reemphasize the point. You're aware of it as\nlong-term investors that we principally remain a risk-first company. Let me now switch over to\nFinAI transformation. Soon, we'll start to publish metrics as well. We are 8th-9th month into\nimplementation of FinAI transformation for us as a firm.\nIt remains central to our long-term vision, and we are on track to become a future-ready AI\nfinancial services company over the next, I would say, 15-18 months. It's underway across each\nline of our business and should start to reflect in cost and productivity benefits and for consumers\nas they experience Bajaj Finance over the next 12-18 months.\nWe, as senior management are now spending virtually over the last 8-9 months, 12-15% of our\ntime on FinAI transformation. We have identified as a firm as part of our BPR process, 123\nimpact areas -- high-impact areas across business and functions with 80 of them, which will plan\nto go live by end of Feb '26.\nSo lots of action happening on FinAI. Some of the capabilities are already live like B2B\nbusinesses. I'll give you some texture, 442 AI voice bots are now live. They contributed INR\n2,000 crores of origination in Q2 alone. Its 5 AI conversational bots, text bots are live for EMI\ncard, extended warranty, personal loans, health insurance and life insurance. The conversion\nrates in general are quite encouraging.\nWe foresee that all our communication by March '26 would have a BOT in it, depending on the\naffinity product that we principally see. So, so far, 5 have gone live. The pace will now increase\nvery rapidly as we get into the second half of the year. 85% of customer service resolutions in\nQ2 was resolved via AI-powered service bots. In B2B, where we moved a lot of volume in these\n40 days, 42% of loan applications in terms of quality checks was performed by AI.\nWe booked in the process 6.5 lakh loan applications in a single day with zero compromise on\noperational and compliance risk. So we're continuing to perfect, perfect, perfect. This number is\nat 42%, eventually has to go to 85-90%. So good work done, but there's lots of work to be done\nas we move forward.\nIn terms of content generation, 42% of our digital banners, if you go to our asset and 100% of\nvideos, if you experience, are now principally AI generated. We're also using AI for significant"
+  },
+  {
+   "document_id": "104",
+   "page_no": 6,
+   "text": "Page 5 of 18\nenhancement or enrichment of data variables in terms of using audio recordings to extract\nmeaningful variables. And we are quite excited about the kind of data breadth and depth that it\nwould really improve as we deploy this capability across our voice ecosystem.\nWe're also -- one of the areas that we are very excited about on FinAI is deploying face\nrecognition technology. We're going to test with 300 points of sales, service and gold loan\nbranches to identify existing customer and create a WOW experience when they walk into these\nbranches or points of sale.\nThat's something that will go live between now and December, and should help significantly\ntransform the experience. So that's really on FinAI. I've so far covered consolidated financials\nand company. I've talked about FinAI.\nLet me now jump over to subsidiaries. BHFL has already published its results. They had a stable\nquarter with AUM growth of 24% despite heightened competitive intensity, I would say, and\nsignificantly higher-than-expected portfolio attrition. They still delivered a PAT growth of 18%\nand ROA of 2.3%.\nAsset quality for BHFL remained very healthy at 26 basis points GNPA and NNPA of 12 basis\npoints. BFSL, which is the other subsidiary, a bit smaller, saw 40% growth in AUM and profits\nwere up by 27%. It added 94,000 customers in Q2.\nVery quickly, just before I open up the floor for Q&A, I thought I'd just provide 2 more updates.\nOne update is on management. As we made a set of announcements in Q4 FY'25 on -- regarding\nthe management structure. The Board of Directors at its meeting held today has approved the\nelevation of Mr. Manish Jain as the fourth Deputy CEO of the company.\nManish, in addition to his current role as Managing Director of BFSL, will also now be\nresponsible for company's loans against security business, commercial lending business and the\ndeposit business. So the company would now have 4 Deputy CEOs and 3 Chief Operating\nOfficers as what we call executive management group running the firm.\nJust before I finish, I thought I'd just give you a quick update on the festive performance. Clearly,\nthe structural reforms in income tax and GST by the government has lifted customer sentiment\nand spurt consumption, led to a very strong season. We've already done a press release where\nthe company disbursed a record 6.3 million loans, up 27% in volume and 29% in value over last\nyear. This is a 37-day, right, Manish? 30, 30...\nManish Jain: Yes, 35 days.\nRajeev Jain: 35-day period. It's Navratri to Bhai Dooj or 35-day peak kick-off of the festival and end of the\nfestival season. Overall, festive period disbursements were 7.4 million loans we did and a 26%\nincrease year-on-year and added 2.3 million new customers during this period with 52% new to\ncredit at par with previous years."
+  }
+ ],
+ "dossier": {
+  "version": "49f776586837",
+  "data": {
+   "bear": [
+    {
+     "text": "Gross NPA reached 1.06% in Q2 FY27.",
+     "cites": [
+      "fact:q_gnpa"
+     ]
+    },
+    {
+     "text": "Net profit growth slowed to 15.2% in FY26.",
+     "cites": [
+      "fact:fy_pat_growth"
+     ]
+    },
+    {
+     "text": "Gross NPA change YoY dropped by −18 bps in Q2 FY27.",
+     "cites": [
+      "fact:q_gnpa_yoy_bps"
+     ]
+    }
+   ],
+   "bull": [
+    {
+     "text": "Net profit grew 28.7% YoY to ₹6,367 cr in Q2 FY27.",
+     "cites": [
+      "fact:q_pat_yoy",
+      "fact:q_pat"
+     ]
+    },
+    {
+     "text": "Borrowings reached ₹5,01,982 cr with a debt to equity ratio of 4.08× in Sep 2026.",
+     "cites": [
+      "fact:borrowings",
+      "fact:de_ratio"
+     ]
+    },
+    {
+     "text": "Return on equity stood at 18.2% currently.",
+     "cites": [
+      "fact:roe"
+     ]
+    }
+   ],
+   "cash": {
+    "fcf": null,
+    "flag": null,
+    "cfo_ebitda": null,
+    "cfo_pat_5y": null
+   },
+   "name": "Bajaj Finance",
+   "basis": "consolidated",
+   "facts": {
+    "pe": {
+     "key": "pe",
+     "unit": "x",
+     "label": "P/E",
+     "value": 26.1,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "roe": {
+     "key": "roe",
+     "unit": "pct",
+     "label": "ROE",
+     "value": 18.2,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "mcap": {
+     "key": "mcap",
+     "unit": "cr",
+     "label": "Market cap",
+     "value": 571076,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "price": {
+     "key": "price",
+     "unit": "rs",
+     "label": "Price",
+     "value": 917,
+     "period": "now",
+     "source": "Screener consolidated header, header ratios"
+    },
+    "q_nii": {
+     "key": "q_nii",
+     "unit": "cr",
+     "label": "Net interest income",
+     "value": 15944,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "q_pat": {
+     "key": "q_pat",
+     "unit": "cr",
+     "label": "Net profit, total",
+     "value": 6367,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "q_pbt": {
+     "key": "q_pbt",
+     "unit": "cr",
+     "label": "Profit before tax",
+     "value": 8537,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "fy_pat": {
+     "key": "fy_pat",
+     "unit": "cr",
+     "label": "Net profit",
+     "value": 19332,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "q_gnpa": {
+     "key": "q_gnpa",
+     "unit": "pct",
+     "label": "Gross NPA",
+     "value": 1.06,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "q_nnpa": {
+     "key": "q_nnpa",
+     "unit": "pct",
+     "label": "Net NPA",
+     "value": 0.42,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "actual_5": {
+     "key": "actual_5",
+     "unit": "pct",
+     "label": "Revenue growth actual",
+     "value": 20.7,
+     "period": "Q1–Q2 FY27 vs a year earlier, so far",
+     "source": "Screener consolidated quarterly results, Q1–Q2 FY27 vs a year earlier, so far"
+    },
+    "de_ratio": {
+     "key": "de_ratio",
+     "unit": "x",
+     "label": "Debt to equity",
+     "value": 4.08,
+     "period": "Sep 2026",
+     "source": "Screener consolidated balance sheet, Sep 2026 column: borrowings / (equity + reserves)"
+    },
+    "q_ebitda": {
+     "key": "q_ebitda",
+     "unit": "cr",
+     "label": "Financing profit",
+     "value": 8825,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "fy_ebitda": {
+     "key": "fy_ebitda",
+     "unit": "cr",
+     "label": "Financing profit",
+     "value": 27088,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "net_worth": {
+     "key": "net_worth",
+     "unit": "cr",
+     "label": "Net worth",
+     "value": 123179,
+     "period": "Sep 2026",
+     "source": "Screener consolidated balance sheet, Sep 2026 column: equity + reserves"
+    },
+    "q_pat_yoy": {
+     "key": "q_pat_yoy",
+     "unit": "pct",
+     "label": "Net profit growth YoY, total",
+     "value": 28.7,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 vs Sep 2025"
+    },
+    "q_revenue": {
+     "key": "q_revenue",
+     "unit": "cr",
+     "label": "Revenue (interest earned)",
+     "value": 24546,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 column"
+    },
+    "borrowings": {
+     "key": "borrowings",
+     "unit": "cr",
+     "label": "Borrowings",
+     "value": 501982,
+     "period": "Sep 2026",
+     "source": "Screener consolidated balance sheet, Sep 2026 column"
+    },
+    "fy_revenue": {
+     "key": "fy_revenue",
+     "unit": "cr",
+     "label": "Revenue",
+     "value": 81985,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 column"
+    },
+    "pat_cagr_3y": {
+     "key": "pat_cagr_3y",
+     "unit": "pct",
+     "label": "Net profit CAGR, 3 years",
+     "value": 18.9,
+     "period": "3 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2023 to Mar 2026"
+    },
+    "pat_cagr_5y": {
+     "key": "pat_cagr_5y",
+     "unit": "pct",
+     "label": "Net profit CAGR, 5 years",
+     "value": 34.3,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2021 to Mar 2026"
+    },
+    "fy_pat_growth": {
+     "key": "fy_pat_growth",
+     "unit": "pct",
+     "label": "Net profit growth",
+     "value": 15.2,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 vs Mar 2025"
+    },
+    "q_revenue_yoy": {
+     "key": "q_revenue_yoy",
+     "unit": "pct",
+     "label": "Revenue growth YoY",
+     "value": 22.8,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 vs Sep 2025"
+    },
+    "ebitda_cagr_3y": {
+     "key": "ebitda_cagr_3y",
+     "unit": "pct",
+     "label": "Financing profit CAGR, 3 years",
+     "value": 19.1,
+     "period": "3 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2023 to Mar 2026"
+    },
+    "ebitda_cagr_5y": {
+     "key": "ebitda_cagr_5y",
+     "unit": "pct",
+     "label": "Financing profit CAGR, 5 years",
+     "value": 33.8,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2021 to Mar 2026"
+    },
+    "q_gnpa_yoy_bps": {
+     "key": "q_gnpa_yoy_bps",
+     "unit": "bps",
+     "label": "Gross NPA change YoY",
+     "value": -18,
+     "period": "Q2 FY27",
+     "source": "Screener consolidated quarterly results, Sep 2026 vs Sep 2025"
+    },
+    "revenue_cagr_3y": {
+     "key": "revenue_cagr_3y",
+     "unit": "pct",
+     "label": "Revenue CAGR, 3 years",
+     "value": 25.6,
+     "period": "3 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2023 to Mar 2026"
+    },
+    "revenue_cagr_5y": {
+     "key": "revenue_cagr_5y",
+     "unit": "pct",
+     "label": "Revenue CAGR, 5 years",
+     "value": 25.2,
+     "period": "5 years to FY26",
+     "source": "Screener consolidated P&L, Mar 2021 to Mar 2026"
+    },
+    "fy_revenue_growth": {
+     "key": "fy_revenue_growth",
+     "unit": "pct",
+     "label": "Revenue growth",
+     "value": 19.1,
+     "period": "FY26",
+     "source": "Screener consolidated P&L, Mar 2026 vs Mar 2025"
+    }
+   },
+   "flags": [],
+   "stats": {
+    "calls": 7,
+    "seconds": 346,
+    "tokens_in": 72602,
+    "tokens_out": 17969,
+    "cached_calls": 0,
+    "cost_usd_est": 0.0785,
+    "dropped_bullets": 0
+   },
+   "header": {
+    "pe": 26.1,
+    "roe": 18.2,
+    "roce": null,
+    "price": 917,
+    "mcap_cr": 571076,
+    "screener_url": "https://www.screener.in/company/BAJFINANCE/consolidated/"
+   },
+   "lender": true,
+   "sector": null,
+   "symbol": "BAJFINANCE",
+   "numbers": {
+    "cagr": [
+     {
+      "y3": 25.6,
+      "y5": 25.2,
+      "key": "revenue",
+      "label": "Revenue"
+     },
+     {
+      "y3": 19.1,
+      "y5": 33.8,
+      "key": "ebitda",
+      "label": "Financing profit"
+     },
+     {
+      "y3": 18.9,
+      "y5": 34.3,
+      "key": "pat",
+      "label": "Net profit"
+     }
+    ],
+    "tiles": [
+     {
+      "key": "q_nii",
+      "unit": "cr",
+      "label": "Net interest income",
+      "value": 15944,
+      "period": "Q2 FY27"
+     },
+     {
+      "key": "q_pat",
+      "unit": "cr",
+      "label": "Net profit, total",
+      "value": 6367,
+      "change": {
+       "unit": "pct",
+       "label": "YoY",
+       "value": 28.7
+      },
+      "period": "Q2 FY27"
+     },
+     {
+      "key": "q_gnpa",
+      "unit": "pct",
+      "label": "Gross NPA",
+      "value": 1.06,
+      "change": {
+       "unit": "bps",
+       "label": "YoY",
+       "value": -18
+      },
+      "period": "Q2 FY27"
+     },
+     {
+      "key": "roe",
+      "unit": "pct",
+      "label": "ROE",
+      "value": 18.2,
+      "period": "now"
+     }
+    ],
+    "annual": {
+     "cfo": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       -7064,
+       -9870,
+       -10439,
+       -20566,
+       -29062,
+       -24412,
+       -807,
+       -37029,
+       -42112,
+       -72760,
+       -67792,
+       -65790
+      ]
+     },
+     "fcf": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       -7129,
+       -9964,
+       -10587,
+       -20700,
+       -29428,
+       -24912,
+       -1105,
+       -37644,
+       -42970,
+       -73759,
+       -68837,
+       -66686
+      ]
+     },
+     "opm": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       25.4,
+       27.2,
+       28.8,
+       30.9,
+       34.1,
+       28.8,
+       23.7,
+       31.3,
+       38.7,
+       36.4,
+       33.4,
+       33
+      ]
+     },
+     "pat": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       898,
+       1279,
+       1836,
+       2496,
+       3995,
+       5264,
+       4420,
+       7028,
+       11508,
+       14451,
+       16779,
+       19332
+      ]
+     },
+     "roce": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "ebitda": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       1367,
+       1986,
+       2867,
+       3935,
+       6310,
+       7609,
+       6314,
+       9905,
+       16018,
+       19987,
+       22963,
+       27088
+      ]
+     },
+     "revenue": {
+      "labels": [
+       "FY15",
+       "FY16",
+       "FY17",
+       "FY18",
+       "FY19",
+       "FY20",
+       "FY21",
+       "FY22",
+       "FY23",
+       "FY24",
+       "FY25",
+       "FY26"
+      ],
+      "values": [
+       5392,
+       7299,
+       9970,
+       12746,
+       18487,
+       26375,
+       26673,
+       31633,
+       41411,
+       54972,
+       68832,
+       81985
+      ]
+     },
+     "borrowings": {
+      "labels": [
+       "Mar 2015",
+       "Mar 2016",
+       "Mar 2017",
+       "Mar 2018",
+       "Mar 2019",
+       "Mar 2020",
+       "Mar 2021",
+       "Mar 2022",
+       "Mar 2023",
+       "Mar 2024",
+       "Mar 2025",
+       "Mar 2026",
+       "Sep 2026"
+      ],
+      "values": [
+       26655,
+       37025,
+       49250,
+       66557,
+       101588,
+       129806,
+       131634,
+       165232,
+       216690,
+       293346,
+       361249,
+       435112,
+       501982
+      ]
+     }
+    },
+    "quarterly": {
+     "opm": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       36.7,
+       35.8,
+       35.4,
+       33.9,
+       32.8,
+       33,
+       32.1,
+       33.9,
+       34.3,
+       28.3,
+       35.4,
+       36.4,
+       36
+      ]
+     },
+     "pat": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       3551,
+       3639,
+       3825,
+       3912,
+       4014,
+       4308,
+       4546,
+       4765,
+       4948,
+       4066,
+       5553,
+       6081,
+       6367
+      ]
+     },
+     "ebitda": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       4914,
+       5066,
+       5289,
+       5460,
+       5604,
+       5958,
+       5879,
+       6614,
+       6861,
+       5937,
+       7654,
+       8430,
+       8825
+      ]
+     },
+     "revenue": {
+      "labels": [
+       "Q2 FY24",
+       "Q3 FY24",
+       "Q4 FY24",
+       "Q1 FY25",
+       "Q2 FY25",
+       "Q3 FY25",
+       "Q4 FY25",
+       "Q1 FY26",
+       "Q2 FY26",
+       "Q3 FY26",
+       "Q4 FY26",
+       "Q1 FY27",
+       "Q2 FY27"
+      ],
+      "values": [
+       13382,
+       14164,
+       14926,
+       16100,
+       17091,
+       18035,
+       18294,
+       19524,
+       19990,
+       21013,
+       21606,
+       23165,
+       24546
+      ]
+     }
+    }
+   },
+   "pending": [],
+   "version": 1,
+   "built_at": "2026-10-29T12:35:31.684Z",
+   "business": {
+    "cites": {
+     "risks": "doc:105:p84",
+     "description": "doc:105:p66"
+    },
+    "risks": [
+     "Credit risk",
+     "Liquidity risk",
+     "Operational risk",
+     "Market risk",
+     "Cyber security and Information security risk"
+    ],
+    "segments": [],
+    "description": "Bajaj Finance Limited is a deposit-taking Non-Banking Financial Company engaged in lending, partnership and services, payments, and acceptance of deposits. It offers a diversified lending portfolio across retail, MSMEs, and commercial customers with a deep presence across urban and rural India.",
+    "related_party": [
+     "Material related party transactions between the Company and Bajaj Housing Finance Limited for an aggregate amount not exceeding ₹18,152 crore."
+    ]
+   },
+   "documents": [
+    {
+     "id": 100,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7873abcb-7f97-487d-a474-028b0a26feea.pdf",
+     "type": "transcript",
+     "label": "Q2 FY27 call (Oct 2026)",
+     "pages": 20,
+     "period_label": "Q2 FY27"
+    },
+    {
+     "id": 101,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b101e24e-b807-4c74-9025-90009f4b47a5.pdf",
+     "type": "transcript",
+     "label": "Q1 FY27 call (Aug 2026)",
+     "pages": 23,
+     "period_label": "Q1 FY27"
+    },
+    {
+     "id": 102,
+     "url": "https://cms-assets.bajajfinserv.in/is/content/bajajfinance/bajaj-finance-q4-fy26-earnings-conference-call-transcript?scl=1&fmt=pdf",
+     "type": "transcript",
+     "label": "Q4 FY26 call (Apr 2026)",
+     "pages": 18,
+     "period_label": "Q4 FY26"
+    },
+    {
+     "id": 103,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6eb34dc2-bde9-4df5-8b93-aad3d461140e.pdf",
+     "type": "transcript",
+     "label": "Q3 FY26 call (Feb 2026)",
+     "pages": 13,
+     "period_label": "Q3 FY26"
+    },
+    {
+     "id": 104,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/39ea369b-a7b8-42e8-b787-2d1df4efa020.pdf",
+     "type": "transcript",
+     "label": "Q2 FY26 call (Dec 2025)",
+     "pages": 19,
+     "period_label": "Q2 FY26"
+    },
+    {
+     "id": 105,
+     "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a2357f0b-2828-4790-8a02-61064bd1929b.pdf",
+     "type": "annual_report",
+     "label": "FY26 annual report",
+     "pages": 450,
+     "used_pages": [
+      3,
+      19,
+      20,
+      38,
+      41,
+      45,
+      66,
+      68,
+      70,
+      72,
+      74,
+      84,
+      89,
+      103,
+      112,
+      116,
+      119,
+      125,
+      132,
+      165,
+      170,
+      174,
+      259,
+      260,
+      261,
+      282,
+      289,
+      331,
+      399,
+      400,
+      401,
+      402,
+      403,
+      428
+     ],
+     "period_label": "FY26"
+    }
+   ],
+   "say_vs_do": {
+    "note": null,
+    "items": [
+     {
+      "id": 1,
+      "call": "Q2 FY27 call",
+      "cite": "doc:100:p4",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "we remain quite clear about ending the year with close to 2,800 on stand-alone gold branches.",
+      "scope": "gold loan business",
+      "actual": null,
+      "metric": "store_count",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-10-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "gold loan branches",
+      "revised_to": null,
+      "target_text": "2,800",
+      "metric_label": "Store count"
+     },
+     {
+      "id": 2,
+      "call": "Q2 FY27 call",
+      "cite": "doc:100:p4",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "We are well on track to deliver between 60 million to 62 million new loans in FY27.",
+      "scope": null,
+      "actual": null,
+      "metric": "volume_growth",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-10-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "new loans",
+      "revised_to": null,
+      "target_text": "60 million to 62 million",
+      "metric_label": "Volume growth"
+     },
+     {
+      "id": 3,
+      "call": "Q2 FY27 call",
+      "cite": "doc:100:p4",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "We are clear about adding between 18 MM to 20 MM customers to the franchise in FY27.",
+      "scope": null,
+      "actual": null,
+      "metric": "customer_additions",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-10-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "new customers",
+      "revised_to": null,
+      "target_text": "18 million to 20 million",
+      "metric_label": "New customers"
+     },
+     {
+      "id": 4,
+      "call": "Q2 FY27 call",
+      "cite": "doc:100:p4",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "We remain pretty comfortable place to deliver a 25 to 40 basis point improvement in FY27 on opex-to-NTI.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:opex_to_nti",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-10-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "opex-to-NTI improvement",
+      "revised_to": null,
+      "target_text": "0.25–0.4%",
+      "metric_label": "Opex to net total income"
+     },
+     {
+      "id": 5,
+      "call": "Q2 FY27 call",
+      "cite": "doc:100:p11",
+      "note": null,
+      "basis": "unspecified",
+      "quote": "I would say probably between 26%, 27% growth we should deliver now on a full year basis.",
+      "scope": null,
+      "actual": {
+       "cite": "fact:actual_5",
+       "unit": "pct",
+       "label": "Q1–Q2 FY27 vs a year earlier, so far",
+       "value": 20.7
+      },
+      "metric": "revenue_growth",
+      "status": "off_track",
+      "horizon": "FY27",
+      "said_on": "2026-10-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "full year growth",
+      "revised_to": null,
+      "target_text": "26–27%",
+      "metric_label": "Revenue growth"
+     },
+     {
+      "id": 6,
+      "call": "Q2 FY27 call",
+      "cite": "doc:100:p11",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "medium term, we maintain a guidance of 20% to 25% on a year lower here and a year higher there.",
+      "scope": null,
+      "actual": null,
+      "metric": "aum_growth",
+      "status": "pending",
+      "horizon": "Medium term",
+      "said_on": "2026-10-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "medium term growth",
+      "revised_to": null,
+      "target_text": "20–25%",
+      "metric_label": "AUM growth"
+     },
+     {
+      "id": 7,
+      "call": "Q1 FY27 call",
+      "cite": "doc:101:p4",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "organic",
+      "quote": "By year-end we foresee 2,700 to 2,800 branches, all goes well, maybe 3,000 branches and AUM of between INR29,000 crores and INR31,000 crores, all organic.",
+      "scope": null,
+      "actual": null,
+      "metric": "store_count",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-08-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "branches",
+      "revised_to": null,
+      "target_text": "2,700 to 2,800",
+      "metric_label": "Store count"
+     },
+     {
+      "id": 8,
+      "call": "Q1 FY27 call",
+      "cite": "doc:101:p4",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "organic",
+      "quote": "By year-end we foresee 2,700 to 2,800 branches, all goes well, maybe 3,000 branches and AUM of between INR29,000 crores and INR31,000 crores, all organic.",
+      "scope": "gold loan business",
+      "actual": null,
+      "metric": "aum",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-08-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "gold loan AUM",
+      "revised_to": null,
+      "target_text": "₹29,000 cr to ₹31,000 cr",
+      "metric_label": "AUM"
+     },
+     {
+      "id": 10,
+      "call": "Q1 FY27 call",
+      "cite": "doc:101:p6",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "I mean this year the digital platform will deliver INR50,000 crores of business.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:digital_platform_volume",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-08-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "digital platform business volume",
+      "revised_to": null,
+      "target_text": "₹50,000 cr",
+      "metric_label": "Digital platform volume"
+     },
+     {
+      "id": 11,
+      "call": "Q1 FY27 call",
+      "cite": "doc:101:p6",
+      "note": "Period not started",
+      "basis": "unspecified",
+      "quote": "I am targeting that next year we should be delivering INR100,000 crores volume between customer centricity, AI and tech transformation and digital transformation",
+      "scope": null,
+      "actual": null,
+      "metric": "other:digital_platform_volume",
+      "status": "pending",
+      "horizon": "FY28",
+      "said_on": "2026-08-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "digital platform volume next year",
+      "revised_to": null,
+      "target_text": "₹1,00,000 cr",
+      "metric_label": "Digital platform volume"
+     },
+     {
+      "id": 12,
+      "call": "Q4 FY26 call",
+      "cite": "doc:102:p3",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "We foresee gold loan portfolio to probably cross 5-odd percent of total AUM by FY'27.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:gold_loan_aum_share",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-04-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "gold loan portfolio share of total AUM",
+      "revised_to": null,
+      "target_text": "At least 5%",
+      "metric_label": "Gold loan AUM share"
+     },
+     {
+      "id": 13,
+      "call": "Q4 FY26 call",
+      "cite": "doc:102:p6",
+      "note": null,
+      "basis": "unspecified",
+      "quote": "In terms of customer franchise, we continue to be confident of adding 15 - 17 million new customers in FY27.",
+      "scope": null,
+      "actual": null,
+      "metric": "customer_additions",
+      "status": "revised",
+      "horizon": "FY27",
+      "said_on": "2026-04-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "new customers",
+      "revised_to": {
+       "cite": "doc:100:p4",
+       "text": "18 million to 20 million",
+       "said_period": "Q2 FY27"
+      },
+      "target_text": "15 million to 17 million",
+      "metric_label": "New customers"
+     },
+     {
+      "id": 14,
+      "call": "Q4 FY26 call",
+      "cite": "doc:102:p6",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "In terms of AUM, we're confident of a 20% to 24% AUM growth, aided by new businesses that we've launched in the last few years as they begin to scale.",
+      "scope": null,
+      "actual": null,
+      "metric": "aum_growth",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-04-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "AUM growth",
+      "revised_to": null,
+      "target_text": "20–24%",
+      "metric_label": "AUM growth"
+     },
+     {
+      "id": 15,
+      "call": "Q4 FY26 call",
+      "cite": "doc:102:p6",
+      "note": "No numeric target",
+      "basis": "unspecified",
+      "quote": "NIM, we expect marginal moderation. It's a little bit contingent on how interest rates play out, caused by geopolitical tensions.",
+      "scope": null,
+      "actual": null,
+      "metric": "nim",
+      "status": "unverifiable",
+      "horizon": "FY27",
+      "said_on": "2026-04-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "NIM",
+      "revised_to": null,
+      "target_text": "Qualitative",
+      "metric_label": "Net interest margin"
+     },
+     {
+      "id": 16,
+      "call": "Q4 FY26 call",
+      "cite": "doc:102:p6",
+      "note": null,
+      "basis": "unspecified",
+      "quote": "On opex to NTI, we expect to see continued improvement of 25 to 40 basis points from current levels.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:opex_to_nti",
+      "status": "revised",
+      "horizon": "FY27",
+      "said_on": "2026-04-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "opex to NTI improvement",
+      "revised_to": {
+       "cite": "doc:101:p4",
+       "text": "0.25 bps to 0.4 bps",
+       "said_period": "Q1 FY27"
+      },
+      "target_text": "25 bps to 40 bps",
+      "metric_label": "Opex to net total income"
+     },
+     {
+      "id": 17,
+      "call": "Q4 FY26 call",
+      "cite": "doc:102:p8",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "So on an annual basis, 175 goes down to 145 to 160? Rajeev Jain: That's perfect.",
+      "scope": null,
+      "actual": null,
+      "metric": "credit_cost",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-04-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "credit cost to AUM",
+      "revised_to": null,
+      "target_text": "1.45–1.6%",
+      "metric_label": "Credit cost"
+     },
+     {
+      "id": 18,
+      "call": "Q4 FY26 call",
+      "cite": "doc:102:p7",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "ROA came in as of fourth quarter at 4.6%. We continue to guide for 4.4% to 4.6%.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:roa",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-04-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "ROA",
+      "revised_to": null,
+      "target_text": "4.4–4.6%",
+      "metric_label": "Return on assets"
+     },
+     {
+      "id": 19,
+      "call": "Q4 FY26 call",
+      "cite": "doc:102:p7",
+      "note": "Period in progress; no actual stated yet",
+      "basis": "unspecified",
+      "quote": "Return on equity came in at 20% in the current quarter, we continue to guide for 19% to 20%.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:roe",
+      "status": "pending",
+      "horizon": "FY27",
+      "said_on": "2026-04-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "Return on equity",
+      "revised_to": null,
+      "target_text": "19–20%",
+      "metric_label": "Return on equity"
+     },
+     {
+      "id": 20,
+      "call": "Q4 FY26 call",
+      "cite": "doc:102:p7",
+      "note": "No numeric target",
+      "basis": "unspecified",
+      "quote": "And GNPA and NNPA, we expect them to remain range bound and well within our long-term guidance.",
+      "scope": null,
+      "actual": null,
+      "metric": "gnpa",
+      "status": "unverifiable",
+      "horizon": "Medium term",
+      "said_on": "2026-04-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "GNPA",
+      "revised_to": null,
+      "target_text": "Qualitative",
+      "metric_label": "Gross NPA"
+     },
+     {
+      "id": 21,
+      "call": "Q4 FY26 call",
+      "cite": "doc:102:p9",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "We orchestrate these 4 to deliver an outcome of 4.3% to 4.7% ROA and 20% to 22% ROE to investors on a long-term basis.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:roa",
+      "status": "pending",
+      "horizon": "Medium term",
+      "said_on": "2026-04-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "ROA",
+      "revised_to": null,
+      "target_text": "4.3–4.7%",
+      "metric_label": "Return on assets"
+     },
+     {
+      "id": 22,
+      "call": "Q4 FY26 call",
+      "cite": "doc:102:p9",
+      "note": "Multi-year target",
+      "basis": "unspecified",
+      "quote": "We orchestrate these 4 to deliver an outcome of 4.3% to 4.7% ROA and 20% to 22% ROE to investors on a long-term basis.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:roe",
+      "status": "pending",
+      "horizon": "Medium term",
+      "said_on": "2026-04-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "ROE",
+      "revised_to": null,
+      "target_text": "20–22%",
+      "metric_label": "Return on equity"
+     },
+     {
+      "id": 23,
+      "call": "Q3 FY26 call",
+      "cite": "doc:103:p4",
+      "note": null,
+      "basis": "unspecified",
+      "quote": "overall, we've taken a view that the top line growth or AUM growth will gravitate between 22% and 23%, but more likely to be 22% on a full year basis.",
+      "scope": null,
+      "actual": {
+       "cite": "doc:102:p2",
+       "unit": "pct",
+       "label": "FY26",
+       "value": 22.4
+      },
+      "metric": "aum_growth",
+      "status": "delivered",
+      "horizon": "FY26",
+      "said_on": "2026-02-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "AUM growth",
+      "revised_to": null,
+      "target_text": "22–23%",
+      "metric_label": "AUM growth"
+     },
+     {
+      "id": 24,
+      "call": "Q3 FY26 call",
+      "cite": "doc:103:p4",
+      "note": "No actual in the tables or later calls",
+      "basis": "unspecified",
+      "quote": "We're likely to be between 7.55% to 7.60% in terms of cost of funds as we exit the year.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:cost_of_funds",
+      "status": "unverifiable",
+      "horizon": "FY26",
+      "said_on": "2026-02-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "cost of funds",
+      "revised_to": null,
+      "target_text": "7.55–7.6%",
+      "metric_label": "Cost of funds"
+     },
+     {
+      "id": 25,
+      "call": "Q3 FY26 call",
+      "cite": "doc:103:p4",
+      "note": null,
+      "basis": "unspecified",
+      "quote": "We now expect 17 to 18 million customers to be added to the franchise in FY '26.",
+      "scope": null,
+      "actual": {
+       "cite": "doc:102:p6",
+       "unit": "count",
+       "label": "FY26",
+       "value": 17500000
+      },
+      "metric": "customer_additions",
+      "status": "delivered",
+      "horizon": "FY26",
+      "said_on": "2026-02-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "customers to be added",
+      "revised_to": null,
+      "target_text": "17 million to 18 million",
+      "metric_label": "New customers"
+     },
+     {
+      "id": 26,
+      "call": "Q3 FY26 call",
+      "cite": "doc:103:p7",
+      "note": null,
+      "basis": "unspecified",
+      "quote": "We foresee that the number next year as we enter could be anywhere between 165 to 175 basis points",
+      "scope": null,
+      "actual": null,
+      "metric": "credit_cost",
+      "status": "revised",
+      "horizon": "FY27",
+      "said_on": "2026-02-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "credit cost",
+      "revised_to": {
+       "cite": "doc:102:p8",
+       "text": "1.45–1.6%",
+       "said_period": "Q4 FY26"
+      },
+      "target_text": "1.65–1.75%",
+      "metric_label": "Credit cost"
+     },
+     {
+      "id": 27,
+      "call": "Q2 FY26 call",
+      "cite": "doc:104:p3",
+      "note": "No actual in the tables or later calls",
+      "basis": "unspecified",
+      "quote": "We expect full year credit cost to be at the upper end of guided range of 1.85% to 1.95% now.",
+      "scope": null,
+      "actual": null,
+      "metric": "credit_cost",
+      "status": "unverifiable",
+      "horizon": "FY26",
+      "said_on": "2025-12-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "full year credit cost",
+      "revised_to": null,
+      "target_text": "1.85–1.95%",
+      "metric_label": "Credit cost"
+     },
+     {
+      "id": 28,
+      "call": "Q2 FY26 call",
+      "cite": "doc:104:p4",
+      "note": null,
+      "basis": "unspecified",
+      "quote": "We now expect to add 16 to 17 million new customers in FY '26.",
+      "scope": null,
+      "actual": null,
+      "metric": "customer_additions",
+      "status": "revised",
+      "horizon": "FY26",
+      "said_on": "2025-12-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "new customers in FY 26",
+      "revised_to": {
+       "cite": "doc:103:p4",
+       "text": "17 million to 18 million",
+       "said_period": "Q3 FY26"
+      },
+      "target_text": "16 million to 17 million",
+      "metric_label": "New customers"
+     },
+     {
+      "id": 30,
+      "call": "Q2 FY26 call",
+      "cite": "doc:104:p4",
+      "note": null,
+      "basis": "unspecified",
+      "quote": "For FY '26, we expect cost of funds to be in the region of overall full year to be between 7.5% to 7.55%.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:cost_of_funds",
+      "status": "revised",
+      "horizon": "FY26",
+      "said_on": "2025-12-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "cost of funds",
+      "revised_to": {
+       "cite": "doc:103:p4",
+       "text": "7.55–7.6%",
+       "said_period": "Q3 FY26"
+      },
+      "target_text": "7.5–7.55%",
+      "metric_label": "Cost of funds"
+     },
+     {
+      "id": 31,
+      "call": "Q2 FY26 call",
+      "cite": "doc:104:p4",
+      "note": "No actual in the tables or later calls",
+      "basis": "unspecified",
+      "quote": "We now expect MSME business to grow in the current full fiscal by 10-12% only.",
+      "scope": null,
+      "actual": null,
+      "metric": "other:msme_growth",
+      "status": "unverifiable",
+      "horizon": "FY26",
+      "said_on": "2025-12-15",
+      "speaker": "Rajeev Jain",
+      "label_raw": "MSME business",
+      "revised_to": null,
+      "target_text": "10–12%",
+      "metric_label": "MSME growth"
+     }
+    ],
+    "credibility": {
+     "score": null,
+     "missed": 0,
+     "pending": 17,
+     "resolved": 2,
+     "delivered": 2,
+     "near_miss": 0
+    }
+   },
+   "asset_quality": {
+    "gnpa": 1.06,
+    "nnpa": 0.42,
+    "gnpa_yoy_bps": -18
+   },
+   "balance_sheet": {
+    "cites": {
+     "auditor": "doc:105:p399",
+     "contingent": "doc:105:p331"
+    },
+    "wc_days": {
+     "ccc": null,
+     "debtor": null,
+     "payable": null,
+     "inventory": null
+    },
+    "de_ratio": 4.08,
+    "net_worth": 123179,
+    "borrowings": 501982,
+    "contingent_cr": 273.71,
+    "interest_cover": null,
+    "auditor_opinion": "unmodified",
+    "key_audit_matters": [
+     "Assessment of impairment loss allowance based on expected credit loss (ECL) on Loans",
+     "Information Technology (IT) Systems and Controls impacting Financial Reporting"
+    ],
+    "contingent_pct_networth": 0.2
+   },
+   "seed_questions": [
+    "How will management achieve the 20–25% AUM growth target in the medium term?",
+    "What actions explain the MSME segment asset quality deterioration mentioned by analysts?",
+    "How does the capital raise impact Tier 1 capital and future earnings dilution?"
+   ],
+   "analyst_concerns": [
+    {
+     "cite": "doc:100:p5",
+     "topic": "Gold Loan Short-Term Schemes",
+     "summary": "Analysts asked why short-term gold loans are not offered and how they impact LTV and customer delinquencies."
+    },
+    {
+     "cite": "doc:100:p8",
+     "topic": "MSME Asset Quality",
+     "summary": "Concerned about the continuation of GNPA deterioration in the MSME segment."
+    },
+    {
+     "cite": "doc:100:p14",
+     "topic": "Capital Raise Dilution",
+     "summary": "Questioned the timing and large quantum of the capital raise given existing Tier 1 and potential subsidiary stake sales."
+    },
+    {
+     "cite": "doc:101:p7",
+     "topic": "Guidance revision",
+     "summary": "Analysts questioned why management has not raised full-year growth guidance despite strong Q1 performance."
+    },
+    {
+     "cite": "doc:101:p7",
+     "topic": "Macro overlay and credit cost",
+     "summary": "Inquiries regarding the necessity of creating additional management overlays and macroeconomic provisions given strong credit metrics."
+    },
+    {
+     "cite": "doc:101:p11",
+     "topic": "Cost of funds",
+     "summary": "Questions regarding the trajectory of cost of funds and liquidity strategy for the upcoming quarters."
+    },
+    {
+     "cite": "doc:101:p11",
+     "topic": "AI Opex",
+     "summary": "Concerns over controlling opex and token costs associated with scaling AI initiatives."
+    },
+    {
+     "cite": "doc:101:p17",
+     "topic": "Gold loan and PL competitive intensity",
+     "summary": "Discussion on intense competition in gold loans and potential cannibalization of personal loans."
+    }
+   ],
+   "what_matters_now": [
+    {
+     "text": "Revenue grew 22.8% YoY to ₹24,546 cr in Q2 FY27.",
+     "cites": [
+      "fact:q_revenue_yoy",
+      "fact:q_revenue"
+     ]
+    },
+    {
+     "text": "Management delivered AUM growth of 22.4% for FY26 against the targeted 22–23%.",
+     "cites": [
+      "doc:103:p4",
+      "doc:102:p2"
+     ]
+    },
+    {
+     "text": "Revenue growth missed the 26–27% target for FY27, reaching 20.7%.",
+     "cites": [
+      "doc:100:p11",
+      "fact:actual_5"
+     ]
+    }
+   ],
+   "narrative_vs_numbers": [
+    {
+     "id": 1,
+     "cite": "doc:100:p3",
+     "cites": [],
+     "claim": "AUM growth was secular across urban and rural consumer finance, MFI, CV, tractor, and LAS.",
+     "quote": "In general, AUM growth was pretty secular. I'll quickly go through -- I've jumped actually to Panel 52. If you see, the growth is pretty secular",
+     "verdict": "too_early",
+     "evidence": "No facts are available regarding segment-wise AUM growth for urban and rural consumer finance, MFI, CV, tractor, and LAS."
+    },
+    {
+     "id": 2,
+     "cite": "doc:100:p4",
+     "cites": [],
+     "claim": "The company stopped doing short-tenor gold loan schemes in August.",
+     "quote": "We have since August stopped doing short-tenor schemes as a firm.",
+     "verdict": "too_early",
+     "evidence": "No facts are available regarding the cessation of short-tenor gold loan schemes."
+    },
+    {
+     "id": 3,
+     "cite": "doc:100:p5",
+     "cites": [],
+     "claim": "Capital raise is principally driven by the growth story of India and the company.",
+     "quote": "The Board's decision of raising additional capital is principally driven by mainly growth story of India and of the company and its subsidiaries.",
+     "verdict": "too_early",
+     "evidence": "No facts are available regarding the strategic drivers behind capital raise decisions."
+    },
+    {
+     "id": 4,
+     "cite": "doc:101:p4",
+     "cites": [],
+     "claim": "AUM growth was secular and broad-based across segments.",
+     "quote": "AUM growth was secular and broad-based, as you can see from the composition summary later in the deck.",
+     "verdict": "too_early",
+     "evidence": "No facts are available regarding segment-wise AUM composition and broad-based growth."
+    },
+    {
+     "id": 5,
+     "cite": "doc:101:p4",
+     "cites": [],
+     "claim": "Gold loan business sustained strong momentum, growing by 112%.",
+     "quote": "Gold loan business sustained its strong momentum, grew by 112%. Business is now 4% of AUM.",
+     "verdict": "too_early",
+     "evidence": "No facts are available regarding gold loan business momentum or its percentage share of AUM."
+    },
+    {
+     "id": 6,
+     "cite": "doc:101:p4",
+     "cites": [],
+     "claim": "MSME growth slowed down due to proactive risk actions taken since last July.",
+     "quote": "MSME grew by 2%. As you're aware, since last July, we've been pruning business due to sort of risk actions that we've taken.",
+     "verdict": "too_early",
+     "evidence": "No facts are available regarding MSME portfolio growth rates or risk actions."
+    },
+    {
+     "id": 8,
+     "cite": "doc:102:p3",
+     "cites": [],
+     "claim": "MSME portfolio growth remained muted due to proactive risk actions, but management expects worst is behind by June 2026.",
+     "quote": "MSME continue to see muted growth. It grew by 6% only on account of a set of proactive risk actions that we have been taking since Q2 FY'26.",
+     "verdict": "too_early",
+     "evidence": "No facts are available regarding MSME portfolio growth percentages or management expectations for June 2026."
+    },
+    {
+     "id": 9,
+     "cite": "doc:102:p4",
+     "cites": [],
+     "claim": "Captive 2W and 3W financing book will wind down to under INR 1,500 crore by September 2026, aiding credit cost and GNPA.",
+     "quote": "This book will principally just wind down to less than INR 1,500-odd crores by September '26, it will lead to further improvement in GNPA and should result in lower credit cost for FY27.",
+     "verdict": "too_early",
+     "evidence": "No facts are available regarding captive 2W and 3W financing book wind down targets by September 2026."
+    },
+    {
+     "id": 10,
+     "cite": "doc:102:p4",
+     "cites": [],
+     "claim": "Company is pursuing deep FinAI transformation across all aspects of business rather than just use-case deployments.",
+     "quote": "Fundamentally, transformation is about reshaping the business model and in general, covers all aspects of business. I just want to highlight that we are doing transformation",
+     "verdict": "too_early",
+     "evidence": "No facts are available regarding FinAI transformation across business operations."
+    }
+   ]
+  }
+ }
+}
