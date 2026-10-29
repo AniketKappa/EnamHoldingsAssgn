@@ -1,0 +1,18 @@
+QA https://enam-holdings-assgn.vercel.app: 14 screens, 0 console errors, 0 failed requests, 0 API errors, 0 slow API calls
+- light /: HTTP 200, 4289 ms
+- light /?w=7d: HTTP 200, 2378 ms
+- light /?w=30d: HTTP 200, 2516 ms
+- light /alerts: HTTP 200, 2650 ms
+- light /alerts?tab=rules: HTTP 200, 2420 ms
+- light /portfolio: HTTP 200, 3493 ms
+- light /research: HTTP 200, 2936 ms
+- light /dossier?s=LT: HTTP 200, 2390 ms
+- light /company?s=LT: HTTP 200, 2365 ms
+- light /settings: HTTP 200, 2680 ms
+- light /cost: HTTP 200, 3009 ms
+- dark /: HTTP 200, 3136 ms
+- dark /alerts: HTTP 200, 3435 ms
+- dark /dossier?s=LT: HTTP 200, 2699 ms
+Lighthouse 1: {"performance":94,"accessibility":100,"best-practices":100,"seo":100} FCP 1.1 s, LCP 2.6 s, TBT 190 ms, CLS 0.002
+Lighthouse 2: {"performance":97,"accessibility":100,"best-practices":100,"seo":100} FCP 1.1 s, LCP 2.3 s, TBT 120 ms, CLS 0.005
+Lighthouse 3: {"performance":96,"accessibility":100,"best-practices":100,"seo":100} FCP 1.1 s, LCP 2.7 s, TBT 120 ms, CLS 0.002

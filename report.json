@@ -1,0 +1,252 @@
+{
+ "base": "https://enam-holdings-assgn.vercel.app",
+ "at": "2026-10-29T12:52:10.359Z",
+ "pages": [
+  {
+   "scheme": "light",
+   "name": "brief",
+   "path": "/",
+   "status": 200,
+   "ms": 4289,
+   "text": "Thu, 29 Oct\n\n29\nfilings\n6\nevents\n6\nmatter\n\n24h\n3d\n7d\n30d\nCustom\nASIANPAINTAsian Paints\n14:03\nQ2 FY27 results, consolidated\n\nRevenue rose 16.9% YoY to ₹9,977 cr; EBITDA margin fell 201 bps to 15.6%.\n\nRevenue\n₹9,977 cr\n+16.9% YoY\n−5.4% QoQ\nEBITDA\n₹1,557 cr\n+3.6% YoY\n−28.2% QoQ\nMargin 15.6% −201 bps YoY\nProfit before tax\n₹1,478 cr\n+6.2% YoY\n−29.5% QoQ\nNet profit to owners\n₹1,068 cr\n+7.5% YoY\n−30.6% QoQ\nVolume 3.7×\n6 of 6 checks passed\nOpen filing p.12\nAsk\nDone\nTRENTTrent\n16:08\nQ2 FY27 results, consolidated\n\nRevenue rose 21.9% YoY to ₹5,873 cr; EBITDA margin rose 140 bps to 18.4%.\n\nRevenue\n₹5,873 "
+  },
+  {
+   "scheme": "light",
+   "name": "brief-7d",
+   "path": "/?w=7d",
+   "status": 200,
+   "ms": 2378,
+   "text": "Thu, 29 Oct\n\n108\nfilings\n24\nevents\n17\nmatter\n\n24h\n3d\n7d\n30d\nCustom\nASIANPAINTAsian Paints\n14:03\nQ2 FY27 results, consolidated\n\nRevenue rose 16.9% YoY to ₹9,977 cr; EBITDA margin fell 201 bps to 15.6%.\n\nRevenue\n₹9,977 cr\n+16.9% YoY\n−5.4% QoQ\nEBITDA\n₹1,557 cr\n+3.6% YoY\n−28.2% QoQ\nMargin 15.6% −201 bps YoY\nProfit before tax\n₹1,478 cr\n+6.2% YoY\n−29.5% QoQ\nNet profit to owners\n₹1,068 cr\n+7.5% YoY\n−30.6% QoQ\nVolume 3.7×\n6 of 6 checks passed\nOpen filing p.12\nAsk\nDone\nKPITTECHKPIT Technologies\nYesterday 12:52\nQ2 FY27 results, consolidated\n\nRevenue rose 6.5% YoY to ₹1,691 cr; EBITDA margin fell 347 bps"
+  },
+  {
+   "scheme": "light",
+   "name": "brief-30d",
+   "path": "/?w=30d",
+   "status": 200,
+   "ms": 2516,
+   "text": "Thu, 29 Oct\n\n241\nfilings\n63\nevents\n28\nmatter\n\n24h\n3d\n7d\n30d\nCustom\nASIANPAINTAsian Paints\n14:03\nQ2 FY27 results, consolidated\n\nRevenue rose 16.9% YoY to ₹9,977 cr; EBITDA margin fell 201 bps to 15.6%.\n\nRevenue\n₹9,977 cr\n+16.9% YoY\n−5.4% QoQ\nEBITDA\n₹1,557 cr\n+3.6% YoY\n−28.2% QoQ\nMargin 15.6% −201 bps YoY\nProfit before tax\n₹1,478 cr\n+6.2% YoY\n−29.5% QoQ\nNet profit to owners\n₹1,068 cr\n+7.5% YoY\n−30.6% QoQ\nVolume 3.7×\n6 of 6 checks passed\nOpen filing p.12\nAsk\nDone\nKPITTECHKPIT Technologies\nYesterday 12:52\nQ2 FY27 results, consolidated\n\nRevenue rose 6.5% YoY to ₹1,691 cr; EBITDA margin fell 347 bps"
+  },
+  {
+   "scheme": "light",
+   "name": "alerts",
+   "path": "/alerts",
+   "status": 200,
+   "ms": 2650,
+   "text": "Alerts\nInbox\nWatch rules\n\nNotifications are blocked for FINN in this browser's settings. Allow them there, then come back.\n\n19 unread alerts\nMark all read\nASIANPAINT +0.8%, volume 3.7× its 20-day average\nExplained by: Q2 FY27: revenue ₹9,977 cr (+17% YoY), PAT ₹1,068 cr (+8% YoY), filed 14:03\nRule: Volume at 2× its 20-day average\n17:30\nUnread\nASIANPAINT: Q2 FY27: revenue ₹9,977 cr (+17% YoY), PAT ₹1,068 cr (+8% YoY)\nResults · PAT +8% YoY · Margin −201 bps YoY · Volume 3.7×\nRule: Quarterly results\n17:27\nUnread\nINDIGO: Q2 FY27: revenue ₹23,364 cr (+26% YoY), net loss ₹1,879 cr (loss ₹2,582 cr a "
+  },
+  {
+   "scheme": "light",
+   "name": "rules",
+   "path": "/alerts?tab=rules",
+   "status": 200,
+   "ms": 2420,
+   "text": "Alerts\nInbox\nWatch rules\n\nNotifications are blocked for FINN in this browser's settings. Allow them there, then come back.\n\nTell me if…\nAdd\nYour rules\nQuarterly results\nCEO, CFO, MD, chair or auditor changes\nAcquisitions, mergers and stake sales\nEquity raises and buybacks\nCredit rating downgrades\nNew promoter pledges\nAny holding moves 4% in a day\nPrice move\n4%\nVolume at 2× its 20-day average\nVolume multiple\n2×\n\nRules are checked by code after every filing run and after the market close. A model only drafts rules from your words; you confirm each one.\n\nTell me if any holding falls 6%\nany promot"
+  },
+  {
+   "scheme": "light",
+   "name": "portfolio",
+   "path": "/portfolio",
+   "status": 200,
+   "ms": 3493,
+   "text": "Portfolio\n18 holdings\nAdd\nHDFCBANK\n10%\nHDFC Bank\n₹683.30\n−0.3%\n1.0×\n27 Oct: Mr. Anup Bagchi appointed MD & CEO (+1 more change)\nRELIANCE\n10%\nReliance Industries\n₹1,167\n+0.8%\n1.4×\nNo material filings in the last month\nLT\n9%\nLarsen & Toubro\n₹3,837\n+0.9%\n0.8×\n27 Oct: Q2 FY27: revenue ₹78,750 cr (+16% YoY), PAT ₹5,202 cr (+33% YoY)\nBHARTIARTL\n8%\nBharti Airtel\n₹1,972\n+1.2%\n0.7×\n13:42: Notice received from Department of Telecommunications.\nSUNPHARMA\n7%\nSun Pharmaceutical Industries\n₹1,761\n+0.2%\n0.7×\n12 Oct: 10000 Crore raised via issuance of non-convertible debentures.\nMARUTI\n6%\nMaruti Suzuki India\n"
+  },
+  {
+   "scheme": "light",
+   "name": "research",
+   "path": "/research",
+   "status": 200,
+   "ms": 2936,
+   "text": "Research\n\nA dossier for any NSE company, built from its own call transcripts and annual report: what management promised, what it delivered, and the numbers behind both.\n\nBuild\nRecent dossiers\nPOLYCAB Polycab India\n18:20\nETERNAL Eternal\n18:19\nINFY Infosys\n18:18\nBAJFINANCE Bajaj Finance\n18:17\nLT Larsen & Toubro\n67% met18:16\nGood first dossiers\nLT Larsen & Toubro\nOrder inflow, revenue and margin guidance every year\nOpen\nINFY Infosys\nGrowth bands revised every quarter\nOpen\nBAJFINANCE Bajaj Finance\nAUM growth and credit-cost guidance\nOpen\nETERNAL Eternal\nStore counts alongside margin targets\nOpen\n"
+  },
+  {
+   "scheme": "light",
+   "name": "dossier-LT",
+   "path": "/dossier?s=LT",
+   "status": 200,
+   "ms": 2390,
+   "text": "Back\nLarsen & Toubro\n\nLT, Capital goods, EPC\n\n₹3,801\nMarket cap ₹5.23 lakh cr\nP/E 27.7\n\nBuilt 18:16 from 5 call documents and the FY26 annual report. Rebuild\n\nWhat matters now\nRevenue grew 15.8% YoY to ₹78,750 cr in Q2 FY27, while net profit grew 27.2% YoY.\n2 figures\nManagement delivered 20% order inflow growth in FY26 against a target of at least 10%.\np.9\nManagement missed the FY26 revenue growth target of 15% by posting 11.8% growth.\np.8\ntable\nSay vs do\nLast 5 calls\n\n67%\n2 of 3 resolved promises met, 19 still open\n\nMet counts delivered in full and near misses at half. Statuses are computed b"
+  },
+  {
+   "scheme": "light",
+   "name": "company-LT",
+   "path": "/company?s=LT",
+   "status": 200,
+   "ms": 2365,
+   "text": "Back\nLarsen & Toubro\n\nLT, Capital goods, EPC, market cap ₹5.23 lakh cr\n\n₹3,837\n+0.9%\nVolume 0.8× average\n\n120 sessions. Dots mark material filings; tap one to open it.\n\nOpen dossier\nRemove from portfolio\n\nDossier built 18:16.\n\nRecent events\nResults\n27 Oct\nQ2 FY27: revenue ₹78,750 cr (+16% YoY), PAT ₹5,202 cr (+33% YoY)\nOrder win\n27 Oct\nSecured major orders for Dhaka Metro transit project in Bangladesh.\nOrder win\n21 Oct\nSecured large orders in New Delhi and Andhra Pradesh.\nOrder win\n19 Oct\nCommenced initial activities for New Tashkent International Airport project.\nResults date\n13 Oct\nLarsen & "
+  },
+  {
+   "scheme": "light",
+   "name": "settings",
+   "path": "/settings",
+   "status": 200,
+   "ms": 2680,
+   "text": "Back to the Brief\nSettings\nAlerts on this device\n\nNotifications are blocked for FINN in this browser's settings. Allow them there, then come back.\n\nThresholds and the categories that alert you are set as watch rules.\n\nData\n\nFilings checked 18:15; prices at 17:18. Filings come from BSE every 10 minutes from 07:00 to midnight and hourly overnight; if that clock is late, the next visit catches up in the background. Prices are end of day from Yahoo Finance, with BSE as the fallback.\n\nHow FINN decides\n\nFINN groups the filings of one corporate action into a single event, then scores each event from "
+  },
+  {
+   "scheme": "light",
+   "name": "cost",
+   "path": "/cost",
+   "status": 200,
+   "ms": 3009,
+   "text": "Cost and efficiency\nSpent\n₹0\nModel calls\n433\nFrom cache\n2%\n\nFINN runs on free tiers. At paid rates, everything so far would have cost about $0.98. Of 247 filings, 98% were classified with no model call: by rules, or by reading the filing's own subject line.\n\nBy task\nTask\tCalls\tCached\tTokens in\nRead call transcripts\t164\t0\t765k\nSearch a person's background\t67\t0\t0\nRead management changes\t65\t0\t34k\nCheck claims against numbers\t45\t5\t21k\nWrite the dossier summary\t42\t2\t38k\nRead annual reports\t25\t0\t123k\nRead results statements\t15\t0\t12k\nOne-line summaries\t6\t0\t49k\nClassify ambiguous filings\t4\t0\t2k\nBy mod"
+  },
+  {
+   "scheme": "dark",
+   "name": "brief",
+   "path": "/",
+   "status": 200,
+   "ms": 3136,
+   "text": "Thu, 29 Oct\n\n29\nfilings\n6\nevents\n6\nmatter\n\n24h\n3d\n7d\n30d\nCustom\nASIANPAINTAsian Paints\n14:03\nQ2 FY27 results, consolidated\n\nRevenue rose 16.9% YoY to ₹9,977 cr; EBITDA margin fell 201 bps to 15.6%.\n\nRevenue\n₹9,977 cr\n+16.9% YoY\n−5.4% QoQ\nEBITDA\n₹1,557 cr\n+3.6% YoY\n−28.2% QoQ\nMargin 15.6% −201 bps YoY\nProfit before tax\n₹1,478 cr\n+6.2% YoY\n−29.5% QoQ\nNet profit to owners\n₹1,068 cr\n+7.5% YoY\n−30.6% QoQ\nVolume 3.7×\n6 of 6 checks passed\nOpen filing p.12\nAsk\nDone\nTRENTTrent\n16:08\nQ2 FY27 results, consolidated\n\nRevenue rose 21.9% YoY to ₹5,873 cr; EBITDA margin rose 140 bps to 18.4%.\n\nRevenue\n₹5,873 "
+  },
+  {
+   "scheme": "dark",
+   "name": "alerts",
+   "path": "/alerts",
+   "status": 200,
+   "ms": 3435,
+   "text": "Alerts\nInbox\nWatch rules\n\nNotifications are blocked for FINN in this browser's settings. Allow them there, then come back.\n\n19 unread alerts\nMark all read\nASIANPAINT +0.8%, volume 3.7× its 20-day average\nExplained by: Q2 FY27: revenue ₹9,977 cr (+17% YoY), PAT ₹1,068 cr (+8% YoY), filed 14:03\nRule: Volume at 2× its 20-day average\n17:30\nUnread\nASIANPAINT: Q2 FY27: revenue ₹9,977 cr (+17% YoY), PAT ₹1,068 cr (+8% YoY)\nResults · PAT +8% YoY · Margin −201 bps YoY · Volume 3.7×\nRule: Quarterly results\n17:27\nUnread\nINDIGO: Q2 FY27: revenue ₹23,364 cr (+26% YoY), net loss ₹1,879 cr (loss ₹2,582 cr a "
+  },
+  {
+   "scheme": "dark",
+   "name": "dossier-LT",
+   "path": "/dossier?s=LT",
+   "status": 200,
+   "ms": 2699,
+   "text": "Back\nLarsen & Toubro\n\nLT, Capital goods, EPC\n\n₹3,801\nMarket cap ₹5.23 lakh cr\nP/E 27.7\n\nBuilt 18:16 from 5 call documents and the FY26 annual report. Rebuild\n\nWhat matters now\nRevenue grew 15.8% YoY to ₹78,750 cr in Q2 FY27, while net profit grew 27.2% YoY.\n2 figures\nManagement delivered 20% order inflow growth in FY26 against a target of at least 10%.\np.9\nManagement missed the FY26 revenue growth target of 15% by posting 11.8% growth.\np.8\ntable\nSay vs do\nLast 5 calls\n\n67%\n2 of 3 resolved promises met, 19 still open\n\nMet counts delivered in full and near misses at half. Statuses are computed b"
+  }
+ ],
+ "errors": [],
+ "failed": [],
+ "api": [
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/rules",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/portfolio",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/dossiers",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/dossier?symbol=LT",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/company?symbol=LT",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/status",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/cost",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/events?key=ASIANPAINT%3Aresults%3A2026-09-30",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/alerts",
+   "status": 200,
+   "ms": -1
+  },
+  {
+   "url": "/api/dossier?symbol=LT",
+   "status": 200,
+   "ms": -1
+  }
+ ]
+}
