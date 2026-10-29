@@ -123,7 +123,7 @@ export async function runTick(opts: { deadlineMs: number; force?: TaskName[]; sk
     if (await want("verify") && Date.now() < deadline - 40_000) ran.verify = await run("verify", () => verifyResults(deadline - 30_000).then((n) => ({ verified: n })));
     if (await want("digest")) ran.digest = await run("digest", () => pushDigest().then((n) => ({ sent: n })));
     if (await want("jobs") && Date.now() < deadline - 45_000) ran.jobs = await run("jobs", () => drainJobs(deadline - 15_000));
-    if (await want("prebuild") && Date.now() < deadline - 30_000) ran.prebuild = await run("prebuild", () => queuePrebuilds(3));
+    if (await want("prebuild") && Date.now() < deadline - 30_000) ran.prebuild = await run("prebuild", () => queuePrebuilds(1)); // one a night: free model quotas are small
     await db()`insert into kv (key, value, updated_at) values ('last_tick', ${db().json({ at: new Date().toISOString(), ran: Object.keys(ran) })}, now())
       on conflict (key) do update set value = excluded.value, updated_at = now()`;
     return ran;

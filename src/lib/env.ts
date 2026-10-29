@@ -26,10 +26,11 @@ export const env = {
   appUrl: () => str("APP_URL") || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"),
   models: {
     // Gemini 2.5 models are listed but "no longer available to new users" (404), so they are not defaults.
+    // Free-tier daily quotas are small per model, so every chain ends in the Flash-Lite models.
     t1: () => list("MODEL_T1", ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]),
-    t2: () => list("MODEL_T2", ["gemini-3.6-flash", "gemini-3.8-flash", "gemini-3.5-flash-lite"]),
-    t3: () => list("MODEL_T3", ["gemini-3.8-flash", "gemini-3.6-flash"]),
-    grounded: () => list("MODEL_GROUNDED", ["gemini-3.6-flash", "gemini-3.8-flash", "gemini-3.5-flash-lite"]),
+    t2: () => list("MODEL_T2", ["gemini-3.6-flash", "gemini-3.8-flash", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]),
+    t3: () => list("MODEL_T3", ["gemini-3.8-flash", "gemini-3.6-flash", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]),
+    grounded: () => list("MODEL_GROUNDED", ["gemini-3.6-flash", "gemini-3.8-flash", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]),
     groqT1: () => str("GROQ_MODEL_T1", "openai/gpt-oss-20b"),
   },
 };

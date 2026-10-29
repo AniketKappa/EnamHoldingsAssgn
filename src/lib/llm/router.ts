@@ -200,6 +200,38 @@ async function withSlot<T>(provider: string, fn: () => Promise<T>): Promise<T> {
 
 const deadModels = new Set<string>();
 
+// A model whose free daily quota is spent is skipped until the quota resets (midnight
+// Pacific), by every process: the mark lives in kv, read at most once a minute.
+let spent: { until: Record<string, string>; read: number } = { until: {}, read: 0 };
+
+/** Next midnight in Pacific time (UTC-7 until 1 Nov 2026, UTC-8 after), as an ISO instant. */
+export function nextQuotaReset(now = new Date()): string {
+  const offsetH = now < new Date("2026-11-01T09:00:00Z") ? 7 : 8;
+  const pt = new Date(now.getTime() - offsetH * 3600_000);
+  const next = Date.UTC(pt.getUTCFullYear(), pt.getUTCMonth(), pt.getUTCDate() + 1) + offsetH * 3600_000;
+  return new Date(next).toISOString();
+}
+
+async function spentModels(): Promise<Set<string>> {
+  if (hasDb() && Date.now() - spent.read > 60_000) {
+    try {
+      const rows = await db()`select value from kv where key = 'llm_quota_spent'`;
+      spent = { until: (rows[0]?.value as Record<string, string>) ?? {}, read: Date.now() };
+    } catch { spent.read = Date.now(); }
+  }
+  const now = new Date().toISOString();
+  return new Set(Object.entries(spent.until).filter(([, u]) => u > now).map(([m]) => m));
+}
+
+async function markSpent(model: string) {
+  spent.until[model] = nextQuotaReset();
+  if (!hasDb()) return;
+  try {
+    await db()`insert into kv (key, value, updated_at) values ('llm_quota_spent', ${db().json({ [model]: spent.until[model] })}, now())
+      on conflict (key) do update set value = kv.value || excluded.value, updated_at = now()`;
+  } catch { /* in-process mark still applies */ }
+}
+
 function statusOf(e: unknown): number | undefined {
   const any = e as { status?: number; code?: number; message?: string };
   if (typeof any?.status === "number") return any.status;
@@ -233,7 +265,9 @@ export async function llm<T>(req: LlmRequest<T>): Promise<LlmResult<T>> {
     } catch { /* cache miss on error */ }
   }
 
-  const chain = chainFor(cfg.tier).filter((m) => !deadModels.has(m));
+  const skip = await spentModels();
+  let chain = chainFor(cfg.tier).filter((m) => !deadModels.has(m) && !skip.has(m));
+  if (!chain.length) chain = chainFor(cfg.tier).filter((m) => !deadModels.has(m)); // try anyway rather than fail silently
   let lastErr: unknown = new LlmUnavailable("No model configured");
   for (const entry of chain) {
     const isGroq = entry.startsWith("groq:");
@@ -273,6 +307,7 @@ export async function llm<T>(req: LlmRequest<T>): Promise<LlmResult<T>> {
         await logCall({ task: req.task, model, provider, tokensIn: 0, tokensOut: 0, latency: Date.now() - t0, ok: false, cacheHit: false, error: String((e as Error)?.message ?? e).slice(0, 300), ref: req.ref });
         if (e instanceof LlmUnavailable) break;
         if (st === 404) deadModels.add(entry); // retired or misspelt: skip it for the rest of this process
+        if (st === 429 && /PerDay|per day|daily/i.test(String((e as Error)?.message ?? ""))) { await markSpent(entry); break; }
         if (st === 429) { await new Promise((r) => setTimeout(r, 2000 * (attempt + 1))); continue; }
         if (st && st >= 500 && attempt === 0) { await new Promise((r) => setTimeout(r, 1500)); continue; }
         break; // 4xx (model not found, bad request): next model
