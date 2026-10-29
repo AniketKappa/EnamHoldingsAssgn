@@ -26,7 +26,7 @@ const STATUS: Record<Status, { label: string; tone: "up" | "down" | "accent" | "
   off_track: { label: "Off track", tone: "down" },
   revised: { label: "Revised", tone: "accent" },
   pending: { label: "Pending", tone: "neutral" },
-  unverifiable: { label: "Can't verify", tone: "neutral" },
+  unverifiable: { label: "Can't check", tone: "neutral" },
   basis_differs: { label: "Basis differs", tone: "outline" },
 };
 
@@ -405,11 +405,11 @@ function LedgerItem({ r, onOpen }: { r: LedgerRow; onOpen: (o: Opened) => void }
         <Chip tone={s.tone} className="shrink-0">{s.label}</Chip>
       </div>
       <div className="num mt-1 text-sm">
-        <span className="text-ink-2">Said </span><span className="text-ink">{r.target_text}</span>
+        {r.target_text === "Qualitative" ? <span className="text-ink-2">A direction, no number</span> : <><span className="text-ink-2">Said </span><span className="text-ink">{r.target_text}</span></>}
         {r.revised_to ? <><span className="text-ink-2"> then </span><span className="text-ink">{r.revised_to.text}</span><span className="text-ink-2"> in the {r.revised_to.said_period} call</span><Cites cites={[r.revised_to.cite]} onOpen={onOpen} /></> : null}
         {r.actual ? <><span className="text-ink-2">; actual </span><span className="font-medium text-ink">{actualText(r.actual)}</span><span className="text-ink-2"> ({r.actual.label})</span><Cites cites={[r.actual.cite]} onOpen={onOpen} /></> : null}
       </div>
-      {r.note && !r.actual && !r.revised_to ? <p className="mt-0.5 text-xs text-ink-3">{r.note}</p> : null}
+      {r.note && !r.actual && !r.revised_to && r.target_text !== "Qualitative" ? <p className="mt-0.5 text-xs text-ink-3">{r.note}</p> : null}
       <button type="button" onClick={() => onOpen({ cite: r.cite, quote: r.quote })} className="serif mt-1.5 block text-left text-sm text-ink-2">
         “{r.quote}”{r.speaker ? <span className="font-sans text-xs text-ink-3">, {r.speaker}</span> : null}
         <span className="num ml-1 font-sans text-[11px] text-accent">p.{r.cite.split(":p")[1]}</span>
