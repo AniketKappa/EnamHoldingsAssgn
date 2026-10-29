@@ -40,7 +40,7 @@ export interface LedgerItem extends GuidanceIn {
   horizon_label: string;
   status: Status;
   actual: Actual | null;
-  revised_to: { low: number | null; high: number | null; direction: GuidanceIn["direction"]; said_period: string; doc_id: number; page: number } | null;
+  revised_to: { low: number | null; high: number | null; direction: GuidanceIn["direction"]; unit: GuidanceIn["unit"]; said_period: string; doc_id: number; page: number } | null;
   note: string | null;
   counts: boolean;         // included in the credibility score
 }
@@ -197,7 +197,8 @@ function keyOf(g: GuidanceIn, h: Horizon) { return `${g.metric}|${h.label}|${g.b
 
 export function buildLedger(guidance: GuidanceIn[], kpis: KpiIn[], f: FactsBundle): { items: LedgerItem[]; credibility: Credibility } {
   const sorted = [...guidance].sort((a, b) => a.said_on.localeCompare(b.said_on) || a.id - b.id);
-  const nums = (x: GuidanceIn) => [...new Set([x.target_low, x.target_high].filter((v): v is number => v !== null))].sort((a, b) => a - b).join("|");
+  // Compared in one unit: 25 bps and 0.25% are the same target.
+  const nums = (x: GuidanceIn) => [...new Set([x.target_low, x.target_high].filter((v): v is number => v !== null).map((v) => Math.round((x.unit === "bps" ? v / 100 : v) * 1e4) / 1e4))].sort((a, b) => a - b).join("|");
   // Statements of one target, oldest first. A reiteration ("grow at 10%", then "will exceed the 10%
   // guidance") is the same number again; a revision is the next statement with different numbers.
   const chain = new Map<string, GuidanceIn[]>();
@@ -209,7 +210,8 @@ export function buildLedger(guidance: GuidanceIn[], kpis: KpiIn[], f: FactsBundl
   const nextOf = (g: GuidanceIn, k: string): { next: GuidanceIn | null; superseded: boolean } => {
     const list = chain.get(k) ?? [];
     const i = list.indexOf(g);
-    const later = list.slice(i + 1);
+    // Only a later call revises a target; two figures in one call are two targets (group and a subsidiary).
+    const later = list.slice(i + 1).filter((x) => x.doc_id !== g.doc_id);
     const diff = later.find((x) => nums(x) !== nums(g)) ?? null;
     // Shown once per run of equal numbers: at the run's last statement.
     const sameNext = later[0] && nums(later[0]) === nums(g);
@@ -226,7 +228,7 @@ export function buildLedger(guidance: GuidanceIn[], kpis: KpiIn[], f: FactsBundl
     const { next, superseded } = nextOf(g, keyOf(g, h));
     if (superseded) continue;               // reiterated later: shown at the latest statement of the run
     if (next) {
-      items.push({ ...base, status: "revised", revised_to: { low: next.target_low, high: next.target_high, direction: next.direction, said_period: next.said_period, doc_id: next.doc_id, page: next.page } });
+      items.push({ ...base, status: "revised", revised_to: { low: next.target_low, high: next.target_high, direction: next.direction, unit: next.unit, said_period: next.said_period, doc_id: next.doc_id, page: next.page } });
       continue;
     }
     if (h.kind === "multi" || h.kind === "unknown") {

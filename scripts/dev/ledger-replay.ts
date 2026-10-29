@@ -54,7 +54,7 @@ for (const symbol of symbols) {
   for (const g of ng) if (g.checks.length) console.log(`  · #${g.id} ${g.said_period}: ${g.checks.join("; ")}${g.scope.scope === "segment" ? `; scope ${g.scope.label}` : ""}`);
   for (const it of items) {
     const a = it.actual ? `${it.actual.value}${it.actual.unit === "pct" ? "%" : ` ${it.actual.unit}`} (${it.actual.label}; ${it.actual.cite})` : "";
-    const rev = it.revised_to ? ` -> ${targetText({ target_low: it.revised_to.low, target_high: it.revised_to.high, unit: it.unit, direction: it.revised_to.direction })} (${it.revised_to.said_period})` : "";
+    const rev = it.revised_to ? ` -> ${targetText({ target_low: it.revised_to.low, target_high: it.revised_to.high, unit: it.revised_to.unit, direction: it.revised_to.direction })} (${it.revised_to.said_period})` : "";
     const scope = it.scope?.scope === "segment" ? ` [${it.scope.label}]` : "";
     console.log(`  #${it.id} ${it.said_period} | ${metricLabel(it.metric)}${scope}, ${it.horizon_label} | ${targetText(it)}${rev} | ${it.status}${a ? ` | actual ${a}` : ""}${it.note ? ` | ${it.note}` : ""}`);
   }

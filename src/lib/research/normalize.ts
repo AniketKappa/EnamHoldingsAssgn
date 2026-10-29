@@ -138,7 +138,7 @@ export function resolveHorizon(g: Pick<GuidanceIn, "quote" | "label_raw" | "hori
     const pick = targets.find((m) => /^(by|for|in|during|of|before)$/.test(m.prep)) ?? targets[targets.length - 1];
     return { horizon: periodLabel(pick.p), source: "quote" };
   }
-  if (MULTI.test(g.quote)) return { horizon: "Medium term", source: "quote" };
+  if (MULTI.test(g.quote) || MULTI.test(g.label_raw)) return { horizon: "Medium term", source: "quote" };
   const next = NEXT_YEAR.test(g.quote), cur = THIS_YEAR.test(g.quote);
   if (next || cur) {
     const nextFy = call.q === 4 ? call.inProgress : call.fy + 1;   // after a year closes, "next year" is the one just begun
@@ -160,10 +160,11 @@ export function resolveHorizon(g: Pick<GuidanceIn, "quote" | "label_raw" | "hori
     const fy = qi > call.q ? call.fy : call.fy + 1;
     return { horizon: periodLabel(qi === 4 ? { kind: "fy", fy } : { kind: "quarter", fy, q: qi }), source: "relative" };
   }
+  // The model reads more than the quote; when it saw a multi-year target, a year named elsewhere on the page does not override it.
+  if (parsed === "multi") return { horizon: "Medium term", source: "model" };
   // A heading on the page ("guidance on the various parameters for FY '26:") carries to the lines under it.
   const ctx = periodMentions(before).filter((m) => m.p.kind === "fy" && endOrd(m.p) > reported && !/^(from|vs\.?|versus|than|since|over)$/.test(m.prep));
   if (ctx.length) return { horizon: periodLabel(ctx[ctx.length - 1].p), source: "context" };
-  if (parsed === "multi") return { horizon: "Medium term", source: "model" };
   if (model) {
     if (endOrd(model) <= reported) return null;                        // about a period already reported: not a promise
     if (model.kind !== "fy" || model.fy === call.inProgress) return { horizon: periodLabel(model), source: "model" };
@@ -258,6 +259,9 @@ const NEW_SUBJECT = /^\s*(?:(?:and|lastly|finally|now)[, ]+)?(?:on|coming to|mov
 
 export function scopeOf(quote: string, label: string, before = "", metric = ""): Scope {
   const own = `${quote} ${label}`;
+  // A named part of the business wins ("the Projects, Products and Manufacturing overall portfolio");
+  // "group" or "overall" only overrides a generic word like "segment".
+  for (const [re, l] of SEGMENT_NAMED) if (re.test(own)) return { scope: "segment", label: l };
   if (COMPANY.test(own)) return { scope: "company" };
   const seg = segmentIn(own);
   const lead = NEW_SUBJECT.test(quote) ? "" : lastSentences(before, 2);
@@ -305,6 +309,8 @@ export function fixMetric(metric: string, label: string, quote: string, lender: 
   }
   if (/\bfranchise\b/i.test(text) && m === "store_count") return "customer_franchise";
   if (lender && m === "revenue_growth" && /\bAUM\b|assets under management|loan book|book growth/i.test(text)) return "aum_growth";
+  // A lender's unqualified "growth" guidance is balance-sheet growth, not revenue.
+  if (lender && m === "revenue_growth" && !/revenue|top ?line|income|\bNII\b|sales|fee/i.test(text)) return "aum_growth";
   const need: Record<string, RegExp> = {
     net_debt: /debt|borrowing|leverage|net cash|cash surplus|gearing/i,
     ebitda_margin: /margin|EBITDA|EBIT\b|operating profit/i,
@@ -444,7 +450,7 @@ function normalizeEach(items: GuidanceIn[], opts: NormalizeOpts): GuidanceOut[] 
     const h = resolveHorizon(g, call, before);
     if (!h) continue;
     if (h.horizon !== (g.horizon ?? "").trim()) checks.push(`horizon ${g.horizon || "none"} -> ${h.horizon} (${h.source})`);
-    const metric = fixMetric(g.metric, g.label_raw, g.quote, opts.lender);
+    let metric = fixMetric(g.metric, g.label_raw, g.quote, opts.lender);
     if (metric !== g.metric) checks.push(`metric ${g.metric} -> ${metric}`);
     let { target_low: lo, target_high: hi, direction } = g;
     let unit = g.unit;
@@ -457,7 +463,18 @@ function normalizeEach(items: GuidanceIn[], opts: NormalizeOpts): GuidanceOut[] 
         const a = fixAmounts(lo, hi, unit, g.quote, metric);
         if (a.low !== lo || a.high !== hi || a.unit !== unit) checks.push(`amount ${lo}-${hi} ${unit} -> ${a.low}-${a.high} ${a.unit}`);
         lo = a.low; hi = a.high; unit = a.unit; raw = a.text;
+        // "25 to 40 basis points" read as 0.25–0.4%: keep the speaker's unit.
+        if (unit === "pct" && /basis points?|\bbps\b/i.test(g.quote) && /improve|reduc|expan|increase|declin|change|lower|higher/i.test(g.quote) && [lo, hi].every((v) => v === null || (Math.abs(v) < 5 && new RegExp(String.raw`(?<![\d.])${Math.round(v * 100)}(?![\d.])`).test(g.quote)))) {
+          checks.push(`unit pct -> bps`);
+          lo = lo === null ? null : Math.round(lo * 100); hi = hi === null ? null : Math.round(hi * 100); unit = "bps";
+        }
       }
+    }
+    // A count is not a growth rate: "60 million to 62 million new loans".
+    if (/_growth$/.test(metric) && unit === "count") {
+      const m2 = `other:${slug(g.label_raw.replace(/[\d.,%]+|\bmillion\b|\bbetween\b|\bto\b/gi, " ")).split("_").filter(Boolean).slice(0, 3).join("_") || "count"}`;
+      checks.push(`metric ${metric} -> ${m2}`);
+      metric = m2;
     }
     let scope = scopeOf(g.quote, g.label_raw, before, metric);
     if (scope.scope === "segment" && metricNames(metric, scope.label)) scope = { scope: "company" };

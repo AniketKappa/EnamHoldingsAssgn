@@ -363,7 +363,7 @@ async function assemble(state: JobState, jobId: string): Promise<{ dossier: Doss
       id: it.id, call: `${it.said_period} call`, said_on: it.said_on, metric: it.metric, metric_label: metricLabel(it.metric), label_raw: it.label_raw,
       scope: it.scope?.scope === "segment" ? it.scope.label : null,
       target_text: targetText(it), horizon: it.horizon_label, basis: it.basis, status: it.status, actual,
-      revised_to: it.revised_to ? { text: targetText({ target_low: it.revised_to.low, target_high: it.revised_to.high, unit: it.unit, direction: it.revised_to.direction, target_text_raw: it.target_text_raw }), said_period: it.revised_to.said_period, cite: citeOf(it.revised_to.doc_id, it.revised_to.page) } : null,
+      revised_to: it.revised_to ? { text: targetText({ target_low: it.revised_to.low, target_high: it.revised_to.high, unit: it.revised_to.unit, direction: it.revised_to.direction, target_text_raw: it.target_text_raw }), said_period: it.revised_to.said_period, cite: citeOf(it.revised_to.doc_id, it.revised_to.page) } : null,
       note: it.note, quote: it.quote, cite: citeOf(it.doc_id, it.page), speaker: it.speaker,
     };
   });

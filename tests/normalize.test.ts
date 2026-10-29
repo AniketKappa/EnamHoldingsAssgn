@@ -214,4 +214,22 @@ describe("the ledger after code's checks", () => {
     expect(ng).toHaveLength(1);
     expect(ng[0]).toMatchObject({ metric: "other:losses", direction: "qualitative", target_low: null });
   });
+
+  it("keeps two figures from one call as two targets, not a revision (group and a subsidiary)", () => {
+    const raw = [
+      g(1, "Q4 FY26", "2026-05-05", "revenue_growth", 12, 15, "revenue growth of 12% to 15%", { horizon: "medium_term", label_raw: "revenue CAGR" }),
+      g(1, "Q4 FY26", "2026-05-05", "revenue_growth", 13, 15, "The Lakshya L31 targets 13% to 15% revenue CAGR growth for over five years", { id: 2, horizon: "medium_term", label_raw: "LTTS revenue CAGR" }),
+    ];
+    const { items } = buildLedger(normalizeGuidance(raw, { lender: false }), [], facts);
+    expect(items.map((x) => x.status)).toEqual(["pending", "pending"]);
+  });
+
+  it("reads a lender's unqualified growth guidance as AUM growth, and basis-point improvements in bps", () => {
+    const raw = [
+      g(1, "Q2 FY27", "2026-10-20", "revenue_growth", 26, 27, "I would say probably between 26%, 27% growth we should deliver now on a full year basis.", { label_raw: "full year growth" }),
+      g(2, "Q2 FY27", "2026-10-20", "ebitda_margin", 0.25, 0.4, "We remain pretty comfortable place to deliver a 25 to 40 basis point improvement in FY27 on opex-to-NTI.", { label_raw: "opex-to-NTI improvement" }),
+    ];
+    const ng = normalizeGuidance(raw, { lender: true });
+    expect(ng.map((x) => [x.metric, x.unit, x.target_low, x.target_high])).toEqual([["aum_growth", "pct", 26, 27], ["other:opex_to_nti", "bps", 25, 40]]);
+  });
 });
