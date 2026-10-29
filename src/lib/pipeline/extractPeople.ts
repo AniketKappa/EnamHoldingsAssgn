@@ -141,6 +141,31 @@ export async function extractPeopleEvent(eventKey: string): Promise<{ people: Pe
   return { people, primary_index: primaryIndex };
 }
 
+/** Re-derive the code-decided parts of stored person cards (flags, lead change, title) after a rule change. No model calls. */
+export async function refreshPeopleCards(): Promise<number> {
+  const sql = db();
+  const rows = await sql`select event_key, detail from events where category = 'management_change' and status = 'done' and detail ? 'people'`;
+  let n = 0;
+  for (const r of rows) {
+    const detail = r.detail as { people: PersonDetail[]; primary_index?: number };
+    if (!detail.people?.length) continue;
+    for (const p of detail.people) {
+      const keep = p.flags.filter((f) => f === "Leadership churn");
+      p.flags = [...flagsFor(p), ...keep];
+    }
+    const primary = primaryChange(detail.people);
+    const idx = Math.max(0, detail.people.findIndex((p) => p === primary));
+    const pc = detail.people[idx];
+    const others = detail.people.length - 1;
+    const title = `${peopleTitle(pc)}${others > 0 ? ` (+${others} more change${others > 1 ? "s" : ""})` : ""}`;
+    const redFlags = [...new Set(detail.people.flatMap((p) => p.flags))];
+    await sql`update events set subtype = ${peopleSubtype(pc)}, title = ${title}, red_flags = ${sql.json(redFlags)},
+      detail = ${sql.json({ ...detail, primary_index: idx } as never)}, updated_at = now() where event_key = ${String(r.event_key)}`;
+    n++;
+  }
+  return n;
+}
+
 /**
  * Backgrounds whose search failed (usually the free grounding quota) are tried again
  * on later runs, up to three times, for top-role appointments of the last week.

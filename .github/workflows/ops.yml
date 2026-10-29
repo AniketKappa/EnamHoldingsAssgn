@@ -7,7 +7,7 @@ on:
         description: "Command"
         required: true
         type: choice
-        options: [tick, process, reclassify, prices, verify, calendar, eval, diag, taxonomy, status, prebuild]
+        options: [tick, process, rescore, reclassify, prices, verify, calendar, eval, diag, taxonomy, status, prebuild]
       minutes:
         description: "Time budget in minutes"
         required: false

@@ -298,6 +298,16 @@ async function main() {
       ].join("\n"));
       break;
     }
+    case "rescore": {
+      // After a scoring or people-rule change: re-derive person cards, then rescore 30 days of events. No model calls.
+      const { refreshPeopleCards } = await import("../src/lib/pipeline/extractPeople");
+      const { rescoreEvent } = await import("../src/lib/pipeline/events");
+      const people = await refreshPeopleCards();
+      const evs = await sql`select event_key from events where first_filed_at > now() - interval '35 days'`;
+      for (const e of evs) await rescoreEvent(String(e.event_key));
+      summary(`Rescore: ${people} person cards refreshed, ${evs.length} events rescored`);
+      break;
+    }
     case "reclassify": {
       // Filings that fell back to the default (no model answer) get a second pass: their
       // single-filing events (and the alerts about them) go, and the filings return to 'new'.
