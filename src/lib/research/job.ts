@@ -12,6 +12,7 @@ import { pickDocuments, type DocPick } from "./docs";
 import { extractTranscript, extractAnnualReport } from "./extractDocs";
 import { computeFacts, type Fact } from "./facts";
 import { buildLedger, targetText, type GuidanceIn, type KpiIn } from "./ledger";
+import { normalizeGuidance, normalizeKpis, textBefore } from "./normalize";
 import { judgeClaims } from "./judge";
 import { synthesize } from "./synthesize";
 import type { GroundingContext } from "./validate";
@@ -268,6 +269,37 @@ async function loadExtracts(state: JobState) {
   return { guidance, kpis, claims, rows };
 }
 
+/** Page texts by "doc:page". */
+async function loadPages(pairs: [number, number][]): Promise<Map<string, string>> {
+  const sql = db();
+  const out = new Map<string, string>();
+  const uniq = [...new Set(pairs.filter(([a, b]) => a > 0 && b > 0).map(([a, b]) => `${a}:${b}`))].map((k) => k.split(":").map(Number));
+  for (let i = 0; i < uniq.length; i += 200) {
+    const chunk = uniq.slice(i, i + 200);
+    const res = await sql`select p.document_id, p.page_no, p.text from doc_pages p
+      join (values ${sql(chunk.map(([a, b]) => [String(a), String(b)]) as never)}) as v(doc, page)
+        on p.document_id = v.doc::bigint and p.page_no = v.page::int`;
+    for (const r of res) out.set(`${r.document_id}:${r.page_no}`, String(r.text));
+  }
+  return out;
+}
+
+/** The extracts after code's checks (normalize.ts): horizons, units, metric keys and scope re-derived from the quotes. */
+async function normalizedExtracts(state: JobState, lender: boolean) {
+  const raw = await loadExtracts(state);
+  const pages = await loadPages(raw.guidance.flatMap((g) => [[g.doc_id, g.page], [g.doc_id, g.page - 1], [g.doc_id, g.page + 1]] as [number, number][]));
+  const before = (g: { doc_id: number; page: number; quote: string }) => {
+    for (const p of [g.page, g.page - 1, g.page + 1]) {
+      const t = pages.get(`${g.doc_id}:${p}`);
+      const b = t ? textBefore(g.quote, t) : "";
+      if (b) return b;
+    }
+    return "";
+  };
+  const periods = new Map(state.docs.filter((d) => d.id).map((d) => [d.id!, d.period_label] as [number, string]));
+  return { ...raw, guidance: normalizeGuidance(raw.guidance, { lender, before }), kpis: normalizeKpis(raw.kpis, { lender, periods }) };
+}
+
 async function groundingContext(state: JobState, facts: Record<string, Fact>, d?: DossierV1): Promise<GroundingContext> {
   const sql = db();
   // Only pages that can be cited: the ones the extracts point at, plus the annual-report pages read.
@@ -310,7 +342,7 @@ async function assemble(state: JobState, jobId: string): Promise<{ dossier: Doss
   const sc = await screenerFor(state.symbol, 24);
   const fb = computeFacts(sc);
   const facts = { ...fb.facts };
-  const { guidance, kpis, rows } = await loadExtracts(state);
+  const { guidance, kpis, rows } = await normalizedExtracts(state, fb.lender);
   const ledger = buildLedger(guidance, kpis, fb);
   // Table-derived actuals become citable facts.
   const items: LedgerRow[] = ledger.items.map((it) => {
@@ -329,8 +361,9 @@ async function assemble(state: JobState, jobId: string): Promise<{ dossier: Doss
     }
     return {
       id: it.id, call: `${it.said_period} call`, said_on: it.said_on, metric: it.metric, metric_label: metricLabel(it.metric), label_raw: it.label_raw,
+      scope: it.scope?.scope === "segment" ? it.scope.label : null,
       target_text: targetText(it), horizon: it.horizon_label, basis: it.basis, status: it.status, actual,
-      revised_to: it.revised_to ? { text: targetText({ target_low: it.revised_to.low, target_high: it.revised_to.high, unit: it.unit, direction: it.direction }), said_period: it.revised_to.said_period, cite: citeOf(it.revised_to.doc_id, it.revised_to.page) } : null,
+      revised_to: it.revised_to ? { text: targetText({ target_low: it.revised_to.low, target_high: it.revised_to.high, unit: it.unit, direction: it.revised_to.direction, target_text_raw: it.target_text_raw }), said_period: it.revised_to.said_period, cite: citeOf(it.revised_to.doc_id, it.revised_to.page) } : null,
       note: it.note, quote: it.quote, cite: citeOf(it.doc_id, it.page), speaker: it.speaker,
     };
   });

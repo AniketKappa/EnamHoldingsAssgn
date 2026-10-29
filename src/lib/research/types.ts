@@ -22,6 +22,8 @@ export interface LedgerRow {
   metric: string;
   metric_label: string;
   label_raw: string;
+  /** The part of the company a target is for ("Projects and Manufacturing portfolio"); null for the whole company. */
+  scope?: string | null;
   target_text: string;
   horizon: string;
   basis: string;
@@ -77,14 +79,21 @@ export interface DossierV1 {
 }
 
 export const METRIC_LABEL: Record<string, string> = {
-  revenue_growth: "Revenue growth", revenue: "Revenue", ebitda_margin: "EBITDA margin", ebit_margin: "EBIT margin", ebitda: "EBITDA",
+  revenue_growth: "Revenue growth", revenue: "Revenue", ebitda_margin: "EBITDA margin", ebit_margin: "Operating margin", ebitda: "EBITDA",
   pat_growth: "Profit growth", pat: "Net profit", capex: "Capex", net_debt: "Net debt", order_inflow: "Order inflow",
-  order_inflow_growth: "Order inflow growth", order_book: "Order book", volume_growth: "Volume growth", aum_growth: "AUM growth",
+  order_inflow_growth: "Order inflow growth", order_book: "Order book", volume_growth: "Volume growth", aum_growth: "AUM growth", aum: "AUM",
   credit_cost: "Credit cost", nim: "Net interest margin", gnpa: "Gross NPA", capacity: "Capacity", store_count: "Store count",
+  working_capital: "Net working capital to revenue", customer_franchise: "Customer franchise", customer_additions: "New customers",
+  "other:roa": "Return on assets", "other:roe": "Return on equity", "other:cost_of_funds": "Cost of funds", "other:opex_to_nti": "Opex to net total income",
+  "other:losses": "Losses", "other:nov": "Net order value", "other:nov_growth": "Net order value growth", "other:margin_on_nov": "Margin on net order value",
 };
+
+const ACRONYMS = new Set(["aum", "nim", "nti", "roa", "roe", "roce", "nov", "gov", "gmv", "cagr", "fmeg", "ebitda", "ebit", "pat", "nwc", "msme", "npa", "gnpa", "nnpa", "ai", "it", "epc", "ev", "fcf", "tcv", "us", "b2b", "b2c"]);
 
 export function metricLabel(m: string): string {
   if (METRIC_LABEL[m]) return METRIC_LABEL[m];
-  const o = m.replace(/^other:/, "").replace(/_/g, " ");
-  return o.charAt(0).toUpperCase() + o.slice(1);
+  const words = m.replace(/^other:/, "").replace(/[<>]/g, "").split(/[_\s]+/).filter(Boolean).map((w) => (ACRONYMS.has(w.toLowerCase()) ? w.toUpperCase() : w.toLowerCase()));
+  if (!words.length) return "Other target";
+  const s = words.join(" ");
+  return s.charAt(0).toUpperCase() + s.slice(1);
 }

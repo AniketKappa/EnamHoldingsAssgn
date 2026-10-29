@@ -4,6 +4,7 @@
 import type { FactsBundle, Series } from "./facts";
 import { at } from "./facts";
 import { parseHorizon, quartersOf, yearEarlier, normalizePeriod, type Horizon } from "./horizon";
+import type { Scope } from "./normalize";
 
 export type Status = "delivered" | "near_miss" | "missed" | "on_track" | "off_track" | "revised" | "pending" | "unverifiable" | "basis_differs";
 
@@ -23,10 +24,14 @@ export interface GuidanceIn {
   speaker: string | null;
   quote: string;
   page: number;
+  /** Set by normalize.ts: the part of the company a target is for, and the quote's own words for a non-rupee amount. */
+  scope?: Scope;
+  target_text_raw?: string | null;
 }
 
 export interface KpiIn {
   doc_id: number; said_on: string; metric: string; value: number; unit: string; basis?: string | null; period: string; quote: string; page: number;
+  scope?: Scope;
 }
 
 export interface Actual { value: number; unit: string; label: string; cite: string; partial: boolean }
@@ -35,24 +40,30 @@ export interface LedgerItem extends GuidanceIn {
   horizon_label: string;
   status: Status;
   actual: Actual | null;
-  revised_to: { low: number | null; high: number | null; said_period: string; doc_id: number; page: number } | null;
+  revised_to: { low: number | null; high: number | null; direction: GuidanceIn["direction"]; said_period: string; doc_id: number; page: number } | null;
   note: string | null;
   counts: boolean;         // included in the credibility score
 }
 
 export interface Credibility { delivered: number; near_miss: number; missed: number; resolved: number; pending: number; score: number | null }
 
-const LOWER_BETTER = new Set(["credit_cost", "gnpa", "net_debt", "other:net_debt", "other:gross_npa"]);
+const LOWER_BETTER = new Set(["credit_cost", "gnpa", "net_debt", "working_capital", "other:net_debt", "other:gross_npa", "other:cost_of_funds", "other:losses"]);
+/** Balances at a date, not flows: a year's target is met by the year-end (Q4) figure. */
+const STOCK = new Set(["aum", "aum_growth", "order_book", "store_count", "customer_franchise", "working_capital", "net_debt", "gnpa", "capacity"]);
+const scopeKey = (s?: Scope) => (s && s.scope === "segment" ? s.label : "company");
 const NEUTRAL = new Set(["capex"]);
 const TABLE_RATES = new Set(["revenue_growth", "pat_growth", "ebitda_margin"]);
 const TABLE_VALUES = new Set(["revenue", "ebitda", "pat"]);
 
 function round(v: number, d = 1) { const f = 10 ** d; return Math.round(v * f) / f; }
 
-export function targetText(g: Pick<GuidanceIn, "target_low" | "target_high" | "unit" | "direction">): string {
-  const u = (v: number) => g.unit === "pct" ? `${v}%` : g.unit === "bps" ? `${v} bps` : g.unit === "cr" ? `₹${v.toLocaleString("en-IN")} cr` : g.unit === "x" ? `${v}×` : `${v}`;
+const countText = (v: number) => (Math.abs(v) >= 1e6 ? `${Math.round((v / 1e6) * 100) / 100} million` : v.toLocaleString("en-IN"));
+
+export function targetText(g: Pick<GuidanceIn, "target_low" | "target_high" | "unit" | "direction"> & { target_text_raw?: string | null }): string {
+  const u = (v: number) => g.unit === "pct" ? `${v}%` : g.unit === "bps" ? `${v} bps` : g.unit === "cr" ? `₹${v.toLocaleString("en-IN")} cr` : g.unit === "x" ? `${v}×` : g.unit === "count" ? countText(v) : `${v}`;
   const lo = g.target_low, hi = g.target_high;
   if (g.direction === "qualitative" || (lo === null && hi === null)) return "Qualitative";
+  if (g.unit === "other" && g.target_text_raw) return g.target_text_raw;
   if (g.direction === "at_least") return `At least ${u((lo ?? hi)!)}`;
   if (g.direction === "at_most") return `At most ${u((hi ?? lo)!)}`;
   if (lo !== null && hi !== null && lo !== hi) return g.unit === "pct" ? `${lo}–${hi}%` : `${u(lo)} to ${u(hi)}`;
@@ -136,10 +147,15 @@ function annualActual(metric: string, h: Horizon, f: FactsBundle): Actual | null
   return null;
 }
 
+const CANONICAL = /^(?:Q[1-4] |H[12] |9M )?FY\d{2}$/;
+
 export function kpiActual(g: GuidanceIn, h: Horizon, kpis: KpiIn[]): Actual | null {
   const want = h.label;
+  const periods = new Set([want]);
+  if (STOCK.has(g.metric) && h.kind === "fy") periods.add(`Q4 ${want}`);
   const hits = kpis
-    .filter((k) => k.metric === g.metric && sameUnit(k.unit, g.unit) && normalizePeriod(k.period) === want && k.said_on > g.said_on)
+    .filter((k) => k.metric === g.metric && sameUnit(k.unit, g.unit) && periods.has(CANONICAL.test(k.period) ? k.period : normalizePeriod(k.period)) && k.said_on > g.said_on)
+    .filter((k) => scopeKey(k.scope) === scopeKey(g.scope))
     .filter((k) => g.basis === "reported" || g.basis === "unspecified" ? !k.basis || k.basis === "reported" || k.basis === "unspecified" : k.basis === g.basis)
     .sort((a, b) => b.said_on.localeCompare(a.said_on));
   const k = hits[0];
@@ -177,15 +193,28 @@ export function judge(g: Pick<GuidanceIn, "metric" | "target_low" | "target_high
   return "missed";
 }
 
-function keyOf(g: GuidanceIn, h: Horizon) { return `${g.metric}|${h.label}|${g.basis === "unspecified" ? "reported" : g.basis}`; }
+function keyOf(g: GuidanceIn, h: Horizon) { return `${g.metric}|${h.label}|${g.basis === "unspecified" ? "reported" : g.basis}|${scopeKey(g.scope)}`; }
 
 export function buildLedger(guidance: GuidanceIn[], kpis: KpiIn[], f: FactsBundle): { items: LedgerItem[]; credibility: Credibility } {
   const sorted = [...guidance].sort((a, b) => a.said_on.localeCompare(b.said_on) || a.id - b.id);
-  const latestByKey = new Map<string, GuidanceIn>();
+  const nums = (x: GuidanceIn) => [...new Set([x.target_low, x.target_high].filter((v): v is number => v !== null))].sort((a, b) => a - b).join("|");
+  // Statements of one target, oldest first. A reiteration ("grow at 10%", then "will exceed the 10%
+  // guidance") is the same number again; a revision is the next statement with different numbers.
+  const chain = new Map<string, GuidanceIn[]>();
   for (const g of sorted) {
     if (g.direction === "qualitative" || (g.target_low === null && g.target_high === null)) continue;
-    latestByKey.set(keyOf(g, parseHorizon(g.horizon)), g);
+    const k = keyOf(g, parseHorizon(g.horizon));
+    chain.set(k, [...(chain.get(k) ?? []), g]);
   }
+  const nextOf = (g: GuidanceIn, k: string): { next: GuidanceIn | null; superseded: boolean } => {
+    const list = chain.get(k) ?? [];
+    const i = list.indexOf(g);
+    const later = list.slice(i + 1);
+    const diff = later.find((x) => nums(x) !== nums(g)) ?? null;
+    // Shown once per run of equal numbers: at the run's last statement.
+    const sameNext = later[0] && nums(later[0]) === nums(g);
+    return { next: diff, superseded: Boolean(sameNext) };
+  };
   const items: LedgerItem[] = [];
   for (const g of sorted) {
     const h = parseHorizon(g.horizon);
@@ -194,20 +223,18 @@ export function buildLedger(guidance: GuidanceIn[], kpis: KpiIn[], f: FactsBundl
       items.push({ ...base, note: "No numeric target" });
       continue;
     }
-    const latest = latestByKey.get(keyOf(g, h));
-    if (latest && latest !== g) {
-      const changed = latest.target_low !== g.target_low || latest.target_high !== g.target_high;
-      if (changed) {
-        items.push({ ...base, status: "revised", revised_to: { low: latest.target_low, high: latest.target_high, said_period: latest.said_period, doc_id: latest.doc_id, page: latest.page } });
-      }
-      // A reiterated target is shown once, at its latest statement.
+    const { next, superseded } = nextOf(g, keyOf(g, h));
+    if (superseded) continue;               // reiterated later: shown at the latest statement of the run
+    if (next) {
+      items.push({ ...base, status: "revised", revised_to: { low: next.target_low, high: next.target_high, direction: next.direction, said_period: next.said_period, doc_id: next.doc_id, page: next.page } });
       continue;
     }
     if (h.kind === "multi" || h.kind === "unknown") {
       items.push({ ...base, status: "pending", note: "Multi-year target" });
       continue;
     }
-    const tableOk = g.basis === "reported" || g.basis === "unspecified";
+    const segment = g.scope?.scope === "segment" ? g.scope.label : null;
+    const tableOk = (g.basis === "reported" || g.basis === "unspecified") && !segment;
     let actual = tableOk ? tableActual(g.metric, h, f) : null;
     if (!actual || actual.partial) {
       const k = kpiActual(g, h, kpis);
@@ -217,12 +244,16 @@ export function buildLedger(guidance: GuidanceIn[], kpis: KpiIn[], f: FactsBundl
       const qs = quartersOf(h);
       const have = qs.filter((q) => at(f.quarterly.revenue, q) !== null).length;
       const complete = (have > 0 && have === qs.length) || (h.kind === "fy" && at(f.annual.revenue, h.label) !== null);
-      if (!tableOk && (TABLE_RATES.has(g.metric) || TABLE_VALUES.has(g.metric))) {
-        items.push({ ...base, status: "basis_differs", note: `Guided on a ${g.basis.replace("_", " ")} basis; reported numbers differ` });
-      } else if (complete) {
-        items.push({ ...base, status: "unverifiable", note: "No actual in the documents" });
+      const tableMetric = TABLE_RATES.has(g.metric) || TABLE_VALUES.has(g.metric);
+      const why = segment ? `for the ${segment}` : g.basis !== "reported" && g.basis !== "unspecified" ? `on a ${g.basis.replace(/_/g, " ")} basis` : null;
+      if (!complete) {
+        // In progress or not started: a later call (or the year's tables) will settle it.
+        const state = have ? "Period in progress" : "Period not started";
+        items.push({ ...base, status: "pending", note: why && tableMetric ? `${state}; guided ${why}, so it is checked against what management reports` : have ? `${state}; no actual stated yet` : state });
+      } else if (why && tableMetric) {
+        items.push({ ...base, status: "basis_differs", note: `Guided ${why}; the tables show the ${segment ? "whole company" : "reported numbers"}, and no later call states the actual` });
       } else {
-        items.push({ ...base, status: "pending", note: have ? "Period in progress; no actual stated yet" : "Period not started" });
+        items.push({ ...base, status: "unverifiable", note: "No actual in the tables or later calls" });
       }
       continue;
     }

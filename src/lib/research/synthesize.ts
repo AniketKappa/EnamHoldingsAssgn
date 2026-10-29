@@ -7,13 +7,16 @@ import type { Fact } from "./facts";
 import { bannedWordsIn, citeExists, numbersGrounded, stripUrls, type GroundingContext } from "./validate";
 import type { Cited } from "./types";
 
-const PROMPT = (company: string, input: string) => `Write the research summary of ${company} for a concentrated public-markets investor.
+const PROMPT = (company: string, input: string) => `Write the research summary of ${company} for a concentrated public-markets investor deciding whether to own it.
 Use only the facts, ledger and extracts below; do not use any outside knowledge of the company.
-Every bullet cites at least one input id exactly as given (fact:<key> or doc:<id>:p<n>). Numbers carry units and must come from the inputs.
-Write numbers the way the inputs show them: ₹78,750 cr, 11.6%, 133 bps, 1.24×.
-At most 25 words per bullet. Plain verbs, numbers first. Never use: robust, significant, notably, impressive, strong, delve, landscape.
-Produce: what_matters_now (3 bullets: the few things that matter for the thesis today), bull (3), bear (3),
-and seed_questions (3 questions an investor would ask next that these documents can answer).
+Each bullet is one sentence of at most 25 words: the subject first, plain verbs, the numbers inside the sentence.
+For example: "Revenue grew 15.8% YoY to ₹78,750 cr in Q2 FY27, but EBITDA margin fell 133 bps to 11.2%."
+Write numbers the way the inputs show them: ₹78,750 cr, 11.6%, 133 bps, 1.24×. Numbers must come from the inputs.
+Every bullet cites at least one input id exactly as given (fact:<key> or doc:<id>:p<n>).
+what_matters_now (3 bullets): the latest results and what management promised against what it delivered (the ledger's delivered, missed and revised targets).
+bull (3) and bear (3): reasons to own or avoid the stock, each tied to a number: growth, margins, cash conversion, balance sheet, the guidance record, risks management names. Use each number once.
+seed_questions (3): questions an investor would ask next that the call transcripts and annual report can answer.
+Never use: robust, significant, notably, impressive, strong, delve, landscape.
 
 Inputs:
 ${input}`;

@@ -23,9 +23,10 @@ function fyNum(s: string): number | null {
 
 export function parseHorizon(raw: string | null | undefined): Horizon {
   const text = (raw ?? "").trim();
-  const t = text.toUpperCase().replace(/\s+/g, " ");
+  const t = text.toUpperCase().replace(/\s+/g, " ").replace(/[’‘]/g, "'");
   if (!t) return { kind: "unknown", label: "" };
   if (/MEDIUM|LONG|NEXT \d|COMING YEARS|\d\s*-\s*\d\s*YEARS|YEARS?\b/.test(t) && !/FY/.test(t)) return { kind: "multi", label: text };
+  if (/^THROUGH\b|^TILL\b|^UNTIL\b/.test(t)) return { kind: "multi", label: text };
   let m = t.match(/\bQ\s?([1-4])\s?(?:OF\s)?FY\s?'?(\d{2,4}(?:\s*[-–/]\s*\d{2,4})?)/);
   if (m) {
     const fy = fyNum(m[2].replace(/\s/g, ""));

@@ -111,16 +111,16 @@ export const METRIC_KEYS = [
 ] as const;
 
 export const TranscriptExtract = z.object({
-  call_period: z.string().describe("e.g. Q1 FY27"),
+  call_period: z.string().describe("the quarter this call reports, as Qn FYnn"),
   call_date: s(),
   guidance: z.array(z.object({
-    metric: z.string().describe(`one of ${METRIC_KEYS.join(", ")} or other:<short label>`),
+    metric: z.string().describe(`one of ${METRIC_KEYS.join(", ")} or other:short_label`),
     label_raw: z.string(),
     target_low: n(),
     target_high: n(),
     unit: z.enum(["pct", "cr", "bps", "count", "x", "other"]),
     basis: z.enum(["reported", "constant_currency", "organic", "ex_one_offs", "unspecified"]),
-    horizon: z.string().describe("FY27, Q3 FY27, H2 FY27, FY28 or medium_term"),
+    horizon: z.string().describe("the fiscal period the target is for, as FYnn, Qn FYnn, Hn FYnn, or medium_term"),
     direction: z.enum(["range", "at_least", "at_most", "point", "qualitative"]),
     speaker: s(),
     quote: quote(400),
@@ -131,7 +131,7 @@ export const TranscriptExtract = z.object({
     value: z.number(),
     unit: z.enum(["pct", "cr", "bps", "count", "x", "other"]),
     basis: z.enum(["reported", "constant_currency", "organic", "ex_one_offs", "unspecified"]),
-    period: z.string().describe("FY26, Q2 FY27 or H1 FY27"),
+    period: z.string().describe("the period the number is for, as FYnn, Qn FYnn or Hn FYnn"),
     quote: quote(400),
     page: z.number().int(),
   })),

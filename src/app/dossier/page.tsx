@@ -382,6 +382,15 @@ function Dossier() {
   );
 }
 
+function actualText(a: NonNullable<LedgerRow["actual"]>): string {
+  if (a.unit === "pct") return `${a.value}%`;
+  if (a.unit === "cr") return `₹${Math.round(a.value).toLocaleString("en-IN")} cr`;
+  if (a.unit === "bps") return `${a.value} bps`;
+  if (a.unit === "x") return `${a.value}×`;
+  if (a.unit === "count" && Math.abs(a.value) >= 1e6) return `${Math.round((a.value / 1e6) * 100) / 100} million`;
+  return a.value.toLocaleString("en-IN");
+}
+
 function LedgerItem({ r, onOpen }: { r: LedgerRow; onOpen: (o: Opened) => void }) {
   const s = STATUS[r.status];
   return (
@@ -390,6 +399,7 @@ function LedgerItem({ r, onOpen }: { r: LedgerRow; onOpen: (o: Opened) => void }
         <div className="min-w-0">
           <span className="text-sm font-medium">{r.metric_label}</span>
           <span className="text-sm text-ink-2">, {r.horizon}</span>
+          {r.scope ? <span className="text-xs text-ink-3"> ({r.scope})</span> : null}
           {r.basis !== "unspecified" && r.basis !== "reported" ? <span className="text-xs text-ink-3"> ({r.basis.replace("_", " ")})</span> : null}
         </div>
         <Chip tone={s.tone} className="shrink-0">{s.label}</Chip>
@@ -397,7 +407,7 @@ function LedgerItem({ r, onOpen }: { r: LedgerRow; onOpen: (o: Opened) => void }
       <div className="num mt-1 text-sm">
         <span className="text-ink-2">Said </span><span className="text-ink">{r.target_text}</span>
         {r.revised_to ? <><span className="text-ink-2"> then </span><span className="text-ink">{r.revised_to.text}</span><span className="text-ink-2"> in the {r.revised_to.said_period} call</span><Cites cites={[r.revised_to.cite]} onOpen={onOpen} /></> : null}
-        {r.actual ? <><span className="text-ink-2">; actual </span><span className="font-medium text-ink">{r.actual.unit === "pct" ? `${r.actual.value}%` : r.actual.unit === "cr" ? `₹${Math.round(r.actual.value).toLocaleString("en-IN")} cr` : r.actual.value}</span><span className="text-ink-2"> ({r.actual.label})</span><Cites cites={[r.actual.cite]} onOpen={onOpen} /></> : null}
+        {r.actual ? <><span className="text-ink-2">; actual </span><span className="font-medium text-ink">{actualText(r.actual)}</span><span className="text-ink-2"> ({r.actual.label})</span><Cites cites={[r.actual.cite]} onOpen={onOpen} /></> : null}
       </div>
       {r.note && !r.actual && !r.revised_to ? <p className="mt-0.5 text-xs text-ink-3">{r.note}</p> : null}
       <button type="button" onClick={() => onOpen({ cite: r.cite, quote: r.quote })} className="serif mt-1.5 block text-left text-sm text-ink-2">

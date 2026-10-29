@@ -247,6 +247,11 @@ async function main() {
       const symbol = (args[1] ?? "").toUpperCase();
       if (!symbol) throw new Error("Usage: research SYMBOL");
       const { createResearchJob, runResearchJob } = await import("../src/lib/research/job");
+      if (args.includes("--fresh")) {
+        // Re-read the calls: drop cached transcript extracts so the job asks the model again.
+        const del = await sql`delete from doc_extracts where kind = 'transcript' and document_id in (select id from documents where symbol = ${symbol}) returning document_id`;
+        console.log(`Dropped ${del.length} cached transcript extracts for ${symbol}`);
+      }
       const id = await createResearchJob(symbol, null);
       let finished = false;
       while (!finished && Date.now() < deadline) {

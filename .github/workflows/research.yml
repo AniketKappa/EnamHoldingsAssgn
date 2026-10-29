@@ -7,6 +7,11 @@ on:
         description: "NSE symbols, comma separated"
         required: true
         default: "LT,INFY,BAJFINANCE,ETERNAL,POLYCAB"
+      fresh:
+        description: "Re-read the call transcripts (drop cached extracts)"
+        type: boolean
+        required: false
+        default: false
 concurrency:
   group: research
   cancel-in-progress: false
@@ -26,4 +31,5 @@ jobs:
       - name: Build dossiers
         run: |
           IFS=',' read -ra S <<< "${{ github.event.inputs.symbols }}"
-          for s in "${S[@]}"; do npx tsx scripts/finn.ts research "$(echo $s | xargs)" --minutes 15 || true; done
+          FRESH=""; if [ "${{ github.event.inputs.fresh }}" = "true" ]; then FRESH="--fresh"; fi
+          for s in "${S[@]}"; do npx tsx scripts/finn.ts research "$(echo $s | xargs)" --minutes 15 $FRESH || true; done

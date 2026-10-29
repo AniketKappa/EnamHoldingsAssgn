@@ -6,17 +6,30 @@ import { llm, EXTRACTION_SYSTEM } from "../llm/router";
 import { TranscriptExtract, AnnualReportExtract, METRIC_KEYS, type TranscriptExtractT, type AnnualReportExtractT } from "../llm/schemas";
 import { markPages, quoteOnPage } from "../text";
 import { annualReportPages } from "./docs";
+import { callRef } from "./normalize";
 
-const TRANSCRIPT_PROMPT = (company: string, period: string) => `This is the transcript (or investor presentation) of ${company}'s earnings call for ${period}.
-1. guidance: every forward-looking target stated by management: growth, margins, capex, debt, order inflow, volumes, capacity or stores, credit cost, NIM, AUM.
-   Directional statements count, with direction = qualitative. Use a metric key from: ${METRIC_KEYS.join(", ")}; else "other:<short label>".
-   Growth rates use the _growth keys with unit pct; margins use unit pct; amounts use unit cr (convert lakh / 100, million / 10, billion x 100).
-   Record the basis exactly as stated (constant currency, organic, excluding one-offs) or "unspecified". Record the horizon as FY27, Q3 FY27, H2 FY27 or medium_term.
+const TRANSCRIPT_PROMPT = (company: string, period: string) => {
+  const c = callRef(period);
+  const fy = (n: number) => `FY${String(n % 100).padStart(2, "0")}`;
+  const next = c.q === 4 ? c.inProgress : c.fy + 1;
+  return `This is the transcript (or investor presentation) of ${company}'s earnings call for ${period}.
+1. guidance: every forward-looking target stated by management: growth, margins, capex, debt, working capital, order inflow, volumes, capacity or stores, customers, credit cost, NIM, AUM, return ratios.
+   Directional statements count, with direction = qualitative. Use a metric key from: ${METRIC_KEYS.join(", ")}; else other:short_label in snake case (other:working_capital, other:roe, other:cost_of_funds).
+   Growth rates use the _growth keys with unit pct; margins and ratios use unit pct; amounts use unit cr, converted from the speaker's words
+   (Rs 1,356 billion = 135600; Rs 7.4 trillion = 740000; INR 950 million = 95; Rs 9 lakh = 0.09). Dollar amounts use unit other.
+   Counts of customers, loans or stores use unit count in units (18 million = 18000000).
+   Record the basis exactly as stated (constant currency, organic, excluding one-offs) or "unspecified".
+   horizon is the period the target is for. In this ${period} call, "this year", "full year" or "the current year" mean ${fy(c.inProgress)} and "next year" means ${fy(next)};
+   a target "by March" of a year is that fiscal year. Write it as ${fy(c.inProgress)}, Q4 ${fy(c.inProgress)}, H2 ${fy(c.inProgress)} or ${fy(next)}, or medium_term for targets over several years.
+   When a target is for one segment or business (P&M portfolio, FMEG, MSME loans), name it in label_raw.
    Analysts' questions are never guidance; only management's answers and remarks are.
 2. reported_kpis: numbers management states as actual results for a past period, with the same metric keys, units and basis rules.
+   period is the period the number is for: ${period} for this quarter; in a Q4 call, full-year numbers are for ${fy(c.fy)}.
+   Include the full-year numbers a Q4 call states (growth, margins, order inflows, customers added, credit cost) and segment numbers with the segment in the quote.
 3. narrative_claims: at most 8 qualitative claims about demand, pricing, competition, margins or execution.
 4. analyst_concerns: at most 6 topics analysts pressed on.
 Quotes are verbatim, at most 30 words, with the page number from the [p.N] markers.`;
+};
 
 const AR_PROMPT = (company: string, fy: string) => `These are selected pages of ${company}'s annual report for ${fy}.
 Fill the schema: a two-sentence description of the business; segments with revenue (Rs crore) and share where a segment table exists;
