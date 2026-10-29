@@ -14,7 +14,9 @@ FINN watches an Indian equity portfolio and gives the investor two things:
   snapshot, cash quality, balance sheet and a cited bull and bear case. Built only from the
   company's call transcripts, annual report and standardised financial tables.
 
-**Try it on a phone:** [app link](#) · AI build history: [this chat](#) and [`BUILD_LOG.md`](BUILD_LOG.md)
+**Try it on a phone: [enam-holdings-assgn.vercel.app](https://enam-holdings-assgn.vercel.app)**
+
+AI build history: [`BUILD_LOG.md`](BUILD_LOG.md) and the conversation linked in the submission email.
 
 ## Try it in two minutes
 
