@@ -70,6 +70,22 @@ async function probe() {
       }
       return out.join(" ");
     }],
+    ["Gemini search grounding", async () => {
+      if (!env.geminiKey()) return "no GEMINI_API_KEY";
+      const { GoogleGenAI } = await import("@google/genai");
+      const ai = new GoogleGenAI({ apiKey: env.geminiKey() });
+      const out: string[] = [];
+      for (const w of env.models.grounded()) {
+        try {
+          const r = await ai.models.generateContent({ model: w, contents: "Who is the chief executive of Infosys? One line.", config: { tools: [{ googleSearch: {} }] } });
+          const chunks = r.candidates?.[0]?.groundingMetadata?.groundingChunks?.length ?? 0;
+          out.push(`${w}:ok (${chunks} sources)`);
+        } catch (e) {
+          out.push(`${w}:${String((e as Error).message).replace(/\s+/g, " ").slice(0, 260)}`);
+        }
+      }
+      return out.join(" || ");
+    }],
   ];
   const rows: string[] = ["| Source | Result | ms |", "| --- | --- | --- |"];
   for (const [name, fn] of checks) {

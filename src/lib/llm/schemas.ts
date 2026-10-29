@@ -5,6 +5,16 @@ import { CATEGORIES } from "../pipeline/rules";
 
 const n = () => z.number().nullable();
 const s = () => z.string().nullable();
+/**
+ * Free text with a soft cap: the model is told the length, and a slightly longer
+ * answer is trimmed instead of failing validation (a 720-character profile is not
+ * worth a retry).
+ */
+const text = (max: number) => z.string().describe(`at most ${max} characters`)
+  .transform((v) => (v.length > max ? `${v.slice(0, max - 1).trimEnd()}…` : v));
+/** A verbatim quote: trimmed without an ellipsis, so it is still a substring of the page. */
+const quote = (max: number) => z.string().describe(`verbatim, at most ${max} characters`)
+  .transform((v) => v.slice(0, max));
 
 export const ClassifyBatch = z.object({
   items: z.array(z.object({
@@ -18,7 +28,7 @@ export const ClassifyBatch = z.object({
 export const OneLinerBatch = z.object({
   items: z.array(z.object({
     id: z.string(),
-    one_liner: z.string().max(160),
+    one_liner: text(160),
     amount_cr: n(),
     amount_quote: s(),
     direction: z.enum(["up", "down", "same"]).nullable(),
@@ -55,7 +65,7 @@ export const ResultsExtract = z.object({
   current: ResultLines,
   previous_quarter: ResultLines,
   year_ago_quarter: ResultLines,
-  note: z.string().max(240).nullable(),
+  note: text(240).nullable(),
   // 1-based position, within the pages sent, of the page the numbers were read from.
   statement_page: z.number().int().nullable().optional(),
 });
@@ -69,7 +79,7 @@ export const PeopleExtract = z.object({
     change_type: z.enum(["appointment", "resignation", "retirement", "cessation", "redesignation", "reappointment"]),
     effective_date: s().describe("YYYY-MM-DD if stated"),
     reason: s(),
-    brief_profile: z.string().max(700).nullable(),
+    brief_profile: text(700).nullable(),
     relationships: s(),
     resignation_letter_attached: z.boolean().nullable(),
     quote: z.string(),
@@ -79,7 +89,7 @@ export const PeopleExtract = z.object({
 export type PeopleExtractT = z.infer<typeof PeopleExtract>;
 
 export const PersonBackground = z.object({
-  headline: z.string().max(140).nullable(),
+  headline: text(140).nullable(),
   previous_roles: z.array(z.object({
     organisation: z.string(),
     title: z.string(),
@@ -113,7 +123,7 @@ export const TranscriptExtract = z.object({
     horizon: z.string().describe("FY27, Q3 FY27, H2 FY27, FY28 or medium_term"),
     direction: z.enum(["range", "at_least", "at_most", "point", "qualitative"]),
     speaker: s(),
-    quote: z.string().max(400),
+    quote: quote(400),
     page: z.number().int(),
   })),
   reported_kpis: z.array(z.object({
@@ -122,18 +132,18 @@ export const TranscriptExtract = z.object({
     unit: z.enum(["pct", "cr", "bps", "count", "x", "other"]),
     basis: z.enum(["reported", "constant_currency", "organic", "ex_one_offs", "unspecified"]),
     period: z.string().describe("FY26, Q2 FY27 or H1 FY27"),
-    quote: z.string().max(400),
+    quote: quote(400),
     page: z.number().int(),
   })),
   narrative_claims: z.array(z.object({
-    claim: z.string().max(200),
+    claim: text(200),
     horizon: s(),
-    quote: z.string().max(400),
+    quote: quote(400),
     page: z.number().int(),
   })),
   analyst_concerns: z.array(z.object({
-    topic: z.string().max(80),
-    summary: z.string().max(200),
+    topic: text(80),
+    summary: text(200),
     page: z.number().int(),
   })),
 });
@@ -141,7 +151,7 @@ export type TranscriptExtractT = z.infer<typeof TranscriptExtract>;
 
 export const AnnualReportExtract = z.object({
   fiscal_year: z.string(),
-  business_description: z.string().max(400),
+  business_description: text(400),
   segments: z.array(z.object({
     name: z.string(), revenue_cr: n(), share_pct: n(), page: z.number().int(),
   })),
@@ -158,24 +168,24 @@ export const LedgerJudge = z.object({
   items: z.array(z.object({
     claim_id: z.number().int(),
     verdict: z.enum(["agree", "diverge", "too_early"]),
-    evidence: z.string().max(280),
+    evidence: text(280),
     cites: z.array(z.string()),
   })),
 });
 export type LedgerJudgeT = z.infer<typeof LedgerJudge>;
 
-const Bullet = z.object({ text: z.string().max(260), cites: z.array(z.string()).min(1) });
+const Bullet = z.object({ text: text(260), cites: z.array(z.string()).min(1) });
 
 export const Synthesis = z.object({
   what_matters_now: z.array(Bullet).min(2).max(3),
   bull: z.array(Bullet).min(2).max(3),
   bear: z.array(Bullet).min(2).max(3),
-  seed_questions: z.array(z.string().max(140)).min(2).max(3),
+  seed_questions: z.array(text(140)).min(2).max(3),
 });
 export type SynthesisT = z.infer<typeof Synthesis>;
 
 export const Answer = z.object({
-  answer: z.string().max(1200),
+  answer: text(1200),
   cites: z.array(z.string()),
   found: z.boolean(),
 });
@@ -194,11 +204,11 @@ export const ParsedRules = z.object({
   unparsed: s(),
 });
 
-export const BriefScript = z.object({ script: z.string().max(1400) });
+export const BriefScript = z.object({ script: text(1400) });
 
 /** zod -> JSON Schema in the subset Gemini accepts. */
 export function toGeminiSchema(schema: z.ZodType): Record<string, unknown> {
-  const raw = z.toJSONSchema(schema, { target: "draft-2020-12" }) as Record<string, unknown>;
+  const raw = z.toJSONSchema(schema, { target: "draft-2020-12", io: "input" }) as Record<string, unknown>;
   const walk = (node: unknown): unknown => {
     if (Array.isArray(node)) return node.map(walk);
     if (!node || typeof node !== "object") return node;
